@@ -1,0 +1,15 @@
+{
+  "title": "Ingresa tu correo para restablecer tu contraseña",
+  "email": {
+    "label": "Correo electrónico",
+    "placeholder": "Ingresa un correo valido"
+  },
+  "submit": "Restablecer",
+  "submitting": "Enviando...",
+  "success": {
+    "message": "Se ha enviado un correo de restablecimiento de contraseña a tu bandeja de entrada. Por favor revisa tu email y sigue las instrucciones."
+  },
+  "error": {
+    "general": "Hubo un error al procesar tu solicitud. Por favor intenta nuevamente."
+  }
+}

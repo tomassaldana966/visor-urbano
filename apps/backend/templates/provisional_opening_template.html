@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Provisional Opening Certificate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    .acuse-box { max-width: 800px; margin: auto; padding: 30px; font-size: 16px; line-height: 24px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #555; }
+    html, body { width:100%; margin:0; padding:0; font-size:100%; text-align:justify; }
+    * { font-family:'Century Gothic','Lato', Helvetica, sans-serif; color: #333447; line-height:1; }
+    h3 { font-size:1.375rem; text-align:center; }
+    .font-heavy { font-weight:700; }
+    .row { width:100%; display:flex; margin-bottom:1rem; }
+    .col-3, .col-6, .col-9 { padding:0 .5rem; }
+    .col-3 { width:25%; }
+    .col-6 { width:50%; }
+    .col-9 { width:75%; }
+    .p-parrafo-full { font-size:14px; font-family: 'Red Hat Display', sans-serif; margin-bottom:1rem; }
+    .stamp { text-align:center; border: dashed 4px black; border-radius:2px; width:150px; height:130px; }
+    .stamp-header { height:60px; font-weight:bold; font-size:19px; padding-top:10px; }
+    .stamp-footer { background-color:#D3D3D3; height:60px; font-size:12px; }
+  </style>
+</head>
+<body>
+  <div class="acuse-box">
+    <div class="row">      
+      <div class="col-6"></div>
+      <div class="col-3">
+        <img src="{{ logo }}" style="width:100%; max-width:200px;">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-9"></div>
+      <div class="col-3">
+        Reference No.: <strong>{{ data.folio }}</strong>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <h3><strong>Provisional Opening Certificate</strong></h3>
+      </div>
+    </div>
+
+    <p class="p-parrafo-full">
+      In response to the application submitted by <strong>{{ owner }}</strong>, this certificate grants provisional opening for the business located at <strong>{{ location }}</strong>.
+    </p>
+    <p class="p-parrafo-full">
+      This certificate is valid from <strong>{{ data.start_date }}</strong> to <strong>{{ data.end_date }}</strong>.
+    </p>
+
+    <div class="row">
+      <div class="col-6">
+        <p class="p-parrafo-full font-heavy">
+          Sincerely,<br>
+          Licensing Authority<br>
+          Municipality of {{ result.municipality }}
+        </p>
+      </div>
+      <div class="col-3">
+        <div class="stamp">
+          <div class="stamp-header">
+            <span style="color:#D3D3D3;">VISOR</span><span style="color:#70CE68;">URBANO</span><br>
+            <span>PROVISIONAL</span>
+          </div>
+          <div class="stamp-footer">
+            {{ result.municipality }}<br>
+            {{ data.created_at }}
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <img src="data:image/png;base64,{{ qrCode }}" style="width:150px; max-width:200px;">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

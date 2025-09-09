@@ -1,0 +1,161 @@
+{
+  "title": "Gestión de Requisitos",
+  "description": "Administra campos y requisitos para los diferentes trámites",
+  "breadcrumb": "Requisitos",
+  "addRequirement": "Agregar Requisito",
+  "stats": {
+    "total": "Total",
+    "mandatory": "Obligatorios",
+    "active": "Activos",
+    "types": "Tipos"
+  },
+  "filters": {
+    "filterByType": "Filtrar por tipo:",
+    "allTypes": "Todos los tipos",
+    "freeText": "Texto libre",
+    "yesNo": "Responder sí o no",
+    "dropdown": "Lista desplegable",
+    "optionSelection": "Selección de opciones",
+    "document": "Documento"
+  },
+  "table": {
+    "title": "Lista de Requisitos",
+    "columns": {
+      "requirementTitle": "Título del requisito",
+      "fieldType": "Tipo campo",
+      "required": "Requerido",
+      "procedureType": "Tipo de trámite",
+      "status": "Estatus"
+    },
+    "requirement": "Requisito",
+    "condition": "Condición",
+    "noSpecified": "No especificado"
+  },
+  "fieldTypes": {
+    "input": "Texto libre",
+    "boolean": "Responder sí o no",
+    "select": "Lista desplegable",
+    "radio": "Selección de opciones",
+    "file": "Documento (PDF o imagen)"
+  },
+  "status": {
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "yes": "Sí",
+    "no": "No",
+    "required": "Requerido",
+    "optional": "Opcional"
+  },
+  "modal": {
+    "title": "Agregar Nuevo Requisito",
+    "fieldType": {
+      "label": "Documento o información a requerir",
+      "placeholder": "Seleccionar tipo"
+    },
+    "description": {
+      "label": "Título del requisito o información a requerir",
+      "placeholder": "Ej: Comprobante de Ingresos"
+    },
+    "detailedDescription": {
+      "label": "Descripción detallada del requisito",
+      "placeholder": "Descripción detallada del requisito"
+    },
+    "rationale": {
+      "label": "Fundamento legal",
+      "placeholder": "Señala el artículo que solicita el requisito"
+    },
+    "options": {
+      "title": "Opciones",
+      "add": "Agregar",
+      "empty": "No hay opciones agregadas. Haz clic en \"Agregar\" para crear opciones.",
+      "placeholder": "Texto de la opción",
+      "remove": "Eliminar opción"
+    },
+    "required": {
+      "label": "¿Cuándo se requiere?",
+      "placeholder": "Seleccionar cuándo se requiere",
+      "always": "Siempre (Todos los giros)",
+      "conditional": "Personalizar parámetros"
+    },
+    "conditionalParams": {
+      "title": "Parámetros configurables",
+      "note": "Nota: No es obligatorio llenar todos los campos",
+      "propertyArea": "El requisito aplica cuando la superficie de la propiedad es...",
+      "activityArea": "El requisito aplica cuando la superficie de la actividad es...",
+      "applicantCharacter": "El requisito aplica cuando el carácter del solicitante es",
+      "personType": "El requisito aplica cuando el tipo de persona es",
+      "alcoholSales": "En venta de alcohol, el requisito aplica cuando",
+      "applicationRule": "Para aplicar este requisito:",
+      "allConditions": "Todas las condiciones",
+      "anyCondition": "Con solo una de las condiciones",
+      "dependency": {
+        "label": "Este requisito lo revisa o emite alguna dependencia externa",
+        "placeholder": "Seleccionar dependencia"
+      },
+      "conditions": {
+        "notApply": "No aplica",
+        "greaterEqual": "Mayor o igual a",
+        "lessEqual": "Menor o igual a",
+        "placeholder": "Metros cuadrados"
+      },
+      "characters": {
+        "owner": "Propietario",
+        "tenant": "Arrendatario",
+        "powerOfAttorney": "Carta poder"
+      },
+      "personTypes": {
+        "individual": "Física",
+        "legal": "Moral"
+      },
+      "alcoholTypes": {
+        "lowGradeClosed": "Bebidas de baja graduación cerrada",
+        "lowGradeOpen": "Bebidas de baja graduación abierta",
+        "highGradeClosed": "Bebidas de alta graduación cerrada",
+        "highGradeOpen": "Bebidas de alta graduación abierta",
+        "anyOfAbove": "Cualquiera de las anteriores"
+      }
+    },
+    "step": {
+      "label": "El requisito esta relacionado a...",
+      "placeholder": "Seleccionar relación",
+      "applicant": "Solicitante",
+      "owner": "Propietario",
+      "property": "Predio",
+      "establishment": "Establecimiento"
+    },
+    "procedureType": {
+      "label": "Este requisito o información en dónde se solicitará",
+      "placeholder": "Seleccionar tipo de trámite",
+      "requirementsConsultation": "Para la consulta de requisitos",
+      "licenseApplication": "Para la solicitud de la licencia",
+      "official": "Durante o dentro del trámite"
+    },
+    "actions": {
+      "cancel": "Cancelar",
+      "creating": "Creando...",
+      "create": "Crear Requisito"
+    }
+  },
+  "dependencies": {
+    "dependency1": "Dependencia 1",
+    "dependency2": "Dependencia 2"
+  },
+  "validation": {
+    "required": "Este campo es requerido",
+    "fieldTypeRequired": "Tipo de documento es requerido",
+    "titleRequired": "Título del requisito es requerido",
+    "stepRequired": "Relación del requisito es requerida",
+    "procedureTypeRequired": "Tipo de trámite es requerido",
+    "requiredSelectionRequired": "Cuándo se requiere es obligatorio",
+    "metersRequired": "Metros cuadrados es requerido"
+  },
+  "messages": {
+    "success": "Requisito creado exitosamente",
+    "error": "Error al crear el requisito",
+    "statusUpdated": "Estado del requisito actualizado",
+    "formInvalid": "Datos de formulario inválidos",
+    "unknownError": "Error desconocido",
+    "accessDenied": "Acceso no autorizado",
+    "tokenUnavailable": "Token de acceso no disponible"
+  }
+}

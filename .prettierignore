@@ -1,0 +1,17 @@
+node_modules
+dist
+build
+.turbo
+.git
+pnpm-lock.yaml
+*.log
+.DS_Store
+coverage
+storybook-static
+apps/backend
+legacy
+
+# Generated React Router types
+apps/frontend/.react-router/
+
+# Generated files

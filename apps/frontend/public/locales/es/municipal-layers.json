@@ -1,0 +1,105 @@
+{
+  "page": {
+    "title": "Capas Municipales",
+    "description": "Gestión de capas geográficas y cartográficas del municipio"
+  },
+  "actions": {
+    "addLayer": "Agregar Capa",
+    "edit": "Editar",
+    "view": "Ver",
+    "cancel": "Cancelar",
+    "save": "Guardar Cambios",
+    "add": "Agregar Capa",
+    "adding": "Agregando...",
+    "updating": "Actualizando..."
+  },
+  "columns": {
+    "name": "Nombre",
+    "type": "Tipo",
+    "format": "Formato",
+    "server": "Servidor",
+    "visible": "Visible",
+    "status": "Estado",
+    "editable": "Editable",
+    "opacity": "Opacidad",
+    "order": "Orden",
+    "url": "URL",
+    "attribution": "Atribución",
+    "projection": "Proyección",
+    "version": "Versión",
+    "value": "Valor",
+    "geometryType": "Tipo Geometría",
+    "cqlFilter": "Filtro CQL",
+    "actions": "Acciones"
+  },
+  "status": {
+    "visible": "Visible",
+    "hidden": "Oculto",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "yes": "Sí",
+    "no": "No",
+    "notAvailable": "N/A"
+  },
+  "statistics": {
+    "totalLayers": "Total de Capas",
+    "activeLayers": "Capas Activas",
+    "visibleLayers": "Visibles"
+  },
+  "modal": {
+    "addTitle": "Agregar Nueva Capa",
+    "editTitle": "Editar Capa"
+  },
+  "form": {
+    "layerName": "Nombre de la Capa",
+    "layerValue": "Valor de la Capa",
+    "layers": "Capas",
+    "layerType": "Tipo de Capa",
+    "serverType": "Tipo de Servidor",
+    "serviceUrl": "URL del Servicio",
+    "format": "Formato",
+    "version": "Versión",
+    "projection": "Proyección",
+    "opacity": "Opacidad",
+    "order": "Orden",
+    "attribution": "Atribución",
+    "geometryType": "Tipo de Geometría",
+    "cqlFilter": "Filtro CQL",
+    "activateLayer": "Activar capa",
+    "visible": "Visible",
+    "editable": "Editable"
+  },
+  "placeholders": {
+    "layerName": "Ej: Zonificación Comercial",
+    "layerValue": "layer_value",
+    "layers": "Nombre de las capas en el servicio",
+    "selectType": "Seleccionar tipo",
+    "selectServer": "Seleccionar servidor",
+    "serviceUrl": "https://api.municipality.gov/layers/...",
+    "format": "image/png",
+    "selectVersion": "Seleccionar versión",
+    "projection": "EPSG:4326",
+    "attribution": "© Departamento GIS Municipal",
+    "geometryType": "polygon, point, line",
+    "cqlFilter": "municipality='example'"
+  },
+  "serverTypes": {
+    "geoserver": "GeoServer",
+    "mapserver": "MapServer",
+    "qgis": "QGIS",
+    "carmentaserver": "Carmenta Server"
+  },
+  "layerTypes": {
+    "wms": "WMS",
+    "xyz": "XYZ/TMS"
+  },
+  "errors": {
+    "unauthorized": "Acceso no autorizado",
+    "noMunicipality": "Usuario sin municipio asignado",
+    "invalidFormData": "Datos del formulario inválidos",
+    "createError": "Error al crear la capa",
+    "updateError": "Error al actualizar la capa",
+    "loadError": "Error al cargar las capas",
+    "noLayerId": "ID de capa no proporcionado"
+  }
+}

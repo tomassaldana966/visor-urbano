@@ -1,0 +1,65 @@
+{
+  "title": "What is Visor Urbano",
+  "description": {
+    "title": "Description",
+    "content": "In Visor Urbano, you will be able to learn about the applicable requirements to open your business and process your license completely online."
+  },
+  "background": {
+    "title": "Background",
+    "paragraph1": "In 2016, Guadalajara was one of the five winning cities in the innovation contest called \"Mayors Challenge\" organized by the American foundation Bloomberg Philanthropies, which stood out for their innovative and bold ideas that address urgent challenges, and that also have the greatest potential for positive impact and capacity to be replicated in other regions. One million dollars was awarded for the creation of the Visor Urbano platform.",
+    "paragraph2": "In 2020, once the first stage was completed and given the success achieved, the foundation for the first time in the history of contests in Latin America decided to continue supporting the project to replicate it in all municipalities of the State of Jalisco and internationally."
+  },
+  "benefits": {
+    "title": "Benefits",
+    "subtitle": "Visor Urbano transforms urban management for the benefit of citizens and municipalities",
+    "citizens": {
+      "title": "For citizens:",
+      "items": [
+        "Government information queries in real time",
+        "Completely online process",
+        "Speeds up the processing time and license delivery",
+        "Single process for all municipalities",
+        "Avoid going to government offices",
+        "Reduction of process discretionality",
+        "Proactive citizen participation in urban development"
+      ]
+    },
+    "municipalities": {
+      "title": "For municipalities:",
+      "items": [
+        "Free and configurable software",
+        "No costs, as it is hosted on government servers",
+        "Obtaining certification from the Rapid Business Opening System (SARE) regulated by the National Commission for Regulatory Improvement",
+        "Proactive transparency by publishing all licenses for free consultation",
+        "Real-time report generation",
+        "Real-time status, results and indicator progress consultation",
+        "Training, advice and continuous support from the VU team",
+        "Transition towards a more open, digital and innovative government",
+        "Adapt regulations to new digital standards"
+      ]
+    }
+  },
+  "awards": {
+    "title": "Awards and Recognition",
+    "intro": "Among the awards and recognitions given to Visor Urbano are:",
+    "year": "2016",
+    "mayorsChallengeTitle": "Mayors Challenge",
+    "mayorsChallengeSubtitle": "Winner",
+    "items": [
+      "Mexican SARE certification (Rapid Business Opening System) regulated by the National Commission for Regulatory Improvement.",
+      "National Innovation in Transparency Award 2018",
+      "Latin America Geospatial World Excellence Award",
+      "U-Gob Digital Government Award in the Municipal Government category 2019",
+      "Special mention for \"Government Innovation\" in IT +Gob awards organized by the Computing Committee of State and Municipal Public Administration (CIAPEM)",
+      "Future Cities Award in the \"City of the Future\" category, cataloging it as the most \"futuristic and innovative\" initiative. This award was presented in 2020 at the Annual Investment Meeting held in the United Arab Emirates."
+    ],
+    "conclusion": "Additionally, in 2019, Guadalajara became the first municipality nationally to integrate a Digital Government scheme among member countries of the Organization for Economic Cooperation and Development (OECD), through the digital platforms Visor Urbano and Ciudapp."
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "description": "Join the digital transformation of urban management and process your license efficiently",
+    "exploreMap": "Explore Map",
+    "login": "Login"
+  },
+  "backButton": "Back to home"
+}

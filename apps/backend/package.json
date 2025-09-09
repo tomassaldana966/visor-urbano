@@ -1,0 +1,8 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "docker-compose build --no-cache && docker-compose up",
+    "start": "docker compose up"
+  }
+}

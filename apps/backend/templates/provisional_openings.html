@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Provisional Opening Certificate</title>
+  <style>
+    body { font-family: 'Red Hat Display', sans-serif; padding: 40px; font-size: 14px; }
+    .box { background: #70CE68; color: white; padding: 8px; border-radius: 5px; margin-top: 10px; }
+    .qr img { margin-top: 10px; width: 180px; }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center;">Provisional Opening Certificate</h2>
+  <p><strong>Folio:</strong> {{ folio }}</p>
+  <p><strong>Valid for:</strong> 30 days</p>
+  <p><strong>From:</strong> {{ start_date }}</p>
+  <p><strong>To:</strong> {{ end_date }}</p>
+  <p><strong>Activity Code:</strong> {{ activity_code }}</p>
+  <p><strong>Requested Business Activity:</strong> {{ business_activity }}</p>
+  <p><strong>Owner:</strong> {{ owner }}</p>
+  <p><strong>Location:</strong> {{ location }}</p>
+  <div class="qr">
+    <img src="data:image/png;base64,{{ qr_code }}" />
+  </div>
+</body>
+</html>

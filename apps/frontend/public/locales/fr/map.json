@@ -1,0 +1,212 @@
+{
+  "aside": {
+    "new": "Nouvelle procédure",
+    "layers": "Couches",
+    "commercial": "Diagnostic commercial",
+    "measure": "Mesure et sélection",
+    "upload": "Télécharger le fichier",
+    "info": "Identifier"
+  },
+  "controls": {
+    "layers": {
+      "tabs": {
+        "layers": "Couches",
+        "conventions": "Légende"
+      }
+    },
+    "tools": {
+      "tabs": {
+        "tools": {
+          "title": "Mesure et sélection",
+          "list": {
+            "select": "Sélectionner une propriété",
+            "draw": "Dessiner une propriété",
+            "measure-lineal": "Mesurer la distance (linéaire)",
+            "measure-area": "Mesurer la surface (polygone)",
+            "info": "Identifier"
+          },
+          "tooltips": {
+            "select": "Cliquez sur une propriété pour la sélectionner",
+            "draw": "Cliquez pour commencer à dessiner",
+            "draw-drawing": "Cliquez pour continuer à dessiner <br /> Double-cliquez pour terminer",
+            "measure-lineal": "Cliquez pour commencer à dessiner",
+            "measure-lineal-drawing": "Cliquez pour continuer à dessiner <br /> Double-cliquez pour terminer",
+            "measure-area": "Cliquez pour commencer à dessiner",
+            "measure-area-drawing": "Cliquez pour continuer à dessiner <br /> Double-cliquez pour terminer",
+            "info": "Cliquez sur la carte pour obtenir des informations sur cet emplacement"
+          }
+        }
+      }
+    }
+  },
+  "property": {
+    "municipality": "Municipalité",
+    "locality": "Localité",
+    "postalCode": "Code postal",
+    "colony": "Quartier",
+    "address": "Rue",
+    "area": "Superficie de la propriété",
+    "constructionArea": "Surface construite",
+    "downloadBlueprint": {
+      "cta": "Télécharger le plan",
+      "disclaimer": "Les mesures du plan téléchargé peuvent différer de celles figurant sur le document de propriété. Les informations et mesures officielles pour toute procédure seront celles détenues par le service du cadastre de la municipalité concernée."
+    },
+    "downloadTechnicalSheet": "Télécharger la fiche technique",
+    "requirements": {
+      "title": "Demander une licence",
+      "licenseTypeSelection": {
+        "title": "Quel type de licence avez-vous besoin?",
+        "description": "Sélectionnez le type de licence que vous souhaitez traiter",
+        "options": {
+          "commercial": "Licence commerciale",
+          "construction": "Licence de construction"
+        }
+      },
+      "sections": {
+        "general": {
+          "title": "Informations générales",
+          "inputs": {
+            "applicant_name": {
+              "label": "Nom complet",
+              "error": "Veuillez entrer votre nom complet"
+            },
+            "street": {
+              "label": "Rue",
+              "error": "Veuillez entrer le nom de la rue"
+            },
+            "neighborhood": {
+              "label": "Quartier",
+              "error": "Veuillez entrer le nom du quartier"
+            },
+            "locality": {
+              "label": "Localité",
+              "error": "Veuillez entrer le nom de la localité"
+            },
+            "municipality_name": {
+              "label": "Municipalité",
+              "error": "Veuillez entrer le nom de la municipalité"
+            },
+            "businessType": {
+              "label": "Type d'entreprise",
+              "error": "Veuillez entrer le type d'entreprise"
+            },
+            "activity_area": {
+              "label": "Superficie",
+              "error": "Veuillez entrer la superficie",
+              "helpText": "Superficie en mètres carrés (m²)",
+              "title": "Seuls les chiffres sont autorisés"
+            },
+            "alcohol_sales": {
+              "label": "Licence d'alcool",
+              "error": "Veuillez indiquer si vous avez une licence d'alcool",
+              "options": {
+                "0": "Non inclus",
+                "1": "Boissons à faible teneur fermées",
+                "2": "Boissons à faible teneur ouvertes",
+                "3": "Boissons à forte teneur fermées",
+                "4": "Boissons à forte teneur ouvertes"
+              }
+            }
+          }
+        },
+        "procedure": {
+          "title": "Informations sur la procédure",
+          "inputs": {
+            "ownershipType": {
+              "label": "Type de propriété",
+              "options": {
+                "owner": "Propriétaire (directement)",
+                "tenant": "Locataire (directement)",
+                "letter": "J'ai reçu une procuration simple devant 2 témoins pour traiter"
+              }
+            },
+            "owner": {
+              "label": "Propriétaire (directement)",
+              "options": {
+                "am": "Je suis le propriétaire du bien",
+                "representative": "Je suis représentant d'une entité juridique propriétaire du bien"
+              }
+            },
+            "tenant": {
+              "label": "Locataire (directement)",
+              "options": {
+                "am": "Je suis le locataire du bien",
+                "representative": "Je suis représentant d'une entité juridique locataire du bien"
+              }
+            },
+            "letter": {
+              "label": "J'ai reçu une procuration simple devant 2 témoins pour traiter",
+              "options": {
+                "personal": "Le propriétaire de l'entreprise sera une personne physique",
+                "legal": "Le propriétaire de l'entreprise sera une entité juridique (Société)"
+              }
+            }
+          }
+        },
+        "construction": {
+          "title": "Informations pour la licence de construction",
+          "inputs": {
+            "street": {
+              "label": "Rue",
+              "error": "Veuillez entrer le nom de la rue"
+            },
+            "neighborhood": {
+              "label": "Quartier",
+              "error": "Veuillez entrer le nom du quartier"
+            },
+            "municipality_name": {
+              "label": "Municipalité",
+              "error": "Veuillez entrer le nom de la municipalité"
+            },
+            "address": {
+              "label": "Adresse",
+              "error": "Veuillez entrer l'adresse"
+            },
+            "interested_party": {
+              "label": "Partie intéressée",
+              "error": "Veuillez entrer le nom de la partie intéressée"
+            }
+          }
+        }
+      },
+      "ctas": {
+        "submit": "Vérifier les exigences",
+        "open": "Vérifier les exigences"
+      }
+    }
+  },
+  "noProperty": {
+    "paragraph": "Pour consulter les exigences ou obtenir plus d'informations, dessinez une propriété.",
+    "drawCTA": "Dessiner une propriété"
+  },
+  "search": {
+    "municipality": "Rechercher une municipalité",
+    "clearMap": "Effacer la carte"
+  },
+  "info": {
+    "dialog": {
+      "title": "Informations des Couches",
+      "noData": "Aucune donnée disponible pour cet emplacement"
+    }
+  },
+  "upload": {
+    "dialog": {
+      "title": "Télécharger un fichier",
+      "disclaimer": "La fonction de téléchargement vous permet de télécharger des fichiers avec des données au format vectoriel.\n\nLes données à télécharger doivent être au format GeoJSON, GeoPackage, KML/KMZ ou Shapefile (ce dernier, étant un format multi-fichier, doit être empaqueté dans un seul fichier .zip avec toutes les parties à l'intérieur, sans utiliser de dossiers).\n\nLe fichier de données vectorielles doit avoir le système de coordonnées de référence (CRS) EPSG:4326. Et il doit être de type géométrie Polygone, aucun autre type de géométrie n'est autorisé.",
+      "continue": "Continuer",
+      "cancel": "Annuler",
+      "selectFile": "Sélectionner un fichier",
+      "fileSelected": "Fichier sélectionné:",
+      "uploadFile": "Télécharger le fichier",
+      "back": "Retour",
+      "upload": "Télécharger",
+      "processing": "Traitement...",
+      "error": "Erreur de Téléchargement",
+      "supportedFormats": "Formats supportés",
+      "dropZone": {
+        "title": "Déposez votre fichier ici ou cliquez pour parcourir",
+        "subtitle": "Sélectionnez un fichier GeoJSON, KML, KMZ ou Shapefile (ZIP) à télécharger"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Enter your email to reset your password",
+  "email": {
+    "label": "Email address",
+    "placeholder": "Enter a valid email"
+  },
+  "submit": "Reset",
+  "submitting": "Sending...",
+  "success": {
+    "message": "A password reset email has been sent to your inbox. Please check your email and follow the instructions."
+  },
+  "error": {
+    "general": "There was an error processing your request. Please try again."
+  }
+}

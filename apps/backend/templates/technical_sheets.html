@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Technical Information Sheet - {{ direccion }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2cm;
+            background-color: #70CE68;
+            color: white;
+            font-size: 12px;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .section {
+            margin: 20px auto;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .box {
+            border: 1px solid #70CE68;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px auto;
+            text-align: center;
+        }
+
+        .box-title {
+            background-color: #70CE68;
+            color: white;
+            padding: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .box-text {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .info-block {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+        .qr {
+            width: 100px;
+            margin: 10px auto;
+        }
+
+        img.reference {
+            width: 100%;
+            max-height: 350px;
+            margin-top: 10px;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+    </style>
+</head>
+<body>
+
+<div id="watermark">
+    <img src="{{ logo }}" style="opacity: 0.1; position: absolute; width: 100%; top: 20%;">
+</div>
+
+{% for feature in features %}
+    {% set props = feature.properties %}
+
+    <div class="section">
+
+        <table style="width:100%;">
+            <thead>
+                <tr>
+                    <th style="text-align:center;">
+                        <img src="data:image/png;base64,{{ qr }}" class="qr" alt="QR Code"><br>
+                        <img src="{{ logo }}" style="max-width:120px;"><br><br>
+
+                        <div class="box">
+                            <div class="box-title">Urban District</div>
+                            <div class="box-text">
+                                <b>{{ municipio.name }}</b> 
+                                
+                                {% if props.district %}
+                                    <p>({{ props.district }})</p>
+                                {% endif %}
+
+                                {% if props.sub_district %}
+                                    <br><b>Subdistrict:</b> {{ props.sub_district }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </th>
+                    <th colspan="2" style="text-align:center;">
+                        <div class="box">
+                            <div class="box-title" style="font-size: 14px;">Approximate Address</div>
+                            <div class="box-text" style="font-size: 13px;">{{ direccion }}</div>
+                        </div>
+                        <img src="{{ img }}" class="reference" alt="Reference Image">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <div class="box">
+                            <div class="box-title">Zoning</div>
+                            <div class="box-text">
+                                {{ props.clave_de_zonificacion }}
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="box">
+                            <div class="box-title">Selected Surface Area</div>
+                            <div class="box-text">
+                                {{ metros.area | round(2) }} m²
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="box">                            
+                            <div class="box-title">
+                            Urbanization and Building Control Norms (
+                            {% if props.normas_control_edificacion and props.normas_control_edificacion|length > 0 and props.normas_control_edificacion[0].alternative_regulation_key %}
+                                {{ props.normas_control_edificacion[0].alternative_regulation_key }}
+                            {% elif props.clave_act %}
+                                {{ props.clave_act }}
+                            {% else %}
+                                Sin clave
+                            {% endif %}
+                            )
+                            </div>
+                            <div class="box-text" style="text-align:left;">
+                                {% if props.normas_control_edificacion and props.normas_control_edificacion|length > 0 %}
+                                    {% set norma = props.normas_control_edificacion[0] %}
+                                    {% if norma.minimum_area %}
+                                        <b>Minimum Lot Area:</b> {{ norma.minimum_area }} m²<br>
+                                    {% endif %}
+                                    {# ...rest of norma fields... #}
+                                {% else %}
+                                    <i>No regulations found for this zoning.</i>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </td>
+
+                    <td colspan="2" style="vertical-align: top; padding-left:20px;">
+                        <h5 style="margin-top:0;">Other Provisions</h5>
+                        {% if props.descripcion_de_clasificacion_de_area_primaria or props.descripcion_de_clasificacion_de_zona_secundaria %}
+                            <b>Zoning Description:</b>
+                            {{ props.descripcion_de_clasificacion_de_area_primaria or '' }}
+                            /
+                            {{ props.descripcion_de_clasificacion_de_zona_secundaria or '' }}
+                            <br>
+                        {% endif %}
+
+                        {% if props.normas_control_edificacion and props.normas_control_edificacion|length > 0 %}
+                            {% set norma = props.normas_control_edificacion[0] %}
+                            {% if norma.business_sector %}
+                                <b>Business Sector:</b> {{ norma.business_sector }}<br>
+                            {% endif %}
+
+                            {% if norma.observations %}
+                                <b>Observations:</b><br>
+                                {% if norma.observations|length > 700 %}
+                                    <span style="font-size: 9px;">
+                                        {{ norma.observations }}
+                                    </span><br>
+                                {% else %}
+                                    <span style="font-size: 12px;">
+                                        {{ norma.observations }}
+                                    </span><br>
+                                {% endif %}
+                            {% endif %}
+                        {% else %}
+                            <i>No regulations found for this zoning.</i>
+                        {% endif %}
+
+                        {% if features|length > 1 %}
+                            <div style="font-size: 10px;">
+                                {% if props.important %}
+                                    <b>Important:</b> {{ props.important }}<br>
+                                {% endif %}
+                                <b>Note:</b> The selected surface area overlaps multiple zoning areas; therefore, one sheet was generated per zoning.
+                            </div>
+                        {% endif %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    {% if features|length > 1 %}
+        <div class="page-break"></div>
+    {% endif %}
+
+{% endfor %}
+
+<footer>
+    This technical sheet is issued by the General Coordination of Government Innovation in accordance with its powers set forth in article 8, section III of the Internal Regulations of the Chief of Staff of the Government of the State of Jalisco. All information disclosed here is obtained from the Partial Urban Development Plans published in the respective Municipal Gazette and is merely informative and for reference only, and is subject to validation by the competent agencies of the corresponding municipality.
+</footer>
+
+</body>
+</html>

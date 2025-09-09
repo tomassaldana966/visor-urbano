@@ -1,0 +1,460 @@
+{
+  "myProcedures": "Mes Procédures",
+  "tabs": {
+    "tab1": {
+      "label": "Mes procédures commerciales",
+      "table": {
+        "columns": {
+          "id": "Référence",
+          "address": "Adresse",
+          "location": "Municipalité",
+          "scian": "SCIAN",
+          "createdAt": "Date d'entrée",
+          "actions": "Actions"
+        },
+        "noData": "Aucun processus commercial"
+      }
+    },
+    "tab2": {
+      "label": "Mes procédures de construction",
+      "table": {
+        "columns": {
+          "id": "Référence",
+          "address": "Adresse",
+          "interestedParty": "Partie intéressée",
+          "createdAt": "Date d'entrée",
+          "updatedAt": "Dernière résolution",
+          "status": "Statut de la dernière résolution",
+          "actions": "Actions"
+        },
+        "noData": "Aucun processus de construction"
+      }
+    }
+  },
+  "actions": {
+    "view": "Voir les détails",
+    "files": "Voir les fichiers",
+    "more": "Plus d'options",
+    "continue": "Continuer le processus"
+  },
+  "status": {
+    "active": "Actif",
+    "completed": "Terminé",
+    "approved": "Approuvé",
+    "inProgress": "En cours",
+    "rejected": "Rejeté",
+    "prevention": "Prévention - Informations Supplémentaires Requises",
+    "pending": "En attente",
+    "noStatus": "Aucun statut"
+  },
+  "search": {
+    "placeholder": "Rechercher par folio, adresse, partie intéressée ou municipalité...",
+    "searching": "Recherche de procédures...",
+    "searchingBusiness": "Recherche de procédures commerciales...",
+    "searchingConstruction": "Recherche de procédures de construction...",
+    "specificDatabaseSearch": "Recherche spécifique dans la base de données",
+    "noResultsBusiness": "Aucune procédure commerciale trouvée correspondant à",
+    "noResultsConstruction": "Aucune procédure de construction trouvée correspondant à",
+    "tips": {
+      "title": "💡 Conseil : Si vous cherchez le folio",
+      "inConstruction": "Votre procédure est dans l'onglet",
+      "inBusiness": "Votre procédure est dans l'onglet",
+      "constructionTab": "Construction",
+      "businessTab": "Procédures Commerciales",
+      "result": "résultat",
+      "results": "résultats",
+      "notFound": "Ce folio n'a pas été trouvé. Vérifiez qu'il est correctement écrit ou qu'il appartient à votre utilisateur."
+    }
+  },
+  "limits": {
+    "businessNote": "Affichage des 100 premières procédures commerciales. Si vous ne trouvez pas la procédure que vous cherchez, utilisez la recherche ou elle peut être dans des enregistrements ultérieurs.",
+    "constructionNote": "Affichage des 100 premières procédures de construction. Si vous ne trouvez pas la procédure que vous cherchez, utilisez la recherche ou elle peut être dans des enregistrements ultérieurs.",
+    "maxReached": "Limite maximale de résultats atteinte. Contactez l'administrateur si vous devez voir plus de procédures."
+  },
+  "modal": {
+    "title": "Détails du Processus",
+    "step": "Étape",
+    "basicInfo": "Informations de Base",
+    "folio": "Référence",
+    "applicant": "Demandeur",
+    "businessName": "Nom de l'Entreprise",
+    "location": "Localisation",
+    "address": "Adresse",
+    "businessInfo": "Informations Commerciales",
+    "scianCode": "Code SCIAN",
+    "scianDescription": "Description SCIAN",
+    "dates": "Dates",
+    "createdAt": "Date de Création",
+    "updatedAt": "Dernière Mise à Jour",
+    "startDate": "Date de Début",
+    "close": "Fermer"
+  },
+  "filesModal": {
+    "title": "Fichiers du Processus",
+    "loading": "Chargement des fichiers...",
+    "retry": "Réessayer",
+    "noFiles": "Aucun fichier disponible pour ce processus",
+    "file": "Fichier",
+    "uploadDate": "Date de téléchargement",
+    "modifiedDate": "Date de modification",
+    "view": "Voir le fichier",
+    "download": "Télécharger",
+    "close": "Fermer"
+  },
+  "detail": {
+    "title": "Détail du Processus",
+    "breadcrumb": "Détail",
+    "backToProcedures": "Retour aux Procédures",
+    "editProcedure": "Modifier la Procédure",
+    "downloadPdf": "Télécharger PDF",
+    "downloadLicense": "Télécharger la Licence",
+    "downloadingLicense": "Téléchargement de la Licence...",
+    "viewFiles": "Voir les Fichiers",
+    "progress": {
+      "title": "Progression du Processus",
+      "steps": {
+        "construction": {
+          "submission": "Soumission de Documents",
+          "technicalReview": "Révision Technique",
+          "departmentApproval": "Approbation Départementale",
+          "directorApproval": "Approbation Directeur",
+          "licenseGeneration": "Génération de Licence"
+        },
+        "commercial": {
+          "submission": "Réception",
+          "validation": "Validation",
+          "processing": "Traitement",
+          "approval": "Approbation",
+          "delivery": "Livraison"
+        },
+        "renewal": {
+          "submission": "Application",
+          "verification": "Vérification",
+          "approval": "Approbation",
+          "issuance": "Émission"
+        },
+        "generic": {
+          "start": "Début",
+          "review": "Révision",
+          "approval": "Approbation",
+          "completion": "Achèvement"
+        }
+      },
+      "descriptions": {
+        "construction": {
+          "submission": "Documents soumis et validés",
+          "technicalReview": "Analyse technique et réglementaire",
+          "departmentApproval": "Révision par les départements spécialisés",
+          "directorApproval": "Approbation finale du directeur",
+          "licenseGeneration": "Émission finale de la licence"
+        },
+        "commercial": {
+          "submission": "Documents reçus",
+          "validation": "Vérification des exigences",
+          "processing": "Analyse et évaluation",
+          "approval": "Approbation finale",
+          "delivery": "Licence prête pour livraison"
+        },
+        "renewal": {
+          "submission": "Demande de renouvellement",
+          "verification": "Vérification des antécédents",
+          "approval": "Approbation du renouvellement",
+          "issuance": "Nouvelle licence émise"
+        },
+        "generic": {
+          "start": "Processus initié",
+          "review": "Sous révision",
+          "approval": "Processus d'approbation",
+          "completion": "Processus terminé"
+        }
+      }
+    },
+    "sections": {
+      "general": {
+        "title": "Informations Générales",
+        "folio": "Référence",
+        "type": "Type de Processus",
+        "licenseStatus": "Statut de la Licence",
+        "startDate": "Date de Début",
+        "lastUpdate": "Dernière Mise à Jour",
+        "procedureType": "Type",
+        "created": "Créé"
+      },
+      "applicant": {
+        "title": "Informations du Demandeur",
+        "name": "Nom du Demandeur",
+        "userId": "ID Utilisateur",
+        "entryRole": "Rôle d'Entrée",
+        "responsibilityLetter": "Lettre de Responsabilité"
+      },
+      "property": {
+        "title": "Informations de la Propriété",
+        "address": "Adresse",
+        "scianCode": "Code SCIAN",
+        "scianDescription": "Description SCIAN",
+        "businessName": "Nom de l'Entreprise"
+      },
+      "workflow": {
+        "title": "Statut du Flux de Travail",
+        "step1": "Étape 1",
+        "step2": "Étape 2",
+        "step3": "Étape 3",
+        "step4": "Étape 4",
+        "directorApproval": "Approbation du Directeur",
+        "licenseGenerated": "Licence Générée"
+      },
+      "dates": {
+        "title": "Dates du Processus",
+        "documentsSubmission": "Soumission de Documents",
+        "procedureStart": "Début du Processus",
+        "windowSeen": "Fenêtre Vue",
+        "licenseDelivered": "Licence Livrée",
+        "noSignature": "Aucune Signature",
+        "sentToReviewers": "Envoyé aux Réviseurs"
+      },
+      "observations": {
+        "title": "Observations"
+      },
+      "actions": {
+        "title": "Actions",
+        "viewDocuments": "Voir les Documents",
+        "downloadFile": "Télécharger le Fichier",
+        "downloadLicense": "Télécharger la Licence",
+        "paymentOrder": "Ordre de Paiement",
+        "viewOnMap": "Voir sur la Carte"
+      },
+      "documents": {
+        "title": "Documents Requis",
+        "noDocuments": "Aucun document disponible",
+        "noDocumentsDescription": "Aucun document joint trouvé pour cette procédure.",
+        "download": "Télécharger",
+        "close": "Fermer",
+        "names": {
+          "identificacionOficial": "Identification officielle du demandeur",
+          "comprobanteDomicilio": "Justificatif de domicile de l'établissement",
+          "contratoArrendamiento": "Contrat de location (si applicable)",
+          "licenciaFuncionamiento": "Licence d'exploitation",
+          "cartaPoder": "Procuration",
+          "actaConstitutiva": "Acte constitutif",
+          "cedulaProfesional": "Licence professionnelle",
+          "planosArquitectonicos": "Plans architecturaux",
+          "memoriaCalculo": "Mémoire de calcul",
+          "estudioImpacto": "Étude d'impact",
+          "defaultDocument": "Document"
+        }
+      },
+      "resolutions": {
+        "title": "Résolutions de la procédure",
+        "loading": "Chargement des résolutions...",
+        "error": "Impossible de charger les résolutions",
+        "noResolutions": "Aucune résolution enregistrée",
+        "downloadError": "Erreur lors du téléchargement du fichier",
+        "table": {
+          "headers": {
+            "date": "Date",
+            "status": "Statut",
+            "text": "Texte",
+            "file": "Fichier",
+            "user": "Utilisateur"
+          },
+          "actions": {
+            "download": "Télécharger",
+            "downloadTitle": "Télécharger le fichier de résolution"
+          }
+        }
+      },
+      "dynamicFields": {
+        "title": "Informations Supplémentaires",
+        "noSection": "Section",
+        "question": "Question",
+        "ofForm": "du formulaire"
+      }
+    },
+    "status": {
+      "active": "Actif",
+      "pending": "En attente",
+      "rejected": "Rejeté",
+      "unknown": "Inconnu",
+      "available": "Disponible",
+      "notAvailable": "Non disponible",
+      "noAddress": "Adresse non disponible",
+      "notSpecified": "Non spécifié"
+    }
+  },
+  "new": {
+    "title": "Nouveau Processus",
+    "subtitle": "Entrez la référence pour commencer le processus",
+    "breadcrumb": "Nouveau processus",
+    "buttonText": "Nouveau processus",
+    "form": {
+      "title": "Entrer la référence",
+      "description": "Entrez la référence que vous avez obtenue de la carte pour continuer avec votre processus",
+      "folioLabel": "Référence du processus",
+      "folioPlaceholder": "Exemple: 1-1/2025",
+      "folioHelp": "Entrez la référence fournie par la carte",
+      "businessTypeLabel": "Type d'entreprise",
+      "businessTypePlaceholder": "Sélectionner le type d'entreprise",
+      "businessTypeHelp": "Sélectionnez le type d'entreprise qui décrit le mieux votre entreprise",
+      "privacyLabel": "J'ai lu et j'accepte l'",
+      "privacyLink": "avis de confidentialité",
+      "submitButton": "Commencer le processus",
+      "newTramiteButton": "Nouveau processus",
+      "backToMapButton": "Aller à la carte"
+    },
+    "validation": {
+      "folioRequired": "La référence est requise",
+      "privacyRequired": "Doit accepter l'avis de confidentialité"
+    },
+    "messages": {
+      "validating": "Validation de la référence...",
+      "creating": "Création du processus...",
+      "submitting": "Traitement...",
+      "folioNotFound": "La référence n'existe pas",
+      "folioInvalid": "La référence du processus n'existe pas ou n'est plus valide. Entrez-en une correcte ou vérifiez à nouveau les exigences ici",
+      "municipalityNotAvailable": "Cette municipalité n'est pas disponible pour les procédures en ligne, il est donc recommandé de s'y rendre pour effectuer la procédure et valider la validité des exigences.",
+      "success": "Processus démarré avec succès",
+      "error": "Une erreur s'est produite lors du traitement de votre demande"
+    }
+  },
+  "edit": {
+    "title": "Modifier la Procédure",
+    "subtitle": "Modifier les informations de la procédure",
+    "breadcrumb": "Modifier",
+    "sections": {
+      "section1": {
+        "title": "Informations du Demandeur",
+        "description": "Données de celui qui traite la procédure et type de propriétaire",
+        "icon": "user"
+      },
+      "section2": {
+        "title": "Informations de l'Établissement",
+        "description": "Données des locaux commerciaux et localisation",
+        "icon": "building"
+      },
+      "section3": {
+        "title": "Informations Commerciales",
+        "description": "Type d'activité, description et fonctionnement",
+        "icon": "briefcase"
+      },
+      "section4": {
+        "title": "Documents Requis",
+        "description": "Identification officielle et justificatifs",
+        "icon": "fileText"
+      },
+      "formSections": "Sections du formulaire"
+    },
+    "form": {
+      "saveButton": "Enregistrer",
+      "saveAndContinueButton": "Enregistrer et continuer",
+      "nextButton": "Suivant",
+      "previousButton": "Précédent",
+      "cancelButton": "Annuler",
+      "finishButton": "Terminer",
+      "uploadFile": "Télécharger le fichier",
+      "chooseFile": "Choisir un fichier",
+      "noFileSelected": "Aucun fichier sélectionné",
+      "fileRequired": "Ce fichier est requis",
+      "maxFileSize": "Taille maximale: 15MB",
+      "copyFromApplicant": "Copier les informations du demandeur",
+      "formSections": "Sections du Formulaire",
+      "section": "Section",
+      "step1": "Informations du Demandeur",
+      "step2": "Informations du Propriétaire",
+      "step3": "Informations de la Propriété",
+      "step4": "Informations de l'Établissement",
+      "fieldsCount": "champs",
+      "noFieldsInSection": "Aucun champ dans cette section",
+      "noFieldsAvailable": "Aucun champ disponible",
+      "noFieldsDescription": "Cette procédure n'a aucun champ modifiable disponible.",
+      "licenseInformation": "Informations de licence"
+    },
+    "validation": {
+      "fieldRequired": "Ce champ est requis",
+      "invalidEmail": "Adresse e-mail invalide",
+      "invalidPhone": "Numéro de téléphone invalide",
+      "invalidCURP": "CURP invalide (doit contenir 18 caractères)",
+      "invalidRFC": "RFC invalide (12-13 caractères)",
+      "invalidPostalCode": "Code postal invalide (5 chiffres)",
+      "fileTooLarge": "Le fichier est trop volumineux (maximum 15MB)",
+      "invalidFileType": "Type de fichier invalide"
+    },
+    "messages": {
+      "saving": "Enregistrement...",
+      "loading": "Chargement des informations...",
+      "loadingFields": "Chargement des champs dynamiques...",
+      "sectionSaved": "Section enregistrée avec succès",
+      "procedureUpdated": "Procédure mise à jour avec succès",
+      "error": "Erreur lors de l'enregistrement des données",
+      "networkError": "Erreur de connexion",
+      "unauthorized": "Non autorisé à effectuer cette action"
+    },
+    "status": {
+      "completed": "Terminé",
+      "pending": "En attente",
+      "inProgress": "En cours",
+      "saved": "Enregistré",
+      "error": "Erreur"
+    },
+    "actions": {
+      "backToProcedures": "Retour à Mes Procédures",
+      "viewDetails": "Voir les Détails",
+      "saveSection": "Enregistrer la Section",
+      "downloadPdf": "Télécharger PDF",
+      "submitForReview": "Soumettre pour Révision",
+      "resubmitForReview": "Resoumettre pour Révision",
+      "updateSubmission": "Mettre à Jour la Soumission"
+    },
+    "submitForReview": {
+      "title": "Soumettre pour Révision",
+      "description": "Soumettez votre procédure pour révision par les agences correspondantes",
+      "confirmTitle": "Soumettre la procédure pour révision ?",
+      "confirmMessage": "Une fois soumise pour révision, vous ne pourrez plus apporter de modifications jusqu'à ce que vous receviez une réponse. Êtes-vous sûr ?",
+      "confirmButton": "Oui, soumettre pour révision",
+      "cancelButton": "Annuler",
+      "success": "Procédure soumise pour révision avec succès",
+      "validating": "Validation des champs requis...",
+      "submitting": "Soumission pour révision...",
+      "errors": {
+        "noFolio": "Folio de la procédure non trouvé",
+        "noToken": "Jeton d'authentification non trouvé",
+        "missingFields": "Champs requis manquants à compléter :",
+        "notDraft": "La procédure n'est pas en statut brouillon",
+        "alreadySubmitted": "La procédure a déjà été soumise pour révision",
+        "networkError": "Erreur de connexion lors de la soumission de la procédure",
+        "serverError": "Erreur du serveur lors du traitement de la demande",
+        "validationFailed": "Erreur de validation. Veuillez vérifier que tous les champs sont complets.",
+        "unauthorized": "Vous n'avez pas la permission de soumettre cette procédure"
+      }
+    },
+    "pdf": {
+      "title": "Informations de la Procédure",
+      "folio": "Référence",
+      "generalInfo": "Informations Générales",
+      "addressInfo": "Informations d'Adresse",
+      "generatedOn": "Généré le",
+      "page": "Page",
+      "procedureTypes": {
+        "businessLicense": "Licence Commerciale",
+        "buildingLicense": "Licence de Construction"
+      },
+      "fields": {
+        "folio": "Référence",
+        "status": "Statut",
+        "type": "Type de Procédure",
+        "created": "Date de Création",
+        "updated": "Dernière Mise à Jour",
+        "applicantName": "Nom du Demandeur",
+        "establishmentName": "Nom de l'Établissement",
+        "establishmentAddress": "Adresse de l'Établissement",
+        "establishmentPhone": "Téléphone de l'Établissement",
+        "establishmentArea": "Zone de l'Établissement",
+        "businessName": "Nom de l'Entreprise",
+        "businessSector": "Secteur Commercial",
+        "businessActivity": "Activité Commerciale",
+        "operatingHours": "Heures d'Ouverture",
+        "employeeCount": "Nombre d'Employés",
+        "address": "Adresse"
+      }
+    }
+  }
+}

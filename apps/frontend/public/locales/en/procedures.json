@@ -1,0 +1,479 @@
+{
+  "myProcedures": "My Procedures",
+  "tabs": {
+    "tab1": {
+      "label": "My business procedures",
+      "table": {
+        "columns": {
+          "id": "Folio",
+          "address": "Address",
+          "location": "Municipality",
+          "scian": "SCIAN",
+          "createdAt": "Date of entry",
+          "actions": "Actions"
+        },
+        "noData": "No business processes"
+      }
+    },
+    "tab2": {
+      "label": "My construction procedures",
+      "table": {
+        "columns": {
+          "id": "Folio",
+          "address": "Address",
+          "interestedParty": "Interested party",
+          "createdAt": "Date of entry",
+          "updatedAt": "Last resolution",
+          "status": "Last resolution status",
+          "actions": "Actions"
+        },
+        "noData": "No construction processes"
+      }
+    }
+  },
+  "actions": {
+    "view": "View details",
+    "files": "View files",
+    "more": "More options",
+    "continue": "Continue process"
+  },
+  "status": {
+    "active": "Active",
+    "completed": "Completed",
+    "approved": "Approved",
+    "inProgress": "In progress",
+    "rejected": "Rejected",
+    "pending": "Pending",
+    "noStatus": "No status"
+  },
+  "search": {
+    "placeholder": "Search by folio, address, interested party or municipality...",
+    "searching": "Searching procedures...",
+    "searchingBusiness": "Searching business procedures...",
+    "searchingConstruction": "Searching construction procedures...",
+    "specificDatabaseSearch": "Specific database search",
+    "noResultsBusiness": "No business procedures found matching",
+    "noResultsConstruction": "No construction procedures found matching",
+    "tips": {
+      "title": "💡 Tip: If you're looking for folio",
+      "inConstruction": "Your procedure is in the tab",
+      "inBusiness": "Your procedure is in the tab",
+      "constructionTab": "Construction",
+      "businessTab": "Business Procedures",
+      "result": "result",
+      "results": "results",
+      "notFound": "This folio was not found. Verify that it is spelled correctly or that it belongs to your user."
+    }
+  },
+  "limits": {
+    "businessNote": "Showing the first 100 business procedures. If you can't find the procedure you're looking for, use the search or it may be in later records.",
+    "constructionNote": "Showing the first 100 construction procedures. If you can't find the procedure you're looking for, use the search or it may be in later records.",
+    "maxReached": "Maximum limit of results reached. Contact the administrator if you need to see more procedures."
+  },
+  "modal": {
+    "title": "Process Details",
+    "step": "Step",
+    "basicInfo": "Basic Information",
+    "folio": "Folio",
+    "applicant": "Applicant",
+    "businessName": "Business Name",
+    "location": "Location",
+    "address": "Address",
+    "businessInfo": "Business Information",
+    "scianCode": "SCIAN Code",
+    "scianDescription": "SCIAN Description",
+    "dates": "Dates",
+    "createdAt": "Created Date",
+    "updatedAt": "Last Updated",
+    "startDate": "Start Date",
+    "close": "Close"
+  },
+  "filesModal": {
+    "title": "Process Files",
+    "loading": "Loading files...",
+    "retry": "Retry",
+    "noFiles": "No files available for this process",
+    "file": "File",
+    "uploadDate": "Upload date",
+    "modifiedDate": "Modified date",
+    "view": "View file",
+    "download": "Download",
+    "close": "Close"
+  },
+  "detail": {
+    "title": "Process Detail",
+    "breadcrumb": "Detail",
+    "backToProcedures": "Back to Procedures",
+    "editProcedure": "Edit Procedure",
+    "downloadPdf": "Download PDF",
+    "downloadLicense": "Download License",
+    "downloadingLicense": "Downloading License...",
+    "viewFiles": "View Files",
+    "progress": {
+      "title": "Process Progress",
+      "steps": {
+        "construction": {
+          "submission": "Document Submission",
+          "technicalReview": "Technical Review",
+          "departmentApproval": "Department Approval",
+          "directorApproval": "Director Approval",
+          "licenseGeneration": "License Generation"
+        },
+        "commercial": {
+          "submission": "Reception",
+          "validation": "Validation",
+          "processing": "Processing",
+          "approval": "Approval",
+          "delivery": "Delivery"
+        },
+        "renewal": {
+          "submission": "Application",
+          "verification": "Verification",
+          "approval": "Approval",
+          "issuance": "Issuance"
+        },
+        "generic": {
+          "start": "Start",
+          "review": "Review",
+          "approval": "Approval",
+          "completion": "Completion"
+        }
+      },
+      "descriptions": {
+        "construction": {
+          "submission": "Documents submitted and validated",
+          "technicalReview": "Technical and regulatory analysis",
+          "departmentApproval": "Review by specialized departments",
+          "directorApproval": "Final director approval",
+          "licenseGeneration": "Final license issuance"
+        },
+        "commercial": {
+          "submission": "Documents received",
+          "validation": "Requirements verification",
+          "processing": "Analysis and assessment",
+          "approval": "Final approval",
+          "delivery": "License ready for delivery"
+        },
+        "renewal": {
+          "submission": "Renewal application",
+          "verification": "Background verification",
+          "approval": "Renewal approval",
+          "issuance": "New license issued"
+        },
+        "generic": {
+          "start": "Process initiated",
+          "review": "Under review",
+          "approval": "Approval process",
+          "completion": "Process completed"
+        }
+      }
+    },
+    "sections": {
+      "general": {
+        "title": "General Information",
+        "folio": "Folio",
+        "type": "Process Type",
+        "licenseStatus": "License Status",
+        "startDate": "Start Date",
+        "lastUpdate": "Last Update",
+        "procedureType": "Type",
+        "created": "Created"
+      },
+      "applicant": {
+        "title": "Applicant Information",
+        "name": "Applicant Name",
+        "userId": "User ID",
+        "entryRole": "Entry Role",
+        "responsibilityLetter": "Responsibility Letter"
+      },
+      "property": {
+        "title": "Property Information",
+        "address": "Address",
+        "scianCode": "SCIAN Code",
+        "scianDescription": "SCIAN Description",
+        "businessName": "Business Name"
+      },
+      "workflow": {
+        "title": "Workflow Status",
+        "step1": "Step 1",
+        "step2": "Step 2",
+        "step3": "Step 3",
+        "step4": "Step 4",
+        "directorApproval": "Director Approval",
+        "licenseGenerated": "License Generated"
+      },
+      "dates": {
+        "title": "Process Dates",
+        "documentsSubmission": "Documents Submission",
+        "procedureStart": "Process Start",
+        "windowSeen": "Window Seen",
+        "licenseDelivered": "License Delivered",
+        "noSignature": "No Signature",
+        "sentToReviewers": "Sent to Reviewers"
+      },
+      "observations": {
+        "title": "Observations"
+      },
+      "actions": {
+        "title": "Actions",
+        "viewDocuments": "View Documents",
+        "downloadFile": "Download File",
+        "downloadLicense": "Download License",
+        "paymentOrder": "Payment Order",
+        "viewOnMap": "View on Map"
+      },
+      "documents": {
+        "title": "Required Documents",
+        "noDocuments": "No documents available",
+        "noDocumentsDescription": "No attached documents found for this procedure.",
+        "download": "Download",
+        "close": "Close",
+        "names": {
+          "identificacionOficial": "Official identification of the applicant",
+          "comprobanteDomicilio": "Proof of address of the establishment",
+          "contratoArrendamiento": "Lease agreement (if applicable)",
+          "licenciaFuncionamiento": "Operating license",
+          "cartaPoder": "Power of attorney",
+          "actaConstitutiva": "Articles of incorporation",
+          "cedulaProfesional": "Professional license",
+          "planosArquitectonicos": "Architectural plans",
+          "memoriaCalculo": "Calculation report",
+          "estudioImpacto": "Impact study",
+          "defaultDocument": "Document"
+        }
+      },
+      "resolutions": {
+        "title": "Procedure Resolutions",
+        "loading": "Loading resolutions...",
+        "error": "Could not load resolutions",
+        "noResolutions": "No resolutions registered",
+        "downloadError": "Error downloading file",
+        "table": {
+          "headers": {
+            "date": "Date",
+            "status": "Status",
+            "text": "Text",
+            "file": "File",
+            "user": "User"
+          },
+          "actions": {
+            "download": "Download",
+            "downloadTitle": "Download resolution file"
+          }
+        }
+      },
+      "dynamicFields": {
+        "title": "Additional Information",
+        "noSection": "Section",
+        "question": "Question",
+        "ofForm": "of form"
+      }
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending",
+      "rejected": "Rejected",
+      "unknown": "Unknown",
+      "available": "Available",
+      "notAvailable": "Not available",
+      "noAddress": "Address not available",
+      "notSpecified": "Not specified"
+    }
+  },
+  "new": {
+    "title": "New Process",
+    "subtitle": "Enter folio to start process",
+    "breadcrumb": "New process",
+    "buttonText": "New process",
+    "form": {
+      "title": "Enter folio",
+      "description": "Enter the folio you obtained from the map to continue with your process",
+      "folioLabel": "Process folio",
+      "folioPlaceholder": "Example: 1-1/2025",
+      "folioHelp": "Enter the folio provided by the map",
+      "businessTypeLabel": "Business type",
+      "businessTypePlaceholder": "Select business type",
+      "businessTypeHelp": "Select the business type that best describes your business",
+      "privacyLabel": "I have read and accept the ",
+      "privacyLink": "privacy notice",
+      "submitButton": "Start process",
+      "newTramiteButton": "New process",
+      "backToMapButton": "Go to map"
+    },
+    "validation": {
+      "folioRequired": "Folio is required",
+      "privacyRequired": "Must accept the privacy notice"
+    },
+    "messages": {
+      "validating": "Validating folio...",
+      "creating": "Creating process...",
+      "submitting": "Processing...",
+      "folioNotFound": "Folio does not exist",
+      "folioInvalid": "The process folio does not exist or is no longer valid. Enter a correct one or check the requirements again here",
+      "municipalityNotAvailable": "This municipality is not available for online procedures, so it is recommended to go to it to carry out the procedure and validate the validity of the requirements.",
+      "success": "Process started successfully",
+      "error": "An error occurred while processing your request"
+    }
+  },
+  "edit": {
+    "title": "Edit Procedure",
+    "subtitle": "Edit procedure information",
+    "breadcrumb": "Edit",
+    "sections": {
+      "section1": {
+        "title": "Applicant Information",
+        "description": "Data of who processes the procedure and owner type",
+        "icon": "user"
+      },
+      "section2": {
+        "title": "Establishment Information",
+        "description": "Commercial premises data and location",
+        "icon": "building"
+      },
+      "section3": {
+        "title": "Business Information",
+        "description": "Type of activity, description and operation",
+        "icon": "briefcase"
+      },
+      "section4": {
+        "title": "Required Documents",
+        "description": "Official identification and vouchers",
+        "icon": "fileText"
+      },
+      "formSections": "Form sections"
+    },
+    "form": {
+      "saveButton": "Save",
+      "saveAndContinueButton": "Save and continue",
+      "nextButton": "Next",
+      "previousButton": "Previous",
+      "cancelButton": "Cancel",
+      "finishButton": "Finish",
+      "uploadFile": "Upload file",
+      "chooseFile": "Choose file",
+      "noFileSelected": "No file selected",
+      "fileRequired": "This file is required",
+      "maxFileSize": "Maximum size: 15MB",
+      "copyFromApplicant": "Copy information from applicant",
+      "formSections": "Form Sections",
+      "section": "Section",
+      "step1": "Applicant Information",
+      "step2": "Property Owner Information",
+      "step3": "Property Information",
+      "step4": "Establishment Information",
+      "fieldsCount": "fields",
+      "noFieldsInSection": "No fields in this section",
+      "noFieldsAvailable": "No fields available",
+      "noFieldsDescription": "This procedure has no editable fields available.",
+      "licenseInformation": "License information"
+    },
+    "validation": {
+      "fieldRequired": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number",
+      "invalidCURP": "Invalid CURP (must be 18 characters)",
+      "invalidRFC": "Invalid RFC (12-13 characters)",
+      "invalidPostalCode": "Invalid postal code (5 digits)",
+      "fileTooLarge": "File is too large (maximum 15MB)",
+      "invalidFileType": "Invalid file type"
+    },
+    "messages": {
+      "saving": "Saving...",
+      "loading": "Loading information...",
+      "loadingFields": "Loading dynamic fields...",
+      "sectionSaved": "Section saved successfully",
+      "procedureUpdated": "Procedure updated successfully",
+      "error": "Error saving data",
+      "networkError": "Connection error",
+      "unauthorized": "Not authorized to perform this action"
+    },
+    "status": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "inProgress": "In progress",
+      "saved": "Saved",
+      "error": "Error"
+    },
+    "actions": {
+      "backToProcedures": "Back to My Procedures",
+      "viewDetails": "View Details",
+      "saveSection": "Save Section",
+      "downloadPdf": "Download PDF",
+      "submitForReview": "Submit for Review",
+      "resubmitForReview": "Resubmit for Review",
+      "updateSubmission": "Update Submission"
+    },
+    "submitForReview": {
+      "title": "Submit for Review",
+      "description": "Submit your procedure for review by the corresponding agencies",
+      "confirmTitle": "Submit procedure for review?",
+      "confirmMessage": "Once submitted for review, you won't be able to make changes until you receive a response. Are you sure?",
+      "confirmButton": "Yes, submit for review",
+      "cancelButton": "Cancel",
+      "success": "Procedure submitted for review successfully",
+      "validating": "Validating required fields...",
+      "submitting": "Submitting for review...",
+      "errors": {
+        "noFolio": "Procedure folio not found",
+        "noToken": "Authentication token not found",
+        "missingFields": "Missing required fields to complete:",
+        "notDraft": "The procedure is not in draft status",
+        "alreadySubmitted": "The procedure has already been submitted for review",
+        "networkError": "Connection error when submitting the procedure",
+        "serverError": "Server error while processing the request",
+        "validationFailed": "Validation error. Please verify that all fields are complete.",
+        "unauthorized": "You don't have permission to submit this procedure"
+      }
+    },
+    "pdf": {
+      "title": "Procedure Information",
+      "folio": "Folio",
+      "generalInfo": "General Information",
+      "addressInfo": "Address Information",
+      "generatedOn": "Generated on",
+      "page": "Page",
+      "procedureTypes": {
+        "businessLicense": "Business License",
+        "buildingLicense": "Building License"
+      },
+      "fields": {
+        "folio": "Folio",
+        "status": "Status",
+        "type": "Procedure Type",
+        "created": "Creation Date",
+        "updated": "Last Update",
+        "applicantName": "Applicant Name",
+        "establishmentName": "Establishment Name",
+        "establishmentAddress": "Establishment Address",
+        "establishmentPhone": "Establishment Phone",
+        "establishmentArea": "Establishment Area",
+        "businessName": "Business Name",
+        "businessSector": "Business Sector",
+        "businessActivity": "Business Activity",
+        "operatingHours": "Operating Hours",
+        "employeeCount": "Employee Count",
+        "address": "Address"
+      }
+    }
+  },
+  "workflow": {
+    "states": {
+      "inicio": "Start",
+      "revision": "Review",
+      "aprobacion": "Approval",
+      "finalizacion": "Completion"
+    },
+    "descriptions": {
+      "inicio": "Procedure started",
+      "revision": "Under review",
+      "aprobacion": "Approval process",
+      "finalizacion": "Procedure completed"
+    },
+    "statusMessages": {
+      "rejected": "Procedure Rejected",
+      "prevention": "Prevention - Additional Information Required",
+      "approvedPending": "Procedure Approved - Pending License Issuance",
+      "completed": "Procedure Completed Successfully"
+    }
+  }
+}

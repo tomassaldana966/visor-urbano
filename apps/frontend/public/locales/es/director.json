@@ -1,0 +1,1191 @@
+{
+  "title": "Dashboard Director",
+  "welcome": "Bienvenido de vuelta, {{name}}",
+  "lastUpdate": "Última actualización",
+  "metrics": {
+    "totalProcedures": "Total de Trámites",
+    "pendingApprovals": "Pendientes de Aprobación",
+    "completedToday": "Completados Hoy",
+    "licensesIssuedToday": "Licencias Emitidas Hoy",
+    "averageProcessingTime": "Tiempo Promedio",
+    "trends": {
+      "up": "+{{value}} vs {{period}}",
+      "down": "-{{value}} vs {{period}}",
+      "previousMonth": "mes anterior",
+      "previousDay": "ayer",
+      "vsYesterday": "vs ayer"
+    }
+  },
+  "activity": {
+    "title": "Actividad Reciente",
+    "viewAll": "Ver todo",
+    "noActivity": "No hay actividad reciente",
+    "types": {
+      "approval": "Aprobación",
+      "rejection": "Rechazo",
+      "review": "Revisión",
+      "submission": "Registro",
+      "alert": "Alerta"
+    },
+    "priority": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "labels": {
+      "folio": "Folio",
+      "user": "Usuario"
+    }
+  },
+  "summary": {
+    "title": "Resumen del Mes",
+    "categories": {
+      "construction": "Construcción",
+      "commercial": "Comercial",
+      "others": "Otros"
+    }
+  },
+  "quickActions": {
+    "title": "Acciones Rápidas",
+    "subtitle": "Gestión directiva del sistema",
+    "actions": {
+      "reviews": {
+        "label": "Revisar Trámites",
+        "description": "Gestionar trámites en revisión"
+      },
+      "approvals": {
+        "label": "Aprobaciones Pendientes",
+        "description": "Procesar aprobaciones directivas"
+      },
+      "notifications": {
+        "label": "Notificaciones",
+        "description": "Ver alertas y notificaciones"
+      },
+      "analytics": {
+        "label": "Ver Analíticas",
+        "description": "Reportes y métricas de desempeño"
+      },
+      "dependencies": {
+        "label": "Dependencias",
+        "description": "Gestionar departamentos y requisitos"
+      },
+      "users": {
+        "label": "Gestionar Usuarios",
+        "description": "Administrar personal municipal"
+      },
+      "export": {
+        "label": "Exportar Reportes",
+        "description": "Generar informes ejecutivos"
+      },
+      "municipalLayers": {
+        "label": "Capas Municipales",
+        "description": "Administrar capas cartográficas del municipio"
+      },
+      "impactManagement": {
+        "label": "Gestión de Impacto",
+        "description": "Administrar niveles de impacto de zonificación"
+      },
+      "impactMap": {
+        "label": "Mapa de Impacto",
+        "description": "Mapa interactivo para gestionar zonas de impacto"
+      },
+      "roles": {
+        "label": "Gestionar Roles",
+        "description": "Administrar roles y permisos del sistema"
+      },
+      "requirements": {
+        "label": "Gestionar Requisitos",
+        "description": "Administrar campos y requisitos de trámites"
+      },
+      "businessTypes": {
+        "label": "Gestionar Giros",
+        "description": "Administrar tipos de negocio y giros comerciales"
+      },
+      "blog": {
+        "label": "Gestionar Blog",
+        "description": "Crear, editar y eliminar entradas de blog/noticias"
+      },
+      "settings": {
+        "label": "Configuración",
+        "description": "Ajustes del sistema"
+      }
+    }
+  },
+  "navigation": {
+    "dashboard": "Dashboard Director",
+    "reviews": "En Revisión",
+    "approvals": "Aprobaciones",
+    "impactMap": "Mapa de Impacto",
+    "analytics": "Analíticas",
+    "dependencies": "Dependencias",
+    "users": "Usuarios",
+    "settings": "Configuración",
+    "roles": "Roles",
+    "requirements": "Requisitos",
+    "businessTypes": "Giros",
+    "blog": "Blog",
+    "municipalLayers": "Capas Municipales",
+    "impactManagement": "Gestión de Impactos"
+  },
+  "time": {
+    "days": "días",
+    "hours": "horas",
+    "ago": "hace {{time}}"
+  },
+  "mockData": {
+    "activities": {
+      "licenseApproved": {
+        "title": "Licencia de construcción aprobada",
+        "description": "Proyecto residencial en Zona Norte"
+      },
+      "newReview": {
+        "title": "Nuevo trámite pendiente de revisión",
+        "description": "Licencia comercial - Restaurante"
+      },
+      "incompleteDoc": {
+        "title": "Documentación incompleta",
+        "description": "Falta plano arquitectónico"
+      },
+      "newSubmission": {
+        "title": "Nuevo trámite registrado",
+        "description": "Licencia de funcionamiento comercial"
+      }
+    },
+    "userNames": {
+      "juanPerez": "Juan Pérez",
+      "mariaGarcia": "María García",
+      "carlosLopez": "Carlos López",
+      "anaMartinez": "Ana Martínez"
+    },
+    "timeAgo": {
+      "2hours": "2 horas",
+      "4hours": "4 horas",
+      "6hours": "6 horas",
+      "8hours": "8 horas"
+    },
+    "averageTime": "3.2 días"
+  },
+  "reviewsOld": {
+    "title": "Revisiones de Trámites",
+    "subtitle": "Gestiona y revisa los trámites municipales pendientes",
+    "filter": "Filtrar",
+    "export": "Exportar",
+    "priority": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "status": {
+      "pending_review": "Pendiente de Revisión",
+      "in_review": "En Revisión",
+      "approved": "Aprobado",
+      "rejected": "Rechazado"
+    },
+    "fields": {
+      "applicant": "Solicitante",
+      "location": "Ubicación",
+      "reviewer": "Revisado por"
+    },
+    "actions": {
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "viewDetails": "Ver Detalles"
+    },
+    "stats": {
+      "pending": "Pendientes",
+      "inProgress": "En Progreso",
+      "completed": "Completados",
+      "rejected": "Rechazados"
+    },
+    "sections": {
+      "pending": "Revisiones Pendientes",
+      "recent": "Revisiones Recientes"
+    },
+    "mockData": {
+      "procedureTypes": {
+        "construction": "Licencia de Construcción",
+        "commercial": "Licencia Comercial",
+        "landUse": "Cambio de Uso de Suelo"
+      },
+      "descriptions": {
+        "singleFamily": "Construcción de vivienda unifamiliar de 120m²",
+        "restaurant": "Apertura de restaurante familiar",
+        "landChange": "Cambio de residencial a comercial"
+      },
+      "locations": {
+        "northZone": "Zona Norte, Lote 45",
+        "historicCenter": "Centro Histórico, Local 12",
+        "industrialZone": "Zona Industrial, Manzana 8"
+      },
+      "applicants": {
+        "juanPerez": "Juan Pérez García",
+        "mariaLopez": "María López Hernández",
+        "constructora": "Constructora ABC S.A.",
+        "robertoMartin": "Roberto Martín Sánchez",
+        "anaGarcia": "Ana García Torres"
+      }
+    }
+  },
+  "settings": {
+    "title": "Configuración Municipal",
+    "subtitle": "Gestiona la configuración del sistema y parámetros municipales",
+    "save": "Guardar Cambios",
+    "saving": "Guardando...",
+    "tabs": {
+      "general": "General",
+      "departments": "Dependencias",
+      "workflows": "Workflows",
+      "notifications": "Notificaciones",
+      "security": "Seguridad",
+      "system": "Sistema"
+    },
+    "general": {
+      "title": "Información General",
+      "description": "Configuración básica del municipio",
+      "loading": "Cargando...",
+      "fields": {
+        "municipalityName": "Nombre del Municipio",
+        "director": "Director Municipal",
+        "address": "Dirección",
+        "phone": "Teléfono",
+        "email": "Email",
+        "website": "Sitio Web",
+        "timezone": "Zona Horaria"
+      }
+    },
+    "departments": {
+      "title": "Dependencias Municipales",
+      "addNew": "Nueva Dependencia",
+      "fields": {
+        "name": "Nombre",
+        "head": "Responsable",
+        "email": "Email",
+        "phone": "Teléfono",
+        "status": "Estado"
+      },
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo"
+      }
+    },
+    "workflows": {
+      "title": "Flujos de Trabajo",
+      "addNew": "Nuevo Workflow",
+      "edit": "Editar Workflow",
+      "fields": {
+        "name": "Nombre",
+        "type": "Tipo",
+        "steps": "pasos",
+        "avgDays": "días promedio",
+        "status": "Estado",
+        "documentType": "Tipo de Documento",
+        "description": "Descripción",
+        "legalFoundation": "Fundamento Legal",
+        "requirements": "Requisitos",
+        "conditions": "Condiciones",
+        "dependencies": "Dependencias",
+        "approvals": "Aprobaciones"
+      },
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo"
+      },
+      "types": {
+        "construction": "Construcción",
+        "commercial": "Comercial",
+        "land_use": "Uso de Suelo",
+        "environmental": "Ambiental",
+        "social": "Social"
+      },
+      "documentTypes": {
+        "permit": "Permiso/Licencia",
+        "certificate": "Certificado",
+        "authorization": "Autorización",
+        "registration": "Registro",
+        "notification": "Notificación",
+        "inspection": "Inspección"
+      },
+      "tabs": {
+        "basic": "Información Básica",
+        "requirements": "Requisitos",
+        "conditions": "Condiciones",
+        "dependencies": "Dependencias",
+        "approvals": "Aprobaciones"
+      },
+      "requirements": {
+        "title": "Título del Requisito",
+        "description": "Descripción Detallada",
+        "mandatory": "Obligatorio",
+        "departmentIssued": "Emitido por la dependencia",
+        "addNew": "Agregar Requisito",
+        "empty": "No hay requisitos definidos para este workflow"
+      },
+      "conditions": {
+        "field": "Campo",
+        "operator": "Operador",
+        "value": "Valor",
+        "action": "Acción",
+        "addNew": "Agregar Condición",
+        "empty": "No hay condiciones definidas para este workflow",
+        "types": {
+          "property_size": "Tamaño de Propiedad (m²)",
+          "activity_surface": "Superficie de Actividad (m²)",
+          "applicant_type": "Tipo de Solicitante",
+          "person_type": "Tipo de Persona",
+          "alcohol_sales": "Venta de Alcohol",
+          "activity_type": "Tipo de Actividad"
+        },
+        "operators": {
+          "greater": "Mayor que",
+          "less": "Menor que",
+          "equals": "Igual a",
+          "greaterEquals": "Mayor o igual",
+          "lessEquals": "Menor o igual",
+          "notEquals": "Diferente de",
+          "includes": "Incluye",
+          "excludes": "Excluye"
+        },
+        "actions": {
+          "require": "Requerir",
+          "exclude": "Excluir",
+          "modify": "Modificar"
+        }
+      },
+      "dependencies": {
+        "workflow": "Workflow Dependiente",
+        "condition": "Condición",
+        "description": "Descripción",
+        "addNew": "Agregar Dependencia",
+        "empty": "No hay dependencias definidas para este workflow",
+        "conditions": {
+          "approved": "Aprobado",
+          "rejected": "Rechazado",
+          "completed": "Completado"
+        }
+      },
+      "approvals": {
+        "step": "Paso",
+        "department": "Departamento",
+        "role": "Rol Requerido",
+        "required": "Aprobación Obligatoria",
+        "parallel": "Aprobación Paralela",
+        "addNew": "Agregar Paso de Aprobación",
+        "empty": "No hay pasos de aprobación definidos",
+        "fileType": "Tipo de Archivo/Documento",
+        "legalFoundation": "Fundamento Legal",
+        "isBlocking": "Paso Bloqueante",
+        "isExternalDepartment": "Dependencia Externa",
+        "estimatedDays": "Días Estimados",
+        "fileTypes": {
+          "document": "Documento (PDF o imagen)",
+          "form": "Formulario a llenar",
+          "certificate": "Certificado/Constancia",
+          "identification": "Identificación oficial",
+          "proof_address": "Comprobante de domicilio",
+          "property_deed": "Escritura de propiedad",
+          "technical_drawing": "Plano técnico",
+          "photograph": "Fotografía",
+          "payment_receipt": "Comprobante de pago",
+          "inspection_report": "Reporte de inspección"
+        },
+        "roles": {
+          "reviewer": "Revisor",
+          "supervisor": "Supervisor",
+          "director": "Director",
+          "specialist": "Especialista"
+        }
+      }
+    },
+    "notifications": {
+      "title": "Configuración de Notificaciones",
+      "emailEnabled": "Notificaciones por Email",
+      "smsEnabled": "Notificaciones por SMS",
+      "systemAlerts": "Alertas del Sistema",
+      "deadlineAlerts": "Alertas de Vencimiento (días antes)",
+      "reminderDays": "Recordatorios (días)"
+    },
+    "security": {
+      "title": "Configuración de Seguridad",
+      "sessionTimeout": "Tiempo de Sesión (minutos)",
+      "maxLoginAttempts": "Máximo de Intentos de Login",
+      "passwordExpiry": "Expiración de Contraseña (días)",
+      "twoFactorRequired": "Autenticación de Dos Factores Requerida"
+    },
+    "system": {
+      "title": "Configuración del Sistema",
+      "backupFrequency": "Frecuencia de Respaldo",
+      "maintenanceMode": "Modo de Mantenimiento",
+      "debugMode": "Modo Debug",
+      "maxFileSize": "Tamaño Máximo de Archivo (MB)",
+      "frequencies": {
+        "hourly": "Cada hora",
+        "daily": "Diario",
+        "weekly": "Semanal",
+        "monthly": "Mensual"
+      }
+    },
+    "basicInfo": {
+      "title": "Información Básica",
+      "municipalityName": "Nombre del Municipio",
+      "municipalityNamePlaceholder": "Nombre del municipio",
+      "director": "Director Municipal",
+      "directorPlaceholder": "Nombre del director",
+      "phone": "Teléfono",
+      "phonePlaceholder": "Número de teléfono",
+      "email": "Email",
+      "emailPlaceholder": "correo@municipio.com",
+      "website": "Sitio Web",
+      "websitePlaceholder": "https://www.municipio.com",
+      "responsibleArea": "Área Responsable",
+      "responsibleAreaPlaceholder": "Departamento responsable",
+      "address": "Dirección",
+      "addressPlaceholder": "Dirección completa del municipio"
+    },
+    "licenses": {
+      "title": "Configuración de Licencias",
+      "allowOnlineProcedures": "Permitir trámites en línea",
+      "allowWindowReviewerLicenses": "Permitir revisión de licencias en ventanilla",
+      "lowImpactLicenseCost": "Costo de Licencia de Bajo Impacto",
+      "solvingDays": "Días para Resolución",
+      "initialFolio": "Folio Inicial",
+      "additionalText": "Texto Adicional en Licencias",
+      "additionalTextPlaceholder": "Texto adicional que aparecerá en las licencias"
+    },
+    "visual": {
+      "title": "Configuración Visual",
+      "municipalLogo": "Logo Municipal",
+      "currentLogo": "Logo actual",
+      "logoDescription": "Logo del municipio",
+      "changeLogo": "Cambiar Logo",
+      "uploadLogoDescription": "Subir logo municipal",
+      "uploadMunicipalLogo": "Subir Logo Municipal",
+      "supportedFormats": "PNG, JPG hasta 5MB",
+      "themeColor": "Color del Tema",
+      "themeColorDescription": "Color principal del sistema"
+    },
+    "logo": {
+      "noFileSelected": "No se seleccionó ningún archivo",
+      "invalidFileType": "Tipo de archivo no válido: {{fileType}}. Solo se permiten PNG, JPG",
+      "fileTooLarge": "Archivo muy grande: {{size}}MB. Máximo permitido: 5MB",
+      "uploadError": "Error al subir el logo",
+      "serverError": "Error del servidor: {{error}}",
+      "uploading": "Subiendo..."
+    },
+    "messages": {
+      "saveSuccess": "Configuración guardada exitosamente"
+    },
+    "errors": {
+      "municipalityInfoNotFound": "No se encontró información del municipio",
+      "municipalityIdNotFound": "ID de municipio no encontrado",
+      "municipalityNotFound": "Municipio no encontrado",
+      "loadSettings": "Error al cargar la configuración",
+      "saveSettings": "Error al guardar la configuración",
+      "networkError": "Error de conexión a internet",
+      "generic": "Error: {{error}}"
+    },
+    "signatures": {
+      "title": "Firmas Municipales",
+      "subtitle": "Gestiona las firmas que aparecerán en las licencias y documentos oficiales",
+      "description": "Configura las firmas digitales de autoridades municipales",
+      "count": "{{current}} de {{max}} firmas configuradas",
+      "name": "Nombre",
+      "position": "Cargo",
+      "order": "Orden",
+      "addNew": "Agregar Nueva Firma",
+      "maxReached": "Máximo de firmas alcanzado",
+      "edit": "Editar Firma",
+      "delete": "Eliminar Firma",
+      "noSignatures": "No hay firmas configuradas",
+      "maxSignaturesError": "Solo se permiten un máximo de 4 firmas",
+      "confirmDelete": "¿Estás seguro de que deseas eliminar esta firma?",
+      "deleteError": "Error al eliminar la firma",
+      "notFoundOrDeleted": "La firma no fue encontrada o ya fue eliminada",
+      "notAuthorizedDelete": "No tienes autorización para eliminar esta firma",
+      "saveError": "Error al guardar la firma",
+      "uploadImageError": "Error al subir la imagen",
+      "notAuthorized": "No tienes autorización para realizar esta acción",
+      "notFound": "Firma no encontrada",
+      "fields": {
+        "signerName": "Nombre del Firmante",
+        "position": "Cargo/Posición",
+        "orderIndex": "Orden de Aparición",
+        "signatureImage": "Imagen de la Firma"
+      },
+      "modal": {
+        "addTitle": "Agregar Nueva Firma",
+        "editTitle": "Editar Firma",
+        "signerName": "Nombre del Firmante",
+        "signerNamePlaceholder": "Nombre completo",
+        "position": "Cargo/Posición",
+        "positionPlaceholder": "Director Municipal, Secretario, etc.",
+        "orderIndex": "Orden de Aparición",
+        "orderIndexDescription": "Determina el orden en que aparecerán las firmas en las licencias",
+        "signatureImage": "Imagen de la Firma",
+        "signaturePreview": "Vista previa de la firma",
+        "changeImage": "Cambiar imagen",
+        "uploadImage": "Subir imagen de firma",
+        "imageFormat": "PNG, JPG hasta 5MB",
+        "cancel": "Cancelar",
+        "save": "Guardar",
+        "update": "Actualizar",
+        "saving": "Guardando..."
+      },
+      "messages": {
+        "deleteConfirm": "¿Estás seguro de que deseas eliminar esta firma?",
+        "deleteSuccess": "Firma eliminada exitosamente",
+        "saveSuccess": "Firma guardada exitosamente",
+        "updateSuccess": "Firma actualizada exitosamente",
+        "uploadError": "Error al subir la imagen",
+        "deleteError": "Error al eliminar la firma",
+        "saveError": "Error al guardar la firma"
+      }
+    }
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "markAsRead": "Marcar como leído",
+    "markAllAsRead": "Marcar todas como leídas",
+    "delete": "Eliminar",
+    "deleteAll": "Eliminar todas",
+    "noNotifications": "No hay notificaciones",
+    "filters": {
+      "all": "Todas",
+      "system": "Sistema",
+      "permissions": "Permisos",
+      "users": "Usuarios",
+      "deadlines": "Vencimientos"
+    },
+    "categories": {
+      "system": "Sistema",
+      "permission": "Permisos",
+      "user": "Usuario",
+      "deadline": "Vencimiento"
+    },
+    "priority": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "timeAgo": {
+      "justNow": "Ahora mismo",
+      "minutesAgo": "hace {{count}} minuto",
+      "minutesAgo_plural": "hace {{count}} minutos",
+      "hoursAgo": "hace {{count}} hora",
+      "hoursAgo_plural": "hace {{count}} horas",
+      "daysAgo": "hace {{count}} día",
+      "daysAgo_plural": "hace {{count}} días"
+    }
+  },
+  "analytics": {
+    "title": "Analíticas y Reportes",
+    "breadcrumb": "Analíticas",
+    "subtitle": "Métricas de rendimiento y estadísticas del sistema",
+    "exportPdf": "Exportar PDF",
+    "exporting": "Exportando...",
+    "generatedOn": "Generado el",
+    "page": "Página",
+    "refresh": "Actualizar",
+    "lastUpdate": "Última actualización",
+    "filters": {
+      "period": "Período",
+      "reportType": "Tipo de Reporte",
+      "filter": "Filtrar",
+      "periods": {
+        "7d": "Últimos 7 días",
+        "30d": "Últimos 30 días",
+        "90d": "Últimos 3 meses",
+        "1y": "Último año"
+      },
+      "reportTypes": {
+        "general": "General",
+        "efficiency": "Eficiencia",
+        "dependencies": "Por Dependencias",
+        "types": "Por Tipos de Trámite"
+      }
+    },
+    "kpis": {
+      "title": "KPIs Principales",
+      "averageTime": "Tiempo Promedio",
+      "efficiency": "Eficiencia",
+      "totalProcessed": "Total Procesados",
+      "satisfaction": "Satisfacción",
+      "units": {
+        "days": "días",
+        "percentage": "%",
+        "rating": "/5"
+      },
+      "trends": {
+        "vsLastMonth": "vs. mes anterior",
+        "increase": "+{{value}}% vs. mes anterior",
+        "decrease": "-{{value}}% vs. mes anterior",
+        "rating_increase": "+{{value}} vs. mes anterior"
+      }
+    },
+    "charts": {
+      "monthlyTrends": "Tendencias por Mes",
+      "statusDistribution": "Distribución por Estado",
+      "municipalSummary": "Resumen Ejecutivo del Municipio",
+      "departmentalReviews": "Estado de Revisiones Departamentales",
+      "months": {
+        "january": "Enero",
+        "february": "Febrero",
+        "march": "Marzo",
+        "april": "Abril",
+        "may": "Mayo",
+        "june": "Junio",
+        "july": "Julio",
+        "august": "Agosto",
+        "september": "Septiembre",
+        "october": "Octubre",
+        "november": "Noviembre",
+        "december": "Diciembre"
+      },
+      "monthsShort": {
+        "jan": "Ene",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Abr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Ago",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dic"
+      }
+    },
+    "statuses": {
+      "consultations": "Consultas",
+      "initiated": "Iniciados",
+      "underReview": "En Revisión",
+      "issued": "Emitidos",
+      "completed": "Completados",
+      "inProcess": "En Proceso",
+      "pending": "Pendientes",
+      "rejected": "Rechazados",
+      "approved": "Aprobadas",
+      "corrected": "Para Corrección",
+      "discarded": "Descartadas"
+    },
+    "performance": {
+      "title": "Desempeño por Dependencia",
+      "columns": {
+        "dependency": "Dependencia",
+        "processedProcedures": "Trámites Procesados",
+        "averageTime": "Tiempo Promedio",
+        "efficiency": "Eficiencia",
+        "status": "Estado"
+      },
+      "statusLevels": {
+        "excellent": "Excelente",
+        "good": "Bueno",
+        "warning": "Regular",
+        "poor": "Deficiente",
+        "na": "N/A"
+      },
+      "dependencyNames": {
+        "approvedReviews": "Revisiones Aprobadas",
+        "underReview": "En Revisión",
+        "forCorrection": "Para Corrección",
+        "discarded": "Descartados"
+      }
+    }
+  },
+  "common": {
+    "actions": "Acciones",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información",
+    "date": "Fecha",
+    "logout": "Cerrar sesión",
+    "municipality": "Municipio",
+    "director": "Director"
+  },
+  "errors": {
+    "unauthorized": "Acceso no autorizado",
+    "authTokenRequired": "Token de autenticación requerido",
+    "loadingAnalytics": "Error cargando datos de analíticas"
+  },
+  "reviews": {
+    "title": "Revisiones de Trámites",
+    "subtitle": "Gestiona las revisiones pendientes y completadas",
+    "filter": "Filtrar",
+    "export": "Exportar",
+    "stats": {
+      "pending": "Pendientes de Revisión",
+      "inProgress": "En Progreso",
+      "completed": "Completadas",
+      "rejected": "Rechazadas"
+    },
+    "priority": {
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "status": {
+      "pending_review": "Pendiente",
+      "in_review": "En Revisión",
+      "approved": "Aprobada",
+      "rejected": "Rechazada"
+    },
+    "actions": {
+      "viewDetails": "Ver Detalles",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "requestInfo": "Solicitar Información"
+    },
+    "fields": {
+      "procedureType": "Tipo de Trámite",
+      "applicant": "Solicitante",
+      "submissionDate": "Fecha de Envío",
+      "location": "Ubicación",
+      "reviewer": "Revisor"
+    },
+    "sections": {
+      "pending": "Pendientes de Revisión",
+      "recent": "Revisiones Recientes"
+    }
+  },
+  "approvals": {
+    "title": "Aprobaciones Finales",
+    "subtitle": "Procesa las aprobaciones que requieren autorización directiva",
+    "filter": "Filtrar",
+    "export": "Exportar",
+    "stats": {
+      "pendingApproval": "Pendientes de Aprobación",
+      "readyToApprove": "Listos para Aprobar",
+      "approved": "Aprobadas Hoy",
+      "rejected": "Rechazadas",
+      "onHold": "En Espera",
+      "totalValue": "Valor Total"
+    },
+    "priority": {
+      "critical": "Crítica",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "status": {
+      "pending_approval": "Pendiente de Aprobación",
+      "approved": "Aprobada",
+      "rejected": "Rechazada",
+      "on_hold": "En Espera",
+      "readyToApprove": "Listo para aprobar",
+      "pendingDocuments": "Pendiente documentos"
+    },
+    "actions": {
+      "viewDetails": "Ver Detalles",
+      "approve": "Aprobar",
+      "reject": "Rechazar",
+      "putOnHold": "Poner en Espera",
+      "batchApprove": "Aprobar en Lote"
+    },
+    "requirements": {
+      "title": "Requisitos",
+      "documentsComplete": "Documentos completos",
+      "technicalReview": "Revisión técnica"
+    },
+    "fields": {
+      "procedureType": "Tipo de Trámite",
+      "applicant": "Solicitante",
+      "submissionDate": "Fecha de Envío",
+      "reviewDate": "Fecha de Revisión",
+      "location": "Ubicación",
+      "amount": "Monto",
+      "reviewer": "Revisor",
+      "approvedBy": "Aprobado por"
+    },
+    "sections": {
+      "pending": "Pendientes de Aprobación Final",
+      "recent": "Aprobaciones Recientes"
+    }
+  },
+  "users": {
+    "title": "Gestión de Usuarios",
+    "subtitle": "Administra usuarios y roles del sistema",
+    "addUser": "Agregar Usuario",
+    "editUser": "Editar Usuario",
+    "deleteUser": "Eliminar Usuario",
+    "stats": {
+      "totalUsers": "Total Usuarios",
+      "withRole": "Con Rol Asignado",
+      "municipalities": "Municipios"
+    },
+    "fields": {
+      "name": "Nombre",
+      "email": "Email",
+      "role": "Rol",
+      "status": "Estado",
+      "lastActive": "Última Actividad",
+      "user": "Usuario",
+      "phone": "Teléfono",
+      "municipality": "Municipio",
+      "actions": "Acciones",
+      "paternalLastName": "Apellido Paterno",
+      "maternalLastName": "Apellido Materno",
+      "password": "Contraseña",
+      "newPassword": "Nueva Contraseña"
+    },
+    "table": {
+      "title": "Lista de Usuarios del Sistema",
+      "noRole": "Sin rol",
+      "notAssigned": "No asignado"
+    },
+    "search": {
+      "label": "Buscar usuarios",
+      "placeholder": "Buscar por nombre o email..."
+    },
+    "filters": {
+      "role": "Filtrar por rol",
+      "allRoles": "Todos los roles"
+    },
+    "modals": {
+      "add": {
+        "title": "Agregar Nuevo Usuario",
+        "placeholders": {
+          "name": "Nombre del usuario",
+          "paternalLastName": "Apellido paterno",
+          "maternalLastName": "Apellido materno (opcional)",
+          "phone": "Número de teléfono",
+          "email": "correo@ejemplo.com",
+          "password": "Contraseña segura",
+          "selectMunicipality": "Seleccionar municipio",
+          "selectRole": "Seleccionar rol"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "create": "Crear Usuario",
+          "creating": "Creando..."
+        }
+      },
+      "edit": {
+        "title": "Editar Usuario: {{name}}",
+        "placeholders": {
+          "newPassword": "Dejar vacío para mantener la actual"
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "save": "Guardar Cambios",
+          "saving": "Guardando..."
+        }
+      },
+      "delete": {
+        "title": "Confirmar Eliminación",
+        "question": "¿Eliminar usuario {{name}}?",
+        "subtitle": "Esta acción no se puede deshacer.",
+        "warning": "¡Atención! Al eliminar este usuario se perderán todos sus datos y no podrá acceder al sistema.",
+        "buttons": {
+          "cancel": "Cancelar",
+          "delete": "Eliminar Usuario",
+          "deleting": "Eliminando..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Editar usuario",
+      "delete": "Eliminar usuario"
+    },
+    "roles": {
+      "admin": "Administrador",
+      "director": "Director",
+      "reviewer": "Revisor",
+      "operator": "Operador"
+    },
+    "status": {
+      "active": "Activo",
+      "inactive": "Inactivo",
+      "pending": "Pendiente"
+    },
+    "actions": {
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "activate": "Activar",
+      "deactivate": "Desactivar"
+    }
+  },
+  "roles": {
+    "title": "Gestión de Roles",
+    "subtitle": "Administra roles y permisos del sistema",
+    "addRole": "Agregar Rol",
+    "editRole": "Editar Rol",
+    "deleteRole": "Eliminar Rol",
+    "stats": {
+      "totalRoles": "Total de Roles",
+      "activeRoles": "Roles Activos"
+    },
+    "fields": {
+      "name": "Nombre del Rol",
+      "description": "Descripción",
+      "municipality": "Municipio",
+      "createdAt": "Fecha de Creación",
+      "updatedAt": "Última Actualización",
+      "actions": "Acciones"
+    },
+    "table": {
+      "title": "Lista de Roles del Sistema",
+      "role": "Rol",
+      "municipality": "Municipio",
+      "creationDate": "Fecha de Creación",
+      "lastUpdate": "Última Actualización",
+      "actions": "Acciones"
+    },
+    "modals": {
+      "add": {
+        "title": "Agregar Nuevo Rol",
+        "placeholder": {
+          "name": "Ej: Supervisor",
+          "description": "Describe las responsabilidades y permisos de este rol..."
+        },
+        "buttons": {
+          "cancel": "Cancelar",
+          "create": "Crear Rol",
+          "creating": "Creando..."
+        }
+      },
+      "edit": {
+        "title": "Editar Rol - {{name}}",
+        "buttons": {
+          "cancel": "Cancelar",
+          "save": "Guardar Cambios",
+          "saving": "Guardando..."
+        }
+      },
+      "delete": {
+        "title": "Confirmar Eliminación",
+        "question": "¿Eliminar rol \"{{name}}\"?",
+        "warning": "Esta acción no se puede deshacer. El rol será eliminado permanentemente.",
+        "alert": "Eliminar este rol puede afectar a los usuarios que lo tienen asignado.",
+        "alertTitle": "Advertencia:",
+        "buttons": {
+          "cancel": "Cancelar",
+          "delete": "Eliminar Rol",
+          "deleting": "Eliminando..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Editar rol",
+      "delete": "Eliminar rol"
+    },
+    "types": {
+      "director": "Director",
+      "supervisor": "Supervisor",
+      "reviewer": "Revisor",
+      "citizen": "Ciudadano"
+    }
+  },
+  "dependencies": {
+    "title": "Gestión de Dependencias",
+    "description": "Administrar departamentos, requisitos y roles de usuario",
+    "breadcrumb": "Dependencias",
+    "loading": "Cargando departamentos...",
+    "users": "usuarios",
+    "requirements": "requisitos",
+    "pendingWork": "pendientes",
+    "showInactive": "Mostrar inactivos",
+    "reviewsActive": "Revisiones",
+    "departments": {
+      "title": "Departamentos"
+    },
+    "tabs": {
+      "requirements": "Requisitos",
+      "users": "Usuarios",
+      "roles": "Roles"
+    },
+    "actions": {
+      "addField": "Agregar Campo",
+      "removeField": "Quitar Campo",
+      "addRole": "Agregar Rol",
+      "removeRole": "Quitar Rol"
+    },
+    "departmentRequirements": {
+      "title": "Requisitos del Departamento",
+      "empty": "No hay requisitos asignados a este departamento"
+    },
+    "departmentRoles": {
+      "title": "Roles del Departamento",
+      "empty": "No hay roles asignados para aprobación en este departamento",
+      "canApprove": "Puede aprobar procedimientos para este departamento",
+      "approver": "Aprobador"
+    },
+    "departmentUsers": {
+      "title": "Usuarios del Departamento",
+      "empty": "No hay usuarios asignados a este departamento"
+    },
+    "createDepartment": {
+      "button": "Nuevo Departamento",
+      "title": "Crear Nuevo Departamento",
+      "name": "Nombre del Departamento",
+      "code": "Código del Departamento",
+      "description": "Descripción",
+      "fillFields": "Por favor complete todos los campos requeridos",
+      "error": "Error al crear departamento"
+    },
+    "modal": {
+      "department": "Departamento",
+      "field": "Campo",
+      "selectField": "Seleccionar un campo",
+      "procedureType": "Tipo de Trámite",
+      "selectProcedureType": "Seleccionar tipo de trámite",
+      "role": "Rol",
+      "selectRole": "Seleccionar un rol"
+    },
+    "messages": {
+      "backendTimeout": "Tiempo agotado: Backend no disponible",
+      "connectingBackend": "Conectando con el backend... Si esto toma mucho tiempo, es posible que el servidor no esté ejecutándose.",
+      "connectionError": "Error de Conexión",
+      "noBackendConnection": "No se pudo conectar con el backend. Asegúrate de que el servidor esté ejecutándose.",
+      "retry": "Reintentar",
+      "departmentActivated": "Departamento activado exitosamente",
+      "departmentDeactivated": "Departamento desactivado exitosamente",
+      "newDepartmentCreated": "Nuevo departamento creado exitosamente",
+      "userActivatedForReviews": "Usuario activado para revisiones exitosamente",
+      "userDeactivatedForReviews": "Usuario desactivado para revisiones exitosamente",
+      "roleLabel": "Rol:"
+    },
+    "success": {
+      "actionCompleted": "Acción completada exitosamente"
+    },
+    "error": {
+      "loadDepartments": "Error cargando departamentos",
+      "loadUsers": "Error cargando usuarios",
+      "loadRequirements": "Error cargando requisitos",
+      "actionFailed": "La acción falló",
+      "updateDepartmentStatus": "Error actualizando estado del departamento",
+      "createDepartment": "Error al crear departamento",
+      "updateUserActivation": "Error actualizando activación de usuario"
+    }
+  },
+  "blog": {
+    "title": "Gestión de Blog",
+    "subtitle": "Gestiona entradas de blog y noticias del sistema",
+    "newEntry": "Nueva Entrada",
+    "editEntry": "Editar Entrada de Blog",
+    "createEntry": "Nueva Entrada de Blog",
+    "adminAccessRequired": "Acceso Administrativo Requerido",
+    "adminAccessDescription": "Para gestionar el blog, necesitas ingresar la contraseña de administración.",
+    "adminPasswordPlaceholder": "Contraseña de administración",
+    "access": "Acceder",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "create": "Crear",
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando blogs...",
+    "saving": "Guardando...",
+    "creating": "Creando...",
+    "updating": "Actualizando...",
+    "form": {
+      "title": "Título",
+      "titleRequired": "El título es requerido",
+      "imageUrl": "Imagen URL",
+      "imageUrlPlaceholder": "https://ejemplo.com/imagen.jpg",
+      "imageUrlRequired": "La URL de la imagen es requerida",
+      "publicationDate": "Fecha de Publicación",
+      "link": "Enlace",
+      "linkPlaceholder": "https://ejemplo.com/articulo",
+      "linkRequired": "El enlace es requerido",
+      "summary": "Resumen",
+      "summaryPlaceholder": "Breve resumen de la noticia...",
+      "summaryRequired": "El resumen es requerido",
+      "fullContent": "Contenido Completo",
+      "fullContentPlaceholder": "Contenido completo del artículo...",
+      "adminPassword": "Contraseña de Administración",
+      "adminPasswordPlaceholder": "Ingresa la contraseña de administración",
+      "adminPasswordRequired": "La contraseña de administración es requerida"
+    },
+    "list": {
+      "title": "Entradas de Blog",
+      "count": "{{count}} entrada total",
+      "count_plural": "{{count}} entradas totales",
+      "empty": "No hay entradas de blog aún",
+      "createFirst": "Crear la primera entrada",
+      "type": "Tipo {{type}}"
+    },
+    "messages": {
+      "createSuccess": "Blog creado exitosamente",
+      "updateSuccess": "Blog actualizado exitosamente",
+      "deleteSuccess": "Blog eliminado exitosamente",
+      "createError": "Error creando blog",
+      "updateError": "Error actualizando blog",
+      "deleteError": "Error eliminando blog",
+      "loadError": "Error cargando blogs",
+      "passwordRequired": "Contraseña de administración requerida",
+      "deleteConfirm": "¿Estás seguro de que quieres eliminar esta entrada de blog?"
+    },
+    "editor": {
+      "bold": "Negrita",
+      "italic": "Cursiva",
+      "underline": "Subrayado",
+      "strikethrough": "Tachado",
+      "heading1": "Título 1",
+      "heading2": "Título 2",
+      "bulletList": "Lista con viñetas",
+      "numberedList": "Lista numerada",
+      "link": "Enlace",
+      "linkPrompt": "Ingresa la URL:",
+      "code": "Código",
+      "uploadImage": "Subir imagen",
+      "imageUploadError": "Error al subir la imagen",
+      "invalidImageFile": "Por favor selecciona un archivo de imagen válido",
+      "undo": "Deshacer",
+      "redo": "Rehacer"
+    }
+  },
+  "impactMap": {
+    "title": "Mapa de Impacto",
+    "subtitle": "Administra los niveles de impacto de zonificación del municipio",
+    "tools": "Herramientas",
+    "toolsPanel": {
+      "title": "Herramientas del Mapa",
+      "drawingTools": "Herramientas de Dibujo",
+      "impactLevels": "Niveles de Impacto",
+      "legend": "Leyenda"
+    },
+    "actions": {
+      "add": "Agregar",
+      "edit": "Editar",
+      "info": "Información",
+      "upload": "Subir"
+    },
+    "dialogs": {
+      "selectLevel": {
+        "title": "Seleccionar Nivel de Impacto",
+        "description": "Elige el nivel de impacto para esta zona:",
+        "impactLevel": "Nivel de Impacto"
+      },
+      "confirmDelete": {
+        "title": "Confirmar Eliminación",
+        "description": "¿Estás seguro de que quieres eliminar esta zona de nivel de impacto?"
+      },
+      "impactInfo": {
+        "title": "Información del Nivel de Impacto",
+        "noData": "No hay datos de nivel de impacto disponibles",
+        "fields": {
+          "id": "ID",
+          "municipalityId": "ID del Municipio",
+          "impactLevel": "Nivel de Impacto",
+          "geometry": "Geometría",
+          "geometryType": "Tipo",
+          "coordinates": "Coordenadas",
+          "rings": "anillos"
+        }
+      },
+      "upload": {
+        "title": "Subir Zonas de Impacto",
+        "description": "Sube datos de zonas de impacto desde un archivo",
+        "dropZone": "Arrastra tu archivo aquí o haz clic para seleccionar",
+        "selectFile": "Seleccionar Archivo"
+      }
+    }
+  }
+}

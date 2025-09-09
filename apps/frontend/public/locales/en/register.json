@@ -1,0 +1,38 @@
+{
+  "title": "Create an account",
+  "inputs": {
+    "name": {
+      "label": "Name"
+    },
+    "firstLastName": {
+      "label": "First Last Name"
+    },
+    "secondLastName": {
+      "label": "Second Last Name"
+    },
+    "cellphone": {
+      "label": "Cellphone Number"
+    },
+    "curp": {
+      "label": "CURP"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "password": {
+      "label": "Password"
+    },
+    "verifyPassword": {
+      "label": "Confirm Password"
+    },
+    "privacy": {
+      "label": "I have read the <privacy>privacy notice</privacy>"
+    }
+  },
+  "submit": "Create Account",
+  "forgotPassword": "Forgot your password?",
+  "login": {
+    "title": "Already have an account?",
+    "link": "Log In"
+  }
+}

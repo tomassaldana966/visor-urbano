@@ -1,0 +1,168 @@
+{
+  "title": {
+    "issuedLicenses": "Licenças Emitidas"
+  },
+  "description": {
+    "managementAndConsultation": "Gestão e consulta de licenças comerciais emitidas em {{municipalityName}}"
+  },
+  "stats": {
+    "totalLicenses": "Total de Licenças",
+    "activeLicenses": "Licenças Ativas",
+    "pendingLicenses": "Licenças Pendentes",
+    "paidLicenses": "Licenças Pagas"
+  },
+  "search": {
+    "placeholder": "Pesquisar por fólio, nome da empresa ou proprietário...",
+    "button": "Pesquisar"
+  },
+  "filters": {
+    "allStatuses": "Todos os Status",
+    "allTypes": "Todos os Tipos",
+    "clearFilters": "Limpar Filtros"
+  },
+  "status": {
+    "active": "Ativa",
+    "new": "Nova",
+    "approved": "Aprovada",
+    "pending": "Pendente",
+    "suspended": "Suspensa",
+    "paid": "Paga",
+    "unpaid": "Não Paga",
+    "vigente": "Ativa",
+    "nueva": "Nova",
+    "aprobada": "Aprovada",
+    "pendiente": "Pendente",
+    "suspendida": "Suspensa",
+    "pagada": "Paga",
+    "pagado": "Paga",
+    "sin pagar": "Não Paga",
+    "cancelada": "Cancelada"
+  },
+  "type": {
+    "commercial": "Comercial",
+    "industrial": "Industrial",
+    "services": "Serviços",
+    "giro": "Giro Comercial",
+    "renewal": "Renovação"
+  },
+  "table": {
+    "folio": "Fólio",
+    "folioList": "F. Lista",
+    "activity": "Atividade",
+    "owner": "Proprietário",
+    "type": "Tipo",
+    "status": "Status",
+    "date": "Data",
+    "payment": "Pagamento",
+    "actions": "Ações",
+    "tableTitle": "Licenças",
+    "commercialActivity": "Atividade Comercial",
+    "scianCode": "Código SCIAN",
+    "business": "Negócio",
+    "address": "Endereço",
+    "schedule": "Horário",
+    "unknown": "Desconhecido",
+    "notSpecified": "Não especificado",
+    "municipality": "Município"
+  },
+  "details": {
+    "applicant": "Requerente",
+    "type": "Tipo",
+    "issueDate": "Data de Emissão",
+    "paymentStatus": "Status do Pagamento",
+    "businessDetails": "Detalhes do Negócio",
+    "businessName": "Nome",
+    "address": "Endereço",
+    "phone": "Telefone",
+    "email": "Email",
+    "operatingHours": "Horário de Funcionamento",
+    "schedule": "Horário",
+    "days": "Dias",
+    "mondayToSunday": "Segunda a Domingo"
+  },
+  "actions": {
+    "uploadPdf": "Carregar PDF",
+    "viewLicense": "Ver licença",
+    "downloadReceipt": "Baixar recibo",
+    "downloadLicense": "Baixar licença",
+    "moreActions": "Mais ações",
+    "changeStatus": "Alterar status",
+    "viewDetail": "Ver detalhes",
+    "viewHistory": "Ver histórico"
+  },
+  "empty": {
+    "noLicensesAvailable": "Nenhuma licença disponível",
+    "noResultsFound": "Nenhum resultado encontrado",
+    "noLicensesDescription": "Nenhuma licença emitida encontrada",
+    "tryDifferentFilters": "Tente filtros de pesquisa diferentes"
+  },
+  "errors": {
+    "loadingError": "Erro ao carregar licenças emitidas"
+  },
+  "modals": {
+    "paymentReceipt": {
+      "title": "Recibo de Pagamento",
+      "description": "Uma vez que a licença seja paga, anexe o recibo de pagamento",
+      "uploadLabel": "Carregar recibo digitalizado",
+      "noFileChosen": "Nenhum arquivo escolhido",
+      "chooseFile": "Escolher Arquivo",
+      "sending": "Enviando...",
+      "send": "Enviar"
+    },
+    "noReceipt": {
+      "title": "Recibo não disponível",
+      "description": "Nenhum recibo de pagamento foi carregado para esta licença ainda. Para baixar o recibo, primeiro deve ser marcado como pago e carregar a prova de pagamento.",
+      "understood": "Entendido"
+    },
+    "noLicense": {
+      "title": "Licença não disponível",
+      "description": "Não é possível acessar a licença neste momento. O arquivo PDF não está disponível ou ainda não foi gerado.",
+      "understood": "Entendido"
+    },
+    "statusUpdate": {
+      "title": "Atualizar status da licença",
+      "currentStatus": "Status atual",
+      "reason": "Motivo",
+      "statusChangeDate": "Data de Mudança",
+      "file": "Arquivo",
+      "download": "Baixar",
+      "newStatus": "Status da licença",
+      "newStatusRequired": "Selecionar status",
+      "selectStatus": "Selecionar status",
+      "reasonLabel": "Motivo",
+      "reasonPlaceholder": "Descreva o motivo da mudança de status...",
+      "uploadFile": "Carregar Arquivo",
+      "fileSelected": "Arquivo selecionado",
+      "updating": "Atualizando...",
+      "add": "Adicionar"
+    },
+    "history": {
+      "title": "Log de Status da Licença",
+      "folioLicense": "Fólio da Licença",
+      "folioList": "Fólio da Lista de Requisitos",
+      "applicant": "Requerente/Proprietário",
+      "status": "Status",
+      "type": "Tipo de Licença",
+      "previousStatus": "Status Anterior",
+      "newStatus": "Novo Status",
+      "changeDate": "Data de Mudança",
+      "user": "Usuário",
+      "errorLoading": "Erro ao carregar histórico",
+      "loading": "Carregando..."
+    }
+  },
+  "statusOptions": {
+    "cancelled": "Cancelada",
+    "suspended": "Suspensa",
+    "active": "Ativa",
+    "discharged": "Baixa",
+    "sanction": "Sanção",
+    "debt": "Dívida",
+    "renew": "Renovar"
+  },
+  "about": {
+    "title": "Sobre o Sistema de Licenças",
+    "description": "Este sistema permite consultar e gerenciar licenças comerciais emitidas em tempo real. Você pode pesquisar por fólio, nome da empresa ou proprietário para encontrar informações detalhadas sobre o status e características de cada licença."
+  },
+  "notAvailable": "Não disponível"
+}

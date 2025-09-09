@@ -1,0 +1,40 @@
+codecov:
+  require_ci_to_pass: true
+  notify:
+    wait_for_ci: true
+
+coverage:
+  precision: 2
+  round: down
+  range: "50...95"
+  
+  status:
+    project:
+      default:
+        target: 80%
+        threshold: 1%
+        informational: false
+    patch:
+      default:
+        target: 80%
+        threshold: 1%
+        informational: false
+
+ignore:
+  - "**/*.config.*"
+  - "**/*.d.ts" 
+  - "**/node_modules/**"
+  - "**/build/**"
+  - "**/dist/**"
+  - "**/coverage/**"
+  - "**/.storybook/**"
+  - "**/storybook-static/**"
+  - "**/migrations/**"
+  - "**/scripts/**"
+  - "legacy/**"
+  - "docs/**"
+
+comment:
+  layout: "header, reach, diff, flags, files, footer"
+  behavior: default
+  require_changes: false

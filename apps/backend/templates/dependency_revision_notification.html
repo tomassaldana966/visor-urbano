@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificación de Revisión de Dependencia</title>
+    <style>
+        :root {
+            --vu-primary: #6abf4b;
+            --vu-blue: #2151c6;
+            --vu-dark-gray: #272729;
+            --vu-gray: #7b868c;
+            --vu-green: #65c65d;
+            --vu-light-gray: #f6fafa;
+            --vu-light-green: #e1f2df;
+        }
+        body {
+            font-family: 'Red Hat Display', Arial, sans-serif;
+            color: var(--vu-dark-gray);
+            background: var(--vu-light-gray);
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 24px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(33,81,198,0.07);
+        }
+        h2 {
+            color: var(--vu-blue);
+        }
+        .details {
+            margin: 16px 0;
+            background: var(--vu-light-green);
+            border-left: 4px solid var(--vu-primary);
+            padding: 12px 16px;
+            border-radius: 4px;
+            color: var(--vu-dark-gray);
+        }
+        .footer {
+            margin-top: 32px;
+            font-size: 0.9em;
+            color: var(--vu-gray);
+        }
+        .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 24px;
+            background: var(--vu-primary);
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .cta:hover {
+            background: var(--vu-green);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Revisión de Trámite Asignada</h2>
+        <p>Hola,</p>
+        <p>Se te ha asignado la revisión de un trámite en el sistema Visor Urbano.</p>
+        <div class="details">
+            <strong>Folio del trámite:</strong> {{ folio }}<br>
+            <strong>Tipo de trámite:</strong> {{ procedure_type }}<br>
+            <strong>Municipio:</strong> {{ municipality }}<br>
+            <strong>Fecha de asignación:</strong> {{ assigned_date }}<br>
+        </div>
+        <p>Por favor, ingresa al sistema para revisar los detalles y realizar las acciones correspondientes.</p>
+        <a class="cta" href="{{ system_url }}">Ir a Visor Urbano</a>
+        <p>Gracias,<br>Equipo Visor Urbano</p>
+        <div class="footer">
+            Este es un mensaje automático. No respondas a este correo.
+        </div>
+    </div>
+</body>
+</html>

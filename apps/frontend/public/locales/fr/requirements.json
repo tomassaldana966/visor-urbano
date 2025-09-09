@@ -1,0 +1,161 @@
+{
+  "title": "Gestion des Exigences",
+  "description": "Gérer les champs et exigences pour différentes procédures",
+  "breadcrumb": "Exigences",
+  "addRequirement": "Ajouter une Exigence",
+  "stats": {
+    "total": "Total",
+    "mandatory": "Obligatoires",
+    "active": "Actives",
+    "types": "Types"
+  },
+  "filters": {
+    "filterByType": "Filtrer par type:",
+    "allTypes": "Tous les types",
+    "freeText": "Texte libre",
+    "yesNo": "Réponse oui ou non",
+    "dropdown": "Liste déroulante",
+    "optionSelection": "Sélection d'options",
+    "document": "Document"
+  },
+  "table": {
+    "title": "Liste des Exigences",
+    "columns": {
+      "requirementTitle": "Titre de l'exigence",
+      "fieldType": "Type de champ",
+      "required": "Requis",
+      "procedureType": "Type de procédure",
+      "status": "Statut"
+    },
+    "requirement": "Exigence",
+    "condition": "Condition",
+    "noSpecified": "Non spécifié"
+  },
+  "fieldTypes": {
+    "input": "Texte libre",
+    "boolean": "Réponse oui ou non",
+    "select": "Liste déroulante",
+    "radio": "Sélection d'options",
+    "file": "Document (PDF ou image)"
+  },
+  "status": {
+    "active": "Actif",
+    "inactive": "Inactif",
+    "yes": "Oui",
+    "no": "Non",
+    "required": "Requis",
+    "optional": "Optionnel"
+  },
+  "modal": {
+    "title": "Ajouter une Nouvelle Exigence",
+    "fieldType": {
+      "label": "Document ou information à exiger",
+      "placeholder": "Sélectionner le type"
+    },
+    "description": {
+      "label": "Titre de l'exigence ou information à exiger",
+      "placeholder": "Ex: Relevé de revenus"
+    },
+    "detailedDescription": {
+      "label": "Description détaillée de l'exigence",
+      "placeholder": "Description détaillée de l'exigence"
+    },
+    "rationale": {
+      "label": "Fondement légal",
+      "placeholder": "Indiquer l'article qui demande l'exigence"
+    },
+    "options": {
+      "title": "Options",
+      "add": "Ajouter",
+      "empty": "Aucune option ajoutée. Cliquez sur \"Ajouter\" pour créer des options.",
+      "placeholder": "Texte de l'option",
+      "remove": "Supprimer l'option"
+    },
+    "required": {
+      "label": "Quand est-ce requis?",
+      "placeholder": "Sélectionner quand requis",
+      "always": "Toujours (Tous les types d'activités)",
+      "conditional": "Personnaliser les paramètres"
+    },
+    "conditionalParams": {
+      "title": "Paramètres configurables",
+      "note": "Note: Il n'est pas obligatoire de remplir tous les champs",
+      "propertyArea": "L'exigence s'applique quand la superficie de la propriété est...",
+      "activityArea": "L'exigence s'applique quand la superficie de l'activité est...",
+      "applicantCharacter": "L'exigence s'applique quand le caractère du demandeur est",
+      "personType": "L'exigence s'applique quand le type de personne est",
+      "alcoholSales": "Pour la vente d'alcool, l'exigence s'applique quand",
+      "applicationRule": "Pour appliquer cette exigence:",
+      "allConditions": "Toutes les conditions",
+      "anyCondition": "Avec seulement une des conditions",
+      "dependency": {
+        "label": "Cette exigence est révisée ou émise par une dépendance externe",
+        "placeholder": "Sélectionner la dépendance"
+      },
+      "conditions": {
+        "notApply": "Ne s'applique pas",
+        "greaterEqual": "Supérieur ou égal à",
+        "lessEqual": "Inférieur ou égal à",
+        "placeholder": "Mètres carrés"
+      },
+      "characters": {
+        "owner": "Propriétaire",
+        "tenant": "Locataire",
+        "powerOfAttorney": "Procuration"
+      },
+      "personTypes": {
+        "individual": "Physique",
+        "legal": "Morale"
+      },
+      "alcoholTypes": {
+        "lowGradeClosed": "Boissons de faible teneur fermées",
+        "lowGradeOpen": "Boissons de faible teneur ouvertes",
+        "highGradeClosed": "Boissons de forte teneur fermées",
+        "highGradeOpen": "Boissons de forte teneur ouvertes",
+        "anyOfAbove": "N'importe laquelle des précédentes"
+      }
+    },
+    "step": {
+      "label": "L'exigence est liée à...",
+      "placeholder": "Sélectionner la relation",
+      "applicant": "Demandeur",
+      "owner": "Propriétaire",
+      "property": "Propriété",
+      "establishment": "Établissement"
+    },
+    "procedureType": {
+      "label": "Où cette exigence ou information sera-t-elle demandée",
+      "placeholder": "Sélectionner le type de procédure",
+      "requirementsConsultation": "Pour la consultation des exigences",
+      "licenseApplication": "Pour la demande de licence",
+      "official": "Pendant ou dans la procédure"
+    },
+    "actions": {
+      "cancel": "Annuler",
+      "creating": "Création...",
+      "create": "Créer l'Exigence"
+    }
+  },
+  "dependencies": {
+    "dependency1": "Dépendance 1",
+    "dependency2": "Dépendance 2"
+  },
+  "validation": {
+    "required": "Ce champ est requis",
+    "fieldTypeRequired": "Le type de document est requis",
+    "titleRequired": "Le titre de l'exigence est requis",
+    "stepRequired": "La relation de l'exigence est requise",
+    "procedureTypeRequired": "Le type de procédure est requis",
+    "requiredSelectionRequired": "Quand requis est obligatoire",
+    "metersRequired": "Les mètres carrés sont requis"
+  },
+  "messages": {
+    "success": "Exigence créée avec succès",
+    "error": "Erreur lors de la création de l'exigence",
+    "statusUpdated": "Statut de l'exigence mis à jour",
+    "formInvalid": "Données de formulaire invalides",
+    "unknownError": "Erreur inconnue",
+    "accessDenied": "Accès refusé",
+    "tokenUnavailable": "Jeton d'accès non disponible"
+  }
+}

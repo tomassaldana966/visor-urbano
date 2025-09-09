@@ -1,0 +1,12 @@
+curl -X GET "http://localhost:8000/v1/zoning_impact_levels?municipality_id=19"
+
+curl -X POST http://localhost:8000/v1/zoning_impact_levels \
+-H "Content-Type: application/json" \
+-d '{
+  "impact_level": 3,
+  "municipality_id": 19,
+  "geom": {
+    "type": "Polygon",
+    "coordinates": [[[202000, 3520000], [202500, 3520000], [202500, 3520500], [202000, 3520500], [202000, 3520000]]]
+  }
+}'

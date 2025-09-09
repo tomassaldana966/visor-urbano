@@ -1,0 +1,38 @@
+{
+  "title": "Créer un compte",
+  "inputs": {
+    "name": {
+      "label": "Nom"
+    },
+    "firstLastName": {
+      "label": "Premier Nom de Famille"
+    },
+    "secondLastName": {
+      "label": "Deuxième Nom de Famille"
+    },
+    "cellphone": {
+      "label": "Numéro de Téléphone Portable"
+    },
+    "curp": {
+      "label": "CURP"
+    },
+    "email": {
+      "label": "E-mail"
+    },
+    "password": {
+      "label": "Mot de Passe"
+    },
+    "verifyPassword": {
+      "label": "Confirmer le Mot de Passe"
+    },
+    "privacy": {
+      "label": "J'ai lu l'<privacy>avis de confidentialité</privacy>"
+    }
+  },
+  "submit": "Créer un Compte",
+  "forgotPassword": "Mot de passe oublié ?",
+  "login": {
+    "title": "Vous avez déjà un compte ?",
+    "link": "Se Connecter"
+  }
+}

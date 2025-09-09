@@ -1,0 +1,179 @@
+{
+  "aside": {
+    "new": "Novo procedimento",
+    "layers": "Camadas",
+    "commercial": "Diagnóstico comercial",
+    "measure": "Medição e seleção",
+    "upload": "Carregar arquivo",
+    "info": "Identificar"
+  },
+  "controls": {
+    "layers": {
+      "tabs": {
+        "layers": "Camadas",
+        "conventions": "Legenda"
+      }
+    },
+    "tools": {
+      "tabs": {
+        "tools": {
+          "title": "Medição e seleção",
+          "list": {
+            "select": "Selecionar propriedade",
+            "draw": "Desenhar propriedade",
+            "measure-lineal": "Medir distância (linear)",
+            "measure-area": "Medir área (polígono)",
+            "info": "Identificar"
+          },
+          "tooltips": {
+            "select": "Clique em uma propriedade para selecioná-la",
+            "draw": "Clique para começar a desenhar",
+            "draw-drawing": "Clique para continuar desenhando <br /> Clique duas vezes para finalizar",
+            "measure-lineal": "Clique para começar a desenhar",
+            "measure-lineal-drawing": "Clique para continuar desenhando <br /> Clique duas vezes para finalizar",
+            "measure-area": "Clique para começar a desenhar",
+            "measure-area-drawing": "Clique para continuar desenhando <br /> Clique duas vezes para finalizar",
+            "info": "Clique no mapa para obter informações sobre essa localização"
+          }
+        }
+      }
+    }
+  },
+  "property": {
+    "municipality": "Município",
+    "locality": "Localidade",
+    "postalCode": "Código postal",
+    "colony": "Bairro",
+    "address": "Rua",
+    "area": "Área do imóvel",
+    "constructionArea": "Área construída",
+    "downloadBlueprint": {
+      "cta": "Baixar planta",
+      "disclaimer": "As medidas da planta baixada podem variar das suportadas pelo documento do imóvel. As informações e medidas oficiais para qualquer procedimento serão as detidas pelo Departamento de Cadastro do município correspondente."
+    },
+    "downloadTechnicalSheet": "Baixar ficha técnica",
+    "requirements": {
+      "title": "Solicitar licença",
+      "sections": {
+        "general": {
+          "title": "Informações gerais",
+          "inputs": {
+            "applicant_name": {
+              "label": "Nome completo",
+              "error": "Por favor, insira seu nome completo"
+            },
+            "street": {
+              "label": "Rua",
+              "error": "Por favor, insira o nome da rua"
+            },
+            "neighborhood": {
+              "label": "Bairro",
+              "error": "Por favor, insira o nome do bairro"
+            },
+            "locality": {
+              "label": "Localidade",
+              "error": "Por favor, insira o nome da localidade"
+            },
+            "municipality_name": {
+              "label": "Município",
+              "error": "Por favor, insira o nome do município"
+            },
+            "businessType": {
+              "label": "Tipo de negócio",
+              "error": "Por favor, insira o tipo de negócio"
+            },
+            "activity_area": {
+              "label": "Área",
+              "error": "Por favor, insira a área",
+              "helpText": "Área em metros quadrados (m²)",
+              "title": "Apenas números são permitidos"
+            },
+            "alcohol_sales": {
+              "label": "Licença de álcool",
+              "error": "Por favor, selecione se possui licença de álcool",
+              "options": {
+                "0": "Não inclui",
+                "1": "Bebidas de baixo teor fechadas",
+                "2": "Bebidas de baixo teor abertas",
+                "3": "Bebidas de alto teor fechadas",
+                "4": "Bebidas de alto teor abertas"
+              }
+            }
+          }
+        },
+        "procedure": {
+          "title": "Informações do procedimento",
+          "inputs": {
+            "ownershipType": {
+              "label": "Tipo de posse",
+              "options": {
+                "owner": "Proprietário (diretamente)",
+                "tenant": "Inquilino (diretamente)",
+                "letter": "Recebi uma procuração simples perante 2 testemunhas para processar"
+              }
+            },
+            "owner": {
+              "label": "Proprietário (diretamente)",
+              "options": {
+                "am": "Sou o proprietário do imóvel",
+                "representative": "Sou representante de uma pessoa jurídica proprietária do imóvel"
+              }
+            },
+            "tenant": {
+              "label": "Inquilino (diretamente)",
+              "options": {
+                "am": "Sou o inquilino do imóvel",
+                "representative": "Sou representante de uma pessoa jurídica que é inquilina do imóvel"
+              }
+            },
+            "letter": {
+              "label": "Recebi uma procuração simples perante 2 testemunhas para processar",
+              "options": {
+                "personal": "O proprietário do negócio será uma pessoa física",
+                "legal": "O proprietário do negócio será uma pessoa jurídica (Empresa)"
+              }
+            }
+          }
+        }
+      },
+      "ctas": {
+        "submit": "Verificar requisitos",
+        "open": "Verificar requisitos"
+      }
+    }
+  },
+  "noProperty": {
+    "paragraph": "Para consultar os requisitos ou obter mais informações, desenhe uma propriedade.",
+    "drawCTA": "Desenhar propriedade"
+  },
+  "search": {
+    "municipality": "Buscar município",
+    "clearMap": "Limpar mapa"
+  },
+  "info": {
+    "dialog": {
+      "title": "Informações das Camadas",
+      "noData": "Nenhum dado disponível para esta localização"
+    }
+  },
+  "upload": {
+    "dialog": {
+      "title": "Carregar arquivo",
+      "disclaimer": "A função de carregamento permite carregar arquivos com dados em formato vetorial.\n\nOs dados a serem carregados devem estar em formato GeoJSON, GeoPackage, KML/KMZ ou Shapefile (este último, sendo um formato multifile, deve ser empacotado em um único arquivo .zip com todas as partes dentro, sem usar pastas).\n\nO arquivo de dados vetoriais deve ter o sistema de coordenadas de referência (CRS) EPSG:4326. E deve ser do tipo de geometria Polígono, nenhum outro tipo de geometria é permitido.",
+      "continue": "Continuar",
+      "cancel": "Cancelar",
+      "selectFile": "Selecionar arquivo",
+      "fileSelected": "Arquivo selecionado:",
+      "uploadFile": "Carregar arquivo",
+      "back": "Voltar",
+      "upload": "Carregar",
+      "processing": "Processando...",
+      "error": "Erro de Carregamento",
+      "supportedFormats": "Formatos suportados",
+      "dropZone": {
+        "title": "Solte seu arquivo aqui ou clique para navegar",
+        "subtitle": "Selecione um arquivo GeoJSON, KML, KMZ ou Shapefile (ZIP) para carregar"
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+
+{% raw %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Commercial Diagnostic</title>
+</head>
+<body>
+<div id="watermark">
+    <img src="https://visorurbano.com/assets/img/logo.png" height="100%" width="100%" >
+</div>
+<footer>
+  <div style="margin:20px;">
+    The data displayed here has been obtained from the INEGI database.
+    <br>
+  </div>
+</footer>
+<main>
+    <div class="invoice-box">
+        <div class="row">
+            <div class="col-4">
+                <img src="https://visorurbano.com/assets/img/logo.png" style="width:100%; max-width:178px;">
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <img src="{{ logo }}" style="width:250px; max-width:250px; margin-top:-10px;">
+            </div>
+        </div>
+
+        <h3 align="center" class="">Commercial Diagnostic</h3>
+
+        <div class="row">
+            <div class="col-12">
+                <div align="justify">
+                    Thank you for your interest in establishing a business in the State of Jalisco. 
+                    Below you can find nearby businesses with the same or similar commercial activity: 
+                    <div style="font-weight: bold;">{{ businesses }}</div>.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <table class="styled-table p-parrafo-full border-table">
+                    <tr>
+                        <td>
+                            <p class="p-title">Diagnostic Information:</p>
+                            <div>
+                                <div><b>Business Activity:</b>
+                                    <p>{{ businesses }}</p>
+                                </div>
+                                <hr/>
+                                <div><b>Analysis Area:</b>
+                                    <p>{{ area }}</p>
+                                </div>
+                                <hr/>
+                                <div><b>Municipality:</b>
+                                    <p>{{ municipality }}</p>
+                                </div>
+                                <hr/>
+                                <div><b>Businesses Found:</b>
+                                    <p>{{ data | length }}</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-6">
+                <img src="{{ image }}" style="width:340px;height:340px;margin-top:50px;" alt="">
+            </div>
+        </div>
+
+        <hr/>
+
+        <div class="row">
+            <div class="col-12">
+                <b class="color-v2">Based on the above data, the following businesses were found:</b>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="w3-table w3-striped w3-border">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Business Name</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i, item in enumerate(data[:200], start=1) %}
+                            {% set props = item.properties %}
+                            <tr>
+                                <td>{{ i }}</td>
+                                <td>{{ props.nombre_comercial }}</td>
+                                <td>{{ props.tipo_vialidad }} {{ props.nombre_vialidad }} #{{ props.numero_exterior }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+{% endraw %}

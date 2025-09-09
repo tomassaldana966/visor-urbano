@@ -1,0 +1,212 @@
+{
+  "aside": {
+    "new": "New procedure",
+    "layers": "Layers",
+    "commercial": "Commercial diagnosis",
+    "measure": "Measurement and selection",
+    "upload": "Upload file",
+    "info": "Identify"
+  },
+  "controls": {
+    "layers": {
+      "tabs": {
+        "layers": "Layers",
+        "conventions": "Legend"
+      }
+    },
+    "tools": {
+      "tabs": {
+        "tools": {
+          "title": "Measurement and selection",
+          "list": {
+            "select": "Select property",
+            "draw": "Draw property",
+            "measure-lineal": "Measure distance (linear)",
+            "measure-area": "Measure area (polygon)",
+            "info": "Identify"
+          },
+          "tooltips": {
+            "select": "Click on a property to select it",
+            "draw": "Click to start drawing",
+            "draw-drawing": "Click to continue drawing <br /> Double click to finish",
+            "measure-lineal": "Click to start drawing",
+            "measure-lineal-drawing": "Click to continue drawing <br /> Double click to finish",
+            "measure-area": "Click to start drawing",
+            "measure-area-drawing": "Click to continue drawing <br /> Double click to finish",
+            "info": "Click on the map to get information about that location"
+          }
+        }
+      }
+    }
+  },
+  "property": {
+    "municipality": "Municipality",
+    "locality": "Locality",
+    "postalCode": "Postal code",
+    "colony": "Neighborhood",
+    "address": "Street",
+    "area": "Property area",
+    "constructionArea": "Construction area",
+    "downloadBlueprint": {
+      "cta": "Download blueprint",
+      "disclaimer": "The measurements of the downloaded blueprint may vary from those supported by the property document. The official information and measurements for any procedure will be those held by the Cadastre Department of the corresponding municipality."
+    },
+    "downloadTechnicalSheet": "Download technical sheet",
+    "requirements": {
+      "title": "Request license",
+      "licenseTypeSelection": {
+        "title": "What type of license do you need?",
+        "description": "Select the type of license you want to process",
+        "options": {
+          "commercial": "Commercial license",
+          "construction": "Construction license"
+        }
+      },
+      "sections": {
+        "general": {
+          "title": "General information",
+          "inputs": {
+            "applicant_name": {
+              "label": "Full name",
+              "error": "Please enter your full name"
+            },
+            "street": {
+              "label": "Street",
+              "error": "Please enter the street name"
+            },
+            "neighborhood": {
+              "label": "Colony",
+              "error": "Please enter the colony name"
+            },
+            "locality": {
+              "label": "Locality",
+              "error": "Please enter the locality name"
+            },
+            "municipality_name": {
+              "label": "Municipality",
+              "error": "Please enter the municipality name"
+            },
+            "businessType": {
+              "label": "Business type",
+              "error": "Please enter the business type"
+            },
+            "activity_area": {
+              "label": "Surface area",
+              "error": "Please enter the surface area",
+              "helpText": "Surface area in square meters (m²)",
+              "title": "Only numbers are allowed"
+            },
+            "alcohol_sales": {
+              "label": "Alcohol license",
+              "error": "Please select if you have an alcohol license",
+              "options": {
+                "0": "No incluye",
+                "1": "Bebidas de baja graduación cerrada",
+                "2": "Bebidas de baja graduación abierta",
+                "3": "Bebidas de alta graduación cerrada",
+                "4": "Bebidas de alta graduación abierta"
+              }
+            }
+          }
+        },
+        "procedure": {
+          "title": "Procedure information",
+          "inputs": {
+            "quien_tramita": {
+              "label": "Who is processing the application?",
+              "options": {
+                "propietario": "Owner (directly)",
+                "arrendatario": "Tenant (directly)",
+                "carta_poder": "I was granted a simple power of attorney before 2 witnesses to process"
+              }
+            },
+            "propietario_rad": {
+              "label": "Owner (directly)",
+              "options": {
+                "persona_fisica": "I'm the owner of the property",
+                "persona_moral": "I am a representative of a legal entity that owns the property"
+              }
+            },
+            "arrendatario_rad": {
+              "label": "Tenant (directly)",
+              "options": {
+                "arrendatario_i": "I'm the tenant of the property",
+                "arrendatario_m": "I am a representative of a legal entity that is the tenant of the property"
+              }
+            },
+            "carta_poder_rad": {
+              "label": "I was granted a simple power of attorney before 2 witnesses to process",
+              "options": {
+                "propietario_i": "The owner of the business will be a natural person",
+                "propietario_m": "The owner of the business will be a legal entity (Company)"
+              }
+            }
+          }
+        },
+        "construction": {
+          "title": "Information for construction license",
+          "inputs": {
+            "street": {
+              "label": "Street",
+              "error": "Please enter the street name"
+            },
+            "neighborhood": {
+              "label": "Neighborhood",
+              "error": "Please enter the neighborhood name"
+            },
+            "municipality_name": {
+              "label": "Municipality",
+              "error": "Please enter the municipality name"
+            },
+            "address": {
+              "label": "Address",
+              "error": "Please enter the address"
+            },
+            "interested_party": {
+              "label": "Interested party",
+              "error": "Please enter the interested party name"
+            }
+          }
+        }
+      },
+      "ctas": {
+        "submit": "Check requirements",
+        "open": "Check requirements"
+      }
+    }
+  },
+  "noProperty": {
+    "paragraph": "To consult the requirements or get more information, draw a property.",
+    "drawCTA": "Draw property"
+  },
+  "search": {
+    "municipality": "Search Municipality",
+    "clearMap": "Clear map"
+  },
+  "info": {
+    "dialog": {
+      "title": "Layer Information",
+      "noData": "No data available for this location"
+    }
+  },
+  "upload": {
+    "dialog": {
+      "title": "Upload file",
+      "disclaimer": "The upload function allows you to upload files with data in vector format.\n\nThe data to be uploaded must be in GeoJSON, GeoPackage, KML/KMZ or Shapefile format (the latter, being a multi-file format, must be packaged in a single .zip file with all parts inside, without using folders).\n\nThe vector data file must have the reference coordinate system (CRS) EPSG:4326. And it must be of Polygon geometry type, no other geometry type is allowed.",
+      "continue": "Continue",
+      "cancel": "Cancel",
+      "selectFile": "Select file",
+      "fileSelected": "File selected:",
+      "uploadFile": "Upload file",
+      "back": "Back",
+      "upload": "Upload",
+      "processing": "Processing...",
+      "error": "Upload Error",
+      "supportedFormats": "Supported formats",
+      "dropZone": {
+        "title": "Drop your file here or click to browse",
+        "subtitle": "Select a GeoJSON, KML, KMZ, or Shapefile (ZIP) to upload"
+      }
+    }
+  }
+}

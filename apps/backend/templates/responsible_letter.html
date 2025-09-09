@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Letter of Responsibility</title>
+    <!-- Aquí puedes copiar el CSS original de tu Blade -->
+    <style>
+      .row { display: flex; flex-wrap: wrap; }
+      .col-3 { width: 25%; }
+      .col-6 { width: 50%; }
+      .col-12 { width: 100%; }
+      .letter-box { padding: 20px; font-family: 'Red Hat Display', sans-serif; }
+      /* ... resto de estilos (footable, font-weights, etc.) ... */
+    </style>
+</head>
+<body>
+  <div class="letter-box">
+    <div class="row">
+      <div class="col-3">
+        <img src="{{ government_logo }}" style="width:100%; max-width:178px;">
+      </div>
+      <div class="col-6"></div>
+      <div class="col-3">
+        <img src="{{ logo_url }}" style="width:100%; max-width:200px;">
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-12" style="text-align:left;">
+        <div style="font-size:12px;font-weight:700;">
+          Municipality Government of {{ municipality }}, Jalisco.<br>
+          Present.
+        </div>
+      </div>
+
+      <div class="col-12" style="margin-top:15px;">
+        <p style="font-size:14px; line-height:1.5;">
+          I, the undersigned, <strong>{{ applicant.name }}</strong>, holder of <strong>{{ applicant.id_type }}</strong> number <strong>{{ applicant.id_number }}</strong>, issued by <strong>{{ applicant.id_issuer }}</strong>, on this <strong>{{ date }}</strong>, hereby apply for a business license to carry out the activity of <strong>{{ scian_name }}</strong> at the property located in <strong>{{ address.colonia }}</strong>, ZIP code <strong>{{ address.cp }}</strong>.
+        </p>
+
+        <p style="font-size:14px; line-height:1.5;">
+          I DECLARE UNDER OATH that the documents and information provided through Visor Urbano Jalisco are authentic, real, and truthful, fully evidencing my identity and the legal and technical condition of the property where the business license is requested. I understand that providing false documents or information may result in criminal and/or administrative liability.
+        </p>
+
+        <p style="font-size:14px; line-height:1.5;">
+          Finally, I request that all notifications related to this process be made through the electronic means known as Visor Urbano Jalisco, accessible at <a href="https://visorurbano.jalisco.gob.mx/">https://visorurbano.jalisco.gob.mx/</a>, and I authorize that my contact information provided for this procedure be used for statistical purposes, indicators, and surveys, whether by telephone or email.
+        </p>
+
+        <br><br><br>
+        <div style="text-align:center;">
+          _____________________________<br>
+          Applicant’s Name and Signature
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

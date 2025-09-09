@@ -1,0 +1,18 @@
+{
+  "title": "O que você pode consultar na plataforma Visor Urbano?",
+  "cta": "Ir para o mapa",
+  "features": [
+    {
+      "icon": "store",
+      "title": "Licenças comerciais em Jalisco"
+    },
+    {
+      "icon": "document",
+      "title": "Requisitos para processar sua licença"
+    },
+    {
+      "icon": "map",
+      "title": "Diagnóstico comercial"
+    }
+  ]
+}

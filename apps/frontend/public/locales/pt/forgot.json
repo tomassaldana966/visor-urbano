@@ -1,0 +1,15 @@
+{
+  "title": "Digite seu e-mail para redefinir sua senha",
+  "email": {
+    "label": "Endereço de e-mail",
+    "placeholder": "Digite um e-mail válido"
+  },
+  "submit": "Redefinir",
+  "submitting": "Enviando...",
+  "success": {
+    "message": "Um e-mail de redefinição de senha foi enviado para sua caixa de entrada. Por favor, verifique seu e-mail e siga as instruções."
+  },
+  "error": {
+    "general": "Houve um erro ao processar sua solicitação. Por favor, tente novamente."
+  }
+}

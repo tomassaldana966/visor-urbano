@@ -1,0 +1,29 @@
+{
+  "title": "Entrez votre nom d'utilisateur",
+  "email": {
+    "label": "E-mail",
+    "placeholder": "Entrez un e-mail valide"
+  },
+  "password": {
+    "label": "Mot de passe",
+    "placeholder": "Le mot de passe est requis"
+  },
+  "submit": "Connexion",
+  "forgotPassword": "Mot de passe oublié ?",
+  "register": {
+    "title": "Vous n'avez pas encore de compte ?",
+    "link": "Créer un compte",
+    "success": {
+      "title": "Succès !",
+      "description": "Compte créé avec succès !",
+      "close": "Ok"
+    }
+  },
+  "errors": {
+    "invalidCredentials": {
+      "title": "Identifiants invalides",
+      "description": "Veuillez vérifier votre e-mail et votre mot de passe puis réessayer.",
+      "close": "Ok"
+    }
+  }
+}

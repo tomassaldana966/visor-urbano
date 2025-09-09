@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Types de Commerce",
+  "breadcrumbAdmin": "Administrateur",
+  "breadcrumbBusinessTypes": "Types de Commerce",
+  "addBusinessType": "Ajouter un Type de Commerce",
+  "addBusinessTypeModal": "Ajouter un Nouveau Type de Commerce",
+  "businessTypeName": "Nom du type de commerce",
+  "businessTypeNamePlaceholder": "Ex: Boulangerie",
+  "businessTypeCode": "Code SCIAN",
+  "businessTypeCodePlaceholder": "Ex: 311811",
+  "description": "Description",
+  "descriptionPlaceholder": "Description détaillée du type de commerce",
+  "relatedWords": "Mots associés",
+  "relatedWordsPlaceholder": "Mots-clés séparés par des virgules",
+  "isActive": "Type de commerce actif",
+  "creating": "Création...",
+  "createBusinessType": "Créer le Type de Commerce",
+  "cancel": "Annuler",
+  "totalBusinessTypes": "Total des Types de Commerce",
+  "enabled": "Activés",
+  "withCertificate": "Avec Certificat",
+  "licenses": "Licences",
+  "categoryFilter": "Catégorie:",
+  "categoryAll": "Toutes",
+  "statusFilter": "État:",
+  "statusAll": "Tous",
+  "statusActive": "Actif",
+  "statusInactive": "Inactif",
+  "statusDisabled": "Désactivé",
+  "businessTypesListTitle": "Liste des Types de Commerce",
+  "codeColumnHeader": "Code",
+  "businessTypeColumnHeader": "SCIAN / Type de Commerce",
+  "impactColumnHeader": "Impact",
+  "certificateColumnHeader": "Certificat",
+  "statusColumnHeader": "Statut",
+  "licensesColumnHeader": "Lic.",
+  "certificateShort": "Cert.",
+  "activeShort": "Actif",
+  "mobileLabels": {
+    "impact": "Impact:",
+    "licAbbrev": "lic."
+  },
+  "impactBadges": {
+    "low": "Faible",
+    "medium": "Moyen",
+    "high": "Élevé",
+    "veryHigh": "Très Élevé"
+  },
+  "statusBadges": {
+    "active": "Actif",
+    "inactive": "Inactif",
+    "disabled": "Désactivé"
+  },
+  "checkboxLabels": {
+    "enabled": "Activé",
+    "disabled": "Désactivé",
+    "required": "certificat requis",
+    "notRequired": "sans certificat"
+  },
+  "impactLevels": {
+    "1": "1 - Minimum",
+    "2": "2 - Faible",
+    "3": "3 - Moyen",
+    "4": "4 - Élevé",
+    "5": "5 - Maximum"
+  }
+}

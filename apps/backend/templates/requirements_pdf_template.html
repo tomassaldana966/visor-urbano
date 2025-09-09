@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Requirements Folio: {{ folio }}</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            color: #333447;
+            line-height: 1.6;
+        }
+        h1 { color: #36872f; font-weight: 600; }
+        h2 { color: #36872f; font-weight: 600; margin-top: 20px; }
+        p { margin: 10px 0; }
+        .center { text-align: center; }
+        .right { text-align: right; }
+        .section { margin-bottom: 20px; }
+        .badge { 
+            background: #7edd76; 
+            color: #fff; 
+            border-radius: 50%; 
+            display: inline-block; 
+            width: 20px; 
+            height: 20px; 
+            line-height: 20px; 
+            text-align: center; 
+            font-size: 12px;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 20px 0; 
+        }
+        th, td { 
+            border: 1px solid #ccc; 
+            padding: 8px; 
+            text-align: left; 
+            vertical-align: top;
+        }
+        th { background-color: #dce9f9; }
+        .striped tbody tr:nth-child(even) { background: #f9f9f9; }
+        .watermark {
+            position: fixed;
+            bottom: 12cm;
+            left: 3cm;
+            width: 15cm;
+            height: 9cm;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        .logo-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .map-placeholder {
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            text-align: center;
+            color: #666;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Watermark -->
+    <div class="watermark">
+        <img src="https://visorurbano.com/assets/img/logo.png" width="100%" height="100%" alt="Watermark">
+    </div>
+
+    <!-- Header -->
+    <div class="logo-section">
+        <img src="https://visorurbano.com/assets/img/logo.png" style="max-width: 180px;" alt="Logo">
+        <h1>Department in Charge of Licensing</h1>
+        <h2>Municipal Government of {{ municipality }}</h2>
+        {% if license_type == 'construction' %}
+        <h2>Requirements List for Construction Permit Application</h2>
+        {% else %}
+        <h2>Requirements List for Business License Application</h2>
+        {% endif %}
+        <div class="right">Folio: <strong>{{ folio }}</strong></div>
+    </div>
+
+    <!-- Applicant Information -->
+    <div class="section">
+        <h2>Applicant Information</h2>
+        <p><strong>Name:</strong> {{ applicant_name or interested_party or 'Not specified' }}</p>
+        {% if license_type != 'construction' %}
+        <p><strong>Type:</strong> {{ applicant_type or 'Individual' }}</p>
+        <p><strong>Character:</strong> {{ applicant_character or 'Owner' }}</p>
+        {% endif %}
+    </div>
+
+    <!-- Property Information -->
+    <div class="section">
+        {% if license_type == 'construction' %}
+        <h2>Construction Project Information</h2>
+        <p><strong>Property Address:</strong> {{ address }}, {{ municipality }}</p>
+        <p><strong>Interested Party:</strong> {{ interested_party or applicant_name or 'Not specified' }}</p>
+        {% else %}
+        <h2>Property and Activity Information</h2>
+        <p><strong>Address:</strong> {{ address }}, {{ municipality }}</p>
+        <p><strong>Activity:</strong> {{ activity_name or 'General commercial activity' }} (Code: {{ activity_code or 'N/A' }})</p>
+        <p><strong>Alcohol sales:</strong> {{ alcohol_sales or 'Does not include' }}</p>
+        <p><strong>Property area:</strong> {{ property_surface or 'N/A' }} m²</p>
+        <p><strong>Activity area:</strong> {{ activity_surface or 'N/A' }} m²</p>
+        {% endif %}
+    </div>
+
+    <!-- Map Section -->
+    {% if minimap_url %}
+    <div class="center">
+        <img src="{{ minimap_url }}" style="max-width: 300px; max-height: 200px;" alt="Property location map">
+    </div>
+    {% else %}
+    <div class="map-placeholder">
+        Property Location Map<br>(Map not available)
+    </div>
+    {% endif %}
+
+    <!-- Department Contact -->
+    <div class="section">
+        <h2>Department Contact Information</h2>
+        <p>Department in Charge of Licensing</p>
+        <p>{{ department_address or 'Address not provided' }}</p>
+        <p>{{ department_phone or 'Phone not provided' }}</p>
+    </div>
+
+    <!-- Requirements -->
+    <div class="section">
+        <h2>Requirements</h2>
+        <table class="striped">
+            <thead>
+                <tr>
+                    <th style="width: 50px; text-align: center;">#</th>
+                    <th>Requirement</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for requirement in requirements %}
+                <tr>
+                    <td style="text-align: center;"><span class="badge">{{ loop.index }}</span></td>
+                    <td>{{ requirement.title or ('Requirement ' ~ loop.index|string) }}</td>
+                    <td>
+                        {{ requirement.description or 'Please provide the required documentation.' }}
+                        {% if requirement.department_issued %}
+                        <br><em>This will be issued by the department</em>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% else %}
+                <tr><td style="text-align: center;">1</td><td>Official ID</td><td>Valid official identification</td></tr>
+                <tr><td style="text-align: center;">2</td><td>Proof of address</td><td>Must be recent (no older than 3 months)</td></tr>
+                <tr><td style="text-align: center;">3</td><td>Property document</td><td>Proof of ownership or lease</td></tr>
+                {% endfor %}
+                
+                {% if license_fee %}
+                <tr>
+                    <td style="text-align: center;">{{ requirements|length + 1 if requirements else 4 }}</td>
+                    <td>License Fee</td>
+                    <td>The cost is <strong>{{ license_fee }}</strong>. For high-impact businesses or alcohol sales, consult the authority.</td>
+                </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Restrictions -->
+    {% if restrictions %}
+    <div class="section">
+        <h2>Location Restrictions</h2>
+        <p><strong>Note:</strong> Additional requirements may apply based on location proximity.</p>
+        <table class="striped">
+            <tr><td>Schools</td><td>{{ 'No restrictions' if restrictions.schools == 0 else 'With restriction' }}</td></tr>
+            <tr><td>Health Centers</td><td>{{ 'No restrictions' if restrictions.health_centers == 0 else 'With restriction' }}</td></tr>
+            <tr><td>Government Buildings</td><td>{{ 'No restrictions' if restrictions.government_buildings == 0 else 'With restriction' }}</td></tr>
+            <tr><td>Construction Blocks</td><td>{{ 'No restrictions' if restrictions.construction_blocks == 0 else 'With restriction' }}</td></tr>
+            <tr><td>Water Bodies</td><td>{{ 'No restrictions' if restrictions.water_bodies == 0 else 'With restriction' }}</td></tr>
+        </table>
+    </div>
+    {% endif %}
+
+    <!-- QR Code -->
+    {% if qr_code %}
+    <div class="center">
+        <img src="data:image/png;base64,{{ qr_code }}" width="150" alt="QR Code for verification">
+    </div>
+    {% endif %}
+
+    <!-- Information Requests -->
+    {% if information_requests and information_requests|length > 0 %}
+    <div class="section">
+        <h2>Information Requests</h2>
+        <table class="striped">
+            <thead>
+                <tr><th>Requested Information</th><th>Response</th></tr>
+            </thead>
+            <tbody>
+                {% for request in information_requests %}
+                <tr>
+                    <td>{{ request.description }}</td>
+                    <td>{{ request.response or 'Not provided' }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <div class="center section" style="margin-top: 40px; font-size: 12px;">
+        <strong>Municipality of {{ municipality }} - {{ current_date }}</strong><br>
+        This document is illustrative. Authorization requires compliance and formal resolution.
+    </div>
+</body>
+</html>

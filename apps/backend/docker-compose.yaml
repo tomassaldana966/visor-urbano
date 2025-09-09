@@ -1,0 +1,53 @@
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/init-db.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DATABASE_USERNAME} -d ${DATABASE_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app_network
+    restart: unless-stopped
+
+  backend:
+    build: .
+    ports:
+      - '8000:8000'
+    env_file:
+      - .env
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+    volumes:
+      - ./migrations:/app/migrations:rw
+      - ./scripts:/app/scripts:rw
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - app_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/docs", "||", "exit", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    command: ["/bin/bash", "-c", "./wait-for-db.sh db 5432 ${DATABASE_USERNAME} ${DATABASE_PASSWORD} ${DATABASE_NAME} 30 && ./docker-backend.sh"]
+
+volumes:
+  postgres_data:
+networks:
+  app_network:
+    driver: bridge

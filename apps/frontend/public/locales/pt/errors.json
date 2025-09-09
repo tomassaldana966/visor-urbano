@@ -1,0 +1,8 @@
+{
+  "input": {
+    "required": "O campo é obrigatório",
+    "email": "O campo deve ser um endereço de e-mail válido",
+    "passwordInvalid": "A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número",
+    "passwordMismatch": "As senhas não correspondem"
+  }
+}

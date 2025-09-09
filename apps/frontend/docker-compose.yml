@@ -1,0 +1,13 @@
+services:
+  frontend:
+    image: node:20
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '5173:5173'
+    command: bash -c "npm install -g pnpm && pnpm install && pnpm run dev"
+    environment:
+      - NODE_ENV=development
+      - VITE_API_URL=http://host.docker.internal:8000

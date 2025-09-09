@@ -1,0 +1,168 @@
+{
+  "title": {
+    "issuedLicenses": "Licences Émises"
+  },
+  "description": {
+    "managementAndConsultation": "Gestion et consultation des licences commerciales émises dans {{municipalityName}}"
+  },
+  "stats": {
+    "totalLicenses": "Total des Licences",
+    "activeLicenses": "Licences Actives",
+    "pendingLicenses": "Licences en Attente",
+    "paidLicenses": "Licences Payées"
+  },
+  "search": {
+    "placeholder": "Rechercher par folio, nom d'entreprise ou propriétaire...",
+    "button": "Rechercher"
+  },
+  "filters": {
+    "allStatuses": "Tous les Statuts",
+    "allTypes": "Tous les Types",
+    "clearFilters": "Effacer les Filtres"
+  },
+  "status": {
+    "active": "Active",
+    "new": "Nouvelle",
+    "approved": "Approuvée",
+    "pending": "En Attente",
+    "suspended": "Suspendue",
+    "paid": "Payée",
+    "unpaid": "Non Payée",
+    "vigente": "Active",
+    "nueva": "Nouvelle",
+    "aprobada": "Approuvée",
+    "pendiente": "En Attente",
+    "suspendida": "Suspendue",
+    "pagada": "Payée",
+    "pagado": "Payée",
+    "sin pagar": "Non Payée",
+    "cancelada": "Annulée"
+  },
+  "type": {
+    "commercial": "Commercial",
+    "industrial": "Industriel",
+    "services": "Services",
+    "giro": "Giro Commercial",
+    "renewal": "Renouvellement"
+  },
+  "table": {
+    "folio": "Folio",
+    "folioList": "F. Liste",
+    "activity": "Activité",
+    "owner": "Propriétaire",
+    "type": "Type",
+    "status": "Statut",
+    "date": "Date",
+    "payment": "Paiement",
+    "actions": "Actions",
+    "tableTitle": "Licences",
+    "commercialActivity": "Activité Commerciale",
+    "scianCode": "Code SCIAN",
+    "business": "Entreprise",
+    "address": "Adresse",
+    "schedule": "Horaire",
+    "unknown": "Inconnu",
+    "notSpecified": "Non spécifié",
+    "municipality": "Municipalité"
+  },
+  "details": {
+    "applicant": "Demandeur",
+    "type": "Type",
+    "issueDate": "Date d'Émission",
+    "paymentStatus": "Statut du Paiement",
+    "businessDetails": "Détails de l'Entreprise",
+    "businessName": "Nom",
+    "address": "Adresse",
+    "phone": "Téléphone",
+    "email": "Email",
+    "operatingHours": "Heures d'Exploitation",
+    "schedule": "Horaire",
+    "days": "Jours",
+    "mondayToSunday": "Lundi à Dimanche"
+  },
+  "actions": {
+    "uploadPdf": "Télécharger PDF",
+    "viewLicense": "Voir la licence",
+    "downloadReceipt": "Télécharger le reçu",
+    "downloadLicense": "Télécharger la licence",
+    "moreActions": "Plus d'actions",
+    "changeStatus": "Changer le statut",
+    "viewDetail": "Voir les détails",
+    "viewHistory": "Voir l'historique"
+  },
+  "empty": {
+    "noLicensesAvailable": "Aucune licence disponible",
+    "noResultsFound": "Aucun résultat trouvé",
+    "noLicensesDescription": "Aucune licence émise trouvée",
+    "tryDifferentFilters": "Essayez différents filtres de recherche"
+  },
+  "errors": {
+    "loadingError": "Erreur lors du chargement des licences émises"
+  },
+  "modals": {
+    "paymentReceipt": {
+      "title": "Reçu de Paiement",
+      "description": "Une fois la licence payée, joignez le reçu de paiement",
+      "uploadLabel": "Télécharger le reçu numérisé",
+      "noFileChosen": "Aucun fichier choisi",
+      "chooseFile": "Choisir un Fichier",
+      "sending": "Envoi en cours...",
+      "send": "Envoyer"
+    },
+    "noReceipt": {
+      "title": "Reçu non disponible",
+      "description": "Aucun reçu de paiement n'a encore été téléchargé pour cette licence. Pour télécharger le reçu, il doit d'abord être marqué comme payé et télécharger la preuve de paiement.",
+      "understood": "Compris"
+    },
+    "noLicense": {
+      "title": "Licence non disponible",
+      "description": "Impossible d'accéder à la licence en ce moment. Le fichier PDF n'est pas disponible ou n'a pas encore été généré.",
+      "understood": "Compris"
+    },
+    "statusUpdate": {
+      "title": "Mettre à jour le statut de la licence",
+      "currentStatus": "Statut actuel",
+      "reason": "Raison",
+      "statusChangeDate": "Date de Changement",
+      "file": "Fichier",
+      "download": "Télécharger",
+      "newStatus": "Statut de la licence",
+      "newStatusRequired": "Sélectionner le statut",
+      "selectStatus": "Sélectionner le statut",
+      "reasonLabel": "Raison",
+      "reasonPlaceholder": "Décrivez la raison du changement de statut...",
+      "uploadFile": "Télécharger un Fichier",
+      "fileSelected": "Fichier sélectionné",
+      "updating": "Mise à jour...",
+      "add": "Ajouter"
+    },
+    "history": {
+      "title": "Journal du Statut de la Licence",
+      "folioLicense": "Folio de la Licence",
+      "folioList": "Folio de la Liste des Exigences",
+      "applicant": "Demandeur/Propriétaire",
+      "status": "Statut",
+      "type": "Type de Licence",
+      "previousStatus": "Statut Précédent",
+      "newStatus": "Nouveau Statut",
+      "changeDate": "Date de Changement",
+      "user": "Utilisateur",
+      "errorLoading": "Erreur lors du chargement de l'historique",
+      "loading": "Chargement..."
+    }
+  },
+  "statusOptions": {
+    "cancelled": "Annulée",
+    "suspended": "Suspendue",
+    "active": "Active",
+    "discharged": "Déchargée",
+    "sanction": "Sanction",
+    "debt": "Dette",
+    "renew": "Renouveler"
+  },
+  "about": {
+    "title": "À Propos du Système de Licences",
+    "description": "Ce système permet de consulter et gérer les licences commerciales émises en temps réel. Vous pouvez rechercher par folio, nom d'entreprise ou propriétaire pour trouver des informations détaillées sur le statut et les caractéristiques de chaque licence."
+  },
+  "notAvailable": "Non disponible"
+}

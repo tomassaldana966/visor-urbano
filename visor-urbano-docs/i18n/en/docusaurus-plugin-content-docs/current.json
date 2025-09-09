@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.🚀 Comenzar": {
+    "message": "🚀 Get Started",
+    "description": "The label for category 🚀 Comenzar in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.🌍 Adaptación por Ciudad": {
+    "message": "🌍 City Adaptation",
+    "description": "The label for category 🌍 Adaptación por Ciudad in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.🇨🇱 Chile": {
+    "message": "🇨🇱 Chile",
+    "description": "The label for category 🇨🇱 Chile in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.👨‍💻 Desarrollo": {
+    "message": "👨‍💻 Development",
+    "description": "The label for category 👨‍💻 Desarrollo in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.🚀 Despliegue": {
+    "message": "🚀 Deployment",
+    "description": "The label for category 🚀 Despliegue in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.📚 Ejemplos": {
+    "message": "📚 Examples",
+    "description": "The label for category 📚 Ejemplos in sidebar tutorialSidebar"
+  }
+}

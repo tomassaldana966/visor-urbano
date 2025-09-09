@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Tipos de Negócio",
+  "breadcrumbAdmin": "Administrador",
+  "breadcrumbBusinessTypes": "Tipos de Negócio",
+  "addBusinessType": "Adicionar Tipo de Negócio",
+  "addBusinessTypeModal": "Adicionar Novo Tipo de Negócio",
+  "businessTypeName": "Nome do tipo de negócio",
+  "businessTypeNamePlaceholder": "Ex: Padaria",
+  "businessTypeCode": "Código SCIAN",
+  "businessTypeCodePlaceholder": "Ex: 311811",
+  "description": "Descrição",
+  "descriptionPlaceholder": "Descrição detalhada do tipo de negócio",
+  "relatedWords": "Palavras relacionadas",
+  "relatedWordsPlaceholder": "Palavras-chave separadas por vírgulas",
+  "isActive": "Tipo de negócio ativo",
+  "creating": "Criando...",
+  "createBusinessType": "Criar Tipo de Negócio",
+  "cancel": "Cancelar",
+  "totalBusinessTypes": "Total de Tipos de Negócio",
+  "enabled": "Habilitados",
+  "withCertificate": "Com Certificado",
+  "licenses": "Licenças",
+  "categoryFilter": "Categoria:",
+  "categoryAll": "Todas",
+  "statusFilter": "Estado:",
+  "statusAll": "Todos",
+  "statusActive": "Ativo",
+  "statusInactive": "Inativo",
+  "statusDisabled": "Desabilitado",
+  "businessTypesListTitle": "Lista de Tipos de Negócio",
+  "codeColumnHeader": "Código",
+  "businessTypeColumnHeader": "SCIAN / Tipo de Negócio",
+  "impactColumnHeader": "Impacto",
+  "certificateColumnHeader": "Certificado",
+  "statusColumnHeader": "Status",
+  "licensesColumnHeader": "Lic.",
+  "certificateShort": "Cert.",
+  "activeShort": "Ativo",
+  "mobileLabels": {
+    "impact": "Impacto:",
+    "licAbbrev": "lic."
+  },
+  "impactBadges": {
+    "low": "Baixo",
+    "medium": "Médio",
+    "high": "Alto",
+    "veryHigh": "Muito Alto"
+  },
+  "statusBadges": {
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "disabled": "Desabilitado"
+  },
+  "checkboxLabels": {
+    "enabled": "Habilitado",
+    "disabled": "Desabilitado",
+    "required": "requer certificado",
+    "notRequired": "sem certificado"
+  },
+  "impactLevels": {
+    "1": "1 - Mínimo",
+    "2": "2 - Baixo",
+    "3": "3 - Médio",
+    "4": "4 - Alto",
+    "5": "5 - Máximo"
+  }
+}

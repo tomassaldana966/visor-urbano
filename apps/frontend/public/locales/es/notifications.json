@@ -1,0 +1,94 @@
+{
+  "title": "Notificaciones",
+  "subtitle": "Gestiona las notificaciones de tus trámites y actualizaciones",
+  "tabs": {
+    "tab1": {
+      "label": "Todas las notificaciones",
+      "table": {
+        "columns": {
+          "folio": "Folio",
+          "status": "Estado",
+          "type": "Tipo",
+          "message": "Mensaje",
+          "date": "Fecha",
+          "actions": "Acciones"
+        },
+        "noData": "No se encontraron notificaciones"
+      }
+    },
+    "tab2": {
+      "label": "No leídas",
+      "table": {
+        "columns": {
+          "folio": "Folio",
+          "type": "Tipo",
+          "message": "Mensaje",
+          "date": "Fecha",
+          "actions": "Acciones"
+        },
+        "noData": "No hay notificaciones sin leer"
+      }
+    }
+  },
+  "status": {
+    "read": "Leída",
+    "unread": "Sin leer"
+  },
+  "actions": {
+    "markAsRead": "Marcar como leída",
+    "details": "Detalles",
+    "viewProcedure": "Ver detalles del trámite"
+  },
+  "messages": {
+    "markedAsRead": "Notificación marcada como leída",
+    "markedAsReadSimulated": "Notificación marcada como leída (simulado)",
+    "error": "Error al procesar la notificación"
+  },
+  "types": {
+    "1": "Información General",
+    "2": "Aprobación de Licencia",
+    "3": "Inspección Programada",
+    "4": "Documentación Requerida",
+    "5": "Revisión Pendiente",
+    "default": "Tipo Desconocido"
+  },
+  "departments": {
+    "1": "Licencias de Construcción",
+    "2": "Permisos Especiales",
+    "3": "Inspecciones",
+    "4": "Desarrollo Urbano",
+    "5": "Medio Ambiente",
+    "default": "Departamento No Especificado"
+  },
+  "modal": {
+    "title": "Detalles de Notificación",
+    "fields": {
+      "folio": "Folio",
+      "type": "Tipo",
+      "message": "Mensaje",
+      "date": "Fecha de Creación",
+      "department": "Departamento",
+      "applicant": "Solicitante",
+      "notificationStatus": "Estado de la Notificación"
+    },
+    "status": {
+      "read": "Leída",
+      "unread": "Sin leer"
+    },
+    "actions": {
+      "markAsRead": "Marcar como leída",
+      "viewProcedure": "Ver Detalles del Trámite",
+      "close": "Cerrar"
+    }
+  },
+  "pagination": {
+    "page": "Página {{page}} de {{total}}",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "debug": {
+    "title": "Modo de Desarrollo - Problema de Conexión API",
+    "usingMockData": "Usando datos de prueba",
+    "checkConnection": "Verificar conexión del backend y autenticación"
+  }
+}

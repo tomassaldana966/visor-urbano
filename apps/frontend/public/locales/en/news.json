@@ -1,0 +1,21 @@
+{
+  "title": "News",
+  "cta": "View details",
+  "index": {
+    "title": "Latest News",
+    "subtitle": "Stay updated with the latest developments and announcements from Visor Urbano.",
+    "readMore": "Read More",
+    "noNews": "No news available",
+    "checkBack": "Check back later for the latest updates.",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page"
+    }
+  },
+  "article": {
+    "backToNews": "Back to News",
+    "share": "Share",
+    "viewAllNews": "View All News"
+  }
+}

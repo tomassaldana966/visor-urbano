@@ -1,0 +1,15 @@
+{
+  "title": "Entrez votre email pour réinitialiser votre mot de passe",
+  "email": {
+    "label": "Adresse e-mail",
+    "placeholder": "Entrez un e-mail valide"
+  },
+  "submit": "Réinitialiser",
+  "submitting": "Envoi en cours...",
+  "success": {
+    "message": "Un e-mail de réinitialisation de mot de passe a été envoyé dans votre boîte de réception. Veuillez vérifier votre e-mail et suivre les instructions."
+  },
+  "error": {
+    "general": "Une erreur s'est produite lors du traitement de votre demande. Veuillez réessayer."
+  }
+}

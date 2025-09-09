@@ -1,0 +1,29 @@
+{
+  "title": "Ingresa tu nombre de usuario",
+  "email": {
+    "label": "Correo electrónico",
+    "placeholder": "Ingresa un correo válido"
+  },
+  "password": {
+    "label": "Contraseña",
+    "placeholder": "La contraseña es obligatoria"
+  },
+  "submit": "Iniciar sesión",
+  "forgotPassword": "¿Olvidaste tu contraseña?",
+  "register": {
+    "title": "¿Aún no tienes una cuenta?",
+    "link": "Crear una cuenta",
+    "success": {
+      "title": "¡Éxito!",
+      "description": "¡Cuenta creada exitosamente!",
+      "close": "Ok"
+    }
+  },
+  "errors": {
+    "invalidCredentials": {
+      "title": "Credenciales inválidas",
+      "description": "Por favor verifica tu correo y contraseña e inténtalo de nuevo.",
+      "close": "Ok"
+    }
+  }
+}

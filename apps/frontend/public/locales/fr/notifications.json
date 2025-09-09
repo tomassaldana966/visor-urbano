@@ -1,0 +1,19 @@
+{
+  "tabs": {
+    "tab1": {
+      "label": "Notifications commerciales",
+      "table": {
+        "columns": {
+          "id": "ID",
+          "status": "Statut",
+          "message": "Message",
+          "date": "Date"
+        },
+        "noData": "Aucune notification commerciale"
+      }
+    },
+    "tab2": {
+      "label": "Notifications de construction"
+    }
+  }
+}

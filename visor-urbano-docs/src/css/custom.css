@@ -1,0 +1,493 @@
+/**
+ * Visor Urbano Custom Styles for Docusaurus
+ * Aplicando la guía de colores y branding del frontend
+ */
+
+/* Importar la fuente Red Hat Display (consistente con el frontend) */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Colores principales de Visor Urbano extraídos del frontend */
+:root {
+  /* Paleta principal de Visor Urbano */
+  --vu-dark-gray: #272729;
+  --vu-gray: #7b868c;
+  --vu-green: #65c65d;
+  --vu-light-gray: #f6fafa;
+  --vu-light-green: #e1f2df;
+  --vu-primary: #6abf4b;
+  --vu-blue: #2151c6;
+
+  /* Docusaurus - Modo claro */
+  --ifm-color-primary: var(--vu-primary);
+  --ifm-color-primary-dark: #5da841;
+  --ifm-color-primary-darker: #56a03c;
+  --ifm-color-primary-darkest: #478432;
+  --ifm-color-primary-light: #76d255;
+  --ifm-color-primary-lighter: #7ed55f;
+  --ifm-color-primary-lightest: #8edc74;
+
+  /* Colores secundarios */
+  --ifm-color-secondary: var(--vu-blue);
+  --ifm-color-info: var(--vu-blue);
+  --ifm-color-success: var(--vu-green);
+
+  /* Fondo y contenedores */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: var(--vu-light-gray);
+  --ifm-hero-background-color: linear-gradient(
+    135deg,
+    var(--vu-primary) 0%,
+    var(--vu-blue) 100%
+  );
+
+  /* Tipografía */
+  --ifm-font-family-base:
+    'Red Hat Display', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+  --ifm-font-family-monospace:
+    'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', 'Courier New',
+    monospace;
+
+  /* Navegación */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: 0 2px 4px rgba(103, 191, 75, 0.1);
+
+  /* Sidebar */
+  --ifm-menu-color-background-active: var(--vu-light-green);
+  --ifm-menu-color-background-hover: rgba(106, 191, 75, 0.1);
+
+  /* Bordes y sombras */
+  --ifm-global-border-width: 1px;
+  --ifm-global-radius: 8px;
+  --ifm-card-border-radius: var(--ifm-global-radius);
+  --ifm-button-border-radius: var(--ifm-global-radius);
+
+  /* Colores de texto */
+  --ifm-color-content: var(--vu-dark-gray);
+  --ifm-color-content-secondary: var(--vu-gray);
+
+  /* Links */
+  --ifm-link-color: var(--vu-blue);
+  --ifm-link-hover-color: var(--vu-primary);
+
+  /* Footer */
+  --ifm-footer-background-color: var(--vu-dark-gray);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: var(--vu-light-green);
+  --ifm-footer-title-color: #ffffff;
+
+  /* Code blocks */
+  --ifm-code-background: var(--vu-light-gray);
+  --ifm-code-color: var(--vu-dark-gray);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(106, 191, 75, 0.1);
+}
+
+/* Modo oscuro */
+[data-theme='dark'] {
+  /* Colores principales en modo oscuro */
+  --ifm-color-primary: #76d255;
+  --ifm-color-primary-dark: #5dc93a;
+  --ifm-color-primary-darker: #54bd34;
+  --ifm-color-primary-darkest: #459b2b;
+  --ifm-color-primary-light: #8edc74;
+  --ifm-color-primary-lighter: #97df7d;
+  --ifm-color-primary-lightest: #afe895;
+
+  /* Fondo oscuro */
+  --ifm-background-color: #1a1a1a;
+  --ifm-background-surface-color: var(--vu-dark-gray);
+
+  /* Navegación en modo oscuro */
+  --ifm-navbar-background-color: var(--vu-dark-gray);
+  --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Footer en modo oscuro */
+  --ifm-footer-background-color: #0f0f0f;
+
+  /* Code blocks en modo oscuro */
+  --ifm-code-background: #2a2a2a;
+  --ifm-code-color: #e6e6e6;
+  --docusaurus-highlighted-code-line-bg: rgba(106, 191, 75, 0.3);
+
+  /* Texto en modo oscuro */
+  --ifm-color-content: #e6e6e6;
+  --ifm-color-content-secondary: #b0b0b0;
+}
+
+/* Estilos personalizados para el hero */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--vu-primary) 0%,
+    var(--vu-green) 100%
+  );
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.1;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.95;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contenedor de botones del hero */
+.hero .buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .buttons .button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Botones personalizados */
+.button--primary {
+  background-color: var(--vu-primary);
+  border-color: var(--vu-primary);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(106, 191, 75, 0.2);
+  transition: all 0.2s ease-in-out;
+  border: 2px solid var(--vu-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--vu-green);
+  border-color: var(--vu-green);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(106, 191, 75, 0.3);
+  color: white;
+}
+
+.button--secondary {
+  background-color: transparent;
+  border: 2px solid var(--vu-blue);
+  color: var(--vu-blue);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button--secondary:hover {
+  background-color: var(--vu-blue);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 81, 198, 0.3);
+}
+
+.button--lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.button--hero {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  color: var(--vu-blue);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.button--hero:hover {
+  background-color: #f8f9fa;
+  color: var(--vu-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar personalizada */
+.navbar {
+  border-bottom: 1px solid rgba(106, 191, 75, 0.1);
+}
+
+.navbar__brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__item--active {
+  color: var(--vu-primary) !important;
+}
+
+/* Cards y contenedores */
+.card {
+  border: 1px solid rgba(106, 191, 75, 0.2);
+  box-shadow: 0 2px 8px rgba(106, 191, 75, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(106, 191, 75, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Alertas y admonitions */
+.alert--primary {
+  background-color: var(--vu-light-green);
+  border-color: var(--vu-primary);
+  color: var(--vu-dark-gray);
+}
+
+.alert--info {
+  background-color: rgba(33, 81, 198, 0.1);
+  border-color: var(--vu-blue);
+  color: var(--vu-dark-gray);
+}
+
+.alert--success {
+  background-color: rgba(101, 198, 93, 0.1);
+  border-color: var(--vu-green);
+  color: var(--vu-dark-gray);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--vu-primary);
+  font-weight: 600;
+}
+
+/* Table of contents */
+.table-of-contents__link--active {
+  color: var(--vu-primary);
+  font-weight: 600;
+}
+
+/* Sidebar menu */
+.menu__link--active {
+  color: var(--vu-primary);
+  font-weight: 600;
+}
+
+/* Paginación */
+.pagination-nav__link {
+  border: 1px solid rgba(106, 191, 75, 0.2);
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--vu-primary);
+  box-shadow: 0 2px 8px rgba(106, 191, 75, 0.2);
+}
+
+/* Tabs personalizadas */
+.tabs__item--active {
+  border-bottom-color: var(--vu-primary);
+  color: var(--vu-primary);
+}
+
+/* Footer personalizado */
+.footer {
+  background: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+}
+
+.footer__title {
+  color: var(--ifm-footer-title-color);
+  font-weight: 700;
+}
+
+.footer__link-item {
+  color: #ffffff !important;
+}
+
+.footer__link-item:hover {
+  color: var(--vu-light-green) !important;
+}
+
+/* Copyright en blanco */
+.footer__copyright {
+  color: #ffffff !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Animaciones suaves */
+* {
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vu-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vu-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vu-primary);
+}
+
+/* Destacar elementos de código inline */
+code {
+  background-color: var(--ifm-code-background);
+  color: var(--ifm-code-color);
+  border: 1px solid rgba(106, 191, 75, 0.2);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-weight: 600;
+}
+
+/* Bloques de código */
+pre code {
+  border: none;
+  padding: 0;
+}
+
+/* Estilo para badges y etiquetas */
+.badge {
+  background-color: var(--vu-primary);
+  color: white;
+  border-radius: 12px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge--secondary {
+  background-color: var(--vu-blue);
+}
+
+.badge--success {
+  background-color: var(--vu-green);
+}
+
+/* Mejoras de accesibilidad */
+:focus-visible {
+  outline: 2px solid var(--vu-primary);
+  outline-offset: 2px;
+}
+
+/* Logo y branding */
+.navbar__logo {
+  height: 40px;
+  width: 180px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.1);
+}
+
+/* Logo en modo oscuro - mejor contraste */
+[data-theme='dark'] .navbar__logo {
+  filter: brightness(1.3) contrast(1.2) saturate(1.1);
+}
+
+/* Mejorar la visibilidad del logo */
+.navbar__brand:hover .navbar__logo {
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+  filter: brightness(1.2) contrast(1.2);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  /* Ocultar cualquier texto del brand */
+}
+
+.navbar__brand .navbar__title {
+  display: none !important;
+}
+
+/* Estilos para contenido destacado */
+.content__highlighted {
+  background: linear-gradient(
+    120deg,
+    var(--vu-light-green) 0%,
+    rgba(106, 191, 75, 0.1) 100%
+  );
+  padding: 1.5rem;
+  border-left: 4px solid var(--vu-primary);
+  border-radius: 0 8px 8px 0;
+  margin: 1rem 0;
+}
+
+/* Iconos y elementos decorativos */
+.icon--primary {
+  color: var(--vu-primary);
+}
+
+.icon--secondary {
+  color: var(--vu-blue);
+}
+
+.icon--success {
+  color: var(--vu-green);
+}

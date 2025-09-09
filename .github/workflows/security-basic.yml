@@ -1,0 +1,81 @@
+name: Security Check (Simple)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  security-basic:
+    name: Basic Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Python dependencies
+        run: |
+          cd apps/backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run npm audit (Node.js security)
+        run: |
+          echo "🔍 Running npm audit for Node.js dependencies..."
+          pnpm audit --audit-level moderate || echo "⚠️ Some vulnerabilities found, check details above"
+
+      - name: Check Python dependencies with pip-audit
+        run: |
+          echo "🔍 Installing and running pip-audit for Python dependencies..."
+          pip install pip-audit
+          cd apps/backend
+          pip-audit --desc || echo "⚠️ Some vulnerabilities found, check details above"
+
+      - name: Run basic security checks
+        run: |
+          echo "🔍 Running additional security checks..."
+          
+          # Check for common security issues in code
+          echo "Checking for hardcoded secrets..."
+          if grep -r "password\s*=" --include="*.py" --include="*.js" --include="*.ts" --include="*.tsx" apps/ || true; then
+            echo "⚠️ Potential hardcoded passwords found"
+          fi
+          
+          if grep -r "api_key\s*=" --include="*.py" --include="*.js" --include="*.ts" --include="*.tsx" apps/ || true; then
+            echo "⚠️ Potential hardcoded API keys found"
+          fi
+          
+          if grep -r "secret\s*=" --include="*.py" --include="*.js" --include="*.ts" --include="*.tsx" apps/ || true; then
+            echo "⚠️ Potential hardcoded secrets found"
+          fi
+          
+          echo "✅ Basic security scan completed"
+
+      - name: Security Summary
+        run: |
+          echo "## 🛡️ Security Scan Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **npm audit**: Completed for Node.js dependencies" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **pip-audit**: Completed for Python dependencies" >> $GITHUB_STEP_SUMMARY
+          echo "✅ **Code scan**: Basic security patterns checked" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "💡 **Tip**: For advanced security scanning, consider enabling GitHub Advanced Security and using the full security-and-coverage workflow" >> $GITHUB_STEP_SUMMARY

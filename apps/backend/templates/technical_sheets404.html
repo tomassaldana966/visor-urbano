@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Informational Sheet - Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2cm;
+            background-color: #70CE68;
+            color: white;
+            font-size: 12px;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .container {
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .image {
+            margin: 20px auto;
+            max-height: 350px;
+        }
+
+        .box {
+            display: block;
+            width: 400px;
+            margin: 0 auto 30px;
+            border: 2px solid #70CE68;
+            border-radius: 6px;
+            padding: 10px;
+        }
+
+        .box-title {
+            background-color: #70CE68;
+            color: white;
+            font-size: 16px;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .box-text {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .qr {
+            max-width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box">
+        <div class="box-title">Approximate Address</div>
+        <div class="box-text">{{ direccion }}</div>
+    </div>
+
+    <img src="{{ img }}" alt="Reference Image" class="image">
+
+    <p style="font-size: 20px; font-weight: bold; margin-top: 40px;">
+        No information was found for the selected area.
+    </p>
+
+    <img src="data:image/png;base64,{{ qr }}" alt="QR Code" class="qr">
+</div>
+
+<footer>
+    This technical sheet is issued by the General Coordination of Government Innovation in accordance with its powers set forth in article 8, section III of the Internal Regulations of the Chief of Staff of the Government of the State of Jalisco. All information disclosed here is obtained from the Partial Urban Development Plans published in the respective Municipal Gazette and is merely informative and for reference only, and is subject to validation by the competent agencies of the corresponding municipality.
+</footer>
+
+</body>
+</html>

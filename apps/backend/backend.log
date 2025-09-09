@@ -1,0 +1,416 @@
+INFO:     Will watch for changes in these directories: ['/Users/ketcx/code/da/visor-urbano/apps/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [7353] using StatReload
+INFO:     Started server process [7406]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:app.services.requirements_queries:Municipality name from query: 'Municipio Nueva'
+INFO:app.services.requirements_queries:Municipality in template_data: 'Municipio Nueva'
+INFO:app.services.requirements_queries:Query data: street='Calle Nueva', neighborhood='Colonia Nueva', municipality_name='Municipio Nueva'
+INFO:app.services.requirements_queries:Folio: 1-5/2025
+INFO:app.services.requirements_queries:Applicant name: María García
+INFO:app.services.requirements_queries:Activity name: Negocio Nueva
+INFO:app.services.requirements_queries:Address: Calle Nueva, Colonia Nueva
+ERROR:weasyprint:Failed to load image at 'https://visorurbano.com/assets/img/logo.png': HTTPError: HTTP Error 404: Not Found
+ERROR:weasyprint:Failed to load image at 'http://example.com/map.png': HTTPError: HTTP Error 404: Not Found
+INFO:     127.0.0.1:59522 - "GET /v1/requirements-queries/MS01LzIwMjU%3D/requirements/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59599 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59893 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:app.services.requirements_queries:Municipality name from query: 'Guadalajara'
+INFO:app.services.requirements_queries:Municipality in template_data: 'Guadalajara'
+INFO:app.services.requirements_queries:Query data: street='Calle Debug', neighborhood='Colonia Debug', municipality_name='Guadalajara'
+INFO:app.services.requirements_queries:Folio: 1-6/2025
+INFO:app.services.requirements_queries:Applicant name: Usuario Debug
+INFO:app.services.requirements_queries:Activity name: Negocio Debug
+INFO:app.services.requirements_queries:Address: Calle Debug, Colonia Debug
+ERROR:weasyprint:Failed to load image at 'https://visorurbano.com/assets/img/logo.png': HTTPError: HTTP Error 404: Not Found
+ERROR:weasyprint:Failed to load image at 'http://example.com/map.png': HTTPError: HTTP Error 404: Not Found
+INFO:     127.0.0.1:60427 - "GET /v1/requirements-queries/MS02LzIwMjU%3D/requirements/pdf HTTP/1.1" 200 OK
+INFO:app.services.requirements_queries:Municipality name from query: 'Guadalajara'
+INFO:app.services.requirements_queries:Municipality in template_data: 'Guadalajara'
+INFO:app.services.requirements_queries:Query data: street='Calle Debug', neighborhood='Colonia Debug', municipality_name='Guadalajara'
+INFO:app.services.requirements_queries:Folio: 1-6/2025
+INFO:app.services.requirements_queries:Applicant name: Usuario Debug
+INFO:app.services.requirements_queries:Activity name: Negocio Debug
+INFO:app.services.requirements_queries:Address: Calle Debug, Colonia Debug
+ERROR:weasyprint:Failed to load image at 'https://visorurbano.com/assets/img/logo.png': HTTPError: HTTP Error 404: Not Found
+ERROR:weasyprint:Failed to load image at 'http://example.com/map.png': HTTPError: HTTP Error 404: Not Found
+INFO:     127.0.0.1:60529 - "GET /v1/requirements-queries/MS02LzIwMjU%3D/requirements/pdf?id=733424f0-d27f-47ff-8b41-d8bb4d27d0a0&vscodeBrowserReqId=1749663933093 HTTP/1.1" 200 OK
+INFO:app.services.requirements_queries:Municipality name from query: 'Municipio Nueva'
+INFO:app.services.requirements_queries:Municipality in template_data: 'Municipio Nueva'
+INFO:app.services.requirements_queries:Query data: street='Calle Nueva', neighborhood='Colonia Nueva', municipality_name='Municipio Nueva'
+INFO:app.services.requirements_queries:Folio: 1-5/2025
+INFO:app.services.requirements_queries:Applicant name: María García
+INFO:app.services.requirements_queries:Activity name: Negocio Nueva
+INFO:app.services.requirements_queries:Address: Calle Nueva, Colonia Nueva
+ERROR:weasyprint:Failed to load image at 'https://visorurbano.com/assets/img/logo.png': HTTPError: HTTP Error 404: Not Found
+ERROR:weasyprint:Failed to load image at 'http://example.com/map.png': HTTPError: HTTP Error 404: Not Found
+INFO:     127.0.0.1:60587 - "GET /v1/requirements-queries/MS01LzIwMjU%3D/requirements/pdf HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'app/services/requirements_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7406]
+INFO:     Started server process [10149]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  StatReload detected changes in 'app/routers/requirements_queries.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [10149]
+INFO:     Started server process [10422]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:61032 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61035 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61032 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61035 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61072 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61074 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61072 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61074 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61113 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61115 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61200 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61200 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61204 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61200 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61204 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61346 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61346 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61354 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61346 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61354 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61444 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61444 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61448 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61444 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61448 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61692 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61690 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61692 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61690 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61764 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61766 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61764 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61766 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61764 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61768 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61837 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61839 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61837 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61839 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61837 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61839 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61932 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61934 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61932 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61934 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61932 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:61934 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62012 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62014 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62247 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62249 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62247 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62249 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62389 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62389 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62393 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62389 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62393 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62532 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62532 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62536 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62532 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62536 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62807 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62809 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62807 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62809 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62807 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62809 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62807 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62809 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:63047 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63047 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63047 - "GET /v1/business_types/all?municipality_id=2 HTTP/1.1" 200 OK
+ERROR:app.services.requirements_queries:Error generating PDF for folio 2-5/2025, requirement 131: Multiple rows were found when one or none was required
+INFO:     127.0.0.1:63047 - "GET /v1/requirements-queries/Mi01LzIwMjU%3D/requirements/131/pdf HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63442 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63442 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63485 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63485 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63547 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:app.routers.notifications:Notifications request - user_id: 24, user_email: armin.medinaf@gmail.com
+INFO:app.routers.notifications:Notifications query returned 0 results, total_count: 0
+INFO:     127.0.0.1:63547 - "GET /v1/notifications/?page=1&per_page=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63742 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63744 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63742 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:63744 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+ERROR:app.services.requirements_queries:Error generating PDF for folio 1-5/2025: (sqlalchemy.dialects.postgresql.asyncpg.InterfaceError) <class 'asyncpg.exceptions._base.InterfaceError'>: connection is closed
+[SQL: SELECT requirements_querys.id, requirements_querys.folio, requirements_querys.street, requirements_querys.neighborhood, requirements_querys.municipality_name, requirements_querys.municipality_id, requirements_querys.scian_code, requirements_querys.scian_name, requirements_querys.property_area, requirements_querys.activity_area, requirements_querys.applicant_name, requirements_querys.applicant_character, requirements_querys.person_type, requirements_querys.minimap_url, requirements_querys.restrictions, requirements_querys.status, requirements_querys.user_id, requirements_querys.created_at, requirements_querys.updated_at, requirements_querys.year_folio, requirements_querys.alcohol_sales, requirements_querys.primary_folio 
+FROM requirements_querys 
+WHERE requirements_querys.folio = $1::VARCHAR]
+[parameters: ('1-5/2025',)]
+(Background on this error at: https://sqlalche.me/e/20/rvf5)
+INFO:     127.0.0.1:63888 - "GET /v1/requirements-queries/MS01LzIwMjU%3D/requirements/pdf HTTP/1.1" 500 Internal Server Error
+INFO:app.services.requirements_queries:Municipality name from query: 'Guadalajara'
+INFO:app.services.requirements_queries:Municipality in template_data: 'Guadalajara'
+INFO:app.services.requirements_queries:Query data: street='Calle Debug', neighborhood='Colonia Debug', municipality_name='Guadalajara'
+INFO:app.services.requirements_queries:Folio: 1-6/2025
+INFO:app.services.requirements_queries:Applicant name: Usuario Debug
+INFO:app.services.requirements_queries:Activity name: Negocio Debug
+INFO:app.services.requirements_queries:Address: Calle Debug, Colonia Debug
+INFO:app.services.requirements_queries:Municipality for template: Guadalajara
+INFO:app.services.requirements_queries:Current date for template: June 11, 2025
+INFO:app.services.requirements_queries:✓ Municipality name found in rendered HTML
+ERROR:weasyprint:Failed to load image at 'https://visorurbano.com/assets/img/logo.png': HTTPError: HTTP Error 404: Not Found
+ERROR:weasyprint:Failed to load image at 'http://example.com/map.png': HTTPError: HTTP Error 404: Not Found
+INFO:     127.0.0.1:64057 - "GET /v1/requirements-queries/MS02LzIwMjU%3D/requirements/pdf HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64084 - "GET /apple-touch-icon.png HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64085 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:64135 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64139 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64135 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64135 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64139 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64151 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64148 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64135 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64135 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64135 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64139 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64148 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64200 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64202 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64200 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64202 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64200 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64202 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64200 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64202 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64200 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64200 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64202 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64219 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64286 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64286 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64286 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64286 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64286 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64286 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64362 - "HEAD /v1/requirements-queries/MS01LzIwMjU%3D/requirements/pdf HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:64706 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64706 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64710 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64704 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64706 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64708 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64704 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64706 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64984 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64986 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64988 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64986 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64984 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64990 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64984 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64986 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64986 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:64988 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64984 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64990 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65030 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65030 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65030 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65030 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65030 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65028 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65030 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65085 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65085 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65085 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65085 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65085 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65083 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65085 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65141 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65141 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65141 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65141 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65141 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65160 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65221 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65221 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65221 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65221 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65221 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:65139 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65238 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+ERROR:app.routers.construction_procedures:Error retrieving construction procedures: (psycopg2.DatabaseError) server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT DISTINCT ON (procedures.id) procedures.id AS procedures_id, procedures.folio AS procedures_folio, procedures.current_step AS procedures_current_step, procedures.user_signature AS procedures_user_signature, procedures.user_id AS procedures_user_id, procedures.window_user_id AS procedures_window_user_id, procedures.entry_role AS procedures_entry_role, procedures.documents_submission_date AS procedures_documents_submission_date, procedures.procedure_start_date AS procedures_procedure_start_date, procedures.window_seen_date AS procedures_window_seen_date, procedures.license_delivered_date AS procedures_license_delivered_date, procedures.has_signature AS procedures_has_signature, procedures.no_signature_date AS procedures_no_signature_date, procedures.official_applicant_name AS procedures_official_applicant_name, procedures.responsibility_letter AS procedures_responsibility_letter, procedures.sent_to_reviewers AS procedures_sent_to_reviewers, procedures.sent_to_reviewers_date AS procedures_sent_to_reviewers_date, procedures.license_pdf AS procedures_license_pdf, procedures.payment_order AS procedures_payment_order, procedures.status AS procedures_status, procedures.step_one AS procedures_step_one, procedures.step_two AS procedures_step_two, procedures.step_three AS procedures_step_three, procedures.step_four AS procedures_step_four, procedures.director_approval AS procedures_director_approval, procedures.created_at AS procedures_created_at, procedures.updated_at AS procedures_updated_at, procedures.window_license_generated AS procedures_window_license_generated, procedures.procedure_type AS procedures_procedure_type, procedures.license_status AS procedures_license_status, procedures.reason AS procedures_reason, procedures.renewed_folio AS procedures_renewed_folio, procedures.requirements_query_id AS procedures_requirements_query_id, procedures.street AS procedures_street, procedures.exterior_number AS procedures_exterior_number, procedures.interior_number AS procedures_interior_number, procedures.neighborhood AS procedures_neighborhood, procedures.reference AS procedures_reference, procedures.project_municipality_id AS procedures_project_municipality_id, procedures.municipality_id AS procedures_municipality_id, municipalities.id AS municipalities_id, municipalities.name AS municipalities_name, municipalities.image AS municipalities_image, municipalities.director AS municipalities_director, municipalities.director_signature AS municipalities_director_signature, municipalities.process_sheet AS municipalities_process_sheet, municipalities.solving_days AS municipalities_solving_days, municipalities.issue_license AS municipalities_issue_license, municipalities.address AS municipalities_address, municipalities.phone AS municipalities_phone, municipalities.responsible_area AS municipalities_responsible_area, municipalities.created_at AS municipalities_created_at, municipalities.updated_at AS municipalities_updated_at, municipalities.deleted_at AS municipalities_deleted_at, municipalities.window_license_generation AS municipalities_window_license_generation, municipalities.license_restrictions AS municipalities_license_restrictions, municipalities.license_price AS municipalities_license_price, municipalities.initial_folio AS municipalities_initial_folio, municipalities.has_zoning AS municipalities_has_zoning 
+FROM procedures LEFT OUTER JOIN municipalities ON procedures.municipality_id = municipalities.id 
+WHERE procedures.procedure_type LIKE %(procedure_type_1)s AND procedures.status = %(status_1)s AND procedures.municipality_id = %(municipality_id_1)s AND procedures.user_id = %(user_id_1)s) AS anon_1]
+[parameters: {'procedure_type_1': '%construccion%', 'status_1': 1, 'municipality_id_1': 2, 'user_id_1': 24}]
+(Background on this error at: https://sqlalche.me/e/20/4xp6)
+INFO:     127.0.0.1:65283 - "GET /v1/construction_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:65298 - "GET /v1/construction_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65281 - "GET /v1/business_commercial_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65304 - "GET /v1/construction_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65303 - "GET /v1/business_commercial_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65283 - "GET /v1/business_commercial_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65283 - "GET /v1/construction_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65281 - "GET /v1/business_commercial_procedures/?municipality_id=2&user_id=24&status=1&limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65429 - "POST /v1/auth/login HTTP/1.1" 200 OK
+INFO:app.routers.notifications:Notifications request - user_id: 26, user_email: user1@@bloombergcities.jhu.edu
+INFO:app.routers.notifications:Notifications query returned 1 results, total_count: 1
+INFO:     127.0.0.1:65429 - "GET /v1/notifications/?page=1&per_page=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65460 - "GET /v1/procedures/list?folio=REQ-2025-000001 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49260 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49262 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49258 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49258 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49260 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49258 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49258 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49258 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49256 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49258 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49335 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49337 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49335 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49337 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49412 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49412 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49416 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49412 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49416 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49509 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49509 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49511 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49509 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49511 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49509 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49511 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49628 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:49628 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49632 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49628 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49632 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49740 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49742 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49740 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:49742 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50081 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50083 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50081 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50083 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50081 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50083 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50081 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50083 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50167 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50167 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50171 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50167 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50171 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50421 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50424 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50421 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50424 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50430 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50424 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50421 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50430 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50421 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50424 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50421 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50424 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50655 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50655 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50657 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50655 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50653 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50655 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50657 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50659 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50884 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50884 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50884 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50884 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50989 - "POST /v1/requirements-queries/requirements HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50989 - "GET /v1/business_types/enabled?municipality_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50997 - "GET /v1/fields/municipality/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50989 - "GET /v1/map_layers?municipality=2 HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50997 - "GET /v1/map_layers/?municipality=2 HTTP/1.1" 200 OK

@@ -1,0 +1,38 @@
+{
+  "title": "Criar uma conta",
+  "inputs": {
+    "name": {
+      "label": "Nome"
+    },
+    "firstLastName": {
+      "label": "Primeiro Sobrenome"
+    },
+    "secondLastName": {
+      "label": "Segundo Sobrenome"
+    },
+    "cellphone": {
+      "label": "Número de Telefone Celular"
+    },
+    "curp": {
+      "label": "CURP"
+    },
+    "email": {
+      "label": "E-mail"
+    },
+    "password": {
+      "label": "Senha"
+    },
+    "verifyPassword": {
+      "label": "Confirmar Senha"
+    },
+    "privacy": {
+      "label": "Eu li o <privacy>aviso de privacidade</privacy>"
+    }
+  },
+  "submit": "Criar Conta",
+  "forgotPassword": "Esqueceu a senha?",
+  "login": {
+    "title": "Já tem uma conta?",
+    "link": "Entrar"
+  }
+}

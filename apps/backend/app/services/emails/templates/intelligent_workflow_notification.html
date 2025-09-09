@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Revisión Lista para Inicio - Visor Urbano</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #6abf4b 0%, #65c65d 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 650px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #4a9c3a 0%, #6abf4b 50%, #65c65d 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50% 50% 0 0;
+            transform: scale(1.2);
+        }
+        .logo-section {
+            position: relative;
+            z-index: 2;
+        }
+        .logo-icon {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 15px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .logo-icon svg {
+            width: 100%;
+            height: auto;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header p {
+            margin: 8px 0 0;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 35px 30px;
+        }
+        .priority-alert {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f9f0 100%);
+            border: 2px solid #6abf4b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 0 25px;
+            text-align: center;
+            position: relative;
+        }
+        .priority-alert::before {
+            content: '🚀';
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .priority-alert h3 {
+            color: #2d5016;
+            margin: 0 0 8px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .priority-alert p {
+            color: #4a7c2a;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .department-info {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .department-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #6abf4b, #65c65d);
+            border-radius: 0 0 0 8px;
+        }
+        .info-row {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+        .label {
+            font-weight: 600;
+            color: #1e293b;
+            min-width: 140px;
+            font-size: 14px;
+        }
+        .value {
+            color: #475569;
+            font-size: 14px;
+            flex: 1;
+        }
+        .value.highlight {
+            background: linear-gradient(135deg, #6abf4b, #65c65d);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .status-ready {
+            background: linear-gradient(135deg, #e1f2df 0%, #f0f9ef 100%);
+            color: #2d5016;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            border: 1px solid #9dd494;
+            display: inline-block;
+        }
+        .requirements-summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .requirements-summary h4 {
+            color: #1e293b;
+            margin: 0 0 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .requirements-summary h4::before {
+            content: '📋';
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .req-count {
+            background: #6abf4b;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6abf4b 0%, #65c65d 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 191, 75, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 191, 75, 0.4);
+        }
+        .footer {
+            background: #f8fafc;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer strong {
+            color: #1e293b;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 25px 0;
+        }
+        .workflow-info {
+            background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
+            border: 1px solid #f59e0b;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            font-size: 13px;
+            color: #92400e;
+        }
+        .workflow-info strong {
+            color: #78350f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 148.04 66.29" xmlns="http://www.w3.org/2000/svg">
+                        <defs><style>.cls-1{fill:#ffffff;}.cls-2{fill:#ffffff;}.cls-3{fill:#ffffff;}</style></defs>
+                        <path class="cls-1" d="M0,51.42H3.48L6.39,62,9.48,51.42H13L8.32,66.13H4.42Z"/>
+                        <path class="cls-1" d="M15.87,66.13V51.42h3.3V66.13Z"/>
+                        <path class="cls-1" d="M22.34,56.42V55.18c0-2.53,1.33-3.83,4-3.88l.85,0a16.33,16.33,0,0,1,5.08.64v2.57c-1.36-.13-2.53-.2-3.48-.2h-1.5a2.91,2.91,0,0,0-1.27.2q-.36.21-.36,1V56a1.24,1.24,0,0,0,.22.89,1.8,1.8,0,0,0,1.19.32h2.13a3.39,3.39,0,0,1,2.27.7,4.15,4.15,0,0,1,1.34,3.36v.84c0,1.89-.59,3.13-1.78,3.74a5.18,5.18,0,0,1-2.3.46c-1.58,0-2.74,0-3.5-.12a12.66,12.66,0,0,1-2.4-.52V63.07A51.44,51.44,0,0,0,28,63.3a2.35,2.35,0,0,0,1.13-.23.87.87,0,0,0,.4-.84v-.58a1,1,0,0,0-1.21-1.17H26.22A4.13,4.13,0,0,1,24.07,60a2.87,2.87,0,0,1-1.16-1.13,4.31,4.31,0,0,1-.46-1.22A8.82,8.82,0,0,1,22.34,56.42Z"/>
+                        <path class="cls-1" d="M35.91,61.49a24.91,24.91,0,0,1-.14-2.72,17.42,17.42,0,0,1,.16-2.48,11.18,11.18,0,0,1,.43-1.93A4.54,4.54,0,0,1,37.07,53a4.46,4.46,0,0,1,.91-.89,3.73,3.73,0,0,1,1.12-.5,8.38,8.38,0,0,1,2.28-.3c.81,0,1.42,0,1.81.06a8,8,0,0,1,1.27.24,3.51,3.51,0,0,1,1.12.5,4.43,4.43,0,0,1,.9.89,4.36,4.36,0,0,1,.7,1.34,15,15,0,0,1,.56,4.52A11.41,11.41,0,0,1,46.8,64a3.77,3.77,0,0,1-1.55,1.57,7.58,7.58,0,0,1-3.49.6,7.82,7.82,0,0,1-3.48-.56,3.49,3.49,0,0,1-1.57-1.51A7.37,7.37,0,0,1,35.91,61.49Zm3.53-6a6.5,6.5,0,0,0-.28,1.32,17.11,17.11,0,0,0-.1,1.86c0,.69,0,1.23,0,1.61s.06.73.1,1.06a2.88,2.88,0,0,0,.22.79,2.05,2.05,0,0,0,.33.54,1.1,1.1,0,0,0,.49.35,4.12,4.12,0,0,0,1.47.23A4,4,0,0,0,43.06,63a1.62,1.62,0,0,0,.82-.66,3.2,3.2,0,0,0,.45-1.32,15.13,15.13,0,0,0,.12-2.13,19.5,19.5,0,0,0-.09-2.1,7.2,7.2,0,0,0-.26-1.31,1.49,1.49,0,0,0-.52-.77,1.87,1.87,0,0,0-.74-.35,5.14,5.14,0,0,0-1.07-.09,7.06,7.06,0,0,0-1.06.07,2.08,2.08,0,0,0-.74.32A1.44,1.44,0,0,0,39.44,55.46Z"/>
+                        <path class="cls-1" d="M50.8,66.13V51.42h6.49a4.33,4.33,0,0,1,3.11,1.06,4.78,4.78,0,0,1,1.13,3.58,6.15,6.15,0,0,1-.62,3.14,2.66,2.66,0,0,1-.75.82,6.19,6.19,0,0,1-.9.42l2.67,5.69H58.19L56,60.72l-1.91-.28v5.69Zm3.31-8.22h2.8a1.16,1.16,0,0,0,1-.38,2.65,2.65,0,0,0,.26-1.41,2.57,2.57,0,0,0-.3-1.44,1.15,1.15,0,0,0-1-.41h-2.8Z"/>
+                        <path class="cls-2" d="M70.65,66.23h-.28a6.49,6.49,0,0,1-3.13-.5,5.32,5.32,0,0,1-.83-.72,3,3,0,0,1-.7-1.15,13.16,13.16,0,0,1-.56-4.16V51.42H67V59.7a11.48,11.48,0,0,0,.13,2.11c.08.41.16.74.22,1a1.8,1.8,0,0,0,.27.61c.12.16.23.31.33.43a1.13,1.13,0,0,0,.42.3,4.3,4.3,0,0,0,.47.18,4,4,0,0,0,.55.1c.35,0,.72,0,1.13,0l1,0a3.64,3.64,0,0,0,.73-.13,2,2,0,0,0,.66-.29,2.69,2.69,0,0,0,.55-.53,2.65,2.65,0,0,0,.42-.86,9.76,9.76,0,0,0,.36-2.91V51.42h1.87V59.7c0,2.62-.46,4.39-1.39,5.28a5.49,5.49,0,0,1-.86.73,3.06,3.06,0,0,1-1,.36A11.25,11.25,0,0,1,70.65,66.23Z"/>
+                        <path class="cls-2" d="M86.15,51.42q3.55,0,3.55,4.46a6.21,6.21,0,0,1-.23,2,8.2,8.2,0,0,1-.39.93,1.88,1.88,0,0,1-.39.54l-.4.34a1.81,1.81,0,0,1-.44.23,4.45,4.45,0,0,1-.64.18l3,6h-2l-2.92-5.89L81.68,60v6.17H79.84V51.42Zm-4.47,7h4.39c.73,0,1.21-.19,1.42-.58a3.54,3.54,0,0,0,.34-1.7,7,7,0,0,0-.14-1.64,1.59,1.59,0,0,0-.42-.82,1.62,1.62,0,0,0-1.2-.46H81.68Z"/>
+                        <path class="cls-2" d="M99.43,51.42a4.64,4.64,0,0,1,1.86.34,2.83,2.83,0,0,1,1.21.93,4.21,4.21,0,0,1,.85,2.59c0,1.79-.64,2.86-1.91,3.21a2.32,2.32,0,0,1,1.42,1.08,4.14,4.14,0,0,1,.61,2.4,4.68,4.68,0,0,1-.85,2.91,3.69,3.69,0,0,1-3.17,1.25H93.66V51.42Zm-3.9,6.15h3.86A2.12,2.12,0,0,0,101,57a2.35,2.35,0,0,0,.54-1.67,1.86,1.86,0,0,0-1.37-2.07,2.9,2.9,0,0,0-.74-.08H95.53Zm0,6.79h3.88c1.47,0,2.21-.82,2.21-2.45a3.11,3.11,0,0,0-.55-1.87,1.93,1.93,0,0,0-1.66-.74H95.53Z"/>
+                        <path class="cls-2" d="M105.92,66.13l5.28-14.71h2l5.07,14.71h-2.11l-1.21-3.88h-5.57l-1.26,3.88Zm4-5.63h4.42l-2.17-6.43Z"/>
+                        <path class="cls-2" d="M121.67,66.13V51.42h1.89l7.3,11.27V51.42h1.84V66.13h-1.84l-7.32-11.25V66.13Z"/>
+                        <path class="cls-2" d="M136.54,58.57a15.77,15.77,0,0,1,.29-3.12,7.84,7.84,0,0,1,.75-2.21A3.24,3.24,0,0,1,138.83,52a5,5,0,0,1,1.56-.56,11.27,11.27,0,0,1,1.75-.12q1,0,1.59.06a7.1,7.1,0,0,1,1.22.24,3.42,3.42,0,0,1,1.07.5,4.47,4.47,0,0,1,1.49,2.23,16.13,16.13,0,0,1,.53,4.52,12.12,12.12,0,0,1-.71,4.79,4.7,4.7,0,0,1-.79,1.31,2.9,2.9,0,0,1-1.16.78,8.52,8.52,0,0,1-3.07.46,6.68,6.68,0,0,1-3.8-.78A4,4,0,0,1,137,63.26,17.41,17.41,0,0,1,136.54,58.57Zm2-2.47a8.6,8.6,0,0,0-.13,1.24q0,.69,0,1.65c0,.63,0,1.21.06,1.72a11.67,11.67,0,0,0,.18,1.38,3.33,3.33,0,0,0,.35,1,3.12,3.12,0,0,0,.52.68,1.68,1.68,0,0,0,.72.41,6.22,6.22,0,0,0,1.82.24,12.06,12.06,0,0,0,1.57-.08,3.36,3.36,0,0,0,1-.31,2,2,0,0,0,.74-.61,3.66,3.66,0,0,0,.49-1,12.62,12.62,0,0,0,.36-3.54,18,18,0,0,0-.13-2.54c-.09-.5-.16-.89-.22-1.17a2.33,2.33,0,0,0-.28-.74c-.12-.2-.23-.38-.34-.53a1.16,1.16,0,0,0-.44-.37,4,4,0,0,0-.49-.23,2.33,2.33,0,0,0-.59-.12,11.53,11.53,0,0,0-1.21-.06h-.91a6.07,6.07,0,0,0-.66.05,2.33,2.33,0,0,0-.59.12c-.14.05-.3.13-.49.22a1.06,1.06,0,0,0-.44.36c-.11.15-.23.33-.36.53a2.93,2.93,0,0,0-.29.74C138.69,55.42,138.62,55.74,138.55,56.1Z"/>
+                        <!-- Building icons and city elements -->
+                        <path class="cls-1" d="M85.65,44.05V38.42a4.59,4.59,0,0,1,.47-9.15h.32a4.59,4.59,0,0,1,.09,9.14v6l-.09,0a.79.79,0,0,1-.32.08.46.46,0,0,1-.47-.47M82.44,33.82a3.65,3.65,0,0,0,3.21,3.66V35.24l-1.55-.92a.46.46,0,0,1-.23-.51.47.47,0,0,1,.45-.34.53.53,0,0,1,.24.06l1.09.63V32.39a.44.44,0,0,1,.44-.46.44.44,0,0,1,.44.46v.2l.76-.57a.47.47,0,0,1,.28-.11.47.47,0,0,1,.44.34.4.4,0,0,1-.16.47l-1.32,1v1.49l1.24-.93a.44.44,0,0,1,.25-.08.48.48,0,0,1,.44.32.47.47,0,0,1-.15.53l-1.78,1.33v1.07a3.66,3.66,0,0,0,3.26-3.66,3.72,3.72,0,0,0-3.67-3.67,3.68,3.68,0,0,0-3.68,3.67"/>
+                        <path class="cls-1" d="M129.89,45h-6.6a.67.67,0,0,1-.66-.66V32.6H111.79v7a.67.67,0,0,1-.66.66h-4.38a.66.66,0,0,1-.65-.66V31.94a.66.66,0,0,1,.65-.66h3.72V24H95l.16,20.31a.67.67,0,0,1-.66.67H77.59a.66.66,0,0,1-.66-.66V32.93H72.34a.67.67,0,0,1-.66-.66V6.78L57.41,1.6V34.54H60.8a.66.66,0,0,1,.66.66v9.16a.66.66,0,0,1-.66.66h-4a.66.66,0,0,1-.66-.66v-8.5H50.45v8.5a.66.66,0,0,1-.65.66H32.88a.67.67,0,0,1-.66-.66v-9h-8v9a.67.67,0,0,1-.66.66H19.35a.66.66,0,0,1,0-1.32h3.53v-9a.65.65,0,0,1,.66-.66h9.34a.65.65,0,0,1,.66.66v9h15.6V35.2a.66.66,0,0,1,.66-.66h6.29V.66a.64.64,0,0,1,.28-.54A.67.67,0,0,1,57,0L72.56,5.69a.66.66,0,0,1,.44.62v25.3h4.59a.66.66,0,0,1,.66.66V43.7H93.82l-.15-20.31a.67.67,0,0,1,.19-.47.63.63,0,0,1,.47-.2h16.8a.67.67,0,0,1,.66.66v7.9h11.5a.66.66,0,0,1,.66.66V43.7h5.94a.66.66,0,0,1,0,1.32ZM57.41,43.7h2.73V35.86H57.41Zm50-4.78h3.06V32.6h-3.06Z"/>
+                    </svg>
+                </div>
+                <h1>¡Revisión Lista para Inicio!</h1>
+                <p>Sistema de Workflow Inteligente</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="priority-alert">
+                <h3>Tu departamento puede empezar a revisar inmediatamente</h3>
+                <p>Todas las dependencias han sido resueltas y la revisión está lista</p>
+            </div>
+            
+            <p style="font-size: 16px; color: #475569; line-height: 1.6;">
+                Hola <strong>{{ user_name }}</strong>,
+            </p>
+            
+            <p style="font-size: 16px; color: #475569; line-height: 1.6;">
+                El sistema de workflow inteligente ha determinado que <strong>{{ department_name }}</strong> puede iniciar la revisión del siguiente procedimiento:
+            </p>
+            
+            <div class="department-info">
+                <div class="info-row">
+                    <span class="label">Folio del Trámite:</span>
+                    <span class="value highlight">{{ folio }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Departamento:</span>
+                    <span class="value">{{ department_name }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Estado:</span>
+                    <span class="status-ready">✅ Listo para Revisar</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">ID del Workflow:</span>
+                    <span class="value">{{ workflow_id }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Asignado:</span>
+                    <span class="value">{{ assigned_at }}</span>
+                </div>
+            </div>
+            
+            <div class="requirements-summary">
+                <h4>
+                    Requisitos para Revisar
+                    <span class="req-count">{{ requirements_count }}</span>
+                </h4>
+                <p style="margin: 0; color: #64748b; font-size: 14px;">
+                    Tu departamento tiene asignados <strong>{{ requirements_count }} requisitos</strong> específicos para revisar en este procedimiento.
+                    Podrás ver los detalles completos al acceder al sistema.
+                </p>
+            </div>
+            
+            {% if can_start_immediately %}
+            <div class="workflow-info">
+                <strong>🎯 Ventaja del Workflow Inteligente:</strong> 
+                Se te notifica solo cuando puedes actuar realmente. No hay esperas innecesarias ni notificaciones irrelevantes.
+            </div>
+            {% endif %}
+            
+            <div class="divider"></div>
+            
+            <p style="font-size: 15px; color: #64748b; text-align: center; margin: 20px 0;">
+                Accede al sistema para comenzar la revisión de los requisitos asignados a tu departamento.
+            </p>
+            
+            {% if portal_url %}
+            <div style="text-align: center;">
+                <a href="{{ portal_url }}" class="btn">Iniciar Revisión</a>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p><strong>Visor Urbano</strong> - Sistema de Gestión Urbana Inteligente</p>
+            <p>Workflow optimizado - Solo notificaciones relevantes - Mayor eficiencia</p>
+            <p>Este es un correo automático del sistema. Por favor no responda a este mensaje.</p>
+            <p>© {{ current_year }} Visor Urbano - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

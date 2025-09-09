@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsigned Receipt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 12px;
+            color: #000;
+            margin: 20px;
+        }
+        .header, .footer {
+            text-align: center;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 25px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .qr {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .qr img {
+            width: 120px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .field {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="{{ logo }}" class="logo" alt="Municipal Logo">
+        <h2>Document Receipt - Unsigned</h2>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Applicant Information</div>
+        <div class="field"><span class="bold">Name:</span> {{ data.name }}</div>
+        <div class="field"><span class="bold">Folio:</span> {{ data.result[0].folio }}</div>
+        <div class="field"><span class="bold">Address:</span> {{ data.domicilio.calle }} {{ data.domicilio.exterior }}{{ data.domicilio.interior }} - {{ data.domicilio.colonia }}</div>
+        <div class="field"><span class="bold">Postal Code:</span> {{ data.domicilio.cp }}</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Submitted Documents</div>
+        <ul>
+            {% for item in data.data %}
+            <li><span class="bold">{{ item.description }}:</span> {{ item.value }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Submission Details</div>
+        <div class="field"><span class="bold">Submission Date:</span> {{ data.result[0].created_at.strftime('%B %d, %Y') }}</div>
+        <div class="field"><span class="bold">Municipality:</span> {{ data.result[0].municipio }}</div>
+    </div>
+
+    <div class="qr">
+        <div class="section-title">Verification QR Code</div>
+        <img src="data:image/png;base64,{{ qrCode }}" alt="QR Code">
+    </div>
+
+    <div class="footer">
+        <p>This document was generated electronically and is not signed. For more information, visit our official portal.</p>
+    </div>
+</body>
+</html>

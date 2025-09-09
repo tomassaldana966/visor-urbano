@@ -1,0 +1,11 @@
+{
+  "input": {
+    "required": "The field is required",
+    "email": "The field must be a valid email address",
+    "passwordInvalid": "The password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, and a number",
+    "passwordMismatch": "Passwords do not match"
+  },
+  "auth": {
+    "unauthorized": "Unauthorized access"
+  }
+}

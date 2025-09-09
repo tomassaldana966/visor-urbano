@@ -1,0 +1,180 @@
+{
+  "title": {
+    "issuedLicenses": "Issued Licenses"
+  },
+  "description": {
+    "managementAndConsultation": "Management and consultation of commercial licenses issued in {{municipalityName}}"
+  },
+  "stats": {
+    "totalLicenses": "Total Licenses",
+    "activeLicenses": "Active Licenses",
+    "pendingLicenses": "Pending Licenses",
+    "paidLicenses": "Paid Licenses"
+  },
+  "search": {
+    "placeholder": "Search by folio, business name or owner...",
+    "button": "Search"
+  },
+  "filters": {
+    "allStatuses": "All Statuses",
+    "allTypes": "All Types",
+    "clearFilters": "Clear Filters"
+  },
+  "status": {
+    "active": "Active",
+    "new": "New",
+    "approved": "Approved",
+    "pending": "Pending",
+    "suspended": "Suspended",
+    "paid": "Paid",
+    "unpaid": "Unpaid",
+    "vigente": "Active",
+    "nueva": "New",
+    "aprobada": "Approved",
+    "pendiente": "Pending",
+    "suspendida": "Suspended",
+    "pagada": "Paid",
+    "pagado": "Paid",
+    "sin pagar": "Unpaid",
+    "cancelada": "Cancelled"
+  },
+  "type": {
+    "commercial": "Commercial",
+    "industrial": "Industrial",
+    "services": "Services",
+    "giro": "Commercial Turn",
+    "renewal": "Renewal"
+  },
+  "table": {
+    "folio": "Folio",
+    "folioList": "F. List",
+    "activity": "Activity",
+    "owner": "Owner",
+    "type": "Type",
+    "status": "Status",
+    "date": "Date",
+    "payment": "Payment",
+    "actions": "Actions",
+    "tableTitle": "Licenses",
+    "commercialActivity": "Commercial Activity",
+    "scianCode": "SCIAN Code",
+    "business": "Business",
+    "address": "Address",
+    "schedule": "Schedule",
+    "unknown": "Unknown",
+    "notSpecified": "Not specified",
+    "municipality": "Municipality"
+  },
+  "details": {
+    "applicant": "Applicant",
+    "type": "Type",
+    "issueDate": "Issue Date",
+    "paymentStatus": "Payment Status",
+    "businessDetails": "Business Details",
+    "businessName": "Name",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "operatingHours": "Operating Hours",
+    "schedule": "Schedule",
+    "days": "Days",
+    "mondayToSunday": "Monday to Sunday"
+  },
+  "actions": {
+    "uploadPdf": "Upload PDF",
+    "viewLicense": "View license",
+    "downloadReceipt": "Download receipt",
+    "downloadLicense": "Download license",
+    "moreActions": "More actions",
+    "changeStatus": "Change status",
+    "viewDetail": "View detail",
+    "viewHistory": "View history"
+  },
+  "empty": {
+    "noLicensesAvailable": "No licenses available",
+    "noResultsFound": "No results found",
+    "noLicensesDescription": "No issued licenses found",
+    "tryDifferentFilters": "Try different search filters"
+  },
+  "errors": {
+    "loadingError": "Error loading issued licenses"
+  },
+  "modals": {
+    "paymentReceipt": {
+      "title": "Payment Receipt",
+      "description": "Once the license is paid, attach the payment receipt",
+      "uploadLabel": "Upload scanned receipt",
+      "noFileChosen": "No file chosen",
+      "chooseFile": "Choose File",
+      "sending": "Sending...",
+      "send": "Send"
+    },
+    "noReceipt": {
+      "title": "Receipt not available",
+      "description": "No payment receipt has been uploaded for this license yet. To download the receipt, it must first be marked as paid and upload the payment proof.",
+      "understood": "Understood"
+    },
+    "noLicense": {
+      "title": "License not available",
+      "description": "Cannot access the license at this time. The PDF file is not available or has not been generated yet.",
+      "understood": "Understood"
+    },
+    "statusUpdate": {
+      "title": "Update license status",
+      "currentStatus": "Current status",
+      "reason": "Reason",
+      "statusChangeDate": "Change Date",
+      "file": "File",
+      "download": "Download",
+      "newStatus": "License status",
+      "newStatusRequired": "Select status",
+      "selectStatus": "Select status",
+      "reasonLabel": "Reason",
+      "reasonPlaceholder": "Describe the reason for status change...",
+      "uploadFile": "Upload File",
+      "fileSelected": "File selected",
+      "updating": "Updating...",
+      "add": "Add"
+    },
+    "history": {
+      "title": "License Status Log",
+      "folioLicense": "License Folio",
+      "folioList": "Requirements List Folio",
+      "applicant": "Applicant/Owner",
+      "status": "Status",
+      "type": "License Type",
+      "previousStatus": "Previous Status",
+      "newStatus": "New Status",
+      "changeDate": "Change Date",
+      "user": "User",
+      "errorLoading": "Error loading history",
+      "loading": "Loading..."
+    }
+  },
+  "statusOptions": {
+    "cancelled": "Cancelled",
+    "suspended": "Suspended",
+    "active": "Active",
+    "discharged": "Discharged",
+    "sanction": "Sanction",
+    "debt": "Debt",
+    "renew": "Renew"
+  },
+  "pagination": {
+    "showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "results",
+    "previous": "Previous",
+    "next": "Next",
+    "first": "First",
+    "last": "Last",
+    "page": "Page",
+    "pageOf": "Page {{current}} of {{total}}"
+  },
+  "about": {
+    "title": "About the License System",
+    "description": "This system allows you to consult and manage commercial licenses issued in real time. You can search by folio, business name, or owner to find detailed information about the status and characteristics of each license."
+  },
+  "notAvailable": "Not available"
+}

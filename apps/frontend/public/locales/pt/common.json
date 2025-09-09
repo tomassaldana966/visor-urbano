@@ -1,0 +1,99 @@
+{
+  "actions": {
+    "export": "Exportar",
+    "filter": "Filtrar",
+    "clearFilters": "Limpar Filtros",
+    "search": "Pesquisar",
+    "view": "Ver",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Fechar",
+    "download": "Baixar",
+    "upload": "Carregar",
+    "create": "Criar",
+    "update": "Atualizar",
+    "submit": "Enviar",
+    "reset": "Redefinir",
+    "clear": "Limpar",
+    "refresh": "Atualizar",
+    "title": "Ações"
+  },
+  "pagination": {
+    "showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "results": "resultados",
+    "previous": "Anterior",
+    "next": "Próximo",
+    "first": "Primeiro",
+    "last": "Último",
+    "page": "Página"
+  },
+  "status": {
+    "loading": "Carregando...",
+    "error": "Erro",
+    "success": "Sucesso",
+    "warning": "Aviso",
+    "info": "Informação",
+    "pending": "Pendente",
+    "completed": "Concluído",
+    "cancelled": "Cancelado",
+    "active": "Ativo",
+    "inactive": "Inativo"
+  },
+  "note": "Nota",
+  "time": {
+    "today": "Hoje",
+    "yesterday": "Ontem",
+    "tomorrow": "Amanhã",
+    "minutes": "minutos",
+    "hours": "horas",
+    "days": "dias",
+    "weeks": "semanas",
+    "months": "meses",
+    "years": "anos"
+  },
+  "form": {
+    "required": "Este campo é obrigatório",
+    "invalid": "Valor inválido",
+    "emailInvalid": "Email inválido",
+    "phoneInvalid": "Telefone inválido",
+    "passwordTooShort": "Senha muito curta",
+    "passwordsDoNotMatch": "As senhas não coincidem",
+    "selectOption": "Selecione uma opção",
+    "noResults": "Sem resultados",
+    "searchPlaceholder": "Pesquisar..."
+  },
+  "na": "N/A",
+  "export": "Exportar",
+  "previous": "Anterior",
+  "next": "Próximo",
+  "sidebar": {
+    "collapse": "Recolher",
+    "expand": "Expandir barra lateral"
+  },
+  "errors": {
+    "loadingData": "Erro ao carregar dados",
+    "pleaseReload": "Por favor, recarregue a página",
+    "pageLoadError": "Erro ao carregar página"
+  },
+  "loading": {
+    "translations": "Carregando traduções...",
+    "default": {
+      "title": "Carregando",
+      "message": "Por favor aguarde...",
+      "subtitle": "Estamos processando sua solicitação..."
+    },
+    "map": {
+      "title": "Carregando Mapa",
+      "message": "Preparando o mapa interativo...",
+      "subtitle": "Isso pode levar alguns momentos para carregar todos os dados do mapa..."
+    }
+  },
+  "branding": {
+    "visorUrbano": "Visor Urbano"
+  }
+}

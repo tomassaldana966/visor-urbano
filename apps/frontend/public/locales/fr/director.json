@@ -1,0 +1,695 @@
+{
+  "navigation": {
+    "dashboard": "Tableau de bord",
+    "reviews": "Examens",
+    "approvals": "Approbations",
+    "analytics": "Analytiques",
+    "users": "Utilisateurs",
+    "settings": "Paramètres",
+    "roles": "Rôles",
+    "requirements": "Exigences",
+    "businessTypes": "Types d'Entreprise",
+    "blog": "Blog",
+    "dependencies": "Dépendances",
+    "municipalLayers": "Couches Municipales",
+    "impactManagement": "Gestion d'Impact"
+  },
+  "quickActions": {
+    "title": "Actions Rapides",
+    "subtitle": "Gestion exécutive du système",
+    "actions": {
+      "reviews": {
+        "label": "Réviser les Procédures",
+        "description": "Gérer les procédures en cours de révision"
+      },
+      "approvals": {
+        "label": "Approbations en Attente",
+        "description": "Traiter les approbations exécutives"
+      },
+      "analytics": {
+        "label": "Voir les Analyses",
+        "description": "Rapports de performance et métriques"
+      },
+      "dependencies": {
+        "label": "Dépendances",
+        "description": "Gérer les départements et les flux de travail"
+      },
+      "municipalLayers": {
+        "label": "Couches Municipales",
+        "description": "Gérer les couches cartographiques de la municipalité"
+      },
+      "impactManagement": {
+        "label": "Gestion d'Impact",
+        "description": "Gérer les niveaux d'impact de zonage"
+      },
+      "users": {
+        "label": "Gérer les Utilisateurs",
+        "description": "Administrer le personnel municipal"
+      },
+      "roles": {
+        "label": "Gérer les Rôles",
+        "description": "Gérer les rôles et permissions du système"
+      },
+      "requirements": {
+        "label": "Gérer les Exigences",
+        "description": "Gérer les champs et exigences des procédures"
+      },
+      "businessTypes": {
+        "label": "Gérer les Types d'Entreprise",
+        "description": "Gérer les types d'entreprise et activités commerciales"
+      },
+      "blog": {
+        "label": "Gérer le Blog",
+        "description": "Créer, modifier et supprimer les articles de blog/actualités"
+      },
+      "settings": {
+        "label": "Paramètres",
+        "description": "Configuration du système"
+      }
+    }
+  },
+  "analytics": {
+    "title": "Analyses et Rapports",
+    "breadcrumb": "Analyses",
+    "subtitle": "Métriques de performance et statistiques système",
+    "exportPdf": "Exporter PDF",
+    "refresh": "Actualiser",
+    "lastUpdate": "Dernière mise à jour",
+    "filters": {
+      "period": "Période",
+      "reportType": "Type de Rapport",
+      "filter": "Filtrer",
+      "periods": {
+        "7d": "7 derniers jours",
+        "30d": "30 derniers jours",
+        "90d": "3 derniers mois",
+        "1y": "Dernière année"
+      },
+      "reportTypes": {
+        "general": "Général",
+        "efficiency": "Efficacité",
+        "dependencies": "Par Dépendances",
+        "types": "Par Types de Démarche"
+      }
+    },
+    "kpis": {
+      "title": "KPI Principaux",
+      "averageTime": "Temps Moyen",
+      "efficiency": "Efficacité",
+      "totalProcessed": "Total Traité",
+      "satisfaction": "Satisfaction",
+      "units": {
+        "days": "jours",
+        "percentage": "%",
+        "rating": "/5"
+      },
+      "trends": {
+        "vsLastMonth": "vs. mois dernier",
+        "increase": "+{{value}}% vs. mois dernier",
+        "decrease": "-{{value}}% vs. mois dernier",
+        "rating_increase": "+{{value}} vs. mois dernier"
+      }
+    },
+    "charts": {
+      "monthlyTrends": "Tendances Mensuelles",
+      "statusDistribution": "Distribution par Statut",
+      "municipalSummary": "Résumé Exécutif Municipal",
+      "departmentalReviews": "État des Révisions Départementales",
+      "months": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Décembre"
+      },
+      "monthsShort": {
+        "jan": "Jan",
+        "feb": "Fév",
+        "mar": "Mar",
+        "apr": "Avr",
+        "may": "Mai",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aoû",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Déc"
+      }
+    },
+    "statuses": {
+      "consultations": "Consultations",
+      "initiated": "Initiées",
+      "underReview": "En Révision",
+      "issued": "Émises",
+      "completed": "Terminées",
+      "inProcess": "En Cours",
+      "pending": "En Attente",
+      "rejected": "Rejetées",
+      "approved": "Approuvées",
+      "corrected": "À Corriger",
+      "discarded": "Écartées"
+    },
+    "performance": {
+      "title": "Performance par Département",
+      "columns": {
+        "dependency": "Département",
+        "processedProcedures": "Démarches Traitées",
+        "averageTime": "Temps Moyen",
+        "efficiency": "Efficacité",
+        "status": "Statut"
+      },
+      "statusLevels": {
+        "excellent": "Excellent",
+        "good": "Bon",
+        "warning": "Moyen",
+        "poor": "Faible",
+        "na": "N/A"
+      },
+      "dependencyNames": {
+        "approvedReviews": "Révisions Approuvées",
+        "underReview": "En Révision",
+        "forCorrection": "À Corriger",
+        "discarded": "Écartées"
+      }
+    }
+  },
+  "errors": {
+    "unauthorized": "Accès non autorisé",
+    "authTokenRequired": "Jeton d'authentification requis",
+    "loadingAnalytics": "Erreur lors du chargement des données d'analyse"
+  },
+  "roles": {
+    "title": "Gestion des Rôles",
+    "subtitle": "Gérer les rôles et permissions du système",
+    "addRole": "Ajouter un Rôle",
+    "editRole": "Modifier le Rôle",
+    "deleteRole": "Supprimer le Rôle",
+    "stats": {
+      "totalRoles": "Total des Rôles",
+      "activeRoles": "Rôles Actifs"
+    },
+    "fields": {
+      "name": "Nom du Rôle",
+      "description": "Description",
+      "municipality": "Municipalité",
+      "createdAt": "Date de Création",
+      "updatedAt": "Dernière Mise à Jour",
+      "actions": "Actions"
+    },
+    "table": {
+      "title": "Liste des Rôles du Système",
+      "role": "Rôle",
+      "municipality": "Municipalité",
+      "creationDate": "Date de Création",
+      "lastUpdate": "Dernière Mise à Jour",
+      "actions": "Actions"
+    },
+    "modals": {
+      "add": {
+        "title": "Ajouter un Nouveau Rôle",
+        "placeholder": {
+          "name": "Ex: Superviseur",
+          "description": "Décrivez les responsabilités et permissions de ce rôle..."
+        },
+        "buttons": {
+          "cancel": "Annuler",
+          "create": "Créer le Rôle",
+          "creating": "Création..."
+        }
+      },
+      "edit": {
+        "title": "Modifier le Rôle - {{name}}",
+        "buttons": {
+          "cancel": "Annuler",
+          "save": "Sauvegarder les Modifications",
+          "saving": "Sauvegarde..."
+        }
+      },
+      "delete": {
+        "title": "Confirmer la Suppression",
+        "question": "Supprimer le rôle \"{{name}}\"?",
+        "warning": "Cette action ne peut pas être annulée. Le rôle sera supprimé définitivement.",
+        "alert": "Supprimer ce rôle peut affecter les utilisateurs qui l'ont assigné.",
+        "alertTitle": "Avertissement:",
+        "buttons": {
+          "cancel": "Annuler",
+          "delete": "Supprimer le Rôle",
+          "deleting": "Suppression..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Modifier le rôle",
+      "delete": "Supprimer le rôle"
+    },
+    "types": {
+      "director": "Directeur",
+      "supervisor": "Superviseur",
+      "reviewer": "Réviseur",
+      "citizen": "Citoyen"
+    }
+  },
+  "users": {
+    "title": "Gestion des Utilisateurs",
+    "subtitle": "Gérer les utilisateurs et permissions du système",
+    "addUser": "Ajouter un Utilisateur",
+    "editUser": "Modifier l'Utilisateur",
+    "deleteUser": "Supprimer l'Utilisateur",
+    "stats": {
+      "totalUsers": "Total des Utilisateurs",
+      "withRole": "Avec Rôle Assigné",
+      "municipalities": "Municipalités"
+    },
+    "fields": {
+      "name": "Nom",
+      "email": "Email",
+      "role": "Rôle",
+      "status": "Statut",
+      "lastActive": "Dernière Activité",
+      "user": "Utilisateur",
+      "phone": "Téléphone",
+      "municipality": "Municipalité",
+      "actions": "Actions",
+      "paternalLastName": "Nom de Famille Paternel",
+      "maternalLastName": "Nom de Famille Maternel",
+      "password": "Mot de Passe",
+      "newPassword": "Nouveau Mot de Passe"
+    },
+    "table": {
+      "title": "Liste des Utilisateurs du Système",
+      "noRole": "Aucun rôle",
+      "notAssigned": "Non assigné"
+    },
+    "search": {
+      "label": "Rechercher des utilisateurs",
+      "placeholder": "Rechercher par nom ou email..."
+    },
+    "filters": {
+      "role": "Filtrer par rôle",
+      "allRoles": "Tous les rôles"
+    },
+    "modals": {
+      "add": {
+        "title": "Ajouter un Nouvel Utilisateur",
+        "placeholders": {
+          "name": "Nom de l'utilisateur",
+          "paternalLastName": "Nom de famille paternel",
+          "maternalLastName": "Nom de famille maternel (optionnel)",
+          "phone": "Numéro de téléphone",
+          "email": "email@exemple.com",
+          "password": "Mot de passe sécurisé",
+          "selectMunicipality": "Sélectionner la municipalité",
+          "selectRole": "Sélectionner le rôle"
+        },
+        "buttons": {
+          "cancel": "Annuler",
+          "create": "Créer l'Utilisateur",
+          "creating": "Création..."
+        }
+      },
+      "edit": {
+        "title": "Modifier l'Utilisateur: {{name}}",
+        "placeholders": {
+          "newPassword": "Laisser vide pour garder l'actuel"
+        },
+        "buttons": {
+          "cancel": "Annuler",
+          "save": "Sauvegarder les Modifications",
+          "saving": "Sauvegarde..."
+        }
+      },
+      "delete": {
+        "title": "Confirmer la Suppression",
+        "question": "Supprimer l'utilisateur {{name}}?",
+        "subtitle": "Cette action ne peut pas être annulée.",
+        "warning": "Attention! Supprimer cet utilisateur entraînera la perte de toutes ses données et il ne pourra plus accéder au système.",
+        "buttons": {
+          "cancel": "Annuler",
+          "delete": "Supprimer l'Utilisateur",
+          "deleting": "Suppression..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Modifier l'utilisateur",
+      "delete": "Supprimer l'utilisateur"
+    },
+    "roles": {
+      "admin": "Administrateur",
+      "director": "Directeur",
+      "reviewer": "Réviseur",
+      "operator": "Opérateur"
+    },
+    "status": {
+      "active": "Actif",
+      "inactive": "Inactif",
+      "pending": "En Attente"
+    },
+    "actions": {
+      "edit": "Modifier",
+      "delete": "Supprimer",
+      "activate": "Activer",
+      "deactivate": "Désactiver"
+    }
+  },
+  "dependencies": {
+    "title": "Gestion des Dépendances",
+    "description": "Administrer les départements, exigences et rôles d'utilisateur",
+    "breadcrumb": "Dépendances",
+    "loading": "Chargement des départements...",
+    "users": "utilisateurs",
+    "requirements": "exigences",
+    "pendingWork": "en attente",
+    "showInactive": "Afficher inactifs",
+    "reviewsActive": "Révisions",
+    "departments": {
+      "title": "Départements"
+    },
+    "tabs": {
+      "requirements": "Exigences",
+      "users": "Utilisateurs",
+      "roles": "Rôles"
+    },
+    "actions": {
+      "addField": "Ajouter un Champ",
+      "removeField": "Supprimer un Champ",
+      "addRole": "Ajouter un Rôle",
+      "removeRole": "Supprimer un Rôle"
+    },
+    "departmentRequirements": {
+      "title": "Exigences du Département",
+      "empty": "Aucune exigence assignée à ce département"
+    },
+    "departmentRoles": {
+      "title": "Rôles du Département",
+      "empty": "Aucun rôle assigné pour l'approbation dans ce département",
+      "canApprove": "Peut approuver les procédures pour ce département",
+      "approver": "Approbateur"
+    },
+    "departmentUsers": {
+      "title": "Utilisateurs du Département",
+      "empty": "Aucun utilisateur assigné à ce département"
+    },
+    "createDepartment": {
+      "button": "Nouveau Département",
+      "title": "Créer un Nouveau Département",
+      "name": "Nom du Département",
+      "code": "Code du Département",
+      "description": "Description",
+      "fillFields": "Veuillez remplir tous les champs requis",
+      "error": "Erreur lors de la création du département"
+    },
+    "modal": {
+      "department": "Département",
+      "field": "Champ",
+      "selectField": "Sélectionner un champ",
+      "procedureType": "Type de Procédure",
+      "selectProcedureType": "Sélectionner le type de procédure",
+      "role": "Rôle",
+      "selectRole": "Sélectionner un rôle"
+    },
+    "messages": {
+      "backendTimeout": "Délai d'attente dépassé: Backend indisponible",
+      "connectingBackend": "Connexion au backend... Si cela prend trop de temps, le serveur n'est peut-être pas en cours d'exécution.",
+      "connectionError": "Erreur de Connexion",
+      "noBackendConnection": "Impossible de se connecter au backend. Assurez-vous que le serveur fonctionne.",
+      "retry": "Réessayer",
+      "departmentActivated": "Département activé avec succès",
+      "departmentDeactivated": "Département désactivé avec succès",
+      "newDepartmentCreated": "Nouveau département créé avec succès",
+      "userActivatedForReviews": "Utilisateur activé pour les révisions avec succès",
+      "userDeactivatedForReviews": "Utilisateur désactivé pour les révisions avec succès",
+      "roleLabel": "Rôle:"
+    },
+    "success": {
+      "actionCompleted": "Action terminée avec succès"
+    },
+    "error": {
+      "loadDepartments": "Erreur lors du chargement des départements",
+      "loadUsers": "Erreur lors du chargement des utilisateurs",
+      "loadRequirements": "Erreur lors du chargement des exigences",
+      "actionFailed": "L'action a échoué",
+      "updateDepartmentStatus": "Erreur lors de la mise à jour du statut du département",
+      "createDepartment": "Erreur lors de la création du département",
+      "updateUserActivation": "Erreur lors de la mise à jour de l'activation utilisateur"
+    }
+  },
+  "settings": {
+    "title": "Configuration Municipale",
+    "subtitle": "Gérer la configuration du système et les paramètres municipaux",
+    "save": "Sauvegarder les Modifications",
+    "saving": "Sauvegarde...",
+    "general": {
+      "title": "Informations Générales",
+      "description": "Configuration de base de la municipalité",
+      "loading": "Chargement..."
+    },
+    "basicInfo": {
+      "title": "Informations de Base",
+      "municipalityName": "Nom de la Municipalité",
+      "municipalityNamePlaceholder": "Nom de la municipalité",
+      "director": "Directeur Municipal",
+      "directorPlaceholder": "Nom du directeur",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Numéro de téléphone",
+      "email": "Email",
+      "emailPlaceholder": "email@municipalite.com",
+      "website": "Site Web",
+      "websitePlaceholder": "https://www.municipalite.com",
+      "responsibleArea": "Zone Responsable",
+      "responsibleAreaPlaceholder": "Département responsable",
+      "address": "Adresse",
+      "addressPlaceholder": "Adresse complète de la municipalité"
+    },
+    "licenses": {
+      "title": "Configuration des Licences",
+      "allowOnlineProcedures": "Permettre les procédures en ligne",
+      "allowWindowReviewerLicenses": "Permettre la révision des licences au guichet",
+      "lowImpactLicenseCost": "Coût de Licence à Faible Impact",
+      "solvingDays": "Jours de Résolution",
+      "initialFolio": "Folio Initial",
+      "additionalText": "Texte Supplémentaire sur les Licences",
+      "additionalTextPlaceholder": "Texte supplémentaire qui apparaîtra sur les licences"
+    },
+    "visual": {
+      "title": "Configuration Visuelle",
+      "municipalLogo": "Logo Municipal",
+      "currentLogo": "Logo actuel",
+      "logoDescription": "Logo de la municipalité",
+      "changeLogo": "Changer le Logo",
+      "uploadLogoDescription": "Télécharger le logo municipal",
+      "uploadMunicipalLogo": "Télécharger le Logo Municipal",
+      "supportedFormats": "PNG, JPG jusqu'à 5MB",
+      "themeColor": "Couleur du Thème",
+      "themeColorDescription": "Couleur principale du système"
+    },
+    "logo": {
+      "noFileSelected": "Aucun fichier sélectionné",
+      "invalidFileType": "Type de fichier invalide: {{fileType}}. Seuls PNG, JPG autorisés",
+      "fileTooLarge": "Fichier trop volumineux: {{size}}MB. Maximum autorisé: 5MB",
+      "uploadError": "Erreur lors du téléchargement du logo",
+      "serverError": "Erreur du serveur: {{error}}",
+      "uploading": "Téléchargement..."
+    },
+    "messages": {
+      "saveSuccess": "Paramètres sauvegardés avec succès"
+    },
+    "errors": {
+      "municipalityInfoNotFound": "Informations de la municipalité non trouvées",
+      "municipalityIdNotFound": "ID de la municipalité non trouvé",
+      "municipalityNotFound": "Municipalité non trouvée",
+      "loadSettings": "Erreur lors du chargement des paramètres",
+      "saveSettings": "Erreur lors de la sauvegarde des paramètres",
+      "networkError": "Erreur de connexion Internet",
+      "generic": "Erreur: {{error}}"
+    },
+    "signatures": {
+      "title": "Signatures Municipales",
+      "subtitle": "Gérer les signatures qui apparaîtront sur les licences et documents officiels",
+      "description": "Configurer les signatures numériques des autorités municipales",
+      "count": "{{current}} sur {{max}} signatures configurées",
+      "name": "Nom",
+      "position": "Poste",
+      "order": "Ordre",
+      "addNew": "Ajouter une Nouvelle Signature",
+      "edit": "Modifier la Signature",
+      "delete": "Supprimer la Signature",
+      "noSignatures": "Aucune signature configurée",
+      "maxSignaturesError": "Seul un maximum de 4 signatures est autorisé",
+      "confirmDelete": "Êtes-vous sûr de vouloir supprimer cette signature ?",
+      "deleteError": "Erreur lors de la suppression de la signature",
+      "notFoundOrDeleted": "Signature introuvable ou déjà supprimée",
+      "notAuthorizedDelete": "Vous n'êtes pas autorisé à supprimer cette signature",
+      "saveError": "Erreur lors de l'enregistrement de la signature",
+      "uploadImageError": "Erreur lors du téléchargement de l'image",
+      "notAuthorized": "Vous n'êtes pas autorisé à effectuer cette action",
+      "notFound": "Signature introuvable",
+      "fields": {
+        "signerName": "Nom du Signataire",
+        "position": "Poste/Titre",
+        "orderIndex": "Ordre d'Affichage",
+        "signatureImage": "Image de la Signature"
+      },
+      "modal": {
+        "addTitle": "Ajouter une Nouvelle Signature",
+        "editTitle": "Modifier la Signature",
+        "signerName": "Nom du Signataire",
+        "signerNamePlaceholder": "Nom complet",
+        "position": "Poste/Titre",
+        "positionPlaceholder": "Directeur Municipal, Secrétaire, etc.",
+        "orderIndex": "Ordre d'Affichage",
+        "orderIndexDescription": "Détermine l'ordre dans lequel les signatures apparaîtront sur les licences",
+        "signatureImage": "Image de la Signature",
+        "signaturePreview": "Aperçu de la signature",
+        "changeImage": "Changer l'image",
+        "uploadImage": "Télécharger l'image de signature",
+        "imageFormat": "PNG, JPG jusqu'à 5 Mo",
+        "cancel": "Annuler",
+        "save": "Enregistrer",
+        "update": "Mettre à jour",
+        "saving": "Enregistrement..."
+      },
+      "messages": {
+        "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cette signature ?",
+        "deleteSuccess": "Signature supprimée avec succès",
+        "saveSuccess": "Signature enregistrée avec succès",
+        "updateSuccess": "Signature mise à jour avec succès",
+        "uploadError": "Erreur lors du téléchargement de l'image",
+        "deleteError": "Erreur lors de la suppression de la signature",
+        "saveError": "Erreur lors de l'enregistrement de la signature"
+      }
+    }
+  },
+  "blog": {
+    "title": "Gestion du Blog",
+    "subtitle": "Gérer les articles de blog et les actualités du système",
+    "newEntry": "Nouvelle Entrée",
+    "editEntry": "Modifier l'Article de Blog",
+    "createEntry": "Nouvel Article de Blog",
+    "adminAccessRequired": "Accès Administrateur Requis",
+    "adminAccessDescription": "Pour gérer le blog, vous devez saisir le mot de passe d'administration.",
+    "adminPasswordPlaceholder": "Mot de passe d'administration",
+    "access": "Accéder",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement des blogs...",
+    "saving": "Enregistrement...",
+    "creating": "Création...",
+    "updating": "Mise à jour...",
+    "form": {
+      "title": "Titre",
+      "titleRequired": "Le titre est requis",
+      "imageUrl": "URL de l'Image",
+      "imageUrlPlaceholder": "https://exemple.com/image.jpg",
+      "imageUrlRequired": "L'URL de l'image est requise",
+      "publicationDate": "Date de Publication",
+      "link": "Lien",
+      "linkPlaceholder": "https://exemple.com/article",
+      "linkRequired": "Le lien est requis",
+      "summary": "Résumé",
+      "summaryPlaceholder": "Bref résumé de l'actualité...",
+      "summaryRequired": "Le résumé est requis",
+      "fullContent": "Contenu Complet",
+      "fullContentPlaceholder": "Contenu complet de l'article...",
+      "adminPassword": "Mot de Passe d'Administration",
+      "adminPasswordPlaceholder": "Saisir le mot de passe d'administration",
+      "adminPasswordRequired": "Le mot de passe d'administration est requis"
+    },
+    "list": {
+      "title": "Articles de Blog",
+      "count": "{{count}} entrée au total",
+      "count_plural": "{{count}} entrées au total",
+      "empty": "Aucun article de blog pour le moment",
+      "createFirst": "Créer le premier article",
+      "type": "Type {{type}}"
+    },
+    "messages": {
+      "createSuccess": "Blog créé avec succès",
+      "updateSuccess": "Blog mis à jour avec succès",
+      "deleteSuccess": "Blog supprimé avec succès",
+      "createError": "Erreur lors de la création du blog",
+      "updateError": "Erreur lors de la mise à jour du blog",
+      "deleteError": "Erreur lors de la suppression du blog",
+      "loadError": "Erreur lors du chargement des blogs",
+      "passwordRequired": "Mot de passe d'administration requis",
+      "deleteConfirm": "Êtes-vous sûr de vouloir supprimer cet article de blog ?"
+    },
+    "editor": {
+      "bold": "Gras",
+      "italic": "Italique",
+      "underline": "Souligné",
+      "strikethrough": "Barré",
+      "heading1": "Titre 1",
+      "heading2": "Titre 2",
+      "bulletList": "Liste à puces",
+      "numberedList": "Liste numérotée",
+      "link": "Lien",
+      "linkPrompt": "Entrez l'URL :",
+      "code": "Code",
+      "uploadImage": "Télécharger une image",
+      "imageUploadError": "Erreur lors du téléchargement de l'image",
+      "invalidImageFile": "Veuillez sélectionner un fichier image valide",
+      "undo": "Annuler",
+      "redo": "Refaire"
+    }
+  },
+  "impactMap": {
+    "title": "Carte d'Impact",
+    "subtitle": "Gérer les niveaux d'impact de zonage pour la municipalité",
+    "tools": "Outils",
+    "toolsPanel": {
+      "title": "Outils de Carte",
+      "drawingTools": "Outils de Dessin",
+      "impactLevels": "Niveaux d'Impact",
+      "legend": "Légende"
+    },
+    "actions": {
+      "add": "Ajouter",
+      "edit": "Modifier",
+      "info": "Information",
+      "upload": "Télécharger"
+    },
+    "dialogs": {
+      "selectLevel": {
+        "title": "Sélectionner le Niveau d'Impact",
+        "description": "Choisissez le niveau d'impact pour cette zone:",
+        "impactLevel": "Niveau d'Impact"
+      },
+      "confirmDelete": {
+        "title": "Confirmer la Suppression",
+        "description": "Êtes-vous sûr de vouloir supprimer cette zone de niveau d'impact?"
+      },
+      "impactInfo": {
+        "title": "Informations sur le Niveau d'Impact",
+        "noData": "Aucune donnée de niveau d'impact disponible",
+        "fields": {
+          "id": "ID",
+          "municipalityId": "ID de la Municipalité",
+          "impactLevel": "Niveau d'Impact",
+          "geometry": "Géométrie",
+          "geometryType": "Type",
+          "coordinates": "Coordonnées",
+          "rings": "anneaux"
+        }
+      },
+      "upload": {
+        "title": "Télécharger les Zones d'Impact",
+        "description": "Télécharger les données de zones d'impact à partir d'un fichier",
+        "dropZone": "Déposez votre fichier ici ou cliquez pour sélectionner",
+        "selectFile": "Sélectionner un Fichier"
+      }
+    }
+  }
+}

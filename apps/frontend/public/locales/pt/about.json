@@ -1,0 +1,65 @@
+{
+  "title": "O que é o Visor Urbano",
+  "description": {
+    "title": "Descrição",
+    "content": "No Visor Urbano, você poderá conhecer os requisitos aplicáveis para abrir seu negócio e tramitar sua licença totalmente online."
+  },
+  "background": {
+    "title": "Antecedentes",
+    "paragraph1": "Em 2016, Guadalajara foi uma das cinco cidades vencedoras do concurso de inovação chamado \"Mayors Challenge\" organizado pela fundação americana Bloomberg Philanthropies, que se destacaram por suas ideias inovadoras e ousadas que abordam desafios urgentes, e que também têm o maior potencial de impacto positivo e capacidade de serem replicadas em outras regiões. Um milhão de dólares foi concedido para a criação da plataforma Visor Urbano.",
+    "paragraph2": "Em 2020, uma vez finalizada a primeira etapa e dado o sucesso obtido, a fundação pela primeira vez na história dos concursos na América Latina decidiu continuar apoiando o projeto para replicá-lo em todos os municípios do Estado de Jalisco e a nível internacional."
+  },
+  "benefits": {
+    "title": "Benefícios",
+    "subtitle": "Visor Urbano transforma a gestão urbana para benefício de cidadãos e municípios",
+    "citizens": {
+      "title": "Para os cidadãos:",
+      "items": [
+        "Consultas de informações governamentais em tempo real",
+        "Processo completamente online",
+        "Agiliza o tempo de tramitação e entrega de licença",
+        "Processo único para todos os municípios",
+        "Evitar ir a escritórios governamentais",
+        "Redução da discricionariedade do processo",
+        "Participação proativa dos cidadãos no desenvolvimento urbano"
+      ]
+    },
+    "municipalities": {
+      "title": "Para os municípios:",
+      "items": [
+        "Software livre e configurável",
+        "Sem custos, ao ser hospedado em servidores do governo",
+        "Obtenção da certificação do Sistema de Abertura Rápida de Empresas (SARE) regulado pela Comissão Nacional de Melhoria Regulatória",
+        "Transparência proativa ao publicar todas as licenças para consulta livre",
+        "Geração de relatórios em tempo real",
+        "Consulta de status, resultados e progresso de indicadores em tempo real",
+        "Capacitação, assessoria e acompanhamento contínuo da equipe VU",
+        "Transição para um governo mais aberto, digital e inovador",
+        "Adequar a regulamentação aos novos padrões digitais"
+      ]
+    }
+  },
+  "awards": {
+    "title": "Prêmios e Reconhecimentos",
+    "year": "2016",
+    "mayorsChallengeTitle": "Mayors Challenge",
+    "mayorsChallengeSubtitle": "Vencedor",
+    "intro": "Entre os prêmios e reconhecimentos outorgados ao Visor Urbano estão:",
+    "items": [
+      "Certificação mexicana SARE (Sistema de Abertura Rápida de Empresas) regulada pela Comissão Nacional de Melhoria Regulatória.",
+      "Prêmio Nacional de Inovação em Transparência 2018",
+      "Prêmio de Excelência Geoespacial da América Latina",
+      "Prêmio U-Gob de Governo Digital na categoria de Governo Municipal 2019",
+      "Menção especial de \"Inovação Governamental\" nos prêmios IT +Gob organizados pelo Comitê de Informática da Administração Pública Estadual e Municipal (CIAPEM)",
+      "Prêmio Future Cities na categoria \"Cidade do Futuro\", catalogando-a como a iniciativa mais \"futurista e inovadora\". Este prêmio foi entregue em 2020 na Reunião Anual de Investimentos realizada nos Emirados Árabes Unidos."
+    ],
+    "conclusion": "Além disso, em 2019, Guadalajara se tornou o primeiro município a nível nacional a integrar um esquema de Governo Digital entre os países membros da Organização para a Cooperação e Desenvolvimento Econômico (OCDE), através das plataformas digitais Visor Urbano e Ciudapp."
+  },
+  "cta": {
+    "title": "Pronto para começar?",
+    "description": "Explore nossa plataforma e descubra como o Visor Urbano pode transformar a gestão urbana do seu município.",
+    "exploreMap": "Explorar mapa",
+    "login": "Entrar"
+  },
+  "backButton": "Voltar ao início"
+}

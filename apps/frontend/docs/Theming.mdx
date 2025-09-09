@@ -1,0 +1,45 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { Color } from './components/Color';
+
+<Meta title="Theming" />
+
+# Colors
+
+Here are Visor Urbano default colors:
+
+<div className='pb-14'>
+  <div className="flex flex-col gap-8 shadow-2xl py-8 rounded-4xl overflow-hidden max-w-xl">
+    <div className='flex flex-col gap-2'>
+      <div className='px-4'>
+        <h1 >Institutional colors</h1>
+      </div>
+
+      <div className='grid grid-cols-2'>
+        <Color name="Primary" className="bg-primary text-white" />
+        <Color name="Support 1" className="bg-support-1 text-white" />
+      </div>
+
+    </div>
+
+    <div>
+      <div className='px-4'>
+        <h1 >Support and complementary colors</h1>
+      </div>
+
+      <div className='grid grid-cols-3'>
+        <Color name="Support 5" className="bg-support-5 text-support-2" />
+        <Color name="Support 3" className="bg-support-3 text-white" />
+        <Color name="Secondary" className="bg-secondary text-white" />
+        <Color name="White" className="bg-white text-support-2" />
+        <Color name="Support 4" className="bg-support-4 text-support-2" />
+        <Color name="Support 2" className="bg-support-2 text-white" />
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+## Customizing colors
+
+You can set your own colors, just edit the `theme.css` file with your own colors, the UI will reflect the changes.

@@ -1,0 +1,198 @@
+{
+  "title": "Aprovações de Procedimentos",
+  "breadcrumb": "Aprovações de Procedimentos",
+  "subtitle": "Gestão de procedimentos pendentes de aprovação",
+  "defaultType": "Procedimento Geral",
+  "steps": "etapas",
+  "actions": {
+    "filter": "Filtrar",
+    "approve": "Aprovar",
+    "reject": "Rejeitar",
+    "viewDetails": "Ver detalhes",
+    "batchApprove": "Aprovar em lote"
+  },
+  "search": {
+    "placeholder": "Buscar por fólio..."
+  },
+  "filters": {
+    "all": "Todos",
+    "draft": "Rascunho",
+    "pendingReview": "Pendente revisão",
+    "inReview": "Em revisão",
+    "approved": "Aprovados",
+    "rejected": "Rejeitados"
+  },
+  "filter": {
+    "category": "Filtrar por categoria",
+    "selectCategory": "Selecionar uma categoria"
+  },
+  "stats": {
+    "draft": "Rascunho",
+    "pendingReview": "Pendente revisão",
+    "inReview": "Em revisão",
+    "approved": "Aprovados",
+    "rejected": "Rejeitados",
+    "licenseIssued": "Licença Emitida"
+  },
+  "status": {
+    "draft": "Rascunho",
+    "pending_review": "Pendente revisão",
+    "in_review": "Em revisão",
+    "approved": "Aprovado",
+    "rejected": "Rejeitado",
+    "license_issued": "Licença Emitida"
+  },
+  "fields": {
+    "applicant": "Requerente",
+    "location": "Localização",
+    "reviewer": "Revisor",
+    "amount": "Valor"
+  },
+  "sections": {
+    "procedures": "Procedimentos para aprovação",
+    "pending": "Pendentes de aprovação",
+    "recent": "Aprovações recentes"
+  },
+  "requirements": {
+    "title": "Requisitos",
+    "documentsComplete": "Documentos completos",
+    "technicalReview": "Revisão técnica"
+  },
+  "empty": {
+    "title": "Nenhum procedimento para aprovar",
+    "description": "Nenhum procedimento encontrado que requer aprovação com os filtros selecionados."
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Próximo",
+    "pageInfo": "Página {{page}} de {{total}}"
+  },
+  "licensesIssued": {
+    "title": "Licenças Emitidas",
+    "subtitle": "Visualização e gestão de licenças comerciais emitidas"
+  },
+  "tabs": {
+    "all": "Todos os Procedimentos",
+    "businessLicenses": "Procedimentos comerciais",
+    "buildingLicenses": "Procedimentos de construção",
+    "inReview": "Em revisão",
+    "preventions": "Prevenções",
+    "rejected": "Rejeitados",
+    "approved": "Aprovados",
+    "atWindow": "No balcão"
+  },
+  "statusLabels": {
+    "pendingReview": "Pendente de revisão",
+    "approved": "Aprovado",
+    "rejected": "Rejeitado",
+    "prevention": "Prevenção",
+    "approvedByDirector": "Aprovado pelo diretor",
+    "licenseIssued": "Licença emitida",
+    "inReview": "Em revisão",
+    "new": "Novo"
+  },
+  "actionLabels": {
+    "viewDetail": "Ver detalhes",
+    "resolution": "Resolução",
+    "issueLicense": "Emitir licença",
+    "viewLicense": "Ver licença",
+    "addFiles": "Adicionar arquivos"
+  },
+  "tableHeaders": {
+    "folio": "Fólio",
+    "address": "Endereço",
+    "municipality": "Município",
+    "scian": "SCIAN",
+    "entryDate": "Data de entrada",
+    "status": "Status",
+    "actions": "Ações"
+  },
+  "emptyState": {
+    "title": "Nenhum procedimento",
+    "description": "Nenhum procedimento encontrado para exibir"
+  },
+  "searchPlaceholder": "Fólio",
+  "showingResults": "Mostrando {{count}} de {{total}} procedimentos",
+  "notAvailable": "N/D",
+  "errors": {
+    "accessDenied": "Acesso negado: Privilégios administrativos necessários",
+    "insufficientPermissions": "Acesso negado: Permissões insuficientes para aprovações",
+    "tokenRequired": "Token de acesso necessário",
+    "loadError": "Erro ao carregar aprovações de procedimentos",
+    "authenticationExpired": "Autenticação expirada. Por favor, faça login novamente."
+  },
+  "license": {
+    "issueSuccess": "Licença emitida com sucesso",
+    "issueError": "Erro ao emitir licença",
+    "downloadError": "Falha ao baixar licença",
+    "systemGenerationPending": "Esta funcionalidade será integrada ao sistema existente de geração de licenças",
+    "systemGenerationError": "Erro ao gerar licença pelo sistema",
+    "modal": {
+      "title": "Emitir licença comercial",
+      "subtitle": "Selecione a opção desejada.",
+      "description": "Em seguida, clique em \"Emitir licença\" para notificar o cidadão.",
+      "generateBySystem": "Gerar pelo Visor Urbano",
+      "uploadScanned": "Carregar escaneada",
+      "generateDescription": "Esta opção gerará a licença automaticamente usando o sistema Visor Urbano.",
+      "fileUploadLabel": "Anexar formato municipal de licença escaneada",
+      "noFileChosen": "Nenhum arquivo escolhido",
+      "chooseFile": "Escolher arquivo",
+      "openingTime": "Horário de abertura",
+      "closingTime": "Horário de fechamento",
+      "authorizedArea": "Área a autorizar",
+      "areaUnit": "m²",
+      "areaPlaceholder": "0",
+      "licenseCost": "Custo da licença",
+      "signatures": "Assinaturas",
+      "signaturesSelect": "Selecionar...",
+      "noSignaturesAvailable": "Nenhuma assinatura configurada para este município",
+      "signaturesDirector": "Diretor",
+      "signaturesSupervisor": "Supervisor",
+      "observations": "Anotações particulares (Aparecerão no verso desta licença)",
+      "observationsPlaceholder": "Escreva suas observações aqui...",
+      "cancel": "Cancelar",
+      "generating": "Gerando...",
+      "generateLicense": "Gerar licença",
+      "issuing": "Emitindo...",
+      "issueLicense": "Emitir licença",
+      "successTitle": "Licença emitida com sucesso",
+      "successDescription": "A licença foi emitida com sucesso.",
+      "errorTitle": "Erro",
+      "accept": "Aceitar"
+    }
+  },
+  "resolution": {
+    "title": "Resolução",
+    "successTitle": "Resolução Enviada",
+    "successMessage": "Resolução enviada com sucesso",
+    "successDescription": "A resolução foi salva e o status do procedimento foi atualizado.",
+    "type": "Tipo de Resolução *",
+    "typeRequired": "Você deve selecionar uma opção de resolução",
+    "types": {
+      "approve": "Aprovar",
+      "prevent": "Prevenir",
+      "reject": "Rejeitar"
+    },
+    "details": "Detalhe o sentido da sua resolução *",
+    "detailsPlaceholder": "Explique as razões da sua resolução...",
+    "detailsRequired": "Você deve fornecer detalhes da resolução",
+    "attachFile": "Anexar resolução",
+    "fileSelected": "Arquivo selecionado:",
+    "fileFormats": "Formatos permitidos: PDF, JPG, PNG. Máximo 10MB.",
+    "cancel": "Cancelar",
+    "sending": "Enviando...",
+    "submit": "Enviar Resolução",
+    "errors": {
+      "fileTooLarge": "O arquivo deve ser menor que 10MB",
+      "invalidFileType": "Apenas arquivos PDF, JPG, JPEG ou PNG são permitidos",
+      "authTokenRequired": "Token de autenticação necessário",
+      "uploadError": "Erro ao enviar arquivo",
+      "submissionError": "Erro ao enviar resolução"
+    }
+  },
+  "procedureTypes": {
+    "business_license": "Licença Comercial",
+    "permits_building_license": "Licença de Construção",
+    "default": "Procedimento Geral"
+  }
+}

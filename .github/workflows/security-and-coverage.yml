@@ -1,0 +1,179 @@
+name: Security & Coverage Analysis
+
+on:
+  push:
+    branches: 
+        - main
+  pull_request:
+    branches: 
+        - main
+
+jobs:
+  security-scan:
+    name: Safety Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Python dependencies
+        run: |
+          cd apps/backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install safety
+
+      - name: Run npm audit for Node.js vulnerabilities
+        working-directory: ./apps/frontend
+        continue-on-error: true
+        run: |
+          echo "🔍 Running npm audit for Node.js dependencies..."
+          pnpm audit --audit-level high --json > npm-audit-results.json || true
+          echo "✅ npm audit completed"
+
+      - name: Run Safety for Python vulnerabilities
+        working-directory: ./apps/backend
+        continue-on-error: true
+        run: |
+          echo "🔍 Running Safety scan for Python dependencies..."
+          python -m safety scan --short-report --json > safety-results.json || true
+          echo "✅ Safety scan completed"
+
+      - name: Display Security results summary
+        if: always()
+        run: |
+          echo "🔍 Security Scan completed!"
+          echo "📊 Security Tools Used:"
+          echo "  • npm audit for Node.js dependencies"
+          echo "  • Safety for Python dependencies"
+          echo ""
+          
+          if [ -f "apps/frontend/npm-audit-results.json" ]; then
+            echo "✅ Frontend security scan completed"
+            # Check if there are high/critical vulnerabilities
+            HIGH_VULNS=$(cat apps/frontend/npm-audit-results.json | jq '.metadata.vulnerabilities.high // 0' 2>/dev/null || echo "0")
+            CRITICAL_VULNS=$(cat apps/frontend/npm-audit-results.json | jq '.metadata.vulnerabilities.critical // 0' 2>/dev/null || echo "0")
+            echo "  Frontend: $HIGH_VULNS high, $CRITICAL_VULNS critical vulnerabilities"
+          fi
+          
+          if [ -f "apps/backend/safety-results.json" ]; then
+            echo "✅ Backend security scan completed"
+            # Count vulnerabilities in Safety results
+            SAFETY_VULNS=$(cat apps/backend/safety-results.json | jq '.vulnerabilities | length' 2>/dev/null || echo "0")
+            echo "  Backend: $SAFETY_VULNS vulnerabilities found"
+          fi
+          
+          echo ""
+          echo "💡 Note: Using Safety (Python) and npm audit (Node.js) for reliable security scanning"
+
+  coverage-analysis:
+    name: Coverage Analysis
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgis/postgis:15-3.3
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: visor_urbano_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Set timezone
+        uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: 'America/Lima'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Python dependencies with coverage
+        run: |
+          cd apps/backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest-cov coverage
+
+      - name: Install Playwright
+        run: |
+          cd apps/frontend
+          npx playwright install chromium
+
+      - name: Run backend tests with coverage
+        run: |
+          cd apps/backend
+          python -m pytest tests/ --cov=app --cov-report=xml --cov-report=html --cov-report=term
+        env:
+          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/visor_urbano_test
+
+      - name: Run frontend tests with coverage
+        run: |
+          cd apps/frontend
+          pnpm run test:coverage
+
+      - name: Upload backend coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: apps/backend/coverage.xml
+          flags: backend
+          name: backend-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload frontend coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          file: apps/frontend/coverage/lcov.info
+          flags: frontend
+          name: frontend-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload combined coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          flags: combined
+          name: combined-coverage
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+

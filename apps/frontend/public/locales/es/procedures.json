@@ -1,0 +1,475 @@
+{
+  "myProcedures": "Mis Trámites",
+  "tabs": {
+    "tab1": {
+      "label": "Mis trámites giros",
+      "table": {
+        "columns": {
+          "id": "Folio",
+          "address": "Dirección",
+          "location": "Municipio",
+          "scian": "SCIAN",
+          "createdAt": "Fecha de ingreso",
+          "actions": "Acciones"
+        },
+        "noData": "No hay trámites de giros"
+      }
+    },
+    "tab2": {
+      "label": "Mis trámites construcción",
+      "table": {
+        "columns": {
+          "id": "Folio",
+          "address": "Domicilio",
+          "interestedParty": "Interesado",
+          "createdAt": "Fecha de ingreso",
+          "updatedAt": "Última resolución",
+          "status": "Sentido últ. Resolución",
+          "actions": "Acciones"
+        },
+        "noData": "No hay trámites de construcción"
+      }
+    }
+  },
+  "actions": {
+    "view": "Ver detalles",
+    "files": "Ver archivos",
+    "more": "Más opciones",
+    "continue": "Continuar trámite"
+  },
+  "status": {
+    "approved": "Aprobado",
+    "inProgress": "En proceso",
+    "rejected": "Rechazado",
+    "pending": "Pendiente",
+    "noStatus": "Sin estado"
+  },
+  "search": {
+    "placeholder": "Buscar por folio, dirección, interesado o municipio...",
+    "searching": "Buscando trámites...",
+    "searchingBusiness": "Buscando trámites giros comerciales...",
+    "searchingConstruction": "Buscando trámites construcción...",
+    "specificDatabaseSearch": "Búsqueda específica en base de datos",
+    "noResultsBusiness": "No se encontraron trámites giros comerciales que coincidan con",
+    "noResultsConstruction": "No se encontraron trámites construcción que coincidan con",
+    "tips": {
+      "title": "💡 Tip: Si buscas el folio",
+      "inConstruction": "Tu trámite está en la pestaña de",
+      "inBusiness": "Tu trámite está en la pestaña de",
+      "constructionTab": "Construcción",
+      "businessTab": "Giros Comerciales",
+      "result": "resultado",
+      "results": "resultados",
+      "notFound": "No se encontró este folio. Verifica que esté escrito correctamente o que pertenezca a tu usuario."
+    }
+  },
+  "limits": {
+    "businessNote": "Se muestran los primeros 100 trámites giros comerciales. Si no encuentras el trámite que buscas, usa el buscador o puede estar en registros posteriores.",
+    "constructionNote": "Se muestran los primeros 100 trámites construcción. Si no encuentras el trámite que buscas, usa el buscador o puede estar en registros posteriores.",
+    "maxReached": "Se alcanzó el límite máximo de resultados. Contacta al administrador si necesitas ver más trámites."
+  },
+  "workflow": {
+    "states": {
+      "inicio": "Inicio",
+      "revision": "Revisión",
+      "aprobacion": "Aprobación",
+      "finalizacion": "Finalización"
+    },
+    "descriptions": {
+      "inicio": "Trámite iniciado",
+      "revision": "En proceso de revisión",
+      "aprobacion": "Proceso de aprobación",
+      "finalizacion": "Trámite completado"
+    },
+    "statusMessages": {
+      "rejected": "Trámite Rechazado",
+      "prevention": "Prevención - Información Adicional Requerida",
+      "approvedPending": "Trámite Aprobado - Pendiente de Emisión de Licencia",
+      "completed": "Trámite Completado Exitosamente"
+    }
+  },
+  "modal": {
+    "title": "Detalles del Trámite",
+    "step": "Paso",
+    "basicInfo": "Información Básica",
+    "folio": "Folio",
+    "applicant": "Solicitante",
+    "businessName": "Nombre del Negocio",
+    "location": "Ubicación",
+    "address": "Dirección",
+    "businessInfo": "Información del Negocio",
+    "scianCode": "Código SCIAN",
+    "scianDescription": "Descripción SCIAN",
+    "dates": "Fechas",
+    "createdAt": "Fecha de Creación",
+    "updatedAt": "Última Actualización",
+    "startDate": "Fecha de Inicio",
+    "close": "Cerrar"
+  },
+  "filesModal": {
+    "title": "Archivos del Trámite",
+    "loading": "Cargando archivos...",
+    "retry": "Reintentar",
+    "noFiles": "No hay archivos disponibles para este trámite",
+    "file": "Archivo",
+    "uploadDate": "Fecha de carga",
+    "modifiedDate": "Fecha de modificación",
+    "view": "Ver archivo",
+    "download": "Descargar",
+    "close": "Cerrar"
+  },
+  "detail": {
+    "title": "Detalle del Trámite",
+    "breadcrumb": "Detalle",
+    "backToProcedures": "Volver a Trámites",
+    "editProcedure": "Editar Trámite",
+    "downloadPdf": "Descargar PDF",
+    "downloadLicense": "Descargar Licencia",
+    "downloadingLicense": "Descargando Licencia...",
+    "viewFiles": "Ver Archivos",
+    "progress": {
+      "title": "Progreso del Trámite",
+      "steps": {
+        "construction": {
+          "submission": "Envío de Documentos",
+          "technicalReview": "Revisión Técnica",
+          "departmentApproval": "Aprobación de Dependencias",
+          "directorApproval": "Aprobación Directorial",
+          "licenseGeneration": "Generación de Licencia"
+        },
+        "commercial": {
+          "submission": "Recepción",
+          "validation": "Validación",
+          "processing": "Procesamiento",
+          "approval": "Aprobación",
+          "delivery": "Entrega"
+        },
+        "renewal": {
+          "submission": "Solicitud",
+          "verification": "Verificación",
+          "approval": "Aprobación",
+          "issuance": "Emisión"
+        },
+        "generic": {
+          "start": "Inicio",
+          "review": "Revisión",
+          "approval": "Aprobación",
+          "completion": "Finalización"
+        }
+      },
+      "descriptions": {
+        "construction": {
+          "submission": "Documentos enviados y validados",
+          "technicalReview": "Análisis técnico y normativo",
+          "departmentApproval": "Revisión por dependencias especializadas",
+          "directorApproval": "Aprobación final del director",
+          "licenseGeneration": "Emisión de licencia final"
+        },
+        "commercial": {
+          "submission": "Documentos recibidos",
+          "validation": "Verificación de requisitos",
+          "processing": "Análisis y dictaminación",
+          "approval": "Aprobación final",
+          "delivery": "Licencia lista para entrega"
+        },
+        "renewal": {
+          "submission": "Solicitud de renovación",
+          "verification": "Verificación de antecedentes",
+          "approval": "Aprobación de renovación",
+          "issuance": "Nueva licencia emitida"
+        },
+        "generic": {
+          "start": "Trámite iniciado",
+          "review": "En proceso de revisión",
+          "approval": "Proceso de aprobación",
+          "completion": "Trámite completado"
+        }
+      }
+    },
+    "sections": {
+      "general": {
+        "title": "Información General",
+        "folio": "Folio",
+        "type": "Tipo de Trámite",
+        "licenseStatus": "Estado de Licencia",
+        "startDate": "Fecha de Inicio",
+        "lastUpdate": "Última Actualización",
+        "procedureType": "Tipo",
+        "created": "Creado"
+      },
+      "applicant": {
+        "title": "Información del Solicitante",
+        "name": "Nombre del Solicitante",
+        "userId": "ID de Usuario",
+        "entryRole": "Rol de Entrada",
+        "responsibilityLetter": "Carta de Responsabilidad",
+        "field": "Campo",
+        "noInfo": "No hay información del tramitante disponible"
+      },
+      "property": {
+        "title": "Información de la Propiedad",
+        "address": "Dirección",
+        "scianCode": "Código SCIAN",
+        "scianDescription": "Descripción SCIAN",
+        "businessName": "Nombre del Negocio"
+      },
+      "workflow": {
+        "title": "Estado del Flujo",
+        "step1": "Paso 1",
+        "step2": "Paso 2",
+        "step3": "Paso 3",
+        "step4": "Paso 4",
+        "directorApproval": "Aprobación Director",
+        "licenseGenerated": "Licencia Generada"
+      },
+      "dates": {
+        "title": "Fechas del Proceso",
+        "documentsSubmission": "Envío de Documentos",
+        "procedureStart": "Inicio del Proceso",
+        "windowSeen": "Visto en Ventanilla",
+        "licenseDelivered": "Licencia Entregada",
+        "noSignature": "Sin Firma",
+        "sentToReviewers": "Enviado a Revisores"
+      },
+      "observations": {
+        "title": "Observaciones"
+      },
+      "actions": {
+        "title": "Acciones",
+        "viewDocuments": "Ver Documentos",
+        "downloadFile": "Descargar Expediente",
+        "downloadLicense": "Descargar Licencia",
+        "paymentOrder": "Orden de Pago",
+        "viewOnMap": "Ver en Mapa"
+      },
+      "documents": {
+        "title": "Documentos Requeridos",
+        "noDocuments": "No hay documentos disponibles",
+        "noDocumentsDescription": "No se han encontrado documentos adjuntos para este procedimiento.",
+        "download": "Descargar",
+        "close": "Cerrar",
+        "names": {
+          "identificacionOficial": "Identificación oficial del solicitante",
+          "comprobanteDomicilio": "Comprobante de domicilio del establecimiento",
+          "contratoArrendamiento": "Contrato de arrendamiento (si aplica)",
+          "licenciaFuncionamiento": "Licencia de funcionamiento",
+          "cartaPoder": "Carta poder",
+          "actaConstitutiva": "Acta constitutiva",
+          "cedulaProfesional": "Cédula profesional",
+          "planosArquitectonicos": "Planos arquitectónicos",
+          "memoriaCalculo": "Memoria de cálculo",
+          "estudioImpacto": "Estudio de impacto",
+          "defaultDocument": "Documento"
+        }
+      },
+      "resolutions": {
+        "title": "Resoluciones del trámite",
+        "loading": "Cargando resoluciones...",
+        "error": "No se pudieron cargar las resoluciones",
+        "noResolutions": "No hay resoluciones registradas",
+        "downloadError": "Error al descargar el archivo",
+        "table": {
+          "headers": {
+            "date": "Fecha",
+            "status": "Estatus",
+            "text": "Texto",
+            "file": "Archivo",
+            "user": "Usuario"
+          },
+          "actions": {
+            "download": "Descargar",
+            "downloadTitle": "Descargar archivo de resolución"
+          }
+        }
+      },
+      "dynamicFields": {
+        "title": "Información Adicional",
+        "noSection": "Sección",
+        "question": "Pregunta",
+        "ofForm": "del formulario"
+      }
+    },
+    "status": {
+      "active": "Activo",
+      "completed": "Completado",
+      "pending": "Pendiente",
+      "rejected": "Rechazado",
+      "unknown": "Desconocido",
+      "available": "Disponible",
+      "notAvailable": "No disponible",
+      "noAddress": "Dirección no disponible",
+      "notSpecified": "No especificado"
+    }
+  },
+  "new": {
+    "title": "Nuevo Trámite",
+    "subtitle": "Ingresar folio para iniciar trámite",
+    "breadcrumb": "Nuevo trámite",
+    "buttonText": "Nuevo trámite",
+    "form": {
+      "title": "Ingresar folio",
+      "description": "Ingresa el folio que obtuviste del mapa para continuar con tu trámite",
+      "folioLabel": "Folio del trámite",
+      "folioPlaceholder": "Ejemplo: 1-1/2025",
+      "folioHelp": "Ingresar el folio que te otorgó el mapa",
+      "businessTypeLabel": "Tipo de giro comercial",
+      "businessTypePlaceholder": "Selecciona el tipo de negocio",
+      "businessTypeHelp": "Selecciona el tipo de giro comercial que mejor describa tu negocio",
+      "privacyLabel": "He leído y acepto el ",
+      "privacyLink": "aviso de privacidad",
+      "submitButton": "Iniciar trámite",
+      "newTramiteButton": "Nuevo trámite",
+      "backToMapButton": "Ir al mapa"
+    },
+    "validation": {
+      "folioRequired": "El folio es requerido",
+      "privacyRequired": "Debe aceptar el aviso de privacidad"
+    },
+    "messages": {
+      "validating": "Validando folio...",
+      "creating": "Creando trámite...",
+      "submitting": "Procesando...",
+      "folioNotFound": "No existe el folio",
+      "folioInvalid": "El folio del trámite no existe o ya no es válido. Ingresa uno correcto o verifica los requisitos nuevamente aquí",
+      "municipalityNotAvailable": "Este municipio no está disponible para trámites en línea, por lo que se recomienda acudir a él para realizar el trámite y validar la vigencia de los requisitos.",
+      "success": "Trámite iniciado exitosamente",
+      "error": "Ocurrió un error al procesar su solicitud"
+    }
+  },
+  "edit": {
+    "title": "Editar Trámite",
+    "subtitle": "Editar información del trámite",
+    "breadcrumb": "Editar",
+    "sections": {
+      "section1": {
+        "title": "Información del Tramitante",
+        "description": "Datos de quien realiza el trámite y tipo de propietario",
+        "icon": "user"
+      },
+      "section2": {
+        "title": "Información del Establecimiento",
+        "description": "Datos del local comercial y ubicación",
+        "icon": "building"
+      },
+      "section3": {
+        "title": "Información del Negocio",
+        "description": "Tipo de actividad, descripción y operación",
+        "icon": "briefcase"
+      },
+      "section4": {
+        "title": "Documentos Requeridos",
+        "description": "Identificación oficial y comprobantes",
+        "icon": "fileText"
+      },
+      "formSections": "Secciones del formulario"
+    },
+    "form": {
+      "saveButton": "Guardar",
+      "saveAndContinueButton": "Guardar y continuar",
+      "nextButton": "Siguiente",
+      "previousButton": "Anterior",
+      "cancelButton": "Cancelar",
+      "finishButton": "Finalizar",
+      "uploadFile": "Subir archivo",
+      "chooseFile": "Elegir archivo",
+      "noFileSelected": "Ningún archivo seleccionado",
+      "fileRequired": "Este archivo es requerido",
+      "maxFileSize": "Tamaño máximo: 15MB",
+      "copyFromApplicant": "Copiar información del solicitante",
+      "section": "Sección",
+      "fieldsCount": "campos",
+      "noFieldsInSection": "No hay campos en esta sección",
+      "noFieldsAvailable": "No hay campos disponibles",
+      "noFieldsDescription": "Este trámite no tiene campos editables disponibles.",
+      "licenseInformation": "Información de licencia"
+    },
+    "validation": {
+      "fieldRequired": "Este campo es requerido",
+      "invalidEmail": "Correo electrónico inválido",
+      "invalidPhone": "Número de teléfono inválido",
+      "invalidCURP": "CURP inválido (debe tener 18 caracteres)",
+      "invalidRFC": "RFC inválido (12-13 caracteres)",
+      "invalidPostalCode": "Código postal inválido (5 dígitos)",
+      "fileTooLarge": "El archivo es muy grande (máximo 15MB)",
+      "invalidFileType": "Tipo de archivo no válido"
+    },
+    "messages": {
+      "saving": "Guardando...",
+      "loading": "Cargando información...",
+      "loadingFields": "Cargando campos dinámicos...",
+      "sectionSaved": "Sección guardada exitosamente",
+      "procedureUpdated": "Trámite actualizado exitosamente",
+      "error": "Error al guardar los datos",
+      "networkError": "Error de conexión",
+      "unauthorized": "No autorizado para realizar esta acción"
+    },
+    "status": {
+      "completed": "Completado",
+      "pending": "Pendiente",
+      "inProgress": "En progreso",
+      "saved": "Guardado",
+      "error": "Error"
+    },
+    "actions": {
+      "backToProcedures": "Volver a Mis Trámites",
+      "viewDetails": "Ver Detalles",
+      "saveSection": "Guardar Sección",
+      "downloadPdf": "Descargar PDF",
+      "submitForReview": "Enviar a Revisión",
+      "resubmitForReview": "Re-enviar a Revisión",
+      "updateSubmission": "Actualizar Envío"
+    },
+    "submitForReview": {
+      "title": "Enviar a Revisión",
+      "description": "Envía tu trámite para revisión por parte de las dependencias correspondientes",
+      "confirmTitle": "¿Enviar trámite a revisión?",
+      "confirmMessage": "Una vez enviado a revisión, no podrás realizar más cambios hasta que recibas una respuesta. ¿Estás seguro?",
+      "confirmButton": "Sí, enviar a revisión",
+      "cancelButton": "Cancelar",
+      "success": "Trámite enviado a revisión exitosamente",
+      "validating": "Validando campos requeridos...",
+      "submitting": "Enviando a revisión...",
+      "errors": {
+        "noFolio": "No se encontró el folio del trámite",
+        "noToken": "No se encontró el token de autenticación",
+        "missingFields": "Faltan campos requeridos por completar:",
+        "notDraft": "El trámite no está en estado borrador",
+        "alreadySubmitted": "El trámite ya fue enviado a revisión",
+        "networkError": "Error de conexión al enviar el trámite",
+        "serverError": "Error del servidor al procesar la solicitud",
+        "validationFailed": "Error de validación. Verifica que todos los campos estén completos.",
+        "unauthorized": "No tienes permisos para enviar este trámite"
+      }
+    },
+    "pdf": {
+      "title": "Información del Trámite",
+      "folio": "Folio",
+      "generalInfo": "Información General",
+      "addressInfo": "Información de Dirección",
+      "generatedOn": "Generado el",
+      "page": "Página",
+      "procedureTypes": {
+        "businessLicense": "Licencia Comercial",
+        "buildingLicense": "Licencia de Construcción"
+      },
+      "fields": {
+        "folio": "Folio",
+        "status": "Estado",
+        "type": "Tipo de Trámite",
+        "created": "Fecha de Creación",
+        "updated": "Última Actualización",
+        "applicantName": "Nombre del Solicitante",
+        "establishmentName": "Nombre del Establecimiento",
+        "establishmentAddress": "Dirección del Establecimiento",
+        "establishmentPhone": "Teléfono del Establecimiento",
+        "establishmentArea": "Superficie del Establecimiento",
+        "businessName": "Nombre del Negocio",
+        "businessSector": "Giro Comercial",
+        "businessActivity": "Actividad del Negocio",
+        "operatingHours": "Horario de Operación",
+        "employeeCount": "Número de Empleados",
+        "address": "Dirección"
+      }
+    }
+  }
+}

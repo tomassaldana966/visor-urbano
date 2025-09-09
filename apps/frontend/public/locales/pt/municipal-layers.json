@@ -1,0 +1,105 @@
+{
+  "page": {
+    "title": "Camadas Municipais",
+    "description": "Gestão de camadas geográficas e cartográficas do município"
+  },
+  "actions": {
+    "addLayer": "Adicionar Camada",
+    "edit": "Editar",
+    "view": "Ver",
+    "cancel": "Cancelar",
+    "save": "Salvar Alterações",
+    "add": "Adicionar Camada",
+    "adding": "Adicionando...",
+    "updating": "Atualizando..."
+  },
+  "columns": {
+    "name": "Nome",
+    "type": "Tipo",
+    "format": "Formato",
+    "server": "Servidor",
+    "visible": "Visível",
+    "status": "Status",
+    "editable": "Editável",
+    "opacity": "Opacidade",
+    "order": "Ordem",
+    "url": "URL",
+    "attribution": "Atribuição",
+    "projection": "Projeção",
+    "version": "Versão",
+    "value": "Valor",
+    "geometryType": "Tipo de Geometria",
+    "cqlFilter": "Filtro CQL",
+    "actions": "Ações"
+  },
+  "status": {
+    "visible": "Visível",
+    "hidden": "Oculto",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "yes": "Sim",
+    "no": "Não",
+    "notAvailable": "N/A"
+  },
+  "statistics": {
+    "totalLayers": "Total de Camadas",
+    "activeLayers": "Camadas Ativas",
+    "visibleLayers": "Visíveis"
+  },
+  "modal": {
+    "addTitle": "Adicionar Nova Camada",
+    "editTitle": "Editar Camada"
+  },
+  "form": {
+    "layerName": "Nome da Camada",
+    "layerValue": "Valor da Camada",
+    "layers": "Camadas",
+    "layerType": "Tipo de Camada",
+    "serverType": "Tipo de Servidor",
+    "serviceUrl": "URL do Serviço",
+    "format": "Formato",
+    "version": "Versão",
+    "projection": "Projeção",
+    "opacity": "Opacidade",
+    "order": "Ordem",
+    "attribution": "Atribuição",
+    "geometryType": "Tipo de Geometria",
+    "cqlFilter": "Filtro CQL",
+    "activateLayer": "Ativar camada",
+    "visible": "Visível",
+    "editable": "Editável"
+  },
+  "placeholders": {
+    "layerName": "Ex: Zoneamento Comercial",
+    "layerValue": "layer_value",
+    "layers": "Nomes das camadas no serviço",
+    "selectType": "Selecionar tipo",
+    "selectServer": "Selecionar servidor",
+    "serviceUrl": "https://api.municipality.gov/layers/...",
+    "format": "image/png",
+    "selectVersion": "Selecionar versão",
+    "projection": "EPSG:4326",
+    "attribution": "© Departamento SIG Municipal",
+    "geometryType": "polígono, ponto, linha",
+    "cqlFilter": "municipality='example'"
+  },
+  "serverTypes": {
+    "geoserver": "GeoServer",
+    "mapserver": "MapServer",
+    "qgis": "QGIS",
+    "carmentaserver": "Carmenta Server"
+  },
+  "layerTypes": {
+    "wms": "WMS",
+    "xyz": "XYZ/TMS"
+  },
+  "errors": {
+    "unauthorized": "Acesso não autorizado",
+    "noMunicipality": "Usuário sem município atribuído",
+    "invalidFormData": "Dados do formulário inválidos",
+    "createError": "Erro ao criar a camada",
+    "updateError": "Erro ao atualizar a camada",
+    "loadError": "Erro ao carregar as camadas",
+    "noLayerId": "ID da camada não fornecido"
+  }
+}

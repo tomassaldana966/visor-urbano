@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Giros",
+  "breadcrumbAdmin": "Administrador",
+  "breadcrumbBusinessTypes": "Giros",
+  "addBusinessType": "Agregar Giro",
+  "addBusinessTypeModal": "Agregar Nuevo Giro Comercial",
+  "businessTypeName": "Nombre del giro",
+  "businessTypeNamePlaceholder": "Ej: Panadería",
+  "businessTypeCode": "Código SCIAN",
+  "businessTypeCodePlaceholder": "Ej: 311811",
+  "description": "Descripción",
+  "descriptionPlaceholder": "Descripción detallada del giro comercial",
+  "relatedWords": "Palabras relacionadas",
+  "relatedWordsPlaceholder": "Palabras clave separadas por comas",
+  "isActive": "Giro activo",
+  "creating": "Creando...",
+  "createBusinessType": "Crear Giro",
+  "cancel": "Cancelar",
+  "totalBusinessTypes": "Total Giros",
+  "enabled": "Habilitados",
+  "withCertificate": "Con Certificado",
+  "licenses": "Licencias",
+  "categoryFilter": "Categoría:",
+  "categoryAll": "Todas",
+  "statusFilter": "Estado:",
+  "statusAll": "Todos",
+  "statusActive": "Activo",
+  "statusInactive": "Inactivo",
+  "statusDisabled": "Deshabilitado",
+  "businessTypesListTitle": "Lista de Giros Comerciales",
+  "codeColumnHeader": "Código",
+  "businessTypeColumnHeader": "SCIAN / Giro",
+  "impactColumnHeader": "Impacto",
+  "certificateColumnHeader": "Certificado",
+  "statusColumnHeader": "Estatus",
+  "licensesColumnHeader": "Lic.",
+  "certificateShort": "Cert.",
+  "activeShort": "Activo",
+  "mobileLabels": {
+    "impact": "Impacto:",
+    "licAbbrev": "lic."
+  },
+  "impactBadges": {
+    "low": "Bajo",
+    "medium": "Medio",
+    "high": "Alto",
+    "veryHigh": "Muy Alto"
+  },
+  "statusBadges": {
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "disabled": "Deshabilitado"
+  },
+  "checkboxLabels": {
+    "enabled": "Habilitado",
+    "disabled": "Deshabilitado",
+    "required": "requiere certificado",
+    "notRequired": "sin certificado"
+  },
+  "impactLevels": {
+    "1": "1 - Mínimo",
+    "2": "2 - Bajo",
+    "3": "3 - Medio",
+    "4": "4 - Alto",
+    "5": "5 - Máximo"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "actions": {
+    "export": "Exporter",
+    "filter": "Filtrer",
+    "clearFilters": "Effacer les Filtres",
+    "search": "Rechercher",
+    "view": "Voir",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "close": "Fermer",
+    "download": "Télécharger",
+    "upload": "Téléverser",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "submit": "Soumettre",
+    "reset": "Réinitialiser",
+    "clear": "Effacer",
+    "refresh": "Actualiser",
+    "title": "Actions"
+  },
+  "pagination": {
+    "showing": "Affichage",
+    "to": "à",
+    "of": "sur",
+    "results": "résultats",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "first": "Premier",
+    "last": "Dernier",
+    "page": "Page"
+  },
+  "status": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "warning": "Avertissement",
+    "info": "Information",
+    "pending": "En attente",
+    "completed": "Terminé",
+    "cancelled": "Annulé",
+    "active": "Actif",
+    "inactive": "Inactif"
+  },
+  "note": "Note",
+  "time": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "tomorrow": "Demain",
+    "minutes": "minutes",
+    "hours": "heures",
+    "days": "jours",
+    "weeks": "semaines",
+    "months": "mois",
+    "years": "années"
+  },
+  "form": {
+    "required": "Ce champ est obligatoire",
+    "invalid": "Valeur invalide",
+    "emailInvalid": "Email invalide",
+    "phoneInvalid": "Téléphone invalide",
+    "passwordTooShort": "Mot de passe trop court",
+    "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+    "selectOption": "Sélectionner une option",
+    "noResults": "Aucun résultat",
+    "searchPlaceholder": "Rechercher..."
+  },
+  "na": "N/A",
+  "export": "Exporter",
+  "previous": "Précédent",
+  "next": "Suivant",
+  "sidebar": {
+    "collapse": "Réduire",
+    "expand": "Développer la barre latérale"
+  },
+  "errors": {
+    "loadingData": "Erreur lors du chargement des données",
+    "pleaseReload": "Veuillez recharger la page",
+    "pageLoadError": "Erreur lors du chargement de la page"
+  },
+  "loading": {
+    "translations": "Chargement des traductions...",
+    "default": {
+      "title": "Chargement",
+      "message": "Veuillez patienter...",
+      "subtitle": "Nous traitons votre demande..."
+    },
+    "map": {
+      "title": "Chargement de la Carte",
+      "message": "Préparation de la carte interactive...",
+      "subtitle": "Cela peut prendre quelques instants pour charger toutes les données de la carte..."
+    }
+  },
+  "branding": {
+    "visorUrbano": "Visor Urbano"
+  }
+}

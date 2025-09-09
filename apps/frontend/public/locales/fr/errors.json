@@ -1,0 +1,8 @@
+{
+  "input": {
+    "required": "Le champ est requis",
+    "email": "Le champ doit être une adresse e-mail valide",
+    "passwordInvalid": "Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule et un chiffre",
+    "passwordMismatch": "Les mots de passe ne correspondent pas"
+  }
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Provisional Opening Certificate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+    .acuse-box { max-width: 800px; margin: auto; padding: 30px; font-size: 16px; line-height: 24px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #555; }
+    html, body { width:100%; margin:0; padding:0; font-size:100%; text-align:justify; }
+    * { font-family:'Century Gothic','Lato', Helvetica, sans-serif; color: #333447; line-height:1.2; }
+    h3 { font-size:1.375rem; text-align:center; margin: 20px 0; }
+    .font-heavy { font-weight:700; }
+    .row { width:100%; display:flex; margin-bottom:1rem; align-items: center; }
+    .col-3, .col-6, .col-9, .col-12 { padding:0 .5rem; }
+    .col-3 { width:25%; }
+    .col-6 { width:50%; }
+    .col-9 { width:75%; }
+    .col-12 { width:100%; }
+    .p-parrafo-full { font-size:14px; font-family: 'Red Hat Display', sans-serif; margin-bottom:1rem; text-align: justify; }
+    .stamp { text-align:center; border: dashed 4px #333447; border-radius:8px; width:150px; height:130px; margin: 0 auto; }
+    .stamp-header { height:60px; font-weight:bold; font-size:16px; padding-top:10px; display: flex; flex-direction: column; justify-content: center; }
+    .stamp-footer { background-color:#E8E8E8; height:60px; font-size:11px; display: flex; flex-direction: column; justify-content: center; padding: 5px; }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .details-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    .details-table td { padding: 8px; border-bottom: 1px solid #ddd; }
+    .details-table .label { font-weight: bold; width: 30%; }
+    .qr-container { text-align: center; }
+    .header-info { font-size: 12px; }
+    .status-badge { 
+      padding: 4px 8px; 
+      border-radius: 4px; 
+      font-size: 12px; 
+      font-weight: bold; 
+    }
+    .status-badge-expired {
+      background-color: #ffebee; 
+      color: #c62828;
+    }
+    .status-badge-active {
+      background-color: #e8f5e8; 
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <div class="acuse-box">
+    <!-- Header -->
+    <div class="row">
+      
+      <div class="col-6 text-center">
+        <h3 style="margin: 0; font-size: 18px;">PROVISIONAL OPENING CERTIFICATE</h3>
+        <p style="margin: 5px 0; font-size: 14px;">{{ municipality.name if municipality else 'Municipality' }}</p>
+      </div>
+      <div class="col-3 text-right">
+        <div class="header-info">
+          <strong>Folio:</strong> {{ opening.folio }}<br>
+          {% if is_expired %}
+          <span class="status-badge status-badge-expired">EXPIRED</span>
+          {% else %}
+          <span class="status-badge status-badge-active">ACTIVE</span>
+          {% endif %}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div style="margin: 30px 0;">
+      <p class="p-parrafo-full">
+        In compliance with the submitted request and based on applicable legal provisions, 
+        this <strong>PROVISIONAL OPENING CERTIFICATE</strong> is granted with the following details:
+      </p>
+
+      <table class="details-table">
+        <tr>
+          <td class="label">Folio:</td>
+          <td>{{ opening.folio }}</td>
+        </tr>
+        {% if procedure %}
+        <tr>
+          <td class="label">Procedure:</td>
+          <td>{{ procedure.folio }}</td>
+        </tr>
+        {% endif %}
+        <tr>
+          <td class="label">Start Date:</td>
+          <td>{{ opening.start_date.strftime('%d/%m/%Y %H:%M') }}</td>
+        </tr>
+        <tr>
+          <td class="label">Expiration Date:</td>
+          <td>{{ opening.end_date.strftime('%d/%m/%Y %H:%M') }}</td>
+        </tr>
+        <tr>
+          <td class="label">Days Remaining:</td>
+          <td>{{ days_remaining }} days</td>
+        </tr>
+        <tr>
+          <td class="label">Status:</td>
+          <td>
+            <span class="status-badge">
+              {% if is_expired %}EXPIRED{% else %}ACTIVE{% endif %}
+            </span>
+          </td>
+        </tr>
+        {% if granted_by %}
+        <tr>
+          <td class="label">Granted by:</td>
+          <td>{{ granted_by.name }} {{ granted_by.paternal_last_name }}</td>
+        </tr>
+        {% endif %}
+      </table>
+
+      <p class="p-parrafo-full">
+        <strong>VALIDITY:</strong> This certificate is valid from {{ opening.start_date.strftime('%B %d, %Y') }} 
+        to {{ opening.end_date.strftime('%B %d, %Y') }}. 
+        {% if is_expired %}
+        <span style="color: #c62828; font-weight: bold;">THIS CERTIFICATE HAS EXPIRED.</span>
+        {% else %}
+        The validity of this document is {{ days_remaining }} days from the generation date.
+        {% endif %}
+      </p>
+
+      <p class="p-parrafo-full">
+        <strong>VERIFICATION:</strong> To verify the authenticity of this document, 
+        scan the included QR code or visit: {{ verification_url }}
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="row" style="margin-top: 40px;">
+      <div class="col-6">
+        <p class="p-parrafo-full font-heavy">
+          Sincerely,<br><br>
+          <strong>Licenses and Permits Department</strong><br>
+          {{ municipality.name if municipality else 'Municipality' }}<br>
+          <small>{{ municipality.address if municipality and municipality.address else '' }}</small>
+        </p>
+      </div>
+      <div class="col-3 text-center">
+        <div class="stamp">
+          <div class="stamp-header">
+            <span style="color:#D3D3D3;">VISOR</span><span style="color:#70CE68;">URBANO</span><br>
+            <span style="font-size: 12px;">PROVISIONAL</span>
+          </div>
+          <div class="stamp-footer">
+            {{ municipality.name if municipality else 'Municipio' }}<br>
+            {{ opening.created_at.strftime('%d/%m/%Y') if opening.created_at else generated_date }}
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="qr-container">
+          <img src="data:image/png;base64,{{ qr_code }}" style="width:120px; height:120px; border: 1px solid #ddd;">
+          <p style="font-size: 10px; margin: 5px 0;">Verification code</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div style="margin-top: 30px; padding: 15px; background-color: #f5f5f5; border-left: 4px solid #70CE68;">
+      <p style="font-size: 12px; margin: 0;">
+        <strong>IMPORTANT NOTE:</strong> This document is automatically generated by the VisorUrbano system. 
+        For any clarification or additional verification, please contact the Licenses and Permits Department 
+        of {{ municipality.name if municipality else 'Municipality' }}.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

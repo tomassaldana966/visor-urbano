@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Licencia Lista para Descarga - Visor Urbano</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+        .container {
+            max-width: 650px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50% 50% 0 0;
+            transform: scale(1.2);
+        }
+        .logo-section {
+            position: relative;
+            z-index: 2;
+        }
+        .logo-icon {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 15px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            padding: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header p {
+            margin: 8px 0 0;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        .content {
+            padding: 35px 30px;
+        }
+        .success-alert {
+            background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+            border: 2px solid #22c55e;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 0 0 25px;
+            text-align: center;
+            position: relative;
+        }
+        .success-alert::before {
+            content: '🎉';
+            display: block;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .success-alert h3 {
+            color: #166534;
+            margin: 0 0 10px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .success-alert p {
+            color: #15803d;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .license-info {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+        }
+        .license-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #22c55e, #16a34a);
+            border-radius: 0 0 0 8px;
+        }
+        .info-row {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+        .label {
+            font-weight: 600;
+            color: #1e293b;
+            min-width: 140px;
+            font-size: 14px;
+        }
+        .value {
+            color: #475569;
+            font-size: 14px;
+            flex: 1;
+        }
+        .value.highlight {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .license-ready {
+            background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+            color: #166534;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 12px;
+            border: 1px solid #22c55e;
+            display: inline-block;
+        }
+        .download-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fef9e7 100%);
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .download-section::before {
+            content: '📄';
+            display: block;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .download-section h4 {
+            color: #92400e;
+            margin: 0 0 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .download-section p {
+            color: #92400e;
+            margin: 0 0 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: white;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+        }
+        .btn-secondary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        .instructions {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border: 1px solid #3b82f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .instructions h4 {
+            color: #1e40af;
+            margin: 0 0 15px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .instructions h4::before {
+            content: '📋';
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .instructions ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #1e40af;
+        }
+        .instructions li {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .footer {
+            background: #f8fafc;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer strong {
+            color: #1e293b;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 25px 0;
+        }
+        .security-notice {
+            background: linear-gradient(135deg, #fef2f2 0%, #fef7f7 100%);
+            border: 1px solid #f87171;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            font-size: 13px;
+            color: #991b1b;
+        }
+        .security-notice strong {
+            color: #7f1d1d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 148.04 66.29" xmlns="http://www.w3.org/2000/svg">
+                        <defs><style>.cls-1{fill:#ffffff;}.cls-2{fill:#ffffff;}.cls-3{fill:#ffffff;}</style></defs>
+                        <path class="cls-1" d="M0,51.42H3.48L6.39,62,9.48,51.42H13L8.32,66.13H4.42Z"/>
+                        <path class="cls-1" d="M15.87,66.13V51.42h3.3V66.13Z"/>
+                        <path class="cls-1" d="M22.34,56.42V55.18c0-2.53,1.33-3.83,4-3.88l.85,0a16.33,16.33,0,0,1,5.08.64v2.57c-1.36-.13-2.53-.2-3.48-.2h-1.5a2.91,2.91,0,0,0-1.27.2q-.36.21-.36,1V56a1.24,1.24,0,0,0,.22.89,1.8,1.8,0,0,0,1.19.32h2.13a3.39,3.39,0,0,1,2.27.7,4.15,4.15,0,0,1,1.34,3.36v.84c0,1.89-.59,3.13-1.77,3.73a8.46,8.46,0,0,1-3.49.59,15.15,15.15,0,0,1-5.25-.8V63.58c1.39.2,2.76.29,4.11.29h1.54a2.28,2.28,0,0,0,1.11-.21.88.88,0,0,0,.35-.8V62a.84.84,0,0,0-.26-.66,1.63,1.63,0,0,0-1.11-.29H24.65a4.26,4.26,0,0,1-2.31-.55Z"/>
+                        <path class="cls-1" d="M35.91,61.49a24.91,24.91,0,0,1-.14-2.72,17.42,17.42,0,0,1,.16-2.48,11.18,11.18,0,0,1,.43-1.93A4.54,4.54,0,0,1,37.07,53a4.46,4.46,0,0,1,.91-.89,3.73,3.73,0,0,1,1.12-.5,8.38,8.38,0,0,1,2.28-.3c.81,0,1.42,0,1.81.06a8,8,0,0,1,1.27.24,3.51,3.51,0,0,1,1.12.5,4.43,4.43,0,0,1,.9.89,4.68,4.68,0,0,1,.74,1.36,11.18,11.18,0,0,1,.43,1.93,17.42,17.42,0,0,1,.16,2.48,24.91,24.91,0,0,1-.14,2.72,17.44,17.44,0,0,1-.38,2.33,7.08,7.08,0,0,1-.61,1.68,4.68,4.68,0,0,1-.74,1.36,4.43,4.43,0,0,1-.9.89,3.51,3.51,0,0,1-1.12.5,8,8,0,0,1-1.27.24c-.39,0-1,0-1.81.06a8.38,8.38,0,0,1-2.28-.3,3.73,3.73,0,0,1-1.12-.5,4.46,4.46,0,0,1-.91-.89A4.54,4.54,0,0,1,36.66,65a11.18,11.18,0,0,1-.43-1.93A17.44,17.44,0,0,1,35.91,61.49Zm3.3-.31a17.75,17.75,0,0,0,.11,2.06,4.47,4.47,0,0,0,.26,1.24,1.22,1.22,0,0,0,.39.65,1.36,1.36,0,0,0,.55.16c.25,0,.47,0,.67,0s.42,0,.67,0a1.36,1.36,0,0,0,.55-.16,1.22,1.22,0,0,0,.39-.65,4.47,4.47,0,0,0,.26-1.24,17.75,17.75,0,0,0,.11-2.06,17.73,17.73,0,0,0-.11-2.05,4.47,4.47,0,0,0-.26-1.24,1.22,1.22,0,0,0-.39-.65,1.36,1.36,0,0,0-.55-.16c-.25,0-.47,0-.67,0s-.42,0-.67,0a1.36,1.36,0,0,0-.55.16,1.22,1.22,0,0,0-.39.65,4.47,4.47,0,0,0-.26,1.24A17.73,17.73,0,0,0,39.21,61.18Z"/>
+                        <path class="cls-1" d="M50.8,66.13V51.42h6.49a4.33,4.33,0,0,1,3.11,1.06,4.78,4.78,0,0,1,1.13,3.58,6.15,6.15,0,0,1-.62,3.14,2.66,2.66,0,0,1-.75.82,6.19,6.19,0,0,1-.9.42l2.67,5.69H58.19L56,60.72l-1.91-.28v5.69Zm3.31-8.22h2.8a1.16,1.16,0,0,0,1-.38,2.65,2.65,0,0,0,.26-1.41,2.57,2.57,0,0,0-.3-1.44,1.21,1.21,0,0,0-1-.36H54.11Z"/>
+                        <path class="cls-2" d="M70.65,66.23h-.28a6.49,6.49,0,0,1-3.13-.5,5.32,5.32,0,0,1-.83-.72,3,3,0,0,1-.7-1.15,13.16,13.16,0,0,1-.56-4.16V51.42H67V59.7a11.48,11.48,0,0,0,.13,2.11c.08.41.16.74.22,1a1.8,1.8,0,0,0,.27.61c.12.16.23.31.33.43a1.13,1.13,0,0,0,.42.3,4.3,4.3,0,0,0,.47.18,4,4,0,0,0,.55.1c.35,0,.72,0,1.12,0a3.76,3.76,0,0,0,1.18-.16A1.25,1.25,0,0,0,72,64a3.89,3.89,0,0,0,.45-2V51.42h1.89V62.27A6.26,6.26,0,0,1,73.67,65a3.91,3.91,0,0,1-1.74,1.16A10.11,10.11,0,0,1,70.65,66.23Z"/>
+                        <path class="cls-2" d="M86.15,51.42q3.55,0,3.55,4.46a6.21,6.21,0,0,1-.23,2,8.2,8.2,0,0,1-.39.93,1.88,1.88,0,0,1-.39.54l-.4.34a1.81,1.81,0,0,1-.44.23,4.45,4.45,0,0,1-.64.18l3,6h-2l-2.92-5.89L81.68,60v6.17H79.84V51.42Zm-4.47,7h4.39c.73,0,1.21-.19,1.42-.58a3.54,3.54,0,0,0,.34-1.7,7,7,0,0,0-.14-1.64,1.35,1.35,0,0,0-.49-.9,2.24,2.24,0,0,0-1.13-.22H81.68Z"/>
+                        <path class="cls-2" d="M99.43,51.42a4.64,4.64,0,0,1,1.86.34,2.83,2.83,0,0,1,1.21.93,4.21,4.21,0,0,1,.85,2.59c0,1.79-.64,2.86-1.91,3.21a2.32,2.32,0,0,1,1.42,1.08,4.14,4.14,0,0,1,.61,2.4,4.68,4.68,0,0,1-.85,2.91,3.69,3.69,0,0,1-3.17,1.25H93.66V51.42Zm-3.9,6.15h3.86A2.12,2.12,0,0,0,101,57a2.35,2.35,0,0,0,.32-1.42,2.25,2.25,0,0,0-.35-1.35,1.78,1.78,0,0,0-1.38-.46H95.53Zm0,2.16v4.54h4.32a2.45,2.45,0,0,0,1.73-.55,2.19,2.19,0,0,0,.58-1.66,2.22,2.22,0,0,0-.56-1.68,2.34,2.34,0,0,0-1.75-.59Z"/>
+                        <path class="cls-2" d="M105.92,66.13l5.28-14.71h2l5.07,14.71h-2.11l-1.21-3.88h-5.57l-1.26,3.88Zm4-5.63h4.42l-2.17-6.43Z"/>
+                        <path class="cls-2" d="M121.67,66.13V51.42h1.89l7.3,11.27V51.42h1.84V66.13h-1.84l-7.32-11.25V66.13Z"/>
+                        <path class="cls-2" d="M136.54,58.57a15.77,15.77,0,0,1,.29-3.12,7.84,7.84,0,0,1,.75-2.21A3.24,3.24,0,0,1,138.83,52a5,5,0,0,1,1.56-.56,11.27,11.27,0,0,1,1.75-.12q1,0,1.59.06a7.1,7.1,0,0,1,1.22.24,3.42,3.42,0,0,1,1.07.5,4.47,4.47,0,0,1,1.49,2.23,16.13,16.13,0,0,1,.53,4.52,12.12,12.12,0,0,1-.71,4.79,4.47,4.47,0,0,1-1.49,2.23,3.42,3.42,0,0,1-1.07.5,7.1,7.1,0,0,1-1.22.24q-.6,0-1.59.06a11.27,11.27,0,0,1-1.75-.12,5,5,0,0,1-1.56-.56,3.24,3.24,0,0,1-1.25-1.27,7.84,7.84,0,0,1-.75-2.21A15.77,15.77,0,0,1,136.54,58.57Zm1.89-.31a14.4,14.4,0,0,0,.14,2.05,4.31,4.31,0,0,0,.34,1.24,1.21,1.21,0,0,0,.53.65,2.15,2.15,0,0,0,.76.16c.3,0,.6,0,.91,0s.61,0,.91,0a2.15,2.15,0,0,0,.76-.16,1.21,1.21,0,0,0,.53-.65,4.31,4.31,0,0,0,.34-1.24,14.4,14.4,0,0,0,.14-2.05,14.44,14.44,0,0,0-.14-2.06,4.31,4.31,0,0,0-.34-1.24,1.21,1.21,0,0,0-.53-.65,2.15,2.15,0,0,0-.76-.16c-.3,0-.6,0-.91,0s-.61,0-.91,0a2.15,2.15,0,0,0-.76.16,1.21,1.21,0,0,0-.53.65,4.31,4.31,0,0,0-.34,1.24A14.44,14.44,0,0,0,138.43,58.26Z"/>
+                    </svg>
+                </div>
+                <h1>🎉 ¡Tu Licencia Está Lista!</h1>
+                <p>Tu licencia ha sido emitida y está disponible para descarga</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="success-alert">
+                <h3>¡Felicidades! Tu Licencia Ha Sido Emitida</h3>
+                <p>Tu trámite ha sido completado exitosamente y tu licencia está lista para ser descargada</p>
+            </div>
+            
+            <div class="license-info">
+                <div class="info-row">
+                    <span class="label">Folio del Trámite:</span>
+                    <span class="value highlight">{{ folio }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Tipo de Licencia:</span>
+                    <span class="value">{{ license_type }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Nombre del Solicitante:</span>
+                    <span class="value">{{ applicant_name }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Estado:</span>
+                    <span class="value">
+                        <span class="license-ready">🎉 LICENCIA EMITIDA</span>
+                    </span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Fecha de Emisión:</span>
+                    <span class="value">{{ issue_date }}</span>
+                </div>
+                {% if license_number %}
+                <div class="info-row">
+                    <span class="label">Número de Licencia:</span>
+                    <span class="value">{{ license_number }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="download-section">
+                <h4>📄 Descarga Tu Licencia Oficial</h4>
+                <p>
+                    Tu licencia está disponible para descarga inmediata. Asegúrate de descargarla e imprimirla 
+                    para colocarla en un lugar visible de tu establecimiento.
+                </p>
+                {% if portal_url %}
+                    <a href="{{ portal_url }}" class="btn">Descargar Licencia Ahora</a>
+                {% endif %}
+                {% if license_url %}
+                    <a href="{{ license_url }}" class="btn btn-secondary">Descarga Directa</a>
+                {% endif %}
+            </div>
+            
+            <div class="instructions">
+                <h4>Instrucciones Importantes</h4>
+                <ul>
+                    <li><strong>Descarga inmediata:</strong> Descarga tu licencia tan pronto como sea posible</li>
+                    <li><strong>Impresión:</strong> Imprime la licencia en papel de calidad para mejor durabilidad</li>
+                    <li><strong>Ubicación:</strong> Coloca la licencia impresa en un lugar visible al público en tu establecimiento</li>
+                    <li><strong>Copia digital:</strong> Conserva una copia digital en tus archivos para futuras gestiones</li>
+                    <li><strong>Renovación:</strong> Ten presente las fechas de renovación según el tipo de licencia</li>
+                    <li><strong>Cambios:</strong> Cualquier cambio en la información debe ser reportado a las autoridades</li>
+                </ul>
+            </div>
+            
+            <div class="security-notice">
+                <strong>Nota de Seguridad:</strong> Este documento es oficial y contiene elementos de seguridad. 
+                No compartir en redes sociales o sitios públicos para evitar uso indebido.
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p>
+                <strong>¡Gracias por utilizar Visor Urbano!</strong><br>
+                Esperamos que disfrutes de tu nuevo negocio y contribuyas al crecimiento económico de nuestra comunidad.
+            </p>
+            
+            {% if contact_info %}
+            <p>
+                <strong>¿Necesitas ayuda?</strong><br>
+                Para cualquier consulta o soporte, puedes contactarnos a través del portal de usuario 
+                o visitando nuestras oficinas durante horario de atención.
+            </p>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p><strong>Visor Urbano</strong> - Sistema de Gestión Urbana</p>
+            <p>Tu licencia es válida según los términos y condiciones establecidos por la autoridad municipal.</p>
+            <p>Este es un correo automático del sistema. Por favor no responda a este mensaje.</p>
+            <p>© {{ current_year }} Visor Urbano - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

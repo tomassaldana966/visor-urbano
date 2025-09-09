@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Business License</title>
+    
+    <style>
+        /* Root variables for project colors */
+        :root {
+            --color-vu-primary: #6abf4b;
+            --color-vu-blue: #2151c6;
+            --color-vu-dark-gray: #272729;
+            --color-vu-gray: #7b868c;
+            --color-vu-green: #65c65d;
+            --color-vu-light-gray: #f6fafa;
+            --color-vu-light-green: #e1f2df;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Red Hat Display', sans-serif;
+            color: var(--color-vu-dark-gray);
+            line-height: 1.5;
+            background: white;
+        }
+
+        /* Layout */
+        .license-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--color-vu-primary);
+            padding-bottom: 20px;
+        }
+
+        .logo-container {
+            flex: 0 0 150px;
+            margin-right: 30px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+        }
+
+        .title-container {
+            flex: 1;
+            text-align: right;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--color-vu-primary);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .license-year {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--color-vu-gray);
+        }
+
+        .status-indicator {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .status-preliminary { color: #e74c3c; }
+        .status-cancelled { color: #e74c3c; }
+        .status-suspended { color: #f39c12; }
+        .status-sanction { color: #e74c3c; }
+        .status-debt { color: #e74c3c; }
+
+        /* Content sections */
+        .content-section {
+            margin-bottom: 25px;
+        }
+
+        .section-header {
+            background: var(--color-vu-primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .section-content {
+            padding: 0 20px;
+            background: var(--color-vu-light-green);
+            border-radius: 8px;
+            padding: 15px 20px;
+        }
+
+        .field-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .field-item {
+            flex: 1;
+        }
+
+        .field-label {
+            font-weight: 600;
+            color: var(--color-vu-dark-gray);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .field-value {
+            font-size: 1.1rem;
+            color: var(--color-vu-dark-gray);
+            font-weight: 500;
+        }
+
+        .folio-box {
+            background: var(--color-vu-blue);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .folio-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+
+        .folio-type {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Map container */
+        .map-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .map-container img {
+            width: 225px;
+            height: 225px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Signatures section */
+        .signatures-section {
+            margin-top: 40px;
+            page-break-inside: avoid;
+        }
+
+        .signatures-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .signature-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--color-vu-light-gray);
+            border-radius: 8px;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .signature-image {
+            max-width: 130px;
+            max-height: 50px;
+            margin: 0 auto 15px;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--color-vu-dark-gray);
+        }
+
+        .signature-department {
+            font-size: 0.9rem;
+            color: var(--color-vu-gray);
+        }
+
+        /* QR Code */
+        .qr-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .qr-container img {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Date and location */
+        .issuance-info {
+            text-align: center;
+            margin: 30px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Footer warning */
+        .warning-section {
+            background: var(--color-vu-light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 4px solid var(--color-vu-primary);
+        }
+
+        .warning-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--color-vu-dark-gray);
+        }
+
+        /* Page break styles for print */
+        .page-break {
+            page-break-after: always;
+        }
+
+        /* Second page styles */
+        .info-page {
+            margin-top: 50px;
+        }
+
+        .info-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .info-text {
+            flex: 1;
+            margin-left: 30px;
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .rules-section {
+            margin: 30px 0;
+        }
+
+        .rules-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--color-vu-dark-gray);
+        }
+
+        .rules-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .rules-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .rules-list li:before {
+            content: "•";
+            color: var(--color-vu-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .observations-section {
+            background: var(--color-vu-light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-top: 3px solid var(--color-vu-primary);
+        }
+
+        /* Print styles */
+        @media print {
+            .license-container {
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            .page-break {
+                page-break-after: always;
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .title-container {
+                text-align: center;
+            }
+
+            .field-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .signatures-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .info-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .info-text {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="license-container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="logo-container">
+                {% if municipality_logo %}
+                <img src="{{ municipality_logo }}" alt="Municipality Logo">
+                {% else %}
+                <div class="placeholder-logo" style="width: 150px; height: 100px; background: var(--color-vu-light-gray); border: 2px dashed var(--color-vu-gray); display: flex; align-items: center; justify-content: center; color: var(--color-vu-gray); font-size: 0.8rem;">
+                    Municipality Logo
+                </div>
+                {% endif %}
+            </div>
+            <div class="title-container">
+                <h1 class="main-title">Business License</h1>
+                <div class="license-year">{{ license_year }}</div>
+                {% if license_status %}
+                <div class="status-indicator status-{{ license_status|lower }}">
+                    {% if license_status == 'preliminary' %}(Preliminary){% endif %}
+                    {% if license_status == 'cancelled' %}(Cancelled){% endif %}
+                    {% if license_status == 'suspended' %}(Suspended){% endif %}
+                    {% if license_status == 'sanction' %}(Sanction){% endif %}
+                    {% if license_status == 'debt' %}(Debt){% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- License Holder Information -->
+        <div class="content-section">
+            <div class="section-header">License Holder</div>
+            <div class="section-content">
+                <div class="field-row">
+                    <div class="field-item" style="flex: 2;">
+                        <div class="field-label">Full Name</div>
+                        <div class="field-value">{{ owner_name }}</div>
+                    </div>
+                    <div class="field-item">
+                        <div class="folio-box">
+                            <div class="folio-number">No. {{ license_number }}</div>
+                            <div class="folio-type">{{ license_type }}</div>
+                        </div>
+                    </div>
+                </div>
+                {% if national_id %}
+                <div class="field-row">
+                    <div class="field-item">
+                        <div class="field-label">National ID (CURP)</div>
+                        <div class="field-value">{{ national_id }}</div>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Commercial Activity -->
+        <div class="content-section">
+            <div class="section-header">Requested Commercial Activity</div>
+            <div class="section-content">
+                <div class="field-row">
+                    <div class="field-item">
+                        <div class="field-label">Activity Code</div>
+                        <div class="field-value">{{ industry_classification_code }}</div>
+                    </div>
+                    <div class="field-item">
+                        <div class="field-label">Activity Description</div>
+                        <div class="field-value">{{ commercial_activity }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Details -->
+        <div class="field-row">
+            <div class="field-item" style="flex: 2;">
+                <!-- Detailed Activities -->
+                <div class="content-section">
+                    <div class="section-header">Detailed Activities to Perform</div>
+                    <div class="section-content">
+                        <div class="field-value">{{ detailed_activities or commercial_activity }}</div>
+                    </div>
+                </div>
+
+                <!-- Operating Hours and Location -->
+                <div class="field-row">
+                    <div class="field-item">
+                        <div class="content-section">
+                            <div class="section-header">Operating Hours</div>
+                            <div class="section-content">
+                                {% if opening_time and closing_time %}
+                                <div class="field-value">Opening: {{ opening_time }}</div>
+                                <div class="field-value">Closing: {{ closing_time }}</div>
+                                {% else %}
+                                <div class="field-value">Not specified</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field-item">
+                        <div class="content-section">
+                            <div class="section-header">Location</div>
+                            <div class="section-content">
+                                <div class="field-value">{{ business_address }}</div>
+                                <div class="field-value">Municipality of {{ municipality_name }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Authorized Area -->
+                <div class="content-section">
+                    <div class="section-header">Authorized Area</div>
+                    <div class="section-content">
+                        {% if authorized_area %}
+                        <div class="field-value">{{ authorized_area }} m²</div>
+                        {% else %}
+                        <div class="field-value">Not specified</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="field-item">
+                {% if minimap_url %}
+                <div class="map-container">
+                    <img src="{{ minimap_url }}" alt="Location Map">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Issuance Information -->
+        <div class="issuance-info">
+            Respectfully,<br>
+            {{ municipality_name }}, issued on {{ issue_date_formatted }}<br>
+            
+            {% if payment_status == 0 %}
+            <div style="color: #e74c3c; font-size: 0.9rem; margin-top: 10px;">
+                This document is a preliminary license for validation purposes. Once the fees are paid, the definitive license will be issued.
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Signatures Section -->
+        <div class="signatures-section">
+            <div class="signatures-grid">
+                {% for signature in signatures %}
+                <div class="signature-item">
+                    {% if signature.signature_image %}
+                    <img src="{{ signature.signature_image }}" alt="Signature" class="signature-image">
+                    {% endif %}
+                    <div>
+                        <div class="signature-name">{{ signature.signer_name }}</div>
+                        <div class="signature-department">{{ signature.position_title }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- QR Code -->
+            {% if qr_code %}
+            <div class="qr-container">
+                <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Footer Warning -->
+        <div class="warning-section">
+            <div class="warning-text">
+                <strong>*This Business License does not prove payment of fees made by the taxpayer.</strong> 
+                To verify payment, the holder must display this License along with the proof of payment of fees made 
+                at their business premises.
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Break -->
+    <div class="page-break"></div>
+
+    <!-- Second Page - Information and Rules -->
+    <div class="license-container info-page">
+        <div class="info-header">
+            <div class="logo-container">
+                {% if municipality_logo %}
+                <img src="{{ municipality_logo }}" alt="Municipality Logo">
+                {% else %}
+                <div class="placeholder-logo" style="width: 150px; height: 100px; background: var(--color-vu-light-gray); border: 2px dashed var(--color-vu-gray); display: flex; align-items: center; justify-content: center; color: var(--color-vu-gray); font-size: 0.8rem;">
+                    Municipality Logo
+                </div>
+                {% endif %}
+            </div>
+            <div class="info-text">
+                <strong>The municipality of {{ municipality_name }} is modernizing and provides digital tools 
+                to issue this license.</strong> Therefore, we invite you to continue making good use of them 
+                by respecting and complying with municipal regulations and other applicable regulations so that 
+                this Municipality is more expeditious and facilitates interaction between citizens and government.
+            </div>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-title">
+                Remember that ignorance of regulations or laws does not exempt you from the obligation to comply with them. 
+                Below, we mention some considerations that you should keep in mind for the proper operation of your business.
+            </div>
+            
+            <ul class="rules-list">
+                <li>The license must be displayed in a visible place within the business.</li>
+                <li>The license has an annual validity, so it must be renewed.</li>
+                <li>In case of permanently closing the business, notify the authority of the closure.</li>
+                <li>Have safety and civil protection measures in place.</li>
+                <li>Maintain an orderly and clean image inside and outside the establishment.</li>
+            </ul>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-title">Grounds for closure and/or revocation of the license:</div>
+            
+            <ul class="rules-list">
+                <li>Operating an activity different from that indicated in the license.</li>
+                <li>Operating at a time different from that permitted.</li>
+                <li>Lacking a business license.</li>
+                <li>Discharging harmful waste into drainage or public roads.</li>
+                <li>Having provided false data or documents to obtain this license.</li>
+                <li>Consumption of alcoholic beverages by minors under 18 years of age.</li>
+                <li>Others indicated by applicable regulations.</li>
+            </ul>
+        </div>
+
+        <!-- Observations -->
+        {% if observations or municipality_restrictions %}
+        <div class="observations-section">
+            {% if municipality_restrictions %}
+            <div class="warning-text">{{ municipality_restrictions }}</div>
+            {% endif %}
+            {% if observations %}
+            <div class="warning-text">
+                <strong>Particular Note:</strong> {{ observations }}
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

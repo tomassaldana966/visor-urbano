@@ -1,0 +1,105 @@
+{
+  "page": {
+    "title": "Municipal Layers",
+    "description": "Management of geographic and cartographic layers of the municipality"
+  },
+  "actions": {
+    "addLayer": "Add Layer",
+    "edit": "Edit",
+    "view": "View",
+    "cancel": "Cancel",
+    "save": "Save Changes",
+    "add": "Add Layer",
+    "adding": "Adding...",
+    "updating": "Updating..."
+  },
+  "columns": {
+    "name": "Name",
+    "type": "Type",
+    "format": "Format",
+    "server": "Server",
+    "visible": "Visible",
+    "status": "Status",
+    "editable": "Editable",
+    "opacity": "Opacity",
+    "order": "Order",
+    "url": "URL",
+    "attribution": "Attribution",
+    "projection": "Projection",
+    "version": "Version",
+    "value": "Value",
+    "geometryType": "Geometry Type",
+    "cqlFilter": "CQL Filter",
+    "actions": "Actions"
+  },
+  "status": {
+    "visible": "Visible",
+    "hidden": "Hidden",
+    "active": "Active",
+    "inactive": "Inactive",
+    "yes": "Yes",
+    "no": "No",
+    "notAvailable": "N/A"
+  },
+  "statistics": {
+    "totalLayers": "Total Layers",
+    "activeLayers": "Active Layers",
+    "visibleLayers": "Visible"
+  },
+  "modal": {
+    "addTitle": "Add New Layer",
+    "editTitle": "Edit Layer"
+  },
+  "form": {
+    "layerName": "Layer Name",
+    "layerValue": "Layer Value",
+    "layers": "Layers",
+    "layerType": "Layer Type",
+    "serverType": "Server Type",
+    "serviceUrl": "Service URL",
+    "format": "Format",
+    "version": "Version",
+    "projection": "Projection",
+    "opacity": "Opacity",
+    "order": "Order",
+    "attribution": "Attribution",
+    "geometryType": "Geometry Type",
+    "cqlFilter": "CQL Filter",
+    "activateLayer": "Activate layer",
+    "visible": "Visible",
+    "editable": "Editable"
+  },
+  "placeholders": {
+    "layerName": "Ex: Commercial Zoning",
+    "layerValue": "layer_value",
+    "layers": "Layer names in the service",
+    "selectType": "Select type",
+    "selectServer": "Select server",
+    "serviceUrl": "https://api.municipality.gov/layers/...",
+    "format": "image/png",
+    "selectVersion": "Select version",
+    "projection": "EPSG:4326",
+    "attribution": "© Municipality GIS Department",
+    "geometryType": "polygon, point, line",
+    "cqlFilter": "municipality='example'"
+  },
+  "serverTypes": {
+    "geoserver": "GeoServer",
+    "mapserver": "MapServer",
+    "qgis": "QGIS",
+    "carmentaserver": "Carmenta Server"
+  },
+  "layerTypes": {
+    "wms": "WMS",
+    "xyz": "XYZ/TMS"
+  },
+  "errors": {
+    "unauthorized": "Unauthorized access",
+    "noMunicipality": "User without assigned municipality",
+    "invalidFormData": "Invalid form data",
+    "createError": "Error creating layer",
+    "updateError": "Error updating layer",
+    "loadError": "Error loading layers",
+    "noLayerId": "Layer ID not provided"
+  }
+}

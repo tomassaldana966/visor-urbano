@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <title>Submission Receipt</title>
+    <style>
+        body {
+            font-family: 'Red Hat Display', sans-serif;
+            color: #333447;
+            padding: 2rem;
+        }
+        h3 {
+            text-align: center;
+        }
+        .document-box {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        .document-info {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .document-info strong {
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            font-size: 0.9rem;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 0.5rem;
+        }
+        .footer-note {
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="document-box">
+        <h3><strong>Submission Receipt</strong></h3>
+
+        <p class="document-info">
+            In response to the procedure requested by <strong>{{ data['name'] }}</strong>, this receipt certifies
+            the submission and reception of the attached documents through the Visor Urbano Platform to obtain
+            a Business License for the property located at <strong>{{ data['domicilio']['calle'] }} No. {{ data['domicilio']['exterior'] }} {{ data['domicilio']['interior'] }}</strong>,
+            in the neighborhood <strong>{{ data['domicilio']['colonia'] }}</strong>, Municipality of <strong>{{ data['result'][0].municipio }}</strong>, Jalisco.
+        </p>
+
+        <p class="document-info">
+            The documents submitted to the Visor Urbano Platform are listed below:
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Required Document</th>
+                    <th>Attached File</th>
+                    <th>File Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resp in data['data'] %}
+                    {% set path = resp.value %}
+                    {% set file = path.split('/')[-1] %}
+                    {% set fileFinal = file.split('_')[0] + '.pdf' %}
+                    {% if '.pdf' in file %}
+                    <tr>
+                        <td>{{ resp.description }}</td>
+                        <td>{{ fileFinal }}</td>
+                        <td>PDF</td>
+                    </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p class="footer-note">
+            The submitted information will be reviewed by the municipal authority. If everything is in order,
+            a notification will be sent to the email provided, including the payment order. Once paid, the business
+            license will be issued. If any issues are found, additional information may be requested.
+        </p>
+
+        <p class="footer-note">
+            This receipt is issued under the principles of presumption of truthfulness and good faith,
+            as stated in Article 4, items h) and i) of the Administrative Procedure Law of the State of Jalisco.
+            The authority retains the right to verify the accuracy of the submitted information at any time.
+            In case of false information, the applicant may face administrative or criminal liability.
+        </p>
+
+        <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <strong>Sincerely,</strong><br>
+                Licensing Authority<br>
+                Municipality of {{ data['result'][0].municipio }}, Jalisco
+            </div>
+            <div style="text-align: center;">
+                <img src="data:image/png;base64,{{ qrCode }}" alt="QR Code" width="120" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

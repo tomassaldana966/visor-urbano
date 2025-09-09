@@ -1,0 +1,105 @@
+{
+  "page": {
+    "title": "Couches Municipales",
+    "description": "Gestion des couches géographiques et cartographiques de la municipalité"
+  },
+  "actions": {
+    "addLayer": "Ajouter une Couche",
+    "edit": "Modifier",
+    "view": "Voir",
+    "cancel": "Annuler",
+    "save": "Enregistrer les Modifications",
+    "add": "Ajouter une Couche",
+    "adding": "Ajout en cours...",
+    "updating": "Mise à jour..."
+  },
+  "columns": {
+    "name": "Nom",
+    "type": "Type",
+    "format": "Format",
+    "server": "Serveur",
+    "visible": "Visible",
+    "status": "Statut",
+    "editable": "Modifiable",
+    "opacity": "Opacité",
+    "order": "Ordre",
+    "url": "URL",
+    "attribution": "Attribution",
+    "projection": "Projection",
+    "version": "Version",
+    "value": "Valeur",
+    "geometryType": "Type de Géométrie",
+    "cqlFilter": "Filtre CQL",
+    "actions": "Actions"
+  },
+  "status": {
+    "visible": "Visible",
+    "hidden": "Masqué",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "yes": "Oui",
+    "no": "Non",
+    "notAvailable": "N/A"
+  },
+  "statistics": {
+    "totalLayers": "Total des Couches",
+    "activeLayers": "Couches Actives",
+    "visibleLayers": "Visibles"
+  },
+  "modal": {
+    "addTitle": "Ajouter une Nouvelle Couche",
+    "editTitle": "Modifier la Couche"
+  },
+  "form": {
+    "layerName": "Nom de la Couche",
+    "layerValue": "Valeur de la Couche",
+    "layers": "Couches",
+    "layerType": "Type de Couche",
+    "serverType": "Type de Serveur",
+    "serviceUrl": "URL du Service",
+    "format": "Format",
+    "version": "Version",
+    "projection": "Projection",
+    "opacity": "Opacité",
+    "order": "Ordre",
+    "attribution": "Attribution",
+    "geometryType": "Type de Géométrie",
+    "cqlFilter": "Filtre CQL",
+    "activateLayer": "Activer la couche",
+    "visible": "Visible",
+    "editable": "Modifiable"
+  },
+  "placeholders": {
+    "layerName": "Ex: Zonage Commercial",
+    "layerValue": "layer_value",
+    "layers": "Noms des couches dans le service",
+    "selectType": "Sélectionner le type",
+    "selectServer": "Sélectionner le serveur",
+    "serviceUrl": "https://api.municipality.gov/layers/...",
+    "format": "image/png",
+    "selectVersion": "Sélectionner la version",
+    "projection": "EPSG:4326",
+    "attribution": "© Département SIG Municipal",
+    "geometryType": "polygone, point, ligne",
+    "cqlFilter": "municipality='example'"
+  },
+  "serverTypes": {
+    "geoserver": "GeoServer",
+    "mapserver": "MapServer",
+    "qgis": "QGIS",
+    "carmentaserver": "Carmenta Server"
+  },
+  "layerTypes": {
+    "wms": "WMS",
+    "xyz": "XYZ/TMS"
+  },
+  "errors": {
+    "unauthorized": "Accès non autorisé",
+    "noMunicipality": "Utilisateur sans municipalité assignée",
+    "invalidFormData": "Données de formulaire invalides",
+    "createError": "Erreur lors de la création de la couche",
+    "updateError": "Erreur lors de la mise à jour de la couche",
+    "loadError": "Erreur lors du chargement des couches",
+    "noLayerId": "ID de couche non fourni"
+  }
+}

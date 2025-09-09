@@ -1,0 +1,65 @@
+{
+  "title": "¿Qué es Visor Urbano?",
+  "description": {
+    "title": "Descripción",
+    "content": "En Visor Urbano, podrás conocer los requisitos aplicables para abrir tu negocio y tramitar tu licencia totalmente en línea."
+  },
+  "background": {
+    "title": "Antecedentes",
+    "paragraph1": "En 2016, Guadalajara fue una de las cinco ciudades ganadoras del concurso de innovación llamado \"Mayors Challenge\" organizado por la fundación americana Bloomberg Philanthropies, las cuales destacaron por sus ideas innovadoras y audaces que abordan desafíos urgentes, y que además tienen el mayor potencial de impacto positivo y capacidad para replicarse en otras regiones. Se otorgó un millón de dólares para la creación de la plataforma Visor Urbano.",
+    "paragraph2": "En 2020, una vez finalizada la primera etapa y dado el éxito que se tuvo, la fundación por primera vez en la historia de los concursos en Latinoamérica decidió continuar con el apoyo al proyecto para replicarlo en todos los municipios del Estado de Jalisco y a nivel internacional."
+  },
+  "benefits": {
+    "title": "Beneficios",
+    "subtitle": "Visor Urbano transforma la gestión urbana para beneficio de ciudadanos y municipios",
+    "citizens": {
+      "title": "Para la ciudadanía:",
+      "items": [
+        "Consultas de información gubernamental en tiempo real",
+        "Proceso completamente en línea",
+        "Agiliza el tiempo del trámite y entrega de licencia",
+        "Proceso único para todos los municipios",
+        "Evitar acudir a oficinas gubernamentales",
+        "Reducción de la discrecionalidad del proceso",
+        "Participación proactiva de la ciudadanía en el desarrollo urbano"
+      ]
+    },
+    "municipalities": {
+      "title": "Para los municipios:",
+      "items": [
+        "Software libre y configurable",
+        "Sin costos, al alojarse en servidores del gobierno",
+        "Obtención de la certificación del Sistema de Apertura Rápida de Empresas (SARE) regulada por la Comisión Nacional de Mejora Regulatoria",
+        "Transparencia proactiva al publicar todas las licencias para libre consulta",
+        "Generación de reportes en tiempo real",
+        "Consulta de estatus, resultados y avance de indicadores en tiempo real",
+        "Capacitación, asesoría y acompañamiento continuo del equipo de VU",
+        "Transición hacia un gobierno más abierto, digital e innovador",
+        "Adecuar la normatividad a los nuevos estándares digitales"
+      ]
+    }
+  },
+  "awards": {
+    "title": "Reconocimientos",
+    "intro": "Entre los premios y reconocimientos otorgados a Visor Urbano están:",
+    "year": "2016",
+    "mayorsChallengeTitle": "Mayors Challenge",
+    "mayorsChallengeSubtitle": "Winner",
+    "items": [
+      "Certificación mexicana SARE (Sistema de Apertura Rapida de Empresas) regulada por la Comisión Nacional de Mejora Regulatoria.",
+      "Premio Nacional de Innovación en Transparencia 2018",
+      "Latin America Geospatial World Excellence Award",
+      "U-Gob de Gobierno Digital en la categoría de Gobierno Municipal 2019",
+      "Mención especial de \"Innovación Gubernamental\" en premios IT +Gob organizados por el Comité de Informática de la Administración Pública Estatal y Municipal (CIAPEM)",
+      "Future Cities Award en la categoría \"Ciudad del Futuro\", catalogándola como la iniciativa más \"futurista e innovadora\". Dicho premio fue entregado en 2020 en el marco de la Reunión Anual de Inversiones llevada a cabo en los Emiratos Árabes Unidos."
+    ],
+    "conclusion": "Además, en 2019, Guadalajara se convirtió en el primer municipio a nivel nacional en integrar un esquema de Gobierno Digital entre los países miembros de la Organización para la Cooperación y el Desarrollo Económicos (OCDE), por medio de las plataformas digitales Visor Urbano y Ciudapp."
+  },
+  "cta": {
+    "title": "¿Listo para comenzar?",
+    "description": "Únete a la transformación digital de la gestión urbana y tramita tu licencia de manera eficiente",
+    "exploreMap": "Explorar Mapa",
+    "login": "Iniciar Sesión"
+  },
+  "backButton": "Volver al inicio"
+}

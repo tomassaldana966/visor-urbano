@@ -1,0 +1,94 @@
+{
+  "title": "Notifications",
+  "subtitle": "Manage your procedure notifications and updates",
+  "tabs": {
+    "tab1": {
+      "label": "All notifications",
+      "table": {
+        "columns": {
+          "folio": "Folio",
+          "status": "Status",
+          "type": "Type",
+          "message": "Message",
+          "date": "Date",
+          "actions": "Actions"
+        },
+        "noData": "No notifications found"
+      }
+    },
+    "tab2": {
+      "label": "Unread",
+      "table": {
+        "columns": {
+          "folio": "Folio",
+          "type": "Type",
+          "message": "Message",
+          "date": "Date",
+          "actions": "Actions"
+        },
+        "noData": "No unread notifications"
+      }
+    }
+  },
+  "status": {
+    "read": "Read",
+    "unread": "Unread"
+  },
+  "actions": {
+    "markAsRead": "Mark as Read",
+    "details": "Details",
+    "viewProcedure": "View Procedure Details"
+  },
+  "messages": {
+    "markedAsRead": "Notification marked as read",
+    "markedAsReadSimulated": "Notification marked as read (simulated)",
+    "error": "Error processing notification"
+  },
+  "types": {
+    "1": "General Information",
+    "2": "License Approval",
+    "3": "Scheduled Inspection",
+    "4": "Required Documentation",
+    "5": "Pending Review",
+    "default": "Unknown Type"
+  },
+  "departments": {
+    "1": "Construction Licenses",
+    "2": "Special Permits",
+    "3": "Inspections",
+    "4": "Urban Development",
+    "5": "Environment",
+    "default": "Unspecified Department"
+  },
+  "modal": {
+    "title": "Notification Details",
+    "fields": {
+      "folio": "Folio",
+      "type": "Type",
+      "message": "Message",
+      "date": "Creation Date",
+      "department": "Department",
+      "applicant": "Applicant",
+      "notificationStatus": "Notification Status"
+    },
+    "status": {
+      "read": "Read",
+      "unread": "Unread"
+    },
+    "actions": {
+      "markAsRead": "Mark as Read",
+      "viewProcedure": "View Procedure Details",
+      "close": "Close"
+    }
+  },
+  "pagination": {
+    "page": "Page {{page}} of {{total}}",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "debug": {
+    "title": "Development Mode - API Connection Issue",
+    "usingMockData": "Using mock data for testing",
+    "checkConnection": "Check backend connection and authentication"
+  }
+}

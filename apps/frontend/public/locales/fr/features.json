@@ -1,0 +1,18 @@
+{
+  "title": "Que pouvez-vous consulter sur la plateforme Visor Urbano?",
+  "cta": "Aller à la carte",
+  "features": [
+    {
+      "icon": "store",
+      "title": "Licences commerciales à Jalisco"
+    },
+    {
+      "icon": "document",
+      "title": "Exigences pour traiter votre licence"
+    },
+    {
+      "icon": "map",
+      "title": "Diagnostic commercial"
+    }
+  ]
+}

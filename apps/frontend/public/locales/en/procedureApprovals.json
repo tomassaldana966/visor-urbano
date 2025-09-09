@@ -1,0 +1,193 @@
+{
+  "title": "Procedure Approvals",
+  "breadcrumb": "Procedure Approvals",
+  "subtitle": "Management of procedures pending approval",
+  "defaultType": "General Procedure",
+  "steps": "steps",
+  "actions": {
+    "filter": "Filter",
+    "approve": "Approve",
+    "reject": "Reject",
+    "viewDetails": "View details",
+    "batchApprove": "Batch approve"
+  },
+  "search": {
+    "placeholder": "Search by folio..."
+  },
+  "filters": {
+    "all": "All",
+    "draft": "Draft",
+    "pendingReview": "Pending review",
+    "inReview": "In review",
+    "approved": "Approved",
+    "rejected": "Rejected"
+  },
+  "filter": {
+    "category": "Filter by category",
+    "selectCategory": "Select a category"
+  },
+  "stats": {
+    "draft": "Draft",
+    "pendingReview": "Pending review",
+    "inReview": "In review",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "licenseIssued": "License Issued"
+  },
+  "status": {
+    "draft": "Draft",
+    "pending_review": "Pending review",
+    "in_review": "In review",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "license_issued": "License Issued"
+  },
+  "fields": {
+    "applicant": "Applicant",
+    "location": "Location",
+    "reviewer": "Reviewer",
+    "amount": "Amount"
+  },
+  "sections": {
+    "procedures": "Procedures for approval",
+    "pending": "Pending approval",
+    "recent": "Recent approvals"
+  },
+  "requirements": {
+    "title": "Requirements",
+    "documentsComplete": "Documents complete",
+    "technicalReview": "Technical review"
+  },
+  "empty": {
+    "title": "No procedures to approve",
+    "description": "No procedures found that require approval with the selected filters."
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "pageInfo": "Page {{page}} of {{total}}"
+  },
+  "licensesIssued": {
+    "title": "Issued Licenses",
+    "subtitle": "Visualization and management of issued business licenses"
+  },
+  "tabs": {
+    "all": "All Procedures",
+    "businessLicenses": "Business procedures",
+    "buildingLicenses": "Construction procedures",
+    "inReview": "Under review",
+    "preventions": "Preventions",
+    "rejected": "Rejected",
+    "approved": "Approved",
+    "atWindow": "At window"
+  },
+  "statusLabels": {
+    "pendingReview": "Pending review",
+    "approved": "Approved",
+    "rejected": "Rejected",
+    "prevention": "Prevention",
+    "approvedByDirector": "Approved by director",
+    "licenseIssued": "License issued",
+    "inReview": "Under review",
+    "new": "New"
+  },
+  "actionLabels": {
+    "viewDetail": "View detail",
+    "resolution": "Resolution",
+    "issueLicense": "Issue license",
+    "viewLicense": "View license",
+    "addFiles": "Add files"
+  },
+  "tableHeaders": {
+    "folio": "Folio",
+    "address": "Address",
+    "municipality": "Municipality",
+    "scian": "SCIAN",
+    "entryDate": "Entry date",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "emptyState": {
+    "title": "No procedures",
+    "description": "No procedures found to display"
+  },
+  "searchPlaceholder": "Folio",
+  "showingResults": "Showing {{count}} of {{total}} procedures",
+  "notAvailable": "N/A",
+  "errors": {
+    "accessDenied": "Access denied: Administrative privileges required",
+    "insufficientPermissions": "Access denied: Insufficient permissions for approvals",
+    "tokenRequired": "Access token required",
+    "loadError": "Error loading procedure approvals",
+    "authenticationExpired": "Authentication expired. Please log in again."
+  },
+  "license": {
+    "issueSuccess": "License issued successfully",
+    "issueError": "Error issuing license",
+    "downloadError": "Failed to download license",
+    "systemGenerationPending": "This functionality will be integrated with the existing license generation system",
+    "systemGenerationError": "Error generating license by system",
+    "modal": {
+      "title": "Issue business license",
+      "subtitle": "Select the desired option.",
+      "description": "Then click \"Issue license\" to notify the citizen.",
+      "generateBySystem": "Generate by Visor Urbano",
+      "uploadScanned": "Upload scanned",
+      "generateDescription": "This option will generate the license automatically using the Visor Urbano system.",
+      "fileUploadLabel": "Attach municipal license format scanned",
+      "noFileChosen": "No file chosen",
+      "chooseFile": "Choose File",
+      "openingTime": "Opening time",
+      "closingTime": "Closing time",
+      "authorizedArea": "Area to authorize",
+      "areaUnit": "sq ft",
+      "areaPlaceholder": "0",
+      "licenseCost": "License Cost",
+      "signatures": "Signatures",
+      "signaturesSelect": "Select...",
+      "noSignaturesAvailable": "No signatures configured for this municipality",
+      "signaturesDirector": "Director",
+      "signaturesSupervisor": "Supervisor",
+      "observations": "Particular annotations (Will appear on the back of this license)",
+      "observationsPlaceholder": "Write your observations here...",
+      "cancel": "Cancel",
+      "generating": "Generating...",
+      "generateLicense": "Generate license",
+      "issuing": "Issuing...",
+      "issueLicense": "Issue license",
+      "successTitle": "License issued successfully",
+      "successDescription": "The license has been issued successfully.",
+      "errorTitle": "Error",
+      "accept": "Accept"
+    }
+  },
+  "resolution": {
+    "title": "Resolution",
+    "successTitle": "Resolution Sent",
+    "successMessage": "Resolution sent successfully",
+    "successDescription": "The resolution has been saved and the procedure status has been updated.",
+    "type": "Resolution Type *",
+    "typeRequired": "You must select a resolution option",
+    "types": {
+      "approve": "Approve",
+      "prevent": "Prevent",
+      "reject": "Reject"
+    },
+    "details": "Detail the direction of your resolution *",
+    "detailsPlaceholder": "Explain the reasons for your resolution...",
+    "detailsRequired": "You must provide resolution details",
+    "attachFile": "Attach resolution",
+    "fileSelected": "Selected file:",
+    "fileFormats": "Allowed formats: PDF, JPG, PNG. Maximum 10MB.",
+    "cancel": "Cancel",
+    "sending": "Sending...",
+    "submit": "Send Resolution",
+    "errors": {
+      "fileTooLarge": "File must be less than 10MB",
+      "invalidFileType": "Only PDF, JPG, JPEG or PNG files are allowed",
+      "authTokenRequired": "Authentication token required",
+      "uploadError": "Error uploading file",
+      "submissionError": "Error sending resolution"
+    }
+  }
+}

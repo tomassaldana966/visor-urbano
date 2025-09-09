@@ -1,0 +1,25 @@
+{
+  "logo": {
+    "alt": "Visor Urbano"
+  },
+  "languages": {
+    "es": "🇲🇽 Español",
+    "en": "🇺🇸 English",
+    "fr": "🇫🇷 Français",
+    "pt": "🇧🇷 Português"
+  },
+  "menu": {
+    "home": "Inicio",
+    "about": "¿Qué es VU?",
+    "licenses": "Licencias Emitidas",
+    "map": "Mapa",
+    "news": "Noticias"
+  },
+  "login": "Ingresa a tu cuenta",
+  "logout": "Cerrar sesión",
+  "notifications": "Notificaciones",
+  "procedures": "Mis Trámites",
+  "settings": "Configuración",
+  "changePassword": "Cambiar contraseña",
+  "mobileMenu": "Menú móvil"
+}

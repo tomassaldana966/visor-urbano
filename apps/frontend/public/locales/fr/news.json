@@ -1,0 +1,21 @@
+{
+  "title": "Nouvelles",
+  "cta": "Voir les détails",
+  "index": {
+    "title": "Dernières Nouvelles",
+    "subtitle": "Restez informé des derniers développements et annonces de Visor Urbano.",
+    "readMore": "Lire la suite",
+    "noNews": "Aucune nouvelle disponible",
+    "checkBack": "Revenez plus tard pour les dernières mises à jour.",
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "page": "Page"
+    }
+  },
+  "article": {
+    "backToNews": "Retour aux Nouvelles",
+    "share": "Partager",
+    "viewAllNews": "Voir Toutes les Nouvelles"
+  }
+}

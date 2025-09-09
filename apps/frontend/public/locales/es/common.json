@@ -1,0 +1,113 @@
+{
+  "actions": {
+    "export": "Exportar",
+    "filter": "Filtrar",
+    "clearFilters": "Limpiar Filtros",
+    "search": "Buscar",
+    "view": "Ver",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "download": "Descargar",
+    "upload": "Subir",
+    "create": "Crear",
+    "update": "Actualizar",
+    "submit": "Enviar",
+    "reset": "Restablecer",
+    "clear": "Limpiar",
+    "refresh": "Actualizar",
+    "title": "Acciones"
+  },
+  "pagination": {
+    "showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "results": "resultados",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "first": "Primero",
+    "last": "Último",
+    "page": "Página"
+  },
+  "status": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "warning": "Advertencia",
+    "info": "Información",
+    "pending": "Pendiente",
+    "completed": "Completado",
+    "cancelled": "Cancelado",
+    "active": "Activo",
+    "inactive": "Inactivo"
+  },
+  "time": {
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "tomorrow": "Mañana",
+    "minutes": "minutos",
+    "hours": "horas",
+    "days": "días",
+    "weeks": "semanas",
+    "months": "meses",
+    "years": "años"
+  },
+  "form": {
+    "required": "Este campo es obligatorio",
+    "invalid": "Valor inválido",
+    "emailInvalid": "Email inválido",
+    "phoneInvalid": "Teléfono inválido",
+    "passwordTooShort": "La contraseña es muy corta",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "selectOption": "Selecciona una opción",
+    "noResults": "Sin resultados",
+    "searchPlaceholder": "Buscar..."
+  },
+  "modal": {
+    "close": "Cerrar",
+    "closeAria": "Cerrar modal"
+  },
+  "dataTable": {
+    "noData": "No hay datos disponibles",
+    "search": "Buscar...",
+    "showing": "Mostrando",
+    "entries": "entradas",
+    "page": "Página",
+    "of": "de",
+    "sortAscending": "Ordenar ascendente",
+    "sortDescending": "Ordenar descendente"
+  },
+  "na": "N/A",
+  "export": "Exportar",
+  "previous": "Anterior",
+  "next": "Siguiente",
+  "sidebar": {
+    "collapse": "Colapsar",
+    "expand": "Expandir sidebar"
+  },
+  "errors": {
+    "loadingData": "Error al cargar los datos",
+    "pleaseReload": "Por favor, recarga la página",
+    "pageLoadError": "Error al cargar la página"
+  },
+  "loading": {
+    "translations": "Cargando traducciones...",
+    "default": {
+      "title": "Cargando",
+      "message": "Por favor espere...",
+      "subtitle": "Estamos procesando su solicitud..."
+    },
+    "map": {
+      "title": "Cargando Mapa",
+      "message": "Preparando el mapa interactivo...",
+      "subtitle": "Esto puede tomar unos momentos para cargar todos los datos del mapa..."
+    }
+  },
+  "branding": {
+    "visorUrbano": "Visor Urbano"
+  },
+  "note": "Nota"
+}

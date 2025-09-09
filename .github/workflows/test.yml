@@ -1,0 +1,70 @@
+name: Run Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.2.0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Set timezone
+        uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: 'America/Lima'
+          timezoneMacos: 'America/Lima'
+          timezoneWindows: 'SA Pacific Standard Time'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Playwright
+        run: pnpm add -D @playwright/test -w
+
+      - name: Install playwright dependencies
+        run: npx playwright install chromium
+
+      - name: Restore Python dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('apps/backend/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python dependencies
+        run: |
+          cd apps/backend
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Save Python dependencies cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('apps/backend/requirements.txt') }}
+      - name: Run Python tests
+        run: |
+          cd apps/backend
+          python -m pytest tests/ -v
+
+      - name: Run tests
+        run: pnpm run test

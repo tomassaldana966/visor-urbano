@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status Update - Dependency Review - Urban Viewer</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -20px -20px 20px -20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        .info-row {
+            margin: 10px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #2c3e50;
+            display: inline-block;
+            min-width: 120px;
+        }
+        .value {
+            color: #34495e;
+        }
+        .status-update {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border: 1px solid #2196f3;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #bdc3c7;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .update-icon {
+            font-size: 48px;
+            color: #3498db;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔄 Status Updated</h1>
+            <p>Dependency Review - Urban Viewer</p>
+        </div>
+        
+        <div class="content">
+            <div class="update-icon">📋</div>
+            
+            <p>The dependency review status has been updated in the Urban Viewer system.</p>
+            
+            <div class="info-box">
+                <div class="info-row">
+                    <span class="label">Folio:</span>
+                    <span class="value">{{ folio }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Review ID:</span>
+                    <span class="value">{{ revision_id }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Update Date:</span>
+                    <span class="value">{{ updated_at }}</span>
+                </div>
+                {% if updated_by %}
+                <div class="info-row">
+                    <span class="label">Updated by:</span>
+                    <span class="value">{{ updated_by }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="status-update">
+                <h3 style="margin-top: 0; color: #2196f3;">📝 Update Details</h3>
+                <div class="info-row">
+                    <span class="label">Comments:</span>
+                    <span class="value">{{ comment }}</span>
+                </div>
+                {% if status_change %}
+                <div class="info-row">
+                    <span class="label">Status Change:</span>
+                    <span class="value">{{ status_change }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <p>This update has been recorded in the system and is available for review.</p>
+            
+            {% if portal_url %}
+            <div style="text-align: center;">
+                <a href="{{ portal_url }}" class="btn">View Review in System</a>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p>This is an automated email from the Urban Viewer system.</p>
+            <p>Please do not reply to this email.</p>
+            <p>© {{ current_year }} Urban Viewer - All rights reserved</p>
+        </div>
+    </div>
+</body>
+</html>

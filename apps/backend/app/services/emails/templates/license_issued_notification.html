@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Licencia Emitida - Visor Urbano</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #27ae60;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -20px -20px 20px -20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px 0;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: bold;
+            color: #495057;
+        }
+        .value {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .success-badge {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: 1px solid #c3e6cb;
+            margin: 15px 0;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #bdc3c7;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 12px;
+        }
+        .instructions {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 ¡Licencia Aprobada y Emitida!</h1>
+            <p style="margin: 10px 0 0 0; font-size: 16px;">Tu trámite ha sido completado exitosamente</p>
+        </div>
+        
+        <div class="content">
+            <div class="success-badge">
+                ✅ Licencia de Funcionamiento Emitida
+            </div>
+            
+            <p>¡Felicidades! Tu licencia de funcionamiento ha sido <strong>aprobada y emitida</strong> por las autoridades competentes.</p>
+            
+            <div class="info-box">
+                <div class="info-row">
+                    <span class="label">Folio:</span>
+                    <span class="value">{{ folio }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Fecha de Emisión:</span>
+                    <span class="value">{{ issued_at }}</span>
+                </div>
+                <div class="info-row">
+                    <span class="label">Estado:</span>
+                    <span class="value">APROBADA</span>
+                </div>
+                {% if license_number %}
+                <div class="info-row">
+                    <span class="label">Número de Licencia:</span>
+                    <span class="value">{{ license_number }}</span>
+                </div>
+                {% endif %}
+            </div>
+            
+            <div class="instructions">
+                <h3>📋 Próximos Pasos</h3>
+                <ul style="margin: 0; padding-left: 20px;">
+                    <li>Accede a tu portal para descargar la licencia oficial</li>
+                    <li>Imprime y coloca la licencia en un lugar visible de tu establecimiento</li>
+                    <li>Conserva una copia digital para futuras gestiones</li>
+                    <li>Recuerda que debes renovar tu licencia según los plazos establecidos</li>
+                </ul>
+            </div>
+            
+            <p>Puedes descargar tu licencia oficial accediendo al sistema Visor Urbano.</p>
+            
+            {% if portal_url %}
+            <div style="text-align: center;">
+                <a href="{{ portal_url }}" class="btn">Descargar Licencia</a>
+            </div>
+            {% endif %}
+            
+            {% if additional_instructions %}
+            <div class="info-box">
+                <h3 style="margin-top: 0; color: #2196f3;">📄 Instrucciones Adicionales</h3>
+                <p style="margin: 0;">{{ additional_instructions }}</p>
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="footer">
+            <p>Este es un correo automático del sistema Visor Urbano.</p>
+            <p>Por favor no responda a este correo electrónico.</p>
+            <p>© {{ current_year }} Visor Urbano - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

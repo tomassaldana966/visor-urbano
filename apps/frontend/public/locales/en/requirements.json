@@ -1,0 +1,161 @@
+{
+  "title": "Requirements Management",
+  "description": "Manage fields and requirements for different procedures",
+  "breadcrumb": "Requirements",
+  "addRequirement": "Add Requirement",
+  "stats": {
+    "total": "Total",
+    "mandatory": "Mandatory",
+    "active": "Active",
+    "types": "Types"
+  },
+  "filters": {
+    "filterByType": "Filter by type:",
+    "allTypes": "All types",
+    "freeText": "Free text",
+    "yesNo": "Yes or No answer",
+    "dropdown": "Dropdown list",
+    "optionSelection": "Option selection",
+    "document": "Document"
+  },
+  "table": {
+    "title": "Requirements List",
+    "columns": {
+      "requirementTitle": "Requirement title",
+      "fieldType": "Field type",
+      "required": "Required",
+      "procedureType": "Procedure type",
+      "status": "Status"
+    },
+    "requirement": "Requirement",
+    "condition": "Condition",
+    "noSpecified": "Not specified"
+  },
+  "fieldTypes": {
+    "input": "Free text",
+    "boolean": "Yes or No answer",
+    "select": "Dropdown list",
+    "radio": "Option selection",
+    "file": "Document (PDF or image)"
+  },
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "yes": "Yes",
+    "no": "No",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "modal": {
+    "title": "Add New Requirement",
+    "fieldType": {
+      "label": "Document or information to require",
+      "placeholder": "Select type"
+    },
+    "description": {
+      "label": "Requirement title or information to require",
+      "placeholder": "Ex: Income Statement"
+    },
+    "detailedDescription": {
+      "label": "Detailed requirement description",
+      "placeholder": "Detailed requirement description"
+    },
+    "rationale": {
+      "label": "Legal rationale",
+      "placeholder": "Indicate the article that requests the requirement"
+    },
+    "options": {
+      "title": "Options",
+      "add": "Add",
+      "empty": "No options added. Click \"Add\" to create options.",
+      "placeholder": "Option text",
+      "remove": "Remove option"
+    },
+    "required": {
+      "label": "When is it required?",
+      "placeholder": "Select when required",
+      "always": "Always (All business types)",
+      "conditional": "Customize parameters"
+    },
+    "conditionalParams": {
+      "title": "Configurable parameters",
+      "note": "Note: It is not mandatory to fill all fields",
+      "propertyArea": "The requirement applies when the property area is...",
+      "activityArea": "The requirement applies when the activity area is...",
+      "applicantCharacter": "The requirement applies when the applicant character is",
+      "personType": "The requirement applies when the person type is",
+      "alcoholSales": "For alcohol sales, the requirement applies when",
+      "applicationRule": "To apply this requirement:",
+      "allConditions": "All conditions",
+      "anyCondition": "With just one of the conditions",
+      "dependency": {
+        "label": "This requirement is reviewed or issued by some external dependency",
+        "placeholder": "Select dependency"
+      },
+      "conditions": {
+        "notApply": "Does not apply",
+        "greaterEqual": "Greater than or equal to",
+        "lessEqual": "Less than or equal to",
+        "placeholder": "Square meters"
+      },
+      "characters": {
+        "owner": "Owner",
+        "tenant": "Tenant",
+        "powerOfAttorney": "Power of attorney"
+      },
+      "personTypes": {
+        "individual": "Individual",
+        "legal": "Legal entity"
+      },
+      "alcoholTypes": {
+        "lowGradeClosed": "Low-grade closed beverages",
+        "lowGradeOpen": "Low-grade open beverages",
+        "highGradeClosed": "High-grade closed beverages",
+        "highGradeOpen": "High-grade open beverages",
+        "anyOfAbove": "Any of the above"
+      }
+    },
+    "step": {
+      "label": "The requirement is related to...",
+      "placeholder": "Select relation",
+      "applicant": "Applicant",
+      "owner": "Owner",
+      "property": "Property",
+      "establishment": "Establishment"
+    },
+    "procedureType": {
+      "label": "Where will this requirement or information be requested",
+      "placeholder": "Select procedure type",
+      "requirementsConsultation": "For requirements consultation",
+      "licenseApplication": "For license application",
+      "official": "During or within the procedure"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "creating": "Creating...",
+      "create": "Create Requirement"
+    }
+  },
+  "dependencies": {
+    "dependency1": "Dependency 1",
+    "dependency2": "Dependency 2"
+  },
+  "validation": {
+    "required": "This field is required",
+    "fieldTypeRequired": "Document type is required",
+    "titleRequired": "Requirement title is required",
+    "stepRequired": "Requirement relation is required",
+    "procedureTypeRequired": "Procedure type is required",
+    "requiredSelectionRequired": "When required is mandatory",
+    "metersRequired": "Square meters is required"
+  },
+  "messages": {
+    "success": "Requirement created successfully",
+    "error": "Error creating requirement",
+    "statusUpdated": "Requirement status updated",
+    "formInvalid": "Invalid form data",
+    "unknownError": "Unknown error",
+    "accessDenied": "Access denied",
+    "tokenUnavailable": "Access token not available"
+  }
+}

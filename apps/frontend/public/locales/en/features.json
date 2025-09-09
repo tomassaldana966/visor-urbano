@@ -1,0 +1,18 @@
+{
+  "title": "What can you consult on the Visor Urbano platform?",
+  "cta": "Go to the map",
+  "features": [
+    {
+      "icon": "store",
+      "title": "Business licenses in Jalisco"
+    },
+    {
+      "icon": "document",
+      "title": "Requirements to process your license"
+    },
+    {
+      "icon": "map",
+      "title": "Commercial diagnosis"
+    }
+  ]
+}

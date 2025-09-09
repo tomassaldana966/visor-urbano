@@ -1,0 +1,1128 @@
+{
+  "title": "Director Dashboard",
+  "welcome": "Welcome back, {{name}}",
+  "lastUpdate": "Last update",
+  "metrics": {
+    "totalProcedures": "Total Procedures",
+    "pendingApprovals": "Pending Approvals",
+    "completedToday": "Completed Today",
+    "averageProcessingTime": "Average Processing Time",
+    "trends": {
+      "up": "+{{value}} vs {{period}}",
+      "down": "-{{value}} vs {{period}}",
+      "previousMonth": "previous month",
+      "previousDay": "yesterday"
+    }
+  },
+  "activity": {
+    "title": "Recent Activity",
+    "viewAll": "View all",
+    "noActivity": "No recent activity",
+    "types": {
+      "approval": "Approval",
+      "rejection": "Rejection",
+      "review": "Review",
+      "submission": "Submission",
+      "alert": "Alert"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "labels": {
+      "folio": "Folio",
+      "user": "User"
+    }
+  },
+  "summary": {
+    "title": "Monthly Summary",
+    "categories": {
+      "construction": "Construction",
+      "commercial": "Commercial",
+      "others": "Others"
+    }
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "subtitle": "Executive system management",
+    "actions": {
+      "reviews": {
+        "label": "Review Procedures",
+        "description": "Manage procedures under review"
+      },
+      "approvals": {
+        "label": "Pending Approvals",
+        "description": "Process executive approvals"
+      },
+      "notifications": {
+        "label": "Notifications",
+        "description": "View alerts and notifications"
+      },
+      "analytics": {
+        "label": "View Analytics",
+        "description": "Performance reports and metrics"
+      },
+      "dependencies": {
+        "label": "Dependencies",
+        "description": "Manage departments and requirements"
+      },
+      "users": {
+        "label": "Manage Users",
+        "description": "Administer municipal staff"
+      },
+      "export": {
+        "label": "Export Reports",
+        "description": "Generate executive reports"
+      },
+      "municipalLayers": {
+        "label": "Municipal Layers",
+        "description": "Manage municipality cartographic layers"
+      },
+      "impactManagement": {
+        "label": "Impact Management",
+        "description": "Manage zoning impact levels"
+      },
+      "impactMap": {
+        "label": "Impact Map",
+        "description": "Interactive map for managing impact zones"
+      },
+      "roles": {
+        "label": "Manage Roles",
+        "description": "Manage system roles and permissions"
+      },
+      "requirements": {
+        "label": "Manage Requirements",
+        "description": "Manage procedure fields and requirements"
+      },
+      "businessTypes": {
+        "label": "Manage Business Types",
+        "description": "Manage business types and commercial activities"
+      },
+      "blog": {
+        "label": "Manage Blog",
+        "description": "Create, edit and delete blog entries/news"
+      },
+      "impactMap": {
+        "label": "Impact Map",
+        "description": "Interactive map for managing impact zones"
+      },
+      "settings": {
+        "label": "Settings",
+        "description": "System configuration"
+      }
+    }
+  },
+  "navigation": {
+    "dashboard": "Director Dashboard",
+    "reviews": "Reviews",
+    "approvals": "Approvals",
+    "impactMap": "Impact Map",
+    "analytics": "Analytics",
+    "dependencies": "Dependencies",
+    "users": "Users",
+    "settings": "Settings",
+    "roles": "Roles",
+    "requirements": "Requirements",
+    "businessTypes": "Business Types",
+    "blog": "Blog",
+    "municipalLayers": "Municipal Layers",
+    "impactManagement": "Impact Management"
+  },
+  "time": {
+    "days": "days",
+    "hours": "hours",
+    "ago": "{{time}} ago"
+  },
+  "mockData": {
+    "activities": {
+      "licenseApproved": {
+        "title": "Construction license approved",
+        "description": "Residential project in North Zone"
+      },
+      "newReview": {
+        "title": "New procedure pending review",
+        "description": "Commercial license - Restaurant"
+      },
+      "incompleteDoc": {
+        "title": "Incomplete documentation",
+        "description": "Missing architectural plan"
+      },
+      "newSubmission": {
+        "title": "New procedure registered",
+        "description": "Commercial operating license"
+      }
+    },
+    "userNames": {
+      "juanPerez": "Juan Pérez",
+      "mariaGarcia": "María García",
+      "carlosLopez": "Carlos López",
+      "anaMartinez": "Ana Martínez"
+    },
+    "timeAgo": {
+      "2hours": "2 hours",
+      "4hours": "4 hours",
+      "6hours": "6 hours",
+      "8hours": "8 hours"
+    },
+    "averageTime": "3.2 days"
+  },
+  "settings": {
+    "title": "Municipal Configuration",
+    "subtitle": "Manage system configuration and municipal parameters",
+    "save": "Save Changes",
+    "saving": "Saving...",
+    "tabs": {
+      "general": "General",
+      "departments": "Departments",
+      "workflows": "Workflows",
+      "notifications": "Notifications",
+      "security": "Security",
+      "system": "System"
+    },
+    "general": {
+      "title": "General Information",
+      "description": "Basic municipality configuration",
+      "loading": "Loading...",
+      "fields": {
+        "municipalityName": "Municipality Name",
+        "director": "Municipal Director",
+        "address": "Address",
+        "phone": "Phone",
+        "email": "Email",
+        "website": "Website",
+        "timezone": "Timezone"
+      }
+    },
+    "departments": {
+      "title": "Municipal Departments",
+      "addNew": "New Department",
+      "fields": {
+        "name": "Name",
+        "head": "Head",
+        "email": "Email",
+        "phone": "Phone",
+        "status": "Status"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    },
+    "workflows": {
+      "title": "Workflows",
+      "addNew": "New Workflow",
+      "edit": "Edit Workflow",
+      "fields": {
+        "name": "Name",
+        "type": "Type",
+        "steps": "steps",
+        "avgDays": "average days",
+        "status": "Status",
+        "documentType": "Document Type",
+        "description": "Description",
+        "legalFoundation": "Legal Foundation",
+        "requirements": "Requirements",
+        "conditions": "Conditions",
+        "dependencies": "Dependencies",
+        "approvals": "Approvals"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "types": {
+        "construction": "Construction",
+        "commercial": "Commercial",
+        "land_use": "Land Use",
+        "environmental": "Environmental",
+        "social": "Social"
+      },
+      "documentTypes": {
+        "permit": "Permit/License",
+        "certificate": "Certificate",
+        "authorization": "Authorization",
+        "registration": "Registration",
+        "notification": "Notification",
+        "inspection": "Inspection"
+      },
+      "tabs": {
+        "basic": "Basic Information",
+        "requirements": "Requirements",
+        "conditions": "Conditions",
+        "dependencies": "Dependencies",
+        "approvals": "Approvals"
+      },
+      "requirements": {
+        "title": "Requirement Title",
+        "description": "Detailed Description",
+        "mandatory": "Mandatory",
+        "departmentIssued": "Issued by Department",
+        "addNew": "Add Requirement",
+        "empty": "No requirements defined for this workflow"
+      },
+      "conditions": {
+        "field": "Field",
+        "operator": "Operator",
+        "value": "Value",
+        "action": "Action",
+        "addNew": "Add Condition",
+        "empty": "No conditions defined for this workflow",
+        "types": {
+          "property_size": "Property Size (m²)",
+          "activity_surface": "Activity Surface (m²)",
+          "applicant_type": "Applicant Type",
+          "person_type": "Person Type",
+          "alcohol_sales": "Alcohol Sales",
+          "activity_type": "Activity Type"
+        },
+        "operators": {
+          "greater": "Greater than",
+          "less": "Less than",
+          "equals": "Equal to",
+          "greaterEquals": "Greater or equal",
+          "lessEquals": "Less or equal",
+          "notEquals": "Not equal",
+          "includes": "Includes",
+          "excludes": "Excludes"
+        },
+        "actions": {
+          "require": "Require",
+          "exclude": "Exclude",
+          "modify": "Modify"
+        }
+      },
+      "dependencies": {
+        "workflow": "Dependent Workflow",
+        "condition": "Condition",
+        "description": "Description",
+        "addNew": "Add Dependency",
+        "empty": "No dependencies defined for this workflow",
+        "conditions": {
+          "approved": "Approved",
+          "rejected": "Rejected",
+          "completed": "Completed"
+        }
+      },
+      "approvals": {
+        "step": "Step",
+        "department": "Department",
+        "role": "Required Role",
+        "required": "Mandatory Approval",
+        "parallel": "Parallel Approval",
+        "addNew": "Add Approval Step",
+        "empty": "No approval steps defined",
+        "fileType": "File/Document Type",
+        "legalFoundation": "Legal Foundation",
+        "isBlocking": "Blocking Step",
+        "isExternalDepartment": "External Department",
+        "estimatedDays": "Estimated Days",
+        "fileTypes": {
+          "document": "Document (PDF or image)",
+          "form": "Form to fill",
+          "certificate": "Certificate/Proof",
+          "identification": "Official ID",
+          "proof_address": "Proof of address",
+          "property_deed": "Property deed",
+          "technical_drawing": "Technical drawing",
+          "photograph": "Photograph",
+          "payment_receipt": "Payment receipt",
+          "inspection_report": "Inspection report"
+        },
+        "roles": {
+          "reviewer": "Reviewer",
+          "supervisor": "Supervisor",
+          "director": "Director",
+          "specialist": "Specialist"
+        }
+      }
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "emailEnabled": "Email Notifications",
+      "smsEnabled": "SMS Notifications",
+      "systemAlerts": "System Alerts",
+      "deadlineAlerts": "Deadline Alerts (days before)",
+      "reminderDays": "Reminders (days)"
+    },
+    "security": {
+      "title": "Security Settings",
+      "sessionTimeout": "Session Timeout (minutes)",
+      "maxLoginAttempts": "Max Login Attempts",
+      "passwordExpiry": "Password Expiry (days)",
+      "twoFactorRequired": "Two Factor Authentication Required"
+    },
+    "system": {
+      "title": "System Settings",
+      "backupFrequency": "Backup Frequency",
+      "maintenanceMode": "Maintenance Mode",
+      "debugMode": "Debug Mode",
+      "maxFileSize": "Max File Size (MB)",
+      "frequencies": {
+        "hourly": "Hourly",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly"
+      }
+    },
+    "basicInfo": {
+      "title": "Basic Information",
+      "municipalityName": "Municipality Name",
+      "municipalityNamePlaceholder": "Municipality name",
+      "director": "Municipal Director",
+      "directorPlaceholder": "Director name",
+      "phone": "Phone",
+      "phonePlaceholder": "Phone number",
+      "email": "Email",
+      "emailPlaceholder": "email@municipality.com",
+      "website": "Website",
+      "websitePlaceholder": "https://www.municipality.com",
+      "responsibleArea": "Responsible Area",
+      "responsibleAreaPlaceholder": "Responsible department",
+      "address": "Address",
+      "addressPlaceholder": "Complete municipality address"
+    },
+    "licenses": {
+      "title": "License Configuration",
+      "allowOnlineProcedures": "Allow online procedures",
+      "allowWindowReviewerLicenses": "Allow window license review",
+      "lowImpactLicenseCost": "Low Impact License Cost",
+      "solvingDays": "Resolution Days",
+      "initialFolio": "Initial Folio",
+      "additionalText": "Additional License Text",
+      "additionalTextPlaceholder": "Additional text that will appear on licenses"
+    },
+    "visual": {
+      "title": "Visual Configuration",
+      "municipalLogo": "Municipal Logo",
+      "currentLogo": "Current logo",
+      "logoDescription": "Municipality logo",
+      "changeLogo": "Change Logo",
+      "uploadLogoDescription": "Upload municipal logo",
+      "uploadMunicipalLogo": "Upload Municipal Logo",
+      "supportedFormats": "PNG, JPG up to 5MB",
+      "themeColor": "Theme Color",
+      "themeColorDescription": "System main color"
+    },
+    "logo": {
+      "noFileSelected": "No file selected",
+      "invalidFileType": "Invalid file type: {{fileType}}. Only PNG, JPG allowed",
+      "fileTooLarge": "File too large: {{size}}MB. Maximum allowed: 5MB",
+      "uploadError": "Error uploading logo",
+      "serverError": "Server error: {{error}}",
+      "uploading": "Uploading..."
+    },
+    "messages": {
+      "saveSuccess": "Settings saved successfully"
+    },
+    "errors": {
+      "municipalityInfoNotFound": "Municipality information not found",
+      "municipalityIdNotFound": "Municipality ID not found",
+      "municipalityNotFound": "Municipality not found",
+      "loadSettings": "Error loading settings",
+      "saveSettings": "Error saving settings",
+      "networkError": "Internet connection error",
+      "generic": "Error: {{error}}"
+    },
+    "signatures": {
+      "title": "Municipal Signatures",
+      "subtitle": "Manage signatures that will appear on licenses and official documents",
+      "description": "Configure digital signatures of municipal authorities",
+      "count": "{{current}} of {{max}} signatures configured",
+      "name": "Name",
+      "position": "Position",
+      "order": "Order",
+      "addNew": "Add New Signature",
+      "edit": "Edit Signature",
+      "delete": "Delete Signature",
+      "noSignatures": "No signatures configured",
+      "maxSignaturesError": "Only a maximum of 4 signatures are allowed",
+      "confirmDelete": "Are you sure you want to delete this signature?",
+      "deleteError": "Error deleting signature",
+      "notFoundOrDeleted": "Signature not found or already deleted",
+      "notAuthorizedDelete": "You are not authorized to delete this signature",
+      "saveError": "Error saving signature",
+      "uploadImageError": "Error uploading image",
+      "notAuthorized": "You are not authorized to perform this action",
+      "notFound": "Signature not found",
+      "fields": {
+        "signerName": "Signer Name",
+        "position": "Position/Title",
+        "orderIndex": "Display Order",
+        "signatureImage": "Signature Image"
+      },
+      "modal": {
+        "addTitle": "Add New Signature",
+        "editTitle": "Edit Signature",
+        "signerName": "Signer Name",
+        "signerNamePlaceholder": "Full name",
+        "position": "Position/Title",
+        "positionPlaceholder": "Municipal Director, Secretary, etc.",
+        "orderIndex": "Display Order",
+        "orderIndexDescription": "Determines the order in which signatures will appear on licenses",
+        "signatureImage": "Signature Image",
+        "signaturePreview": "Signature preview",
+        "changeImage": "Change image",
+        "uploadImage": "Upload signature image",
+        "imageFormat": "PNG, JPG up to 5MB",
+        "cancel": "Cancel",
+        "save": "Save",
+        "update": "Update",
+        "saving": "Saving..."
+      },
+      "messages": {
+        "deleteConfirm": "Are you sure you want to delete this signature?",
+        "deleteSuccess": "Signature deleted successfully",
+        "saveSuccess": "Signature saved successfully",
+        "updateSuccess": "Signature updated successfully",
+        "uploadError": "Error uploading image",
+        "deleteError": "Error deleting signature",
+        "saveError": "Error saving signature"
+      }
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "markAsRead": "Mark as read",
+    "markAllAsRead": "Mark all as read",
+    "delete": "Delete",
+    "deleteAll": "Delete all",
+    "noNotifications": "No notifications",
+    "filters": {
+      "all": "All",
+      "system": "System",
+      "permissions": "Permissions",
+      "users": "Users",
+      "deadlines": "Deadlines"
+    },
+    "categories": {
+      "system": "System",
+      "permission": "Permission",
+      "user": "User",
+      "deadline": "Deadline"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "timeAgo": {
+      "justNow": "Just now",
+      "minutesAgo": "{{count}} minute ago",
+      "minutesAgo_plural": "{{count}} minutes ago",
+      "hoursAgo": "{{count}} hour ago",
+      "hoursAgo_plural": "{{count}} hours ago",
+      "daysAgo": "{{count}} day ago",
+      "daysAgo_plural": "{{count}} days ago"
+    }
+  },
+  "analytics": {
+    "title": "Analytics and Reports",
+    "breadcrumb": "Analytics",
+    "subtitle": "Performance metrics and system statistics",
+    "exportPdf": "Export PDF",
+    "refresh": "Refresh",
+    "lastUpdate": "Last update",
+    "filters": {
+      "period": "Period",
+      "reportType": "Report Type",
+      "filter": "Filter",
+      "periods": {
+        "7d": "Last 7 days",
+        "30d": "Last 30 days",
+        "90d": "Last 3 months",
+        "1y": "Last year"
+      },
+      "reportTypes": {
+        "general": "General",
+        "efficiency": "Efficiency",
+        "dependencies": "By Dependencies",
+        "types": "By Procedure Types"
+      }
+    },
+    "kpis": {
+      "title": "Main KPIs",
+      "averageTime": "Average Time",
+      "efficiency": "Efficiency",
+      "totalProcessed": "Total Processed",
+      "satisfaction": "Satisfaction",
+      "units": {
+        "days": "days",
+        "percentage": "%",
+        "rating": "/5"
+      },
+      "trends": {
+        "vsLastMonth": "vs. last month",
+        "increase": "+{{value}}% vs. last month",
+        "decrease": "-{{value}}% vs. last month",
+        "rating_increase": "+{{value}} vs. last month"
+      }
+    },
+    "charts": {
+      "monthlyTrends": "Monthly Trends",
+      "statusDistribution": "Status Distribution",
+      "municipalSummary": "Municipal Executive Summary",
+      "departmentalReviews": "Departmental Review Status",
+      "months": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+      },
+      "monthsShort": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Apr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dec"
+      }
+    },
+    "statuses": {
+      "consultations": "Consultations",
+      "initiated": "Initiated",
+      "underReview": "Under Review",
+      "issued": "Issued",
+      "completed": "Completed",
+      "inProcess": "In Process",
+      "pending": "Pending",
+      "rejected": "Rejected",
+      "approved": "Approved",
+      "corrected": "For Correction",
+      "discarded": "Discarded"
+    },
+    "performance": {
+      "title": "Performance by Department",
+      "columns": {
+        "dependency": "Department",
+        "processedProcedures": "Processed Procedures",
+        "averageTime": "Average Time",
+        "efficiency": "Efficiency",
+        "status": "Status"
+      },
+      "statusLevels": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "warning": "Warning",
+        "poor": "Poor",
+        "na": "N/A"
+      },
+      "dependencyNames": {
+        "approvedReviews": "Approved Reviews",
+        "underReview": "Under Review",
+        "forCorrection": "For Correction",
+        "discarded": "Discarded"
+      }
+    }
+  },
+  "common": {
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "date": "Date",
+    "logout": "Logout",
+    "municipality": "Municipality",
+    "director": "Director"
+  },
+  "errors": {
+    "unauthorized": "Unauthorized access",
+    "authTokenRequired": "Authentication token required",
+    "loadingAnalytics": "Error loading analytics data"
+  },
+  "reviews": {
+    "title": "Procedure Reviews",
+    "subtitle": "Manage pending and completed reviews",
+    "filter": "Filter",
+    "export": "Export",
+    "stats": {
+      "pending": "Pending Review",
+      "inProgress": "In Progress",
+      "completed": "Completed",
+      "rejected": "Rejected"
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "status": {
+      "pending_review": "Pending",
+      "in_review": "In Review",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "actions": {
+      "viewDetails": "View Details",
+      "approve": "Approve",
+      "reject": "Reject",
+      "requestInfo": "Request Information"
+    },
+    "fields": {
+      "procedureType": "Procedure Type",
+      "applicant": "Applicant",
+      "submissionDate": "Submission Date",
+      "location": "Location",
+      "reviewer": "Reviewer"
+    },
+    "sections": {
+      "pending": "Pending Review",
+      "recent": "Recent Reviews"
+    }
+  },
+  "approvals": {
+    "title": "Final Approvals",
+    "subtitle": "Process approvals requiring executive authorization",
+    "filter": "Filter",
+    "export": "Export",
+    "stats": {
+      "pendingApproval": "Pending Approval",
+      "readyToApprove": "Ready to Approve",
+      "approved": "Approved Today",
+      "rejected": "Rejected",
+      "onHold": "On Hold",
+      "totalValue": "Total Value"
+    },
+    "priority": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "status": {
+      "pending_approval": "Pending Approval",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "on_hold": "On Hold",
+      "readyToApprove": "Ready to approve",
+      "pendingDocuments": "Pending documents"
+    },
+    "actions": {
+      "viewDetails": "View Details",
+      "approve": "Approve",
+      "reject": "Reject",
+      "putOnHold": "Put On Hold",
+      "batchApprove": "Batch Approve"
+    },
+    "requirements": {
+      "title": "Requirements",
+      "documentsComplete": "Documents complete",
+      "technicalReview": "Technical review"
+    },
+    "fields": {
+      "procedureType": "Procedure Type",
+      "applicant": "Applicant",
+      "submissionDate": "Submission Date",
+      "reviewDate": "Review Date",
+      "location": "Location",
+      "amount": "Amount",
+      "reviewer": "Reviewer",
+      "approvedBy": "Approved by"
+    },
+    "sections": {
+      "pending": "Pending Final Approval",
+      "recent": "Recent Approvals"
+    }
+  },
+  "users": {
+    "title": "User Management",
+    "subtitle": "Manage system users and permissions",
+    "addUser": "Add User",
+    "editUser": "Edit User",
+    "deleteUser": "Delete User",
+    "stats": {
+      "totalUsers": "Total Users",
+      "withRole": "With Assigned Role",
+      "municipalities": "Municipalities"
+    },
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "status": "Status",
+      "lastActive": "Last Active",
+      "user": "User",
+      "phone": "Phone",
+      "municipality": "Municipality",
+      "actions": "Actions",
+      "paternalLastName": "Paternal Last Name",
+      "maternalLastName": "Maternal Last Name",
+      "password": "Password",
+      "newPassword": "New Password"
+    },
+    "table": {
+      "title": "System Users List",
+      "noRole": "No role",
+      "notAssigned": "Not assigned"
+    },
+    "search": {
+      "label": "Search users",
+      "placeholder": "Search by name or email..."
+    },
+    "filters": {
+      "role": "Filter by role",
+      "allRoles": "All roles"
+    },
+    "modals": {
+      "add": {
+        "title": "Add New User",
+        "placeholders": {
+          "name": "User's name",
+          "paternalLastName": "Paternal last name",
+          "maternalLastName": "Maternal last name (optional)",
+          "phone": "Phone number",
+          "email": "email@example.com",
+          "password": "Secure password",
+          "selectMunicipality": "Select municipality",
+          "selectRole": "Select role"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "create": "Create User",
+          "creating": "Creating..."
+        }
+      },
+      "edit": {
+        "title": "Edit User: {{name}}",
+        "placeholders": {
+          "newPassword": "Leave empty to keep current"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save Changes",
+          "saving": "Saving..."
+        }
+      },
+      "delete": {
+        "title": "Confirm Deletion",
+        "question": "Delete user {{name}}?",
+        "subtitle": "This action cannot be undone.",
+        "warning": "Warning! Deleting this user will lose all their data and they will not be able to access the system.",
+        "buttons": {
+          "cancel": "Cancel",
+          "delete": "Delete User",
+          "deleting": "Deleting..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Edit user",
+      "delete": "Delete user"
+    },
+    "roles": {
+      "admin": "Administrator",
+      "director": "Director",
+      "reviewer": "Reviewer",
+      "operator": "Operator"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "pending": "Pending"
+    },
+    "actions": {
+      "edit": "Edit",
+      "delete": "Delete",
+      "activate": "Activate",
+      "deactivate": "Deactivate"
+    }
+  },
+  "roles": {
+    "title": "Role Management",
+    "subtitle": "Manage system roles and permissions",
+    "addRole": "Add Role",
+    "editRole": "Edit Role",
+    "deleteRole": "Delete Role",
+    "stats": {
+      "totalRoles": "Total Roles",
+      "activeRoles": "Active Roles"
+    },
+    "fields": {
+      "name": "Role Name",
+      "description": "Description",
+      "municipality": "Municipality",
+      "createdAt": "Creation Date",
+      "updatedAt": "Last Update",
+      "actions": "Actions"
+    },
+    "table": {
+      "title": "System Roles List",
+      "role": "Role",
+      "municipality": "Municipality",
+      "creationDate": "Creation Date",
+      "lastUpdate": "Last Update",
+      "actions": "Actions"
+    },
+    "modals": {
+      "add": {
+        "title": "Add New Role",
+        "placeholder": {
+          "name": "E.g: Supervisor",
+          "description": "Describe the responsibilities and permissions of this role..."
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "create": "Create Role",
+          "creating": "Creating..."
+        }
+      },
+      "edit": {
+        "title": "Edit Role - {{name}}",
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save Changes",
+          "saving": "Saving..."
+        }
+      },
+      "delete": {
+        "title": "Confirm Deletion",
+        "question": "Delete role \"{{name}}\"?",
+        "warning": "This action cannot be undone. The role will be permanently deleted.",
+        "alert": "Deleting this role may affect users who have it assigned.",
+        "alertTitle": "Warning:",
+        "buttons": {
+          "cancel": "Cancel",
+          "delete": "Delete Role",
+          "deleting": "Deleting..."
+        }
+      }
+    },
+    "tooltips": {
+      "edit": "Edit role",
+      "delete": "Delete role"
+    },
+    "types": {
+      "director": "Director",
+      "supervisor": "Supervisor",
+      "reviewer": "Reviewer",
+      "citizen": "Citizen"
+    }
+  },
+  "dependencies": {
+    "title": "Dependencies Management",
+    "description": "Manage departments, requirements and user roles",
+    "breadcrumb": "Dependencies",
+    "loading": "Loading departments...",
+    "users": "users",
+    "requirements": "requirements",
+    "pendingWork": "pending",
+    "showInactive": "Show inactive",
+    "reviewsActive": "Reviews",
+    "departments": {
+      "title": "Departments"
+    },
+    "tabs": {
+      "requirements": "Requirements",
+      "users": "Users",
+      "roles": "Roles"
+    },
+    "actions": {
+      "addField": "Add Field",
+      "removeField": "Remove Field",
+      "addRole": "Add Role",
+      "removeRole": "Remove Role"
+    },
+    "departmentRequirements": {
+      "title": "Department Requirements",
+      "empty": "No requirements assigned to this department"
+    },
+    "departmentRoles": {
+      "title": "Department Roles",
+      "empty": "No roles assigned for approval in this department",
+      "canApprove": "Can approve procedures for this department",
+      "approver": "Approver"
+    },
+    "departmentUsers": {
+      "title": "Department Users",
+      "empty": "No users assigned to this department"
+    },
+    "createDepartment": {
+      "button": "New Department",
+      "title": "Create New Department",
+      "name": "Department Name",
+      "code": "Department Code",
+      "description": "Description",
+      "fillFields": "Please fill in all required fields",
+      "error": "Error creating department"
+    },
+    "modal": {
+      "department": "Department",
+      "field": "Field",
+      "selectField": "Select a field",
+      "procedureType": "Procedure Type",
+      "selectProcedureType": "Select procedure type",
+      "role": "Role",
+      "selectRole": "Select a role"
+    },
+    "messages": {
+      "backendTimeout": "Timeout: Backend unavailable",
+      "connectingBackend": "Connecting to backend... If this takes too long, the server might not be running.",
+      "connectionError": "Connection Error",
+      "noBackendConnection": "Could not connect to backend. Make sure the server is running.",
+      "retry": "Retry",
+      "departmentActivated": "Department activated successfully",
+      "departmentDeactivated": "Department deactivated successfully",
+      "newDepartmentCreated": "New department created successfully",
+      "userActivatedForReviews": "User activated for reviews successfully",
+      "userDeactivatedForReviews": "User deactivated for reviews successfully",
+      "roleLabel": "Role:"
+    },
+    "success": {
+      "actionCompleted": "Action completed successfully"
+    },
+    "error": {
+      "loadDepartments": "Error loading departments",
+      "loadUsers": "Error loading users",
+      "loadRequirements": "Error loading requirements",
+      "actionFailed": "Action failed",
+      "updateDepartmentStatus": "Error updating department status",
+      "createDepartment": "Error creating department",
+      "updateUserActivation": "Error updating user activation"
+    }
+  },
+  "blog": {
+    "title": "Blog Management",
+    "subtitle": "Manage blog entries and system news",
+    "newEntry": "New Entry",
+    "editEntry": "Edit Blog Entry",
+    "createEntry": "New Blog Entry",
+    "adminAccessRequired": "Administrative Access Required",
+    "adminAccessDescription": "To manage the blog, you need to enter the administration password.",
+    "adminPasswordPlaceholder": "Administration password",
+    "access": "Access",
+    "cancel": "Cancel",
+    "save": "Save",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading blogs...",
+    "saving": "Saving...",
+    "creating": "Creating...",
+    "updating": "Updating...",
+    "form": {
+      "title": "Title",
+      "titleRequired": "Title is required",
+      "imageUrl": "Image URL",
+      "imageUrlPlaceholder": "https://example.com/image.jpg",
+      "imageUrlRequired": "Image URL is required",
+      "publicationDate": "Publication Date",
+      "link": "Link",
+      "linkPlaceholder": "https://example.com/article",
+      "linkRequired": "Link is required",
+      "summary": "Summary",
+      "summaryPlaceholder": "Brief summary of the news...",
+      "summaryRequired": "Summary is required",
+      "fullContent": "Full Content",
+      "fullContentPlaceholder": "Full article content...",
+      "adminPassword": "Administration Password",
+      "adminPasswordPlaceholder": "Enter administration password",
+      "adminPasswordRequired": "Administration password is required"
+    },
+    "list": {
+      "title": "Blog Entries",
+      "count": "{{count}} total entry",
+      "count_plural": "{{count}} total entries",
+      "empty": "No blog entries yet",
+      "createFirst": "Create the first entry",
+      "type": "Type {{type}}"
+    },
+    "messages": {
+      "createSuccess": "Blog created successfully",
+      "updateSuccess": "Blog updated successfully",
+      "deleteSuccess": "Blog deleted successfully",
+      "createError": "Error creating blog",
+      "updateError": "Error updating blog",
+      "deleteError": "Error deleting blog",
+      "loadError": "Error loading blogs",
+      "passwordRequired": "Administration password required",
+      "deleteConfirm": "Are you sure you want to delete this blog entry?"
+    },
+    "editor": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "bulletList": "Bullet list",
+      "numberedList": "Numbered list",
+      "link": "Link",
+      "linkPrompt": "Enter the URL:",
+      "code": "Code",
+      "uploadImage": "Upload image",
+      "imageUploadError": "Error uploading image",
+      "invalidImageFile": "Please select a valid image file",
+      "undo": "Undo",
+      "redo": "Redo"
+    }
+  },
+  "impactMap": {
+    "title": "Impact Map",
+    "subtitle": "Manage zoning impact levels for the municipality",
+    "tools": "Tools",
+    "toolsPanel": {
+      "title": "Map Tools",
+      "drawingTools": "Drawing Tools",
+      "impactLevels": "Impact Levels",
+      "legend": "Legend"
+    },
+    "actions": {
+      "add": "Add",
+      "edit": "Edit",
+      "info": "Info",
+      "upload": "Upload"
+    },
+    "dialogs": {
+      "selectLevel": {
+        "title": "Select Impact Level",
+        "description": "Choose the impact level for this zone:",
+        "impactLevel": "Impact Level"
+      },
+      "confirmDelete": {
+        "title": "Confirm Deletion",
+        "description": "Are you sure you want to delete this impact level zone?"
+      },
+      "impactInfo": {
+        "title": "Impact Level Information",
+        "noData": "No impact level data available",
+        "fields": {
+          "id": "ID",
+          "municipalityId": "Municipality ID",
+          "impactLevel": "Impact Level",
+          "geometry": "Geometry",
+          "geometryType": "Type",
+          "coordinates": "Coordinates",
+          "rings": "rings"
+        }
+      },
+      "upload": {
+        "title": "Upload Impact Zones",
+        "description": "Upload impact zone data from a file",
+        "dropZone": "Drop your file here or click to select",
+        "selectFile": "Select File"
+      }
+    }
+  }
+}

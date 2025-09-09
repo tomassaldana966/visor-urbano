@@ -1,0 +1,72 @@
+from sqlalchemy import Column, BigInteger, Integer, String, Text, DateTime, ForeignKey
+from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
+from config.settings import Base
+
+class BusinessLicense(Base):
+    __tablename__ = 'business_licenses'
+    
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
+    owner = Column(String(200), nullable=False)
+    license_folio = Column(String(200), nullable=False)
+    commercial_activity = Column(String(200), nullable=False)
+    industry_classification_code = Column(String(200), nullable=False)
+    authorized_area = Column(String(200), nullable=False)
+    opening_time = Column(String(200), nullable=False)
+    closing_time = Column(String(200), nullable=False)
+    owner_last_name_p = Column(String(200), nullable=True)
+    owner_last_name_m = Column(String(200), nullable=True)
+    national_id = Column(String(200), nullable=True)
+    owner_profile = Column(String(200), nullable=True)
+    logo_image = Column(Text, nullable=True)
+    signature = Column(Text, nullable=True)
+    minimap_url = Column(Text, nullable=True)
+    scanned_pdf = Column(Text, nullable=True)
+    license_year = Column(Integer, nullable=False, default=1)
+    license_category = Column(Integer, nullable=True, default=1)
+    generated_by_user_id = Column(Integer, nullable=False, default=1)
+    deleted_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime, nullable=True, default=func.now())
+    updated_at = Column(DateTime, nullable=True, default=func.now(), onupdate=func.now())
+    payment_status = Column(Integer, nullable=True, default=0)
+    payment_user_id = Column(Integer, nullable=True, default=0)
+    deactivation_status = Column(Integer, nullable=True, default=0)
+    payment_date = Column(DateTime, nullable=True)
+    payment_receipt_file = Column(Text, nullable=True)
+    deactivation_date = Column(DateTime, nullable=True)
+    secondary_folio = Column(String(200), nullable=True, default='')
+    deactivation_reason = Column(Text, nullable=True)
+    deactivated_by_user_id = Column(Integer, nullable=True, default=0)
+    signer_name_1 = Column(String(255), nullable=True)
+    department_1 = Column(String(255), nullable=True)
+    signature_1 = Column(String(255), nullable=True)
+    signer_name_2 = Column(String(255), nullable=True)
+    department_2 = Column(String(255), nullable=True)
+    signature_2 = Column(String(255), nullable=True)
+    signer_name_3 = Column(String(255), nullable=True)
+    department_3 = Column(String(255), nullable=True)
+    signature_3 = Column(String(255), nullable=True)
+    signer_name_4 = Column(String(255), nullable=True)
+    department_4 = Column(String(255), nullable=True)
+    signature_4 = Column(String(255), nullable=True)
+    license_number = Column(Integer, nullable=True)
+    municipality_id = Column(Integer, ForeignKey('municipalities.id'), nullable=True)
+    license_type = Column(String(255), nullable=True)
+    license_status = Column(String(255), nullable=True)
+    reason = Column(String(255), nullable=True)
+    reason_file = Column(Text, nullable=True)
+    status_change_date = Column(DateTime, nullable=True)
+    observations = Column(Text, nullable=True)
+    
+    # Connection to procedure and requirements query
+    procedure_id = Column(BigInteger, ForeignKey('procedures.id'), nullable=True)
+    requirements_query_id = Column(BigInteger, ForeignKey('requirements_querys.id'), nullable=True)
+    
+    # Establishment data copied from procedure at license generation
+    establishment_name = Column(String(255), nullable=True)
+    establishment_address = Column(String(500), nullable=True) 
+    establishment_phone = Column(String(50), nullable=True)
+    establishment_email = Column(String(255), nullable=True)
+    
+    municipality = relationship("Municipality", back_populates="business_licenses")
+    status_logs = relationship("BusinessLicenseStatusLog", back_populates="business_license")

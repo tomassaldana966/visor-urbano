@@ -1,0 +1,212 @@
+{
+  "aside": {
+    "new": "Nuevo trámite",
+    "layers": "Capas",
+    "commercial": "Diagnóstico comercial",
+    "measure": "Medición y selección",
+    "upload": "Subir archivo",
+    "info": "Identificar"
+  },
+  "controls": {
+    "layers": {
+      "tabs": {
+        "layers": "Capas",
+        "conventions": "Leyenda"
+      }
+    },
+    "tools": {
+      "tabs": {
+        "tools": {
+          "title": "Medición y selección",
+          "list": {
+            "select": "Seleccionar predio",
+            "draw": "Dibujar predio",
+            "measure-lineal": "Medir distancia (lineal)",
+            "measure-area": "Medir área (polígono)",
+            "info": "Identificar"
+          },
+          "tooltips": {
+            "select": "Haz clic en un predio para seleccionarlo",
+            "draw": "Haz clic para empezar a dibujar",
+            "draw-drawing": "Haz clic para continuar dibujando <br /> Doble clic para terminar",
+            "measure-lineal": "Haz clic para empezar a dibujar",
+            "measure-lineal-drawing": "Haz clic para continuar dibujando <br /> Doble clic para terminar",
+            "measure-area": "Haz clic para empezar a dibujar",
+            "measure-area-drawing": "Haz clic para continuar dibujando <br /> Doble clic para terminar",
+            "info": "Haz clic en el mapa para obtener información sobre esa ubicación"
+          }
+        }
+      }
+    }
+  },
+  "property": {
+    "municipality": "Municipio",
+    "locality": "Localidad",
+    "postalCode": "Código postal",
+    "colony": "Colonia",
+    "address": "Calle",
+    "area": "Superficie del predio",
+    "constructionArea": "Superficie construida",
+    "downloadBlueprint": {
+      "cta": "Descargar plano",
+      "disclaimer": "Las medidas del plano descargado pueden variar de las que constan en el documento del predio. La información y medidas oficiales para cualquier trámite serán las que obren en el Departamento de Catastro del municipio correspondiente."
+    },
+    "downloadTechnicalSheet": "Descargar ficha técnica",
+    "requirements": {
+      "title": "Solicitar licencia",
+      "licenseTypeSelection": {
+        "title": "¿Qué tipo de licencia necesitas?",
+        "description": "Selecciona el tipo de licencia que deseas tramitar",
+        "options": {
+          "commercial": "Licencia comercial",
+          "construction": "Licencia de construcción"
+        }
+      },
+      "sections": {
+        "general": {
+          "title": "Información general",
+          "inputs": {
+            "applicant_name": {
+              "label": "Nombre completo",
+              "error": "Por favor ingresa tu nombre completo"
+            },
+            "street": {
+              "label": "Calle",
+              "error": "Por favor ingresa el nombre de la calle"
+            },
+            "neighborhood": {
+              "label": "Colonia",
+              "error": "Por favor ingresa el nombre de la colonia"
+            },
+            "locality": {
+              "label": "Localidad",
+              "error": "Por favor ingresa el nombre de la localidad"
+            },
+            "municipality_name": {
+              "label": "Municipio",
+              "error": "Por favor ingresa el nombre del municipio"
+            },
+            "businessType": {
+              "label": "Giro comercial",
+              "error": "Por favor ingresa el giro comercial"
+            },
+            "activity_area": {
+              "label": "Superficie",
+              "error": "Por favor ingresa la superficie",
+              "helpText": "Superficie en metros cuadrados (m²)",
+              "title": "Solo se permiten números"
+            },
+            "alcohol_sales": {
+              "label": "Licencia de alcohol",
+              "error": "Por favor selecciona si cuentas con licencia de alcohol",
+              "options": {
+                "0": "No incluye",
+                "1": "Bebidas de baja graduación cerrada",
+                "2": "Bebidas de baja graduación abierta",
+                "3": "Bebidas de alta graduación cerrada",
+                "4": "Bebidas de alta graduación abierta"
+              }
+            }
+          }
+        },
+        "procedure": {
+          "title": "Información del trámite",
+          "inputs": {
+            "quien_tramita": {
+              "label": "¿Quién realiza el trámite?",
+              "options": {
+                "propietario": "Propietario (directamente)",
+                "arrendatario": "Arrendatario (directamente)",
+                "carta_poder": "Me otorgaron carta poder simple ante 2 testigos para realizar el trámite"
+              }
+            },
+            "propietario_rad": {
+              "label": "Propietario (directamente)",
+              "options": {
+                "persona_fisica": "Soy el propietario del predio",
+                "persona_moral": "Soy representante de una persona moral propietaria del predio"
+              }
+            },
+            "arrendatario_rad": {
+              "label": "Arrendatario (directamente)",
+              "options": {
+                "arrendatario_i": "Soy el arrendatario del predio",
+                "arrendatario_m": "Soy representante de una persona moral arrendataria del predio"
+              }
+            },
+            "carta_poder_rad": {
+              "label": "Me otorgaron carta poder simple ante 2 testigos para realizar el trámite",
+              "options": {
+                "propietario_i": "El titular del negocio será persona física",
+                "propietario_m": "El titular del negocio será persona moral (Empresa)"
+              }
+            }
+          }
+        },
+        "construction": {
+          "title": "Información para licencia de construcción",
+          "inputs": {
+            "street": {
+              "label": "Calle",
+              "error": "Por favor ingresa el nombre de la calle"
+            },
+            "neighborhood": {
+              "label": "Colonia",
+              "error": "Por favor ingresa el nombre de la colonia"
+            },
+            "municipality_name": {
+              "label": "Municipio",
+              "error": "Por favor ingresa el nombre del municipio"
+            },
+            "address": {
+              "label": "Domicilio",
+              "error": "Por favor ingresa el domicilio"
+            },
+            "interested_party": {
+              "label": "Interesado",
+              "error": "Por favor ingresa el nombre del interesado"
+            }
+          }
+        }
+      },
+      "ctas": {
+        "submit": "Consultar requisitos",
+        "open": "Consultar requisitos"
+      }
+    }
+  },
+  "noProperty": {
+    "paragraph": "Para consultar los requisitos o más información, dibuja un predio.",
+    "drawCTA": "Dibujar predio"
+  },
+  "search": {
+    "municipality": "Buscar municipio",
+    "clearMap": "Limpiar mapa"
+  },
+  "info": {
+    "dialog": {
+      "title": "Información de Capas",
+      "noData": "No hay datos disponibles para esta ubicación"
+    }
+  },
+  "upload": {
+    "dialog": {
+      "title": "Subir archivo",
+      "disclaimer": "La función de subir permite subir archivos con datos en formato vectorial.\n\nLos datos a subir deben estar en formato GeoJSON, GeoPackage, KML/KMZ o Shapefile (este último, al ser un formato multiarchivo, deberá estar empaquetado en un solo archivo .zip con todas las partes dentro, sin utilizar carpetas).\n\nEl archivo de datos vectoriales debe contar con el sistema de coordenadas de referencia (CRS) EPSG:4326. Y debe ser de geometría de tipo Polígono, ningún otro tipo de geometría está permitido.",
+      "continue": "Continuar",
+      "cancel": "Cancelar",
+      "selectFile": "Seleccionar archivo",
+      "fileSelected": "Archivo seleccionado:",
+      "uploadFile": "Subir archivo",
+      "back": "Volver",
+      "upload": "Subir",
+      "processing": "Procesando...",
+      "error": "Error de Subida",
+      "supportedFormats": "Formatos soportados",
+      "dropZone": {
+        "title": "Arrastra tu archivo aquí o haz clic para explorar",
+        "subtitle": "Selecciona un archivo GeoJSON, KML, KMZ o Shapefile (ZIP) para subir"
+      }
+    }
+  }
+}

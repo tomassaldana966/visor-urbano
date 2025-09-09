@@ -1,0 +1,65 @@
+{
+  "title": "Qu'est-ce que Visor Urbano",
+  "description": {
+    "title": "Description",
+    "content": "Dans Visor Urbano, vous pourrez connaître les exigences applicables pour ouvrir votre entreprise et traiter votre licence entièrement en ligne."
+  },
+  "background": {
+    "title": "Contexte",
+    "paragraph1": "En 2016, Guadalajara était l'une des cinq villes gagnantes du concours d'innovation appelé \"Mayors Challenge\" organisé par la fondation américaine Bloomberg Philanthropies, qui se sont distinguées par leurs idées innovantes et audacieuses qui répondent aux défis urgents, et qui ont également le plus grand potentiel d'impact positif et la capacité d'être répliquées dans d'autres régions. Un million de dollars a été attribué pour la création de la plateforme Visor Urbano.",
+    "paragraph2": "En 2020, une fois la première étape terminée et compte tenu du succès obtenu, la fondation a décidé pour la première fois dans l'histoire des concours en Amérique latine de continuer à soutenir le projet pour le répliquer dans toutes les municipalités de l'État de Jalisco et au niveau international."
+  },
+  "benefits": {
+    "title": "Avantages",
+    "subtitle": "Visor Urbano transforme la gestion urbaine au bénéfice des citoyens et des municipalités",
+    "citizens": {
+      "title": "Pour les citoyens:",
+      "items": [
+        "Consultations d'informations gouvernementales en temps réel",
+        "Processus entièrement en ligne",
+        "Accélère le temps de traitement et la livraison de licence",
+        "Processus unique pour toutes les municipalités",
+        "Éviter d'aller aux bureaux gouvernementaux",
+        "Réduction du caractère discrétionnaire du processus",
+        "Participation proactive des citoyens au développement urbain"
+      ]
+    },
+    "municipalities": {
+      "title": "Pour les municipalités:",
+      "items": [
+        "Logiciel libre et configurable",
+        "Aucun coût, car hébergé sur les serveurs du gouvernement",
+        "Obtention de la certification du Système d'Ouverture Rapide d'Entreprises (SARE) réglementé par la Commission Nationale d'Amélioration Réglementaire",
+        "Transparence proactive en publiant toutes les licences pour consultation libre",
+        "Génération de rapports en temps réel",
+        "Consultation en temps réel du statut, des résultats et des progrès des indicateurs",
+        "Formation, conseil et soutien continu de l'équipe VU",
+        "Transition vers un gouvernement plus ouvert, numérique et innovant",
+        "Adapter la réglementation aux nouveaux standards numériques"
+      ]
+    }
+  },
+  "awards": {
+    "title": "Prix et Reconnaissances",
+    "year": "2016",
+    "mayorsChallengeTitle": "Mayors Challenge",
+    "mayorsChallengeSubtitle": "Gagnant",
+    "intro": "Parmi les prix et reconnaissances attribués à Visor Urbano figurent:",
+    "items": [
+      "Certification mexicaine SARE (Système d'Ouverture Rapide d'Entreprises) réglementée par la Commission Nationale d'Amélioration Réglementaire.",
+      "Prix National d'Innovation en Transparence 2018",
+      "Prix d'Excellence Géospatiale d'Amérique Latine",
+      "Prix U-Gob de Gouvernement Numérique dans la catégorie Gouvernement Municipal 2019",
+      "Mention spéciale d'\"Innovation Gouvernementale\" aux prix IT +Gob organisés par le Comité d'Informatique de l'Administration Publique Étatique et Municipale (CIAPEM)",
+      "Prix Future Cities dans la catégorie \"Ville du Futur\", la cataloguant comme l'initiative la plus \"futuriste et innovante\". Ce prix a été remis en 2020 lors de la Réunion Annuelle d'Investissements tenue aux Émirats Arabes Unis."
+    ],
+    "conclusion": "De plus, en 2019, Guadalajara est devenue la première municipalité au niveau national à intégrer un schéma de Gouvernement Numérique parmi les pays membres de l'Organisation de Coopération et de Développement Économiques (OCDE), grâce aux plateformes numériques Visor Urbano et Ciudapp."
+  },
+  "cta": {
+    "title": "Prêt à commencer ?",
+    "description": "Explorez notre plateforme et découvrez comment Visor Urbano peut transformer la gestion urbaine de votre municipalité.",
+    "exploreMap": "Explorer la carte",
+    "login": "Se connecter"
+  },
+  "backButton": "Retour à l'accueil"
+}

@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Visor Urbano Blog",
+    "description": "The title for the blog used in SEO"
+  },
+  "description": {
+    "message": "Implementation stories and best practices from cities around the world",
+    "description": "The description for the blog used in SEO"
+  },
+  "sidebar.title": {
+    "message": "Recent posts",
+    "description": "The label for the left sidebar"
+  }
+}

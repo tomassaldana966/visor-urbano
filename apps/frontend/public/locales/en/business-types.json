@@ -1,0 +1,67 @@
+{
+  "pageTitle": "Business Types",
+  "breadcrumbAdmin": "Administrator",
+  "breadcrumbBusinessTypes": "Business Types",
+  "addBusinessType": "Add Business Type",
+  "addBusinessTypeModal": "Add New Business Type",
+  "businessTypeName": "Business type name",
+  "businessTypeNamePlaceholder": "E.g: Bakery",
+  "businessTypeCode": "SCIAN Code",
+  "businessTypeCodePlaceholder": "E.g: 311811",
+  "description": "Description",
+  "descriptionPlaceholder": "Detailed description of the business type",
+  "relatedWords": "Related words",
+  "relatedWordsPlaceholder": "Keywords separated by commas",
+  "isActive": "Active business type",
+  "creating": "Creating...",
+  "createBusinessType": "Create Business Type",
+  "cancel": "Cancel",
+  "totalBusinessTypes": "Total Business Types",
+  "enabled": "Enabled",
+  "withCertificate": "With Certificate",
+  "licenses": "Licenses",
+  "categoryFilter": "Category:",
+  "categoryAll": "All",
+  "statusFilter": "Status:",
+  "statusAll": "All",
+  "statusActive": "Active",
+  "statusInactive": "Inactive",
+  "statusDisabled": "Disabled",
+  "businessTypesListTitle": "Business Types List",
+  "codeColumnHeader": "Code",
+  "businessTypeColumnHeader": "SCIAN / Business Type",
+  "impactColumnHeader": "Impact",
+  "certificateColumnHeader": "Certificate",
+  "statusColumnHeader": "Status",
+  "licensesColumnHeader": "Lic.",
+  "certificateShort": "Cert.",
+  "activeShort": "Active",
+  "mobileLabels": {
+    "impact": "Impact:",
+    "licAbbrev": "lic."
+  },
+  "impactBadges": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High",
+    "veryHigh": "Very High"
+  },
+  "statusBadges": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "disabled": "Disabled"
+  },
+  "checkboxLabels": {
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "required": "require cert",
+    "notRequired": "no cert"
+  },
+  "impactLevels": {
+    "1": "1 - Minimum",
+    "2": "2 - Low",
+    "3": "3 - Medium",
+    "4": "4 - High",
+    "5": "5 - Maximum"
+  }
+}

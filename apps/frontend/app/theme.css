@@ -1,0 +1,9 @@
+@theme inline {
+  --color-primary: var(--color-vu-primary);
+  --color-secondary: var(--color-vu-blue);
+  --color-support-1: var(--color-vu-dark-gray);
+  --color-support-2: var(--color-vu-gray);
+  --color-support-3: var(--color-vu-green);
+  --color-support-4: var(--color-vu-light-gray);
+  --color-support-5: var(--color-vu-light-green);
+}

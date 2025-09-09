@@ -1,0 +1,59 @@
+{
+  "name": "visor-urbano-turbo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev": "turbo run dev",
+    "docs:dev": "pnpm --filter visor-urbano-docs run start",
+    "docs:build": "pnpm --filter visor-urbano-docs run build",
+    "docs:serve": "pnpm --filter visor-urbano-docs run serve",
+    "docs:translate": "pnpm --filter visor-urbano-docs run write-translations",
+    "docs:generate-api": "./scripts/generate-api-docs.sh",
+    "docs:validate": "./scripts/validate-integration.sh",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test --force",
+    "lint": "turbo run lint",
+    "start": "turbo run start",
+    "codegen": "turbo run codegen",
+    "prepare": "husky || ln -sf ../../.husky/pre-commit .git/hooks/pre-commit"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.5",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "lint-staged": {
+    "apps/frontend/**/*.{ts,tsx}": [
+      "prettier --write",
+      "bash -c 'cd apps/frontend && pnpm typecheck'"
+    ],
+    "apps/frontend/**/*.{js,jsx,json,css,md}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "overrides": {
+      "axios": "^1.9.0",
+      "@babel/runtime": "^7.26.10",
+      "@babel/helpers": "^7.26.10",
+      "esbuild": "^0.25.0",
+      "undici": "^6.21.2",
+      "brace-expansion": "^2.0.2",
+      "webpack-dev-server": "^5.2.1",
+      "form-data": "^4.0.4",
+      "@eslint/plugin-kit": "^0.3.4",
+      "on-headers": "^1.1.0"
+    }
+  }
+}

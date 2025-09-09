@@ -1,0 +1,17 @@
+[
+  {
+    "route": "/",
+    "file": "routes/home.tsx",
+    "description": "Página principal con dashboard y estadísticas",
+    "status": "complete",
+    "storybook": [],
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/v1/dashboard/stats",
+        "description": "Estadísticas del dashboard",
+        "router": "dashboard"
+      }
+    ]
+  }
+]
