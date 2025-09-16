@@ -334,6 +334,7 @@ export function OpenLayerMap({
           }
         })
         .flat();
+/*
 
       const geometry = geoJSONFeatures[0]?.getGeometry();
 
@@ -342,7 +343,7 @@ export function OpenLayerMap({
           padding: [100, 100, 100, 100],
         });
       }
-
+*/
       map.current.on('pointerdrag', () => {
         shouldFetch.current = true;
       });
