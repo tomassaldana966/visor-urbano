@@ -30,7 +30,10 @@ import type { loader } from '@root/app/routes/map';
 import { formatArea, formatLength } from './utils';
 import proj4 from 'proj4';
 import { register } from 'ol/proj/proj4';
-import { transform, fromLonLat, toLonLat } from 'ol/proj';
+import { transform, toLonLat } from 'ol/proj';
+
+// ✅ importa tu GeoJSON
+import SanFernandoLimite from '../../assets/san_fernando_limite.json';
 
 // Define EPSG:32613 (WGS 84 / UTM zone 13N) projection
 proj4.defs('EPSG:32613', '+proj=utm +zone=13 +datum=WGS84 +units=m +no_defs');
@@ -47,66 +50,53 @@ function moveHandler({
   municipioLayer?: string;
   onFeatureLoad?: ({ name }: { name: string }) => void;
 }) {
-  if (!geoServerURL || !municipioLayer) {
-    return;
-  }
+  if (!geoServerURL || !municipioLayer) return;
 
   const center = map?.getView().getCenter();
+  if (!center) return;
 
-  if (center) {
-    fetchGeoServer({
-      geoServerURL,
-      service: 'WFS',
-      request: 'GetFeature',
-      version: '2.0.0',
-      typename: `${municipioLayer}`,
-      count: 1,
-      outputFormat: 'application/json',
-      cql_filter: `CONTAINS(geom, POINT (${encodeURIComponent(center[0])} ${encodeURIComponent(center[1])}))`,
-    })
-      .then((data: any) => {
-        if (
-          onFeatureLoad &&
-          Array.isArray(data.features) &&
-          data.features.length > 0 &&
-          data.features[0].properties.nom_mun
-        ) {
-          onFeatureLoad({ name: data.features[0].properties.nom_mun });
-        }
+  fetchGeoServer({
+    geoServerURL,
+    service: 'WFS',
+    request: 'GetFeature',
+    version: '2.0.0',
+    typename: `${municipioLayer}`,
+    count: 1,
+    outputFormat: 'application/json',
+    cql_filter: `CONTAINS(geom, POINT (${encodeURIComponent(center[0])} ${encodeURIComponent(center[1])}))`,
+  })
+    .then((data: any) => {
+      if (
+        onFeatureLoad &&
+        Array.isArray(data.features) &&
+        data.features.length > 0 &&
+        data.features[0].properties?.nom_mun
+      ) {
+        onFeatureLoad({ name: data.features[0].properties.nom_mun });
+      }
 
-        const layers = getLayerFromFeatures(data.features);
+      const layers = getLayerFromFeatures(data.features);
+      const mapCurrentLayers = map?.getLayers().getArray();
 
-        const mapCurrentLayers = map?.getLayers().getArray();
-
-        layers.forEach(layer => {
-          const layerId = layer.get('id');
-
-          const existingLayer = mapCurrentLayers?.find(
-            (layer: any) => layer.get('id') === layerId
-          );
-
-          if (!existingLayer) {
-            map?.addLayer(layer);
-          }
-        });
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
+      layers.forEach(layer => {
+        const layerId = layer.get('id');
+        const exists = mapCurrentLayers?.find((l: any) => l.get('id') === layerId);
+        if (!exists) map?.addLayer(layer);
       });
-  }
+    })
+    .catch(error => console.error('Error fetching data:', error));
 }
 
 function getLayerFromFeatures(features: Array<unknown>) {
   const layers = features
-    .filter(feature => {
-      if (!feature || typeof feature !== 'object') return false;
-      const f = feature as Record<string, unknown>;
-      return f.geometry && typeof f.geometry === 'object';
+    .filter(f => {
+      if (!f || typeof f !== 'object') return false;
+      const r = f as Record<string, unknown>;
+      return r.geometry && typeof r.geometry === 'object';
     })
-    .map(feature => {
+    .map(f => {
       try {
-        const geoJSONFeatures = new GeoJSON().readFeatures(feature);
-
+        const geoJSONFeatures = new GeoJSON().readFeatures(f);
         const vectorSource = new VectorSource({
           features: geoJSONFeatures.map(
             geoFeature =>
@@ -119,21 +109,13 @@ function getLayerFromFeatures(features: Array<unknown>) {
         const vectorLayer = new VectorLayer({
           source: vectorSource,
           style: new Style({
-            fill: new Fill({
-              color: 'rgba(0, 0, 0, 0)',
-            }),
-            stroke: new Stroke({
-              color: 'rgba(0, 0, 0, 0.5)',
-              width: 1,
-            }),
+            fill: new Fill({ color: 'rgba(0, 0, 0, 0)' }),
+            stroke: new Stroke({ color: 'rgba(0, 0, 0, 0.5)', width: 1 }),
           }),
         });
 
-        const featureWithId = feature as Partial<{ id: string }>;
-
-        if (featureWithId.id) {
-          vectorLayer.set('id', featureWithId.id);
-        }
+        const featureWithId = f as Partial<{ id: string }>;
+        if (featureWithId.id) vectorLayer.set('id', featureWithId.id);
 
         return vectorLayer;
       } catch (error) {
@@ -141,7 +123,7 @@ function getLayerFromFeatures(features: Array<unknown>) {
         return null;
       }
     })
-    .filter(layer => layer !== null);
+    .filter(Boolean) as VectorLayer<VectorSource>[];
 
   return layers;
 }
@@ -165,21 +147,10 @@ export function OpenLayerMap({
   customVectorLayers?: VectorLayer<VectorSource>[];
   property?: Awaited<ReturnType<typeof loader>>['property'];
   searchResult?: Awaited<ReturnType<typeof loader>>['searchResult'];
-  center?: {
-    lat: number;
-    lon: number;
-  };
+  center?: { lat: number; lon: number };
   municipioLayer?: string;
-  states?: {
-    features?: Array<unknown>;
-  };
-  tool?:
-    | 'select'
-    | 'draw'
-    | 'measure-lineal'
-    | 'measure-area'
-    | 'clear'
-    | 'info';
+  states?: { features?: Array<unknown> };
+  tool?: 'select' | 'draw' | 'measure-lineal' | 'measure-area' | 'clear' | 'info';
   onMapClick?: (data: {
     coordinate: Coordinate;
     tool?: string;
@@ -189,10 +160,7 @@ export function OpenLayerMap({
       layerId?: string;
     };
   }) => void;
-  onDrawEnd?: (geometry?: {
-    type: 'Polygon';
-    coordinates: number[][][];
-  }) => void;
+  onDrawEnd?: (geometry?: { type: 'Polygon'; coordinates: number[][][] }) => void;
 }>) {
   const { t: tMap } = useTranslation('map');
 
@@ -219,7 +187,6 @@ export function OpenLayerMap({
   const propertyID = useRef<string | null>(null);
   const searchResultID = useRef<string | null>(null);
 
-  // Update tool ref when tool prop changes
   useEffect(() => {
     toolRef.current = tool;
   }, [tool]);
@@ -235,10 +202,8 @@ export function OpenLayerMap({
       const layers = getLayerFromFeatures(states?.features ?? []);
 
       const view = new View({
-        center: center
-          ? transform([center.lon, center.lat], 'EPSG:4326', 'EPSG:32613')
-          : [0, 0],
-        zoom: 7,
+        center: center ? transform([center.lon, center.lat], 'EPSG:4326', 'EPSG:32613') : [0, 0],
+        zoom: 14,
         projection: 'EPSG:32613',
       });
 
@@ -280,9 +245,7 @@ export function OpenLayerMap({
       tiles.current = layersFromProps
         .map(layer => {
           const tile = new TileLayer({
-            properties: {
-              id: layer.id,
-            },
+            properties: { id: layer.id },
             source: new TileWMS({
               attributions: layer.attribution ?? undefined,
               url: layer.url,
@@ -299,17 +262,14 @@ export function OpenLayerMap({
             }),
             visible: layer.visible !== false,
           });
-
           return tile;
         })
-        .filter(layer => layer !== null);
+        .filter(Boolean) as TileLayer[];
 
       map.current = new Map({
         target: mapContainer.current,
         layers: [
-          new TileLayer({
-            source: new OSM(),
-          }),
+          new TileLayer({ source: new OSM() }),
           ...layers,
           ...tiles.current,
           drawVectorLayer,
@@ -319,31 +279,35 @@ export function OpenLayerMap({
         view,
       });
 
-      const geoJSONFeatures = (states?.features ?? [])
-        .filter(feature => {
-          if (!feature || typeof feature !== 'object') return false;
-          const f = feature as Record<string, unknown>;
-          return f.geometry && typeof f.geometry === 'object';
-        })
-        .map(feature => {
-          try {
-            return new GeoJSON().readFeatures(feature);
-          } catch (error) {
-            console.warn('Failed to read GeoJSON feature:', error);
-            return [];
-          }
-        })
-        .flat();
-/*
-
-      const geometry = geoJSONFeatures[0]?.getGeometry();
-
-      if (geometry) {
-        view.fit(geometry.getExtent(), {
-          padding: [100, 100, 100, 100],
+      // === LÍMITE SAN FERNANDO (línea negra) ===
+      try {
+        const sanFernandoFeatures = new GeoJSON().readFeatures(SanFernandoLimite as any, {
+          dataProjection: 'EPSG:4326',     // CRS del archivo (ajusta si tu JSON no está en WGS84)
+          featureProjection: 'EPSG:32613', // CRS del mapa
         });
+
+        const sanFernandoSource = new VectorSource({ features: sanFernandoFeatures });
+
+        const sanFernandoLayer = new VectorLayer({
+          source: sanFernandoSource,
+          properties: {
+            id: 'limite-san-fernando',
+            label: 'Límite San Fernando',
+            type: 'vector',
+            coordinateSystem: 'EPSG:32613',
+          },
+          style: new Style({
+            stroke: new Stroke({ color: 'black', width: 2 }),
+          }),
+        });
+
+        sanFernandoLayer.setZIndex(1000);
+        map.current.addLayer(sanFernandoLayer);
+      } catch (e) {
+        console.warn('No se pudo cargar san_fernando_limite.json', e);
       }
-*/
+      // === FIN LÍMITE ===
+
       map.current.on('pointerdrag', () => {
         shouldFetch.current = true;
       });
@@ -364,14 +328,12 @@ export function OpenLayerMap({
             onFeatureLoad: handleFeatureLoad,
           });
         }
-
         shouldFetch.current = false;
       });
 
       map.current.on('click', event => {
         if (!map.current) return;
 
-        // Get features at clicked pixel
         const featuresAtPixel = map.current.getFeaturesAtPixel(event.pixel);
 
         let clickData: {
@@ -382,46 +344,36 @@ export function OpenLayerMap({
             layerType?: string;
             layerId?: string;
           };
-        } = {
-          coordinate: event.coordinate,
-          tool: toolRef.current ?? undefined,
-        };
+        } = { coordinate: event.coordinate, tool: toolRef.current ?? undefined };
 
-        // Check if we clicked on a feature
         if (featuresAtPixel.length > 0) {
           const feature = featuresAtPixel[0];
           const properties = feature.getProperties();
 
-          // Get the layer information by checking which layer contains this feature
-          const layers = map.current.getLayers().getArray();
-          let layerInfo = null;
+          const layersArr = map.current.getLayers().getArray();
+          let layerInfo: { layerType?: string; layerId?: string } | null = null;
 
-          for (const layer of layers) {
+          for (const layer of layersArr) {
             if (layer instanceof VectorLayer) {
               const source = layer.getSource();
-              if (source) {
-                const features = source.getFeatures();
-                if (features.includes(feature)) {
-                  layerInfo = {
-                    layerType: layer.get('type') ?? 'vector',
-                    layerId: layer.get('id') ?? layer.get('label') ?? 'unknown',
-                  };
-                  break;
-                }
+              if (source && source.getFeatures().includes(feature)) {
+                layerInfo = {
+                  layerType: layer.get('type') ?? 'vector',
+                  layerId: layer.get('id') ?? layer.get('label') ?? 'unknown',
+                };
+                break;
               }
             }
           }
 
-          clickData.feature = {
-            properties,
-            ...layerInfo,
-          };
+          clickData.feature = { properties, ...layerInfo };
         }
 
         onMapClick?.(clickData);
       });
 
       map.current.getViewport().addEventListener('mouseout', onMouseOut);
+      mounted.current = true;
     }
 
     return () => {
@@ -434,7 +386,7 @@ export function OpenLayerMap({
         });
         customLayers.current = [];
 
-        map.current.setTarget();
+        map.current.setTarget(undefined);
         map.current = null;
         mounted.current = false;
       }
@@ -448,9 +400,7 @@ export function OpenLayerMap({
       }
 
       measureTooltipElement.current = document.createElement('div');
-
-      measureTooltipElement.current.className =
-        'ol-tooltip bg-primary/40 text-xs p-2 rounded mt-8';
+      measureTooltipElement.current.className = 'ol-tooltip bg-primary/40 text-xs p-2 rounded mt-8';
 
       measureTooltip.current = new Overlay({
         element: measureTooltipElement.current,
@@ -471,21 +421,10 @@ export function OpenLayerMap({
       measureSourceRef.current.clear();
       searchSourceRef.current.clear();
 
-      tooltips.current.forEach(overlay => {
-        map.current?.removeOverlay(overlay);
-      });
-
-      tooltipElements.current.forEach(el => {
-        el.remove();
-      });
-
-      measureTooltips.current.forEach(overlay => {
-        map.current?.removeOverlay(overlay);
-      });
-
-      measureTooltipElements.current.forEach(el => {
-        el.remove();
-      });
+      tooltips.current.forEach(overlay => map.current?.removeOverlay(overlay));
+      tooltipElements.current.forEach(el => el.remove());
+      measureTooltips.current.forEach(overlay => map.current?.removeOverlay(overlay));
+      measureTooltipElements.current.forEach(el => el.remove());
 
       tooltips.current = [];
       tooltipElements.current = [];
@@ -493,14 +432,11 @@ export function OpenLayerMap({
       measureTooltipElements.current = [];
 
       searchResultID.current = null;
-
       return;
     }
 
     const style = new Style({
-      fill: new Fill({
-        color: 'rgba(106, 191, 75, 0.4)',
-      }),
+      fill: new Fill({ color: 'rgba(106, 191, 75, 0.4)' }),
       stroke: new Stroke({
         color: tool === 'draw' ? undefined : 'rgba(0,0,0,0.7)',
         lineDash: tool === 'draw' ? undefined : [10, 10],
@@ -508,22 +444,14 @@ export function OpenLayerMap({
       }),
       image: new CircleStyle({
         radius: 7,
-        stroke: new Stroke({
-          color: tool === 'draw' ? undefined : 'rgba(0, 0, 0, 0.7)',
-        }),
-        fill: new Fill({
-          color: '#6abf4b',
-        }),
+        stroke: new Stroke({ color: tool === 'draw' ? undefined : 'rgba(0, 0, 0, 0.7)' }),
+        fill: new Fill({ color: '#6abf4b' }),
       }),
     });
 
     const draw = new Draw({
-      source:
-        tool === 'draw' ? drawSourceRef.current : measureSourceRef.current,
-      type:
-        tool && ['measure-area', 'draw'].includes(tool)
-          ? 'Polygon'
-          : 'LineString',
+      source: tool === 'draw' ? drawSourceRef.current : measureSourceRef.current,
+      type: tool && ['measure-area', 'draw'].includes(tool) ? 'Polygon' : 'LineString',
       style,
     });
 
@@ -534,8 +462,7 @@ export function OpenLayerMap({
     }
 
     tooltipElement.current = document.createElement('div');
-    tooltipElement.current.className =
-      'ol-tooltip bg-primary/40 text-xs p-2 rounded hidden mt-8';
+    tooltipElement.current.className = 'ol-tooltip bg-primary/40 text-xs p-2 rounded hidden mt-8';
 
     tooltip.current = new Overlay({
       element: tooltipElement.current,
@@ -553,24 +480,18 @@ export function OpenLayerMap({
 
       let tooltipCoordinates: Coordinate;
 
-      listener = sketch.current.getGeometry()?.on('change', event => {
-        const geom = event.target;
+      listener = sketch.current.getGeometry()?.on('change', e => {
+        const geom = (e as any).target;
 
         let output = '';
 
         if (geom instanceof Polygon && tool !== 'draw') {
           const areaInfo = formatArea(geom);
-
-          if (!areaInfo?.value) {
-            return;
-          }
-
-          output = `${areaInfo?.value}<sup>${areaInfo?.sup}</sup>`;
-
+          if (!areaInfo?.value) return;
+          output = `${areaInfo.value}<sup>${areaInfo.sup}</sup>`;
           tooltipCoordinates = geom.getInteriorPoint().getCoordinates();
         } else if (geom instanceof LineString) {
           output = formatLength(geom) ?? '';
-
           tooltipCoordinates = geom.getLastCoordinate();
         }
         if (measureTooltipElement.current) {
@@ -591,9 +512,7 @@ export function OpenLayerMap({
         if (geometry instanceof Polygon) {
           const coordinates = geometry.getCoordinates()[0];
 
-          const wgs84Coordinates = coordinates.map((coord: number[]) => {
-            return toLonLat(coord, 'EPSG:32613');
-          });
+          const wgs84Coordinates = coordinates.map((coord: number[]) => toLonLat(coord, 'EPSG:32613'));
 
           const polygonGeometry = {
             type: 'Polygon' as const,
@@ -601,13 +520,8 @@ export function OpenLayerMap({
           };
 
           setSearchParams(searchParams => {
-            searchParams.set(
-              'polygon',
-              encodePolygonToBase64(wgs84Coordinates)
-            );
-
+            searchParams.set('polygon', encodePolygonToBase64(wgs84Coordinates));
             searchParams.delete('point');
-
             return searchParams;
           });
 
@@ -619,10 +533,7 @@ export function OpenLayerMap({
         }
       }
 
-      if (listener) {
-        unByKey(listener);
-      }
-
+      if (listener) unByKey(listener);
       createMeasureTooltip();
     });
 
@@ -634,16 +545,11 @@ export function OpenLayerMap({
       map.current.addOverlay(tooltip.current);
 
       const pointerMoveEventKey = map.current.on('pointermove', event => {
-        if (event.dragging) {
-          return;
-        }
+        if (event.dragging) return;
 
         let helpMessage = tMap(`controls.tools.tabs.tools.tooltips.${tool}`);
-
         if (sketch.current) {
-          helpMessage = tMap(
-            `controls.tools.tabs.tools.tooltips.${tool}-drawing`
-          );
+          helpMessage = tMap(`controls.tools.tabs.tools.tooltips.${tool}-drawing`);
         }
 
         if (tooltipElement.current) {
@@ -655,13 +561,9 @@ export function OpenLayerMap({
 
       return () => {
         unByKey(pointerMoveEventKey);
-
         map.current?.removeInteraction(draw);
-
         tooltip.current && map.current?.removeOverlay(tooltip.current);
-
-        measureTooltip.current &&
-          map.current?.removeOverlay(measureTooltip.current);
+        measureTooltip.current && map.current?.removeOverlay(measureTooltip.current);
       };
     }
   }, [tool]);
@@ -672,10 +574,8 @@ export function OpenLayerMap({
   useEffect(() => {
     if (tiles.current) {
       tiles.current.forEach(tile => {
-        const id = tile.getProperties().id;
-
+        const id = (tile.getProperties() as any).id;
         const newVisibility = layersFromProps.find(layer => layer.id === id);
-
         tile.setVisible(newVisibility?.visible ?? true);
       });
     }
@@ -683,32 +583,16 @@ export function OpenLayerMap({
 
   useEffect(() => {
     if (map.current) {
-      // Remove existing custom layers from map
-      customLayers.current.forEach(layer => {
-        map.current?.removeLayer(layer);
-      });
-
-      // Clear the reference
+      // Remove existing custom layers
+      customLayers.current.forEach(layer => map.current?.removeLayer(layer));
       customLayers.current = [];
 
-      // Add new custom layers to map
-      console.warn('OpenLayerMap - Adding custom vector layers:', {
-        total: customVectorLayers.length,
-        layers: customVectorLayers.map(layer => ({
-          id: layer.get('id'),
-          label: layer.get('label'),
-          coordinateSystem: layer.get('coordinateSystem'),
-          featureCount: layer.getSource()?.getFeatures()?.length ?? 0,
-          extent: layer.getSource()?.getExtent(),
-        })),
-      });
-
+      // Add new custom layers
       customVectorLayers.forEach(layer => {
         map.current?.addLayer(layer);
         customLayers.current.push(layer);
       });
 
-      // Log map extent after adding layers
       if (map.current && customVectorLayers.length > 0) {
         const mapView = map.current.getView();
         console.warn('OpenLayerMap - Current map view:', {
@@ -721,11 +605,7 @@ export function OpenLayerMap({
   }, [customVectorLayers]);
 
   useEffect(() => {
-    if (
-      map.current &&
-      propertyData &&
-      propertyID.current !== String(propertyData.id)
-    ) {
+    if (map.current && propertyData && propertyID.current !== String(propertyData.id)) {
       propertyID.current = String(propertyData.id);
 
       const geoJSON = new GeoJSON().readFeatures(propertyData, {
@@ -736,7 +616,6 @@ export function OpenLayerMap({
       drawSourceRef.current.addFeatures(geoJSON);
 
       const geometry = geoJSON[0]?.getGeometry();
-
       if (geometry) {
         map.current.getView().fit(geometry.getExtent(), {
           padding: [200, 200, 200, 800],
@@ -748,23 +627,15 @@ export function OpenLayerMap({
   }, [propertyData]);
 
   useEffect(() => {
-    if (
-      map.current &&
-      searchResultData &&
-      searchResultID.current !== searchResultData.place_id
-    ) {
+    if (map.current && searchResultData && searchResultID.current !== searchResultData.place_id) {
       searchResultID.current = searchResultData.place_id;
 
       searchSourceRef.current.clear();
 
       const { lat, lng } = searchResultData.geometry.location;
-
       const coordinates = transform([lng, lat], 'EPSG:4326', 'EPSG:32613');
 
-      const pointFeature = new Feature({
-        geometry: new Point(coordinates),
-      });
-
+      const pointFeature = new Feature({ geometry: new Point(coordinates) });
       searchSourceRef.current.addFeature(pointFeature);
 
       map.current.getView().fit(pointFeature.getGeometry()!.getExtent(), {
@@ -791,9 +662,7 @@ export function OpenLayerMapLayersControls({
     <div
       className={clsx(
         'absolute right-0 top-1/2 z-10 h-1/2 bg-white -translate-y-1/2 w-72 transition',
-        {
-          'translate-x-full': !open,
-        }
+        { 'translate-x-full': !open }
       )}
     >
       <button
@@ -801,11 +670,7 @@ export function OpenLayerMapLayersControls({
         type="button"
         onClick={onToggle}
       >
-        <ChevronRight
-          className={clsx('text-white', {
-            'rotate-180': !open,
-          })}
-        />
+        <ChevronRight className={clsx('text-white', { 'rotate-180': !open })} />
       </button>
 
       <div className="overflow-hidden h-full">{children}</div>
