@@ -209,6 +209,17 @@ export async function loader({ request }: LoaderFunctionArgs) {
   };
 }
 
+const ortofotoLayer = {
+  id: 'ortofoto-2020',
+  label: 'Ortofoto 2020',
+  url: 'http://localhost:8080/geoserver/visorurbano/wms',
+  layers: 'visorurbano:ortofoto_ok',
+  format: 'image/jpeg',
+  projection: 'EPSG:32613',
+  visible: true,
+  server_type: 'geoserver',
+};
+
 function validateFormFields(
   fields: Record<string, string | null>,
   requiredFields: string[]
@@ -618,6 +629,7 @@ export default function MapRoute() {
 
   const navigation = useNavigation();
 
+  
   const loaderData = useLoaderData<typeof loader>();
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -831,6 +843,10 @@ export default function MapRoute() {
     }
   );
 
+  const layersWithOrtofoto = state.layers
+  ? [ortofotoLayer, ...state.layers]
+  : [ortofotoLayer];
+  
   const handleFileUpload = async (file: File) => {
     dispatch({ type: 'SET_UPLOAD_PROCESSING', payload: true });
     dispatch({ type: 'SET_UPLOAD_ERROR', payload: null });
@@ -1028,7 +1044,7 @@ export default function MapRoute() {
         geoServerURL={loaderData.ENV.GEOSERVER_URL ?? ''}
         states={loaderData.states}
         searchResult={loaderData.searchResult}
-        layers={state.layers}
+        layers={layersWithOrtofoto}
         property={loaderData.property}
         center={{
           lat: parseFloat(loaderData.ENV.MAP_CENTER_LAT ?? '0'),
