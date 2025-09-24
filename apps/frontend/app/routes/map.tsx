@@ -187,7 +187,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   let layers;
 
   try {
-    layers = await getMapLayers({ municipality: 2 });
+    layers = await getMapLayers({ municipality: 5 });
   } catch (error) {
     console.error('Error fetching map layers:', error);
   }
@@ -209,16 +209,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
   };
 }
 
-const ortofotoLayer = {
-  id: 'ortofoto-2020',
-  label: 'Ortofoto 2020',
-  url: 'http://localhost:8080/geoserver/visorurbano/wms',
-  layers: 'visorurbano:ortofoto_ok',
-  format: 'image/jpeg',
-  projection: 'EPSG:32613',
-  visible: true,
-  server_type: 'geoserver',
-};
+
 
 function validateFormFields(
   fields: Record<string, string | null>,
@@ -632,8 +623,24 @@ export default function MapRoute() {
   
   const loaderData = useLoaderData<typeof loader>();
 
+  const ortofotoLayer = {
+    id: 'ortofoto-2020',
+    label: 'Ortofoto 2020',
+    url: loaderData.ENV.GEOSERVER_URL + '/geoserver/visorurbano/wms',
+    layers: 'visorurbano:ortofoto_ok',
+    format: 'image/jpeg',
+    projection: 'EPSG:32613',
+    visible: true,
+    server_type: 'geoserver',
+  };
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
+
+  const allLayers = loaderData?.layers
+  ? [ortofotoLayer, ...loaderData.layers]
+  : [ortofotoLayer];
 
   const [state, dispatch] = useReducer(
     (state: State, action: Actions) => {
@@ -843,9 +850,6 @@ export default function MapRoute() {
     }
   );
 
-  const layersWithOrtofoto = state.layers
-  ? [ortofotoLayer, ...state.layers]
-  : [ortofotoLayer];
   
   const handleFileUpload = async (file: File) => {
     dispatch({ type: 'SET_UPLOAD_PROCESSING', payload: true });
@@ -1044,7 +1048,7 @@ export default function MapRoute() {
         geoServerURL={loaderData.ENV.GEOSERVER_URL ?? ''}
         states={loaderData.states}
         searchResult={loaderData.searchResult}
-        layers={layersWithOrtofoto}
+        layers={state.layers}
         property={loaderData.property}
         center={{
           lat: parseFloat(loaderData.ENV.MAP_CENTER_LAT ?? '0'),
