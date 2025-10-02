@@ -55,5 +55,8 @@
       "@eslint/plugin-kit": "^0.3.4",
       "on-headers": "^1.1.0"
     }
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
   }
 }
