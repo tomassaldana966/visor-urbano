@@ -11,7 +11,7 @@ export function BloombergLogo({ className }: { className?: string }) {
       <img
         alt="Bloomberg Philanthropies"
         src="/logos/bloomberg-philanthropies.svg"
-        className={cn('h-8', className)}
+        className={cn('h-12 -mt-1', className)}
       />
     </Link>
   );

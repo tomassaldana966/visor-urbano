@@ -13,10 +13,10 @@ export const footerNav = {
       Datos abiertos
     </Link>,
     <img
-      src="/logos/jalisco.svg"
+      src="/logos/Logo-Municipal.svg"
       alt="Jalisco"
       key="3"
-      className="h-10 hidden md:block"
+      className="h-22 w-auto hidden md:block"
     />,
   ],
   en: [
@@ -31,10 +31,10 @@ export const footerNav = {
       Open data
     </Link>,
     <img
-      src="/logos/jalisco.svg"
+      src="/logos/Logo-Municipal.svg"
       alt="Jalisco"
       key="3"
-      className="h-10 hidden md:block"
+      className="h-16 w-auto hidden md:block"
     />,
   ],
   fr: [
